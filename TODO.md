@@ -2,7 +2,6 @@
 
 ## In Progress / Next Up
 
-- [ ] **Redesign B** Backgrounds/classes at character creation — pick background on first login, sets starting stats; store as `w_background`
 
 ## Planned
 
@@ -23,6 +22,7 @@
 
 ## Completed
 
+- [x] **Redesign B** Backgrounds — `connect` shows chooser if `w_background == "none"`; `background <num/name>` picks from 5 backgrounds; stat bonuses applied on pick; scavenger gets +50% salvage sell price
 - [x] **Redesign A** CAC economy — `w_credits` on $player; `sell <item>` / `sell all` (radio uplink, works anywhere); `balance`; `prices`; `status` updated with credits + stamina bar
 - [x] Building system — `pre-fab shelter kit` recipe (inert metal + 2x fiber); `place <kit>` deploys `$building` at current coords; `buildings` lists structures in room; $building prototype #117 with b_type/b_owner/b_hp/b_x/b_y props
 - [x] Food/water consumables — craft (ration bar, water canteen), eat/drink restore HP+Nourished; HellCore !obj bug fixed
