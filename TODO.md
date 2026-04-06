@@ -5,7 +5,6 @@
 
 ## Planned
 
-- [ ] **Redesign C** Skill system — `w_skills` dict, skill shop NPC, buy skills with credits, skills gate content
 - [ ] **Redesign D** Per-player colonies — `place sector center` spawns 3-room complex (plaza + governor's office + factorium) owned by player
 - [ ] **Redesign E** NPC workers — hire/fire colonists at sector center, auto-gather resources on a timer
 - [ ] **#4** Test/fix CHATNET/CHAT comms (verbs exist on $player but untested)
@@ -22,6 +21,7 @@
 
 ## Completed
 
+- [x] **Redesign C** Skill system — `skills` verb shows shop; `buy skill <name>` costs credits; 8 skills across 2 tiers; survival_1 wired (+3 HP on eat), commerce_1/2 wired (sell bonuses), combat_1 (+5 HP max)
 - [x] **Redesign B** Backgrounds — `connect` shows chooser if `w_background == "none"`; `background <num/name>` picks from 5 backgrounds; stat bonuses applied on pick; scavenger gets +50% salvage sell price
 - [x] **Redesign A** CAC economy — `w_credits` on $player; `sell <item>` / `sell all` (radio uplink, works anywhere); `balance`; `prices`; `status` updated with credits + stamina bar
 - [x] Building system — `pre-fab shelter kit` recipe (inert metal + 2x fiber); `place <kit>` deploys `$building` at current coords; `buildings` lists structures in room; $building prototype #117 with b_type/b_owner/b_hp/b_x/b_y props
