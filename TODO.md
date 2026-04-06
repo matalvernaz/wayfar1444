@@ -2,11 +2,10 @@
 
 ## In Progress / Next Up
 
-- [ ] **#3** Food/water consumables — gathered resources → eat/drink verbs restore stats
+- [ ] **#4** Test/fix CHATNET/CHAT comms (verbs exist on $player but untested)
 
 ## Planned
 
-- [ ] **#4** Test/fix CHATNET/CHAT comms (verbs exist on $player but untested)
 - [ ] **#5** Building system — craft structures from materials, place at coordinates, persist in room
 - [ ] **#6** NPCs/creatures — colony citizens gather autonomously, hostile fauna roam and attack
 - [ ] **#7** Second planet — Xeris Prime (icy mining world), launch pad travel between planets
@@ -16,6 +15,7 @@
 
 ## Completed
 
+- [x] Food/water consumables — craft (ration bar, water canteen), eat/drink restore HP+Nourished; HellCore !obj bug fixed
 - [x] Resource nodes — `$ods:populate` creates typed nodes in new rooms; `gather [type]` works in all wilderness rooms and Impact Site Zero
 - [x] Player survival stats — hunger/health/stamina on $player with vitals/eat/drink/rest/build/treat/status verbs
 - [x] Heartbeat decay + death/respawn — #545 in Colony Hub; 5-min tick, starvation kills, respawn at #459 with hunger=20/health=30/stamina=50
