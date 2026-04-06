@@ -2,10 +2,14 @@
 
 ## In Progress / Next Up
 
-- [ ] **#4** Test/fix CHATNET/CHAT comms (verbs exist on $player but untested)
+- [ ] **Redesign B** Backgrounds/classes at character creation — pick background on first login, sets starting stats; store as `w_background`
 
 ## Planned
 
+- [ ] **Redesign C** Skill system — `w_skills` dict, skill shop NPC, buy skills with credits, skills gate content
+- [ ] **Redesign D** Per-player colonies — `place sector center` spawns 3-room complex (plaza + governor's office + factorium) owned by player
+- [ ] **Redesign E** NPC workers — hire/fire colonists at sector center, auto-gather resources on a timer
+- [ ] **#4** Test/fix CHATNET/CHAT comms (verbs exist on $player but untested)
 - [ ] **#6** NPCs/creatures — colony citizens gather autonomously, hostile fauna roam and attack
 - [ ] **#7** Second planet — Xeris Prime (icy mining world), launch pad travel between planets
 - [ ] **#8** Skill trees — hunter, pilot, botanist, hacker, engineer; XP from activities
@@ -19,6 +23,7 @@
 
 ## Completed
 
+- [x] **Redesign A** CAC economy — `w_credits` on $player; `sell <item>` / `sell all` (radio uplink, works anywhere); `balance`; `prices`; `status` updated with credits + stamina bar
 - [x] Building system — `pre-fab shelter kit` recipe (inert metal + 2x fiber); `place <kit>` deploys `$building` at current coords; `buildings` lists structures in room; $building prototype #117 with b_type/b_owner/b_hp/b_x/b_y props
 - [x] Food/water consumables — craft (ration bar, water canteen), eat/drink restore HP+Nourished; HellCore !obj bug fixed
 - [x] Resource nodes — `$ods:populate` creates typed nodes in new rooms; `gather [type]` works in all wilderness rooms and Impact Site Zero
