@@ -2,7 +2,6 @@
 
 ## In Progress / Next Up
 
-- [ ] **#2** Player stats — hunger/health/stamina properties, heartbeat decay, `status` command, death + respawn
 - [ ] **#3** Food/water consumables — gathered resources → eat/drink verbs restore stats
 
 ## Planned
@@ -19,6 +18,7 @@
 
 - [x] Resource nodes — `$ods:populate` creates typed nodes in new rooms; `gather [type]` works in all wilderness rooms and Impact Site Zero
 - [x] Player survival stats — hunger/health/stamina on $player with vitals/eat/drink/rest/build/treat/status verbs
+- [x] Heartbeat decay + death/respawn — #545 in Colony Hub; 5-min tick, starvation kills, respawn at #459 with hunger=20/health=30/stamina=50
 - [x] Perlin noise C extension (`perlin_2d`)
 - [x] `chr()` / `ord()` C extensions
 - [x] On-demand room spawning via `$ods` (#458)
