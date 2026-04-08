@@ -33,7 +33,7 @@ STATUS_VERB = [
     'endif',
     'x = loc.x;',
     'y = loc.y;',
-    'bnames = {"Mineral Flats", "Scrublands", "Broken Ground", "Dust Plains", "Thermal Zone"};',
+    'bnames = {"Mountain", "Forest", "Desert", "Jungle", "Volcanic"};',
     'b = loc.biome;',
     'if (b < 0)',
     '  b = 0;',
