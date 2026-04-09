@@ -34,5 +34,6 @@ hellcore.db.new
 hellcore.db.new.PANIC
 hellcore.db.old.gz
 
-# Python cache
+# Python setup/deployment scripts (local only)
+*.py
 __pycache__/
