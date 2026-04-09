@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
-1691
-3505
+1692
+3508
 0
 4
 65
@@ -7301,13 +7301,17 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 361
 0
 4
+2
 1
+-42
 1
--40
+-43
 361
 5
 4
-1
+2
+0
+2
 0
 2
 361
@@ -9263,7 +9267,7 @@ generic player
 100
 33
 -1
-336
+339
 confunc
 361
 173
@@ -10605,6 +10609,18 @@ cr_retaliate
 29
 -1
 _init_newplayer
+361
+13
+-1
+scan
+361
+13
+-1
+configure
+361
+29
+-1
+harvest
 361
 13
 -1
@@ -64346,7 +64362,7 @@ generic immortal
 -1
 33
 2
--1
+1691
 37
 lookup_room
 29
@@ -76965,6 +76981,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 03:11:50 2026 PDT Database checkpoint started.~1b[0m
+0
+1775729510
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 03:00:57 2026 PDT Database checkpoint started.~1b[0m
 0
 1775728857
@@ -77256,12 +77278,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mTue Apr  7 06:15:19 2026 PDT Database checkpoint started.~1b[0m
 0
 1775567719
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mTue Apr  7 05:15:19 2026 PDT Database checkpoint started.~1b[0m
-0
-1775564119
 361
 5
 5
@@ -94747,7 +94763,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-2100157685
+1843019076
 361
 5
 4
@@ -97022,7 +97038,7 @@ hi
 4
 2
 0
-1775728421
+1775728931
 2
 localhost
 361
@@ -97032,7 +97048,7 @@ localhost
 361
 0
 0
-1775728577
+1775728959
 361
 1
 5
@@ -97691,7 +97707,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 40402
+port 7777 from localhost, port 54738
 361
 0
 5
@@ -97710,7 +97726,7 @@ port 7777 from localhost, port 40402
 361
 5
 0
-1775728856
+1775729277
 361
 1
 0
@@ -97864,19 +97880,19 @@ test
 361
 5
 0
-125
+135
 361
 5
 0
-125
+135
 361
 5
 0
-104
+106
 361
 5
 0
-104
+106
 361
 5
 0
@@ -97908,7 +97924,7 @@ test
 361
 5
 2
-none
+hunter
 361
 5
 5
@@ -97950,13 +97966,15 @@ none
 -1
 361
 7
-5
+0
+3
 361
 7
 5
 361
 7
-5
+0
+3
 361
 7
 5
@@ -132656,7 +132674,7 @@ equipment prototype
 1689
 1681
 0
-11
+12
 eq_slot
 eq_type
 eq_tohit
@@ -132668,7 +132686,8 @@ eq_stam_bonus
 eq_clarity_bonus
 eq_aggr_bonus
 eq_actions
-41
+h_resource
+42
 2
 
 361
@@ -132713,6 +132732,10 @@ eq_actions
 0
 361
 3
+2
+
+361
+7
 5
 361
 5
@@ -133262,7 +133285,7 @@ colonial machete
 1690
 0
 0
-41
+42
 2
 weapon
 361
@@ -133303,6 +133326,9 @@ melee
 swing
 361
 3
+5
+361
+7
 5
 361
 5
@@ -133412,7 +133438,7 @@ hide armor
 -1
 0
 0
-41
+42
 2
 armor
 361
@@ -133451,6 +133477,9 @@ armor
 5
 361
 3
+5
+361
+7
 5
 361
 5
@@ -133546,6 +133575,633 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 5
 361
+5
+#1691
+
+
+0
+1691
+-1
+-1
+-1
+33
+-1
+-1
+0
+0
+204
+5
+1691
+5
+5
+1691
+4
+5
+1691
+5
+5
+361
+1
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+4
+5
+1691
+4
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+29
+1
+5
+361
+0
+5
+361
+0
+5
+361
+1
+0
+0
+1691
+5
+5
+1691
+5
+5
+29
+1
+5
+29
+1
+5
+29
+0
+5
+29
+1
+5
+361
+1
+5
+29
+1
+5
+1691
+4
+5
+361
+0
+5
+361
+0
+5
+1691
+4
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+361
+1
+5
+29
+0
+5
+361
+0
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+361
+1
+5
+29
+0
+5
+361
+0
+5
+361
+0
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+361
+1
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+29
+1
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+1691
+7
+5
+1691
+7
+5
+1691
+7
+5
+1691
+7
+5
+1691
+7
+5
+1691
+7
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+361
+1
+5
+361
+1
+5
+361
+1
+5
+361
+1
+5
+1691
+5
+5
+361
+1
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+362
+1
+5
+1691
+5
+5
+29
+1
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
+5
+5
+1691
 5
 #0:0
 "...This code should only be run as a server task...";
@@ -148982,7 +149638,6 @@ p:tell("      background colonist  (or type the name)");
 "Called when player connects.";
 p = player;
 if ((p.w_background == "none") || (p.w_background == ""))
-"First time  initialize stats and give starter items";
 this:_init_newplayer();
 p:tell("");
 p:tell("");
@@ -148998,16 +149653,16 @@ p:tell("  transmitting. The Central Administrative");
 p:tell("  Complex will buy any resources you can find.");
 p:tell("  Survive. Build. Sell. That is the loop.");
 p:tell("");
-p:tell("  You have a basic crafting tool, some fiber,");
-p:tell("  and ore from the crash. Type CRAFT to see");
-p:tell("  what you can make. Type STATUS for your");
-p:tell("  vitals. LOOK to see around you.");
+p:tell("  You salvage a crafting tool, a mineral");
+p:tell("  collector, some fiber, and ore from the");
+p:tell("  crash. WIELD the collector, then SCAN and");
+p:tell("  HARVEST. Type CRAFT for recipes. LOOK to");
+p:tell("  see around you.");
 p:tell("");
 p:tell("  First: choose who you were before the crash.");
 p:tell("");
 this:bg_menu();
 else
-"Returning player";
 p:tell(("Welcome back, " + p.name) + ".");
 p:tell(((((((("[" + p.w_background) + " | HP:") + tostr(p.w_hp)) + "/") + tostr(p.w_hp_max)) + " | Credits:") + tostr(p.w_credits)) + "]");
 endif
@@ -150266,6 +150921,14 @@ tool = create(#592);
 tool.name = "basic crafting tool";
 tool.description = "A battered multi-tool issued to all colonists. Craft items with: craft <recipe name>";
 move(tool, p);
+"Give starter harvesting tool";
+ht = create($equipment);
+ht.name = "ion-driven mineral collector";
+ht.description = "A starter-issue handheld scanner and extraction device. WIELD it, then SCAN and HARVEST.";
+ht.eq_slot = "special";
+ht.eq_type = "harvest";
+ht.h_resource = "";
+move(ht, p);
 "Give some starting resources";
 for i in [1..4]
 f = create($thing);
@@ -150283,6 +150946,119 @@ endfor
 if (p.location != #459)
 move(p, #459);
 endif
+.
+#6:336
+"Scan for resources in current area. Requires harvesting tool in special slot.";
+p = player;
+if ((!valid(p.w_special)) || (p.w_special.eq_type != "harvest"))
+p:tell("You need a harvesting tool wielded. (WIELD <tool>)");
+return;
+endif
+loc = p.location;
+nodes = {};
+for OBJ in (loc.contents)
+try
+if (OBJ.is_node)
+nodes = listappend(nodes, OBJ);
+endif
+except e (ANY)
+endtry
+endfor
+tool = p.w_special;
+p:tell(("=== SCAN: " + tool.name) + " ===");
+if (nodes == {})
+p:tell("  No harvestable resources detected in this area.");
+p:tell("  Move to a different tile and try again.");
+else
+for nd in (nodes)
+p:tell(((((("  [" + nd.name) + "] ") + tostr(nd.count)) + "/") + tostr(nd.max_count)) + " remaining");
+endfor
+endif
+if (tool.h_resource != "")
+p:tell("  Configured target: " + tool.h_resource);
+else
+p:tell("  Target: any (use CONFIGURE <type> to focus)");
+endif
+.
+#6:337
+"Configure harvesting tool to target a resource type. Usage: configure <ore|fiber|water|salvage|any>.";
+p = player;
+if ((!valid(p.w_special)) || (p.w_special.eq_type != "harvest"))
+p:tell("You need a harvesting tool wielded first. (WIELD <tool>)");
+return;
+endif
+tstr = ((typeof(dobjstr) == STR) && (dobjstr != "")) ? dobjstr | "";
+if ((tstr == "") && (args != {}))
+for w in (args)
+if (typeof(w) == STR)
+tstr = (tstr == "") ? w | ((tstr + " ") + w);
+endif
+endfor
+endif
+if ((((tstr == "") || (tstr == "any")) || (tstr == "all")) || (tstr == "reset"))
+p.w_special.h_resource = "";
+p:tell("Harvesting tool reset to collect any available resource.");
+return;
+endif
+valid_types = {"ore", "fiber", "water", "salvage"};
+if (!(tstr in valid_types))
+p:tell("Valid targets: ore, fiber, water, salvage, any");
+return;
+endif
+p.w_special.h_resource = tstr;
+p:tell("Harvesting tool configured to target: " + tstr);
+.
+#6:338
+"Harvest resources using your wielded harvesting tool.";
+p = player;
+"Check for harvesting tool";
+if ((!valid(p.w_special)) || (p.w_special.eq_type != "harvest"))
+p:tell("You need a harvesting tool wielded. (WIELD <tool>)");
+p:tell("You can still GATHER by hand (slower, 1 unit).");
+return;
+endif
+loc = p.location;
+tool = p.w_special;
+target_type = tool.h_resource;
+"Find matching node";
+node = 0;
+for OBJ in (loc.contents)
+try
+if (OBJ.is_node)
+if ((target_type == "") || index(OBJ.name, target_type))
+node = OBJ;
+break;
+endif
+endif
+except e (ANY)
+endtry
+endfor
+if (node == 0)
+if (target_type != "")
+p:tell(("No " + target_type) + " resource here. Try CONFIGURE ANY or move to another tile.");
+else
+p:tell("No harvestable resources here. Move to another tile.");
+endif
+return;
+endif
+if (node.count <= 0)
+p:tell(("The " + node.name) + " is depleted.");
+return;
+endif
+"Harvest  tool gets 2 units instead of 1";
+amt = 2;
+if (node.count < amt)
+amt = node.count;
+endif
+for i in [1..amt]
+item = create($thing);
+item.name = node.yield_name;
+item.description = node.yield_desc;
+move(item, p);
+endfor
+node.count = node.count - amt;
+p:tell(((((((((("You harvest " + tostr(amt)) + "x ") + node.yield_name) + " with your ") + tool.name) + ". [") + tostr(node.count)) + "/") + tostr(node.max_count)) + " remaining]");
+p.location:announce(((p.name + " harvests resources with a ") + tool.name) + ".", p);
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -204843,7 +205619,7 @@ endfor
 .
 0 clocks
 2 queued tasks
-0 6 1775728864 2100157685
+0 6 1775729524 1843019076
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -204916,7 +205692,7 @@ WAIF
 11
 task_id
 0
-2100157685
+1843019076
 this.beat_task = 0;
 this:_beat();
 .
