@@ -3,7 +3,7 @@
 
 ## Phase 1 — Core Survival Loop
 
-- [ ] **#19b** Fix biomes — add underwater (major), make volcanic/fungal 1-tile dangerous; wiki: underwater/desert/forest/jungle/mountain (major) + fungal/volcanic (dangerous) + pink desert (special)
+- [x] **#19b** Fix biomes — 5 major (Mountain/Forest/Desert/Jungle/Underwater) + 2 dangerous overlays (Fungal Zone/Volcanic, ~5% rare 1-tile); wiki-accurate descriptions, colors, map chars, resource mapping
 - [ ] **#14** Item quality — resources get quality 0-100+ on harvest; crafting skill affects output; refining converts bulk low-quality → fewer high-quality (wiki: quality is core to endgame)
 - [ ] **#12** Expanded crafting tools — wiki lists 8+ tools each with own recipes: structure crafting tool (colony buildings, sector center), equipment crafting tool (weapons, armor, gadgets), defensive crafting tool, micro-bot crafting tool, chemistry tool, food processor, maker block, cooking fire, engineering tool, electronics processor, component crafting tool; `craft <item> on <tool>` syntax; `list <tool>` shows recipes
 - [ ] **#41** Sector center recipe fix — wiki: needs structure crafting tool, not basic tool; recipe: 2x simple structure base + 10x inert beam + 8x inert siding + 4x structure power core; complexity 85.0; up to 5 per player

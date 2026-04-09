@@ -7311,7 +7311,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--49
+-51
 361
 5
 4
@@ -71568,7 +71568,7 @@ visit
 361
 5
 0
-1930155551
+933609782
 361
 5
 4
@@ -77015,6 +77015,18 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 14:26:08 2026 PDT Database checkpoint started.~1b[0m
+0
+1775769968
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 14:17:53 2026 PDT Database checkpoint started.~1b[0m
+0
+1775769473
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 14:05:52 2026 PDT Database checkpoint started.~1b[0m
 0
 1775768752
@@ -77300,18 +77312,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 10:25:17 2026 PDT Database checkpoint started.~1b[0m
 0
 1775669117
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 09:25:17 2026 PDT Database checkpoint started.~1b[0m
-0
-1775665517
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 08:25:17 2026 PDT Database checkpoint started.~1b[0m
-0
-1775661917
 361
 5
 5
@@ -94797,7 +94797,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-499920050
+1582065898
 361
 5
 4
@@ -97072,7 +97072,7 @@ hi
 4
 2
 0
-1775768042
+1775769281
 2
 localhost
 361
@@ -97082,7 +97082,7 @@ localhost
 361
 0
 0
-1775768214
+1775769481
 361
 1
 5
@@ -97751,7 +97751,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 54222
+port 7777 from localhost, port 47464
 361
 0
 5
@@ -97770,7 +97770,7 @@ port 7777 from localhost, port 54222
 361
 5
 0
-1775768596
+1775769937
 361
 1
 0
@@ -99618,7 +99618,7 @@ biome_descs
 biome_chars
 33
 4
-5
+7
 2
 Mountain
 2
@@ -99628,11 +99628,15 @@ Desert
 2
 Jungle
 2
+Underwater
+2
+Fungal Zone
+2
 Volcanic
 361
 5
 4
-5
+7
 2
 Jagged peaks and exposed rock faces rise around you. Mineral veins glint in the cliff walls. The air is thin and cold.
 2
@@ -99642,11 +99646,15 @@ Endless dunes of amber sand stretch to the horizon. Half-buried wreckage and anc
 2
 Dense tropical vegetation chokes every surface. Moisture drips from broad alien leaves. Hidden water sources trickle nearby.
 2
-The ground radiates heat. Sulphur vents hiss between cracked basalt slabs. Energy readings spike on your scanner.
+Shallow alien waters lap at your suit. Bioluminescent organisms pulse beneath the surface. The ground is soft silt.
+2
+WARNING: Fungal zone. Towering alien mushrooms release clouds of spores. The air is thick and acrid. Diseases likely.
+2
+WARNING: Volcanic zone. The ground radiates searing heat. Sulphur vents hiss. Energy readings spike. Move quickly.
 361
 5
 4
-5
+7
 2
  ^ 
 2
@@ -99657,6 +99665,10 @@ The ground radiates heat. Sulphur vents hiss between cracked basalt slabs. Energ
  % 
 2
  ~ 
+2
+ * 
+2
+ ! 
 361
 5
 5
@@ -152553,64 +152565,40 @@ dest = $ods:spawn_room(loc.planet, new_x, new_y);
 move(p, dest);
 .
 #6:240
-"Wayfar dice-pool status.";
-esc = chr(27);
-bold = esc + "[1m";
-reset = esc + "[0m";
-red = esc + "[31m";
-grn = esc + "[32m";
-yel = esc + "[33m";
-cyn = esc + "[36m";
-dim = esc + "[90m";
-hp = player.w_hp;
-hpmax = player.w_hp_max;
-stam = player.w_stam;
-stammax = player.w_stam_max;
-clar = player.w_clar;
-clarmax = player.w_clar_max;
-agg = player.w_agg;
-aggmax = player.w_agg_max;
-"HP bar (10 chars)";
-pct = (hpmax > 0) ? (hp * 10) / hpmax | 0;
-hpbar = "";
-filled = 0;
-while (filled < 10)
-hpbar = hpbar + ((filled < pct) ? "#" | "-");
-filled = filled + 1;
-endwhile
-hpcol = (pct >= 7) ? grn | ((pct >= 4) ? yel | red);
-"Dice bars";
-stambar = "";
-idx = 1;
-while (idx <= stammax)
-stambar = stambar + ((idx <= stam) ? "|" | ((dim + ".") + reset));
-idx = idx + 1;
-endwhile
-clarbar = "";
-idx = 1;
-while (idx <= clarmax)
-clarbar = clarbar + ((idx <= clar) ? "|" | ((dim + ".") + reset));
-idx = idx + 1;
-endwhile
-aggbar = "";
-idx = 1;
-while (idx <= aggmax)
-aggbar = aggbar + ((idx <= agg) ? "|" | ((dim + ".") + reset));
-idx = idx + 1;
-endwhile
-player:tell((bold + "=== STATUS ===") + reset);
-player:tell((((((((("  HP     : " + hpcol) + "[") + hpbar) + "]") + reset) + " ") + tostr(hp)) + "/") + tostr(hpmax));
-player:tell((((((("  Stamina: [" + grn) + stambar) + reset) + "] ") + tostr(stam)) + "/") + tostr(stammax));
-player:tell((((((("  Clarity: [" + cyn) + clarbar) + reset) + "] ") + tostr(clar)) + "/") + tostr(clarmax));
-player:tell((((((("  Aggress: [" + yel) + aggbar) + reset) + "] ") + tostr(agg)) + "/") + tostr(aggmax));
-player:tell((((("  Credits: " + tostr(player.w_credits)) + "  |  SP: ") + tostr(player.w_sp)) + "/") + tostr(player.w_sp_cap));
-player:tell("  Class  : " + player.w_background);
-if (player.w_nourished > time())
-player:tell((("  Status : " + grn) + "Nourished") + reset);
+"Show status.";
+loc = player.location;
+if (parent(loc) != $wroom)
+player:tell("=== STATUS ===");
+player:tell("  Location: " + loc.name);
+else
+x = loc.x;
+y = loc.y;
+bnames = {"Mountain", "Forest", "Desert", "Jungle", "Underwater", "Fungal Zone", "Volcanic"};
+b = loc.biome;
+if (b < 0)
+b = 0;
+elseif (b > 6)
+b = 6;
 endif
-tgt = player.w_combat_target;
-if (valid(tgt))
-player:tell("  Target : " + tgt.name);
+player:tell("=== STATUS ===");
+player:tell(((("  Coords : (" + tostr(x)) + ", ") + tostr(y)) + ")");
+player:tell("  Biome  : " + bnames[b + 1]);
+endif
+p = player;
+player:tell((("  HP     : " + tostr(p.w_hp)) + "/") + tostr(p.w_hp_max));
+player:tell((((((((((("  STM    : " + tostr(p.w_stam)) + "/") + tostr(p.w_stam_max)) + "  CLR: ") + tostr(p.w_clarity)) + "/") + tostr(p.w_clarity_max)) + "  AGG: ") + tostr(p.w_aggression)) + "/") + tostr(p.w_aggression_max));
+player:tell(("  Hunger : " + tostr(p.hunger)) + "/100");
+player:tell((((("  Credits: " + tostr(p.w_credits)) + "  SP: ") + tostr(p.w_sp)) + "/") + tostr(p.w_sp_cap));
+player:tell("  Class  : " + p.w_background);
+"Show equipment";
+if (valid(p.w_weapon))
+player:tell("  Weapon : " + p.w_weapon.name);
+endif
+if (valid(p.w_armor))
+player:tell("  Armor  : " + p.w_armor.name);
+endif
+if (valid(p.w_special))
+player:tell("  Tool   : " + p.w_special.name);
 endif
 .
 #6:241
@@ -208368,8 +208356,8 @@ planet = this.planet;
 esc = chr(27);
 reset = esc + "[0m";
 bold = esc + "[1m";
-bcolor = {esc + "[37m", esc + "[32m", esc + "[33m", esc + "[36m", esc + "[31m"};
-bchar = {" ^ ", " T ", " . ", " % ", " ~ "};
+bcolor = {esc + "[37m", esc + "[32m", esc + "[33m", esc + "[36m", esc + "[34m", esc + "[35m", esc + "[31m"};
+bchar = {" ^ ", " T ", " . ", " % ", " ~ ", " * ", " ! "};
 pcell = (((" " + esc) + "[36m@") + reset) + " ";
 "draw 7-wide x 5-tall map (dy 2..-2, dx -3..3)";
 dy = 2;
@@ -208593,11 +208581,19 @@ r = create($wroom);
 r.x = x;
 r.y = y;
 r.planet = planet;
+"5 major biomes from perlin (0-4), then rare dangerous overlay (5-6)";
 b = perlin_2d(x, y, 1.0, 1.5, 5, 1);
 if (b < 0)
 b = 0;
 elseif (b > 4)
 b = 4;
+endif
+"~5% chance of dangerous biome overlay (fungal=5, volcanic=6)";
+danger_roll = perlin_2d((x * 3) + 97, (y * 3) + 53, 3.0, 2.5, 7, 1);
+if (danger_roll == 9)
+b = 5;
+elseif (danger_roll == 0)
+b = 6;
 endif
 r.biome = b;
 bnames = planet.biome_names;
@@ -208621,12 +208617,14 @@ roll = perlin_2d((x * 7) + 13, (y * 5) + 7, 2.0, 2.0, 10, 1);
 if (roll < 7)
 return;
 endif
-"Select node prototype by biome";
-"  0=Mountain -> ore (mineral veins)";
-"  1=Forest   -> fiber (alien plant matter)";
-"  2=Desert   -> salvage (buried ruins/wreckage)";
-"  3=Jungle   -> water (hidden springs) + fiber";
-"  4=Volcanic -> ore (geothermal mineral deposits)";
+"Select node prototype by biome (wiki-accurate)";
+"  0=Mountain   -> ore (mineral veins)";
+"  1=Forest     -> fiber (organic matter)";
+"  2=Desert     -> salvage (buried ruins)";
+"  3=Jungle     -> water + fiber";
+"  4=Underwater -> water (ocean resources)";
+"  5=Fungal     -> fiber (rare organics)";
+"  6=Volcanic   -> ore (energy/mineral deposits)";
 proto = 0;
 if (b == 0)
 proto = $ore_node;
@@ -208641,6 +208639,10 @@ else
 proto = $water_node;
 endif
 elseif (b == 4)
+proto = $water_node;
+elseif (b == 5)
+proto = $fiber_node;
+elseif (b == 6)
 proto = $ore_node;
 endif
 if (!valid(proto))
@@ -208665,15 +208667,15 @@ endif
 endfor
 .
 #459:0
-"Override look for the crash site  shows special description.";
+"Override look for the crash site.";
 rx = this.x;
 ry = this.y;
 planet = this.planet;
 esc = chr(27);
 reset = esc + "[0m";
 bold = esc + "[1m";
-bcolor = {esc + "[37m", esc + "[32m", esc + "[33m", esc + "[36m", esc + "[31m"};
-bchar = {" ^ ", " T ", " . ", " % ", " ~ "};
+bcolor = {esc + "[37m", esc + "[32m", esc + "[33m", esc + "[36m", esc + "[34m", esc + "[35m", esc + "[31m"};
+bchar = {" ^ ", " T ", " . ", " % ", " ~ ", " * ", " ! "};
 pcell = (((" " + esc) + "[36m@") + reset) + " ";
 dy = 2;
 while (dy >= -2)
@@ -208689,6 +208691,13 @@ b = 0;
 elseif (b > 4)
 b = 4;
 endif
+"Dangerous biome overlay check";
+dr = perlin_2d(((rx + dx) * 3) + 97, ((ry + dy) * 3) + 53, 3.0, 2.5, 7, 1);
+if (dr == 9)
+b = 5;
+elseif (dr == 0)
+b = 6;
+endif
 row = ((row + bcolor[b + 1]) + bchar[b + 1]) + reset;
 endif
 dx = dx + 1;
@@ -208701,7 +208710,7 @@ player:tell(((bold + "Impact Site Zero") + reset) + "  (0, 0)  [Kepler-7]");
 player:tell("Your escape pod hit at terminal velocity, carving a blackened crater in the mountainside.");
 player:tell("The hull is twisted open like a tin can. The emergency beacon is transmitting.");
 player:tell("You have atmosphere  barely. Whatever you need, you will have to build it.");
-"List visible contents";
+"List contents";
 items = {};
 for OBJ in (this.contents)
 if (OBJ != player)
@@ -208719,7 +208728,7 @@ endwhile
 player:tell("You see here: " + listing);
 endif
 player:tell("");
-player:tell("Exits: n  s  e  w");
+player:tell("Exits: n  s  e  w  ne  se  sw  nw");
 .
 #459:1
 "Enter the colony hub from the crash site.";
@@ -209737,7 +209746,7 @@ player:tell("  Exits: west");
 .
 0 clocks
 2 queued tasks
-0 6 1775768772 499920050
+0 6 1775769973 1582065898
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -209810,11 +209819,11 @@ WAIF
 11
 task_id
 0
-499920050
+1582065898
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775768943 1930155551
+0 6 1775770743 933609782
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -209887,7 +209896,7 @@ WAIF
 11
 taskid
 0
-1930155551
+933609782
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
