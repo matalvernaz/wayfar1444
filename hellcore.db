@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
 1705
-3514
+3517
 0
 4
 65
@@ -7311,7 +7311,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--44
+-47
 361
 5
 4
@@ -9277,7 +9277,7 @@ generic player
 100
 33
 -1
-342
+345
 confunc
 361
 173
@@ -10643,6 +10643,18 @@ _mkrooms
 13
 -1
 dispatch
+361
+13
+-1
+crewhire
+361
+29
+-1
+crewfire
+361
+29
+-1
+survey
 361
 13
 -1
@@ -71556,7 +71568,7 @@ visit
 361
 5
 0
-1006113953
+2088512710
 361
 5
 4
@@ -77003,6 +77015,18 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:49:10 2026 PDT Database checkpoint started.~1b[0m
+0
+1775767750
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:34:44 2026 PDT Database checkpoint started.~1b[0m
+0
+1775766884
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:23:57 2026 PDT Database checkpoint started.~1b[0m
 0
 1775766237
@@ -77288,18 +77312,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 03:15:19 2026 PDT Database checkpoint started.~1b[0m
 0
 1775643319
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 02:15:19 2026 PDT Database checkpoint started.~1b[0m
-0
-1775639719
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 01:15:19 2026 PDT Database checkpoint started.~1b[0m
-0
-1775636119
 361
 5
 5
@@ -94785,7 +94797,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1570701020
+1349560282
 361
 5
 4
@@ -97060,7 +97072,7 @@ hi
 4
 2
 0
-1775765856
+1775767059
 2
 localhost
 361
@@ -97070,7 +97082,7 @@ localhost
 361
 0
 0
-1775765873
+1775767082
 361
 1
 5
@@ -97739,7 +97751,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 40866
+port 7777 from localhost, port 41848
 361
 0
 5
@@ -97758,7 +97770,7 @@ port 7777 from localhost, port 40866
 361
 5
 0
-1775766007
+1775767585
 361
 1
 0
@@ -98899,7 +98911,7 @@ biome
 361
 5
 #453
-ore deposit
+mineral deposit
 
 0
 361
@@ -98931,7 +98943,7 @@ max_count
 is_node
 36
 2
-ore sample
+inert metal
 361
 5
 4
@@ -98945,7 +98957,7 @@ mineral
 361
 5
 2
-A rough chunk of alien mineral ore. Dark and heavy, threaded with an iridescent blue compound. Raw material for fabrication.
+Raw alien ore, smelted into a rough ingot. Foundation of all construction.
 361
 5
 0
@@ -99068,7 +99080,7 @@ A seam of metallic ore running through the rock face. Crystalline flecks catch t
 361
 5
 #454
-fiber growth
+organic growth
 
 0
 361
@@ -99104,7 +99116,7 @@ max_count
 is_node
 36
 2
-alien plant fiber
+native fiber
 361
 5
 4
@@ -99118,7 +99130,7 @@ stalk
 361
 5
 2
-A bundle of tough fibrous stalks. Pale, waxy, surprisingly strong. Smells faintly of ammonia.
+A tough, fibrous stalk harvested from alien vegetation.
 361
 5
 0
@@ -99241,7 +99253,7 @@ Dense clumps of tough alien vegetation anchor themselves to cracks in the rock. 
 361
 5
 #455
-water seep
+water source
 
 0
 361
@@ -99277,7 +99289,7 @@ max_count
 is_node
 36
 2
-raw water
+unpurified water
 361
 5
 4
@@ -99291,7 +99303,7 @@ fluid
 361
 5
 2
-Collected raw water. Needs filtering before it is safe to drink.
+A sealed flask of unprocessed alien water. Drinkable in a pinch.
 361
 5
 0
@@ -99466,7 +99478,7 @@ scrap
 361
 5
 2
-Corroded machine components recovered from debris. Potentially functional if cleaned up.
+Twisted metal and polymer pulled from alien ruins.
 361
 5
 0
@@ -152490,67 +152502,55 @@ endif
 .
 #6:234
 "Move ne.";
-loc = player.location;
-if (!("x" in properties(loc)))
-player:tell("Can't go ne from here.");
+p = player;
+loc = p.location;
+if (parent(loc) != $wroom)
+p:tell("You can only move in the wilderness.");
 return;
 endif
-nx = loc.x + 1;
-ny = loc.y + 1;
-newroom = $ods:spawn_room(loc.planet, nx, ny);
-if (!valid(newroom))
-player:tell("Can't go ne.");
-return;
-endif
-move(player, newroom);
+new_x = loc.x + 1;
+new_y = loc.y + 1;
+dest = $ods:spawn_room(loc.planet, new_x, new_y);
+move(p, dest);
 .
 #6:235
 "Move se.";
-loc = player.location;
-if (!("x" in properties(loc)))
-player:tell("Can't go se from here.");
+p = player;
+loc = p.location;
+if (parent(loc) != $wroom)
+p:tell("You can only move in the wilderness.");
 return;
 endif
-nx = loc.x + 1;
-ny = loc.y + -1;
-newroom = $ods:spawn_room(loc.planet, nx, ny);
-if (!valid(newroom))
-player:tell("Can't go se.");
-return;
-endif
-move(player, newroom);
+new_x = loc.x + 1;
+new_y = loc.y + -1;
+dest = $ods:spawn_room(loc.planet, new_x, new_y);
+move(p, dest);
 .
 #6:236
 "Move sw.";
-loc = player.location;
-if (!("x" in properties(loc)))
-player:tell("Can't go sw from here.");
+p = player;
+loc = p.location;
+if (parent(loc) != $wroom)
+p:tell("You can only move in the wilderness.");
 return;
 endif
-nx = loc.x + -1;
-ny = loc.y + -1;
-newroom = $ods:spawn_room(loc.planet, nx, ny);
-if (!valid(newroom))
-player:tell("Can't go sw.");
-return;
-endif
-move(player, newroom);
+new_x = loc.x + -1;
+new_y = loc.y + -1;
+dest = $ods:spawn_room(loc.planet, new_x, new_y);
+move(p, dest);
 .
 #6:237
 "Move nw.";
-loc = player.location;
-if (!("x" in properties(loc)))
-player:tell("Can't go nw from here.");
+p = player;
+loc = p.location;
+if (parent(loc) != $wroom)
+p:tell("You can only move in the wilderness.");
 return;
 endif
-nx = loc.x + -1;
-ny = loc.y + 1;
-newroom = $ods:spawn_room(loc.planet, nx, ny);
-if (!valid(newroom))
-player:tell("Can't go nw.");
-return;
-endif
-move(player, newroom);
+new_x = loc.x + -1;
+new_y = loc.y + 1;
+dest = $ods:spawn_room(loc.planet, new_x, new_y);
+move(p, dest);
 .
 #6:240
 "Wayfar dice-pool status.";
@@ -153438,8 +153438,7 @@ p:tell((((("  [" + b.b_type) + "]  HP: ") + hpstr) + "  Owner: ") + owner);
 endfor
 .
 #6:273
-"Sell items to the Central Administrative Complex for credits.";
-"Usage: sell <item name> | sell all";
+"Sell items for credits. Quality affects price. In factorium: sells room items too.";
 p = player;
 query = (typeof(dobjstr) == STR) ? dobjstr | "";
 if ((query == "") && (args != {}))
@@ -153451,26 +153450,27 @@ endfor
 endif
 if (query == "")
 p:tell("Sell what? (sell <item> or sell all)");
-p:tell("Type 'prices' to see CAC buy rates.");
 return;
 endif
-"Build sell list from inventory";
 sell_list = {};
 if ((query == "all") || (query == "resources"))
 for itm in (p.contents)
+if (!is_a(itm, $equipment))
 sell_list = listappend(sell_list, itm);
+endif
 endfor
-"If in own factorium, also sell room items";
+"In own factorium, also sell room items";
+try
 loc = p.location;
-if ("labor_cd" in properties(loc))
-if (("sc_owner" in properties(loc)) && (loc.sc_owner == p))
+if ((loc.labor_cd != E_PROPNF) && (loc.sc_owner == p))
 for itm in (loc.contents)
-if ((itm != p) && (!is_a(itm, $npc_worker)))
+if (((itm != p) && (!is_a(itm, $npc_worker))) && (!is_a(itm, $equipment)))
 sell_list = listappend(sell_list, itm);
 endif
 endfor
 endif
-endif
+except e (ANY)
+endtry
 else
 for itm in (p.contents)
 nm = "";
@@ -153483,33 +153483,11 @@ if (index(nm, query))
 sell_list = listappend(sell_list, itm);
 endif
 endfor
-"If in own factorium, also search room";
-loc = p.location;
-if ("labor_cd" in properties(loc))
-if (("sc_owner" in properties(loc)) && (loc.sc_owner == p))
-for itm in (loc.contents)
-if ((itm != p) && (!is_a(itm, $npc_worker)))
-nm = "";
-try
-nm = tostr(itm.name);
-except e (ANY)
-nm = "";
-endtry
-if (index(nm, query))
-sell_list = listappend(sell_list, itm);
-endif
-endif
-endfor
-endif
-endif
 endif
 if (sell_list == {})
-p:tell(("You're not carrying '" + query) + "'.");
+p:tell(("Nothing to sell matching '" + query) + "'.");
 return;
 endif
-is_scav = p.w_background == "scavenger";
-has_com1 = "commerce_1" in p.w_learned;
-has_com2 = "commerce_2" in p.w_learned;
 total = 0;
 sold = 0;
 for itm in (sell_list)
@@ -153520,35 +153498,42 @@ except e (ANY)
 nm = "";
 endtry
 price = 0;
-if (index(nm, "ore") || index(nm, "mineral"))
-price = has_com2 ? 10 | 5;
-elseif (index(nm, "fiber") || index(nm, "plant"))
+"Wiki-accurate resource prices";
+if ((index(nm, "inert metal") || index(nm, "ore")) || index(nm, "mineral"))
+price = 5;
+elseif (index(nm, "solid-phase"))
+price = 10;
+elseif (((index(nm, "native fiber") || index(nm, "fiber")) || index(nm, "plant")) || index(nm, "lumber"))
 price = 3;
-elseif (index(nm, "water sample") || index(nm, "raw water"))
+elseif (index(nm, "water"))
 price = 2;
-elseif ((index(nm, "salvage") || index(nm, "scrap")) || index(nm, "wreckage"))
-base = is_scav ? 6 | 4;
-price = has_com2 ? base * 2 | base;
-elseif (index(nm, "inert metal"))
-price = 15;
-elseif (index(nm, "crude wire"))
+elseif ((index(nm, "salvage") || index(nm, "scrap")) || index(nm, "component"))
+price = 4;
+elseif (index(nm, "crude wire") || index(nm, "wiring"))
 price = 12;
-elseif (index(nm, "ration bar") || index(nm, "ration"))
+elseif (index(nm, "ration") || index(nm, "soup"))
 price = 8;
-elseif (index(nm, "canteen"))
+elseif (index(nm, "canteen") || index(nm, "water canteen"))
 price = 6;
+elseif (index(nm, "kretherson") || index(nm, "energy"))
+price = 7;
 endif
 if (price > 0)
-if (has_com1)
-price = price + 1;
+"Quality bonus";
+try
+q = itm.q_quality;
+if (q > 0)
+price = price + ((price * q) / 100);
 endif
+except e (ANY)
+endtry
 total = total + price;
 sold = sold + 1;
 recycle(itm);
 endif
 endfor
 if (sold == 0)
-p:tell("The CAC doesn't buy that. (Type 'prices' to see what they buy.)");
+p:tell("The CAC doesn't buy that.");
 return;
 endif
 p.w_credits = p.w_credits + total;
@@ -153621,28 +153606,31 @@ endif
 endfor
 .
 #6:283
-"Display background selection menu.";
+"Display background selection menu  wiki-accurate.";
 p = player;
 p:tell("");
-p:tell("            CHOOSE YOUR BACKGROUND               ");
+p:tell("              CHOOSE YOUR BACKGROUND                 ");
 p:tell("");
-p:tell("  1. Colonist  +20 HP  +1 STM die               ");
-p:tell("     Balanced survivor. Jack of all trades.      ");
-p:tell("                                                 ");
-p:tell("  2. Hunter    +10 HP  +2 STM dice               ");
-p:tell("     Endurance specialist. Born to fight.        ");
-p:tell("                                                 ");
-p:tell("  3. Engineer  +10 HP  +2 CLR dice               ");
-p:tell("     Craftsman. Precision and technology.        ");
-p:tell("                                                 ");
-p:tell("  4. Medic     +30 HP  +1 CLR die                ");
-p:tell("     Field surgeon. Hard to kill.                ");
-p:tell("                                                 ");
-p:tell("  5. Scavenger +10 HP  +1 AGG die  +50% salvage ");
-p:tell("     Opportunist. Turns wreckage into wealth.    ");
+p:tell("  1. Ranger      Kill 100 wildlife            [1 RP] ");
+p:tell("     Innate: Keen Eye (+2 success, +5 clarity max)   ");
+p:tell("                                                     ");
+p:tell("  2. Fabricator  Craft 25 items quality 70+   [1 RP] ");
+p:tell("     Fast SP gain from crafting.                     ");
+p:tell("                                                     ");
+p:tell("  3. Retiree     Control 10 buildings          [1 RP] ");
+p:tell("     Easiest background. Build your empire.          ");
+p:tell("                                                     ");
+p:tell("  4. Student     Reroll from starship in space [1 RP] ");
+p:tell("     Requires building and flying a starship.        ");
+p:tell("                                                     ");
+p:tell("  5. Lab Tech    Research 25 artifacts         [2 RP] ");
+p:tell("     Explore and discover, research at Laboratory.   ");
+p:tell("                                                     ");
+p:tell("  6. Botanist    Discover 15 specimens         [1 RP] ");
+p:tell("     Starting skills: Heavy Tan, Sightseer,         ");
+p:tell("     Developing Observation. Recommended first run.  ");
 p:tell("");
-p:tell("Type: background <number>  to choose.");
-p:tell("      background colonist  (or type the name)");
+p:tell("Type: background <number or name>");
 .
 #6:284
 "Called on login.";
@@ -153670,7 +153658,7 @@ p:tell(((((((("[" + p.w_background) + " | HP:") + tostr(p.w_hp)) + "/") + tostr(
 endif
 .
 #6:285
-"Choose background at terminal.";
+"Choose background  wiki-accurate.";
 p = player;
 arg = (typeof(dobjstr) == STR) ? dobjstr | "";
 if ((arg == "") && (args != {}))
@@ -153692,40 +153680,44 @@ if ((p.w_background != "none") && (p.w_background != ""))
 p:tell(("You are already a " + p.w_background) + ".");
 return;
 endif
+"Map arg to background";
 bg = "";
-if ((arg == "1") || index(arg, "colonist"))
-bg = "colonist";
-elseif ((arg == "2") || index(arg, "hunter"))
-bg = "hunter";
-elseif ((arg == "3") || index(arg, "engineer"))
-bg = "engineer";
-elseif ((arg == "4") || index(arg, "medic"))
-bg = "medic";
-elseif ((arg == "5") || index(arg, "scavenger"))
-bg = "scavenger";
+if ((arg == "1") || index(arg, "ranger"))
+bg = "ranger";
+elseif ((arg == "2") || index(arg, "fabricator"))
+bg = "fabricator";
+elseif ((arg == "3") || index(arg, "retiree"))
+bg = "retiree";
+elseif ((arg == "4") || index(arg, "student"))
+bg = "student";
+elseif (((arg == "5") || index(arg, "lab")) || index(arg, "tech"))
+bg = "lab tech";
+elseif ((arg == "6") || index(arg, "botanist"))
+bg = "botanist";
 endif
 if (bg == "")
-p:tell("Unknown. Try: background <1-5 or name>");
+p:tell("Unknown. Try: background <1-6 or name>");
 this:bg_menu();
 return;
 endif
-if (bg == "colonist")
-p.w_hp_max = p.w_hp_max + 20;
-p.w_stam_max = p.w_stam_max + 1;
-elseif (bg == "hunter")
+"Apply background-specific starting bonuses";
+if (bg == "ranger")
+"Innate: Keen Eye  +2 success, +5 clarity max";
+p.w_clarity_max = p.w_clarity_max + 5;
+p.w_clarity = p.w_clarity_max;
+elseif (bg == "fabricator")
+"Crafting focus  no innate combat bonus";
+elseif (bg == "retiree")
+"Building focus  no innate combat bonus";
+elseif (bg == "student")
+"Starship focus  no innate combat bonus";
+elseif (bg == "lab tech")
+"Research focus  no innate combat bonus";
+elseif (bg == "botanist")
+"Starting skills: Heavy Tan (+10 HP), Sightseer, Developing Observation";
 p.w_hp_max = p.w_hp_max + 10;
-p.w_stam_max = p.w_stam_max + 2;
-elseif (bg == "engineer")
-p.w_hp_max = p.w_hp_max + 10;
-p.w_clarity_max = p.w_clarity_max + 2;
-elseif (bg == "medic")
-p.w_hp_max = p.w_hp_max + 30;
-p.w_clarity_max = p.w_clarity_max + 1;
-elseif (bg == "scavenger")
-p.w_hp_max = p.w_hp_max + 10;
-p.w_aggression_max = p.w_aggression_max + 1;
-endif
 p.w_hp = p.w_hp_max;
+endif
 p.w_stam = p.w_stam_max;
 p.w_clarity = p.w_clarity_max;
 p.w_aggression = p.w_aggression_max;
@@ -154847,9 +154839,8 @@ endif
 endif
 .
 #6:335
-"Initialize new player stats and items. Does NOT move them.";
+"Initialize new player stats and items.";
 p = player;
-"Check if already initialized";
 has_tool = 0;
 for itm in (p.contents)
 if (is_a(itm, #592))
@@ -154884,26 +154875,28 @@ p.w_armor = $nothing;
 p.w_gadget = $nothing;
 p.w_special = $nothing;
 p.w_target = $nothing;
-"Starter items";
+"Starter items  wiki-accurate";
 tool = create(#592);
 tool.name = "basic crafting tool";
-tool.description = "A battered multi-tool. Type CRAFT to see recipes.";
+tool.description = "A battered multi-tool issued to all colonists. Type CRAFT to see recipes.";
 move(tool, p);
+"Ion-driven mineral collector (starter harvesting tool per wiki)";
 ht = create($equipment);
 ht.name = "ion-driven mineral collector";
-ht.description = "Starter mineral extractor. WIELD it, then SCAN and HARVEST.";
+ht.description = "Starter-issue handheld scanner and extraction device. WIELD it, then SURVEY and HARVEST.";
 ht.eq_slot = "special";
 ht.eq_type = "harvest";
 ht.h_resource = "";
 move(ht, p);
+"Starting resources";
 for i in [1..4]
 f = create($thing);
-f.name = "alien plant fiber";
+f.name = "native fiber";
 move(f, p);
 endfor
 for i in [1..2]
 o = create($thing);
-o.name = "ore sample";
+o.name = "inert metal";
 move(o, p);
 endfor
 .
@@ -155095,6 +155088,18 @@ p:tell("  WIELD your mineral collector, then SCAN and HARVEST.");
 p:tell("  Type CRAFT for recipes. LOOK for the map.");
 p:tell("  Move: n/s/e/w. SELL ALL to earn credits.");
 p:tell("");
+.
+#6:342
+"Alias for hire  wiki-accurate command name.";
+return this:hire(@args);
+.
+#6:343
+"Alias for fire  wiki-accurate command name.";
+return this:fire(@args);
+.
+#6:344
+"Alias for scan  wiki-accurate command name.";
+return this:scan(@args);
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -209671,84 +209676,7 @@ player:tell("  Exits: west");
 .
 0 clocks
 2 queued tasks
-0 6 1775766243 1006113953
-1
-103
-103 -7 -8 362 -9 361 103 -10 8
-No
-More
-Parse
-Infos
-_meat_reaper
-_meat_reaper
-21 variables
-NUM
-0
-0
-OBJ
-0
-1
-STR
-0
-2
-LIST
-0
-4
-ERR
-0
-3
-player
-1
-362
-this
-1
-103
-caller
-1
-103
-verb
-2
-_meat_reaper
-args
-4
-0
-argstr
-2
-
-dobj
-1
--1
-dobjstr
-2
-
-prepstr
-2
-
-iobj
-1
--1
-iobjstr
-2
-
-INT
-0
-0
-FLOAT
-0
-9
-HASH
-0
-10
-WAIF
-0
-11
-taskid
-0
-1006113953
-this.meat_reaper_task = 0;
-this:_meat_reaper();
-.
-0 6 1775766252 1570701020
+0 6 1775767752 1349560282
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -209821,9 +209749,86 @@ WAIF
 11
 task_id
 0
-1570701020
+1349560282
 this.beat_task = 0;
 this:_beat();
+.
+0 6 1775768043 2088512710
+1
+103
+103 -7 -8 362 -9 361 103 -10 8
+No
+More
+Parse
+Infos
+_meat_reaper
+_meat_reaper
+21 variables
+NUM
+0
+0
+OBJ
+0
+1
+STR
+0
+2
+LIST
+0
+4
+ERR
+0
+3
+player
+1
+362
+this
+1
+103
+caller
+1
+103
+verb
+2
+_meat_reaper
+args
+4
+0
+argstr
+2
+
+dobj
+1
+-1
+dobjstr
+2
+
+prepstr
+2
+
+iobj
+1
+-1
+iobjstr
+2
+
+INT
+0
+0
+FLOAT
+0
+9
+HASH
+0
+10
+WAIF
+0
+11
+taskid
+0
+2088512710
+this.meat_reaper_task = 0;
+this:_meat_reaper();
 .
 0 suspended tasks
 1 active connections with listeners
