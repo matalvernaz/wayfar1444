@@ -7311,7 +7311,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--48
+-49
 361
 5
 4
@@ -77015,6 +77015,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 14:05:52 2026 PDT Database checkpoint started.~1b[0m
+0
+1775768752
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:56:46 2026 PDT Database checkpoint started.~1b[0m
 0
 1775768206
@@ -77306,12 +77312,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 08:25:17 2026 PDT Database checkpoint started.~1b[0m
 0
 1775661917
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 04:15:19 2026 PDT Database checkpoint started.~1b[0m
-0
-1775646919
 361
 5
 5
@@ -94797,7 +94797,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1608495619
+499920050
 361
 5
 4
@@ -97072,7 +97072,7 @@ hi
 4
 2
 0
-1775767585
+1775768042
 2
 localhost
 361
@@ -97082,7 +97082,7 @@ localhost
 361
 0
 0
-1775767758
+1775768214
 361
 1
 5
@@ -97751,7 +97751,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 45012
+port 7777 from localhost, port 54222
 361
 0
 5
@@ -97770,7 +97770,7 @@ port 7777 from localhost, port 45012
 361
 5
 0
-1775768042
+1775768596
 361
 1
 0
@@ -152852,8 +152852,24 @@ player.w_sp = old - 1;
 player:tell("ok: " + tostr(player.w_sp));
 .
 #6:257
-"Craft items using a basic crafting tool from inventory.";
+"Craft items. Usage: craft <recipe> on <tool>. Partial names work.";
 p = player;
+"Parse args  strip 'on <tool>' suffix";
+tgt = "";
+for w in (args)
+if (typeof(w) == STR)
+tgt = (tgt == "") ? w | ((tgt + " ") + w);
+endif
+endfor
+if ((typeof(dobjstr) == STR) && (dobjstr != ""))
+tgt = dobjstr;
+endif
+"Strip 'on <toolname>' from end";
+on_idx = rindex(tgt, " on ");
+if (on_idx > 0)
+tgt = tgt[1..on_idx - 1];
+endif
+"Find crafting tool in inventory";
 tool = 0;
 for itm in (player.contents)
 if (is_a(itm, #592))
@@ -152862,164 +152878,33 @@ break;
 endif
 endfor
 if (tool == 0)
-player:tell("You need a basic crafting tool. (You don't have one.)");
+player:tell("You need a crafting tool.");
 return;
-endif
-tgt = "";
-for w in (args)
-tgt = (tgt == "") ? w | ((tgt + " ") + w);
-endfor
-if ((typeof(dobjstr) == STR) && (dobjstr != ""))
-tgt = dobjstr;
 endif
 if (((tgt == "") || (tgt == "list")) || (tgt == "help"))
 p:tell("=== BASIC CRAFTING TOOL  RECIPES ===");
-p:tell("  ration bar            2x fiber");
-p:tell("  water canteen         1x fiber + 1x raw water");
-p:tell("  inert metal           2x ore/mineral");
-p:tell("  crude wire            1x ore + 1x salvage");
-p:tell("  pre-fab shelter kit   1x inert metal + 2x fiber");
-p:tell("  sector center kit     2x inert metal + 2x crude wire");
-p:tell("  --- EQUIPMENT ---");
-p:tell("  colonial machete      1x inert metal + 1x fiber");
-p:tell("  colonial rifle        2x inert metal + 1x crude wire");
-p:tell("  hide armor            3x fiber");
-p:tell("Usage: craft <recipe name>");
+p:tell("  Weapons:");
+p:tell("    colonial machete      1x inert metal + 1x native fiber");
+p:tell("    colonial rifle        2x inert metal + 1x crude wire");
+p:tell("    wilder javelin        2x native fiber + 1x inert metal");
+p:tell("  Armour:");
+p:tell("    hide armor            3x native fiber");
+p:tell("  Food:");
+p:tell("    insta-meat soup       2x native fiber + 1x unpurified water");
+p:tell("  Components:");
+p:tell("    inert metal           2x ore (from mineral deposit)");
+p:tell("    crude wire            1x inert metal + 1x salvaged components");
+p:tell("    weak power emitter    2x inert metal + 1x any energy");
+p:tell("    inert casing          1x inert metal + 1x native fiber");
+p:tell("  Medical:");
+p:tell("    fibrous bandage       2x native fiber");
+p:tell("  Containers:");
+p:tell("    fiber backpack        3x native fiber");
+p:tell("  Kits:");
+p:tell("    pre-fab shelter kit   1x inert metal + 2x native fiber");
+p:tell("  Usage: craft <recipe> on basic crafting tool");
 return;
 endif
-if ((index(tgt, "ration") || index(tgt, "food")) || index(tgt, "bar"))
-found = {};
-for itm in (p.contents)
-if ((length(found) < 2) && (index(itm.name, "fiber") || index(itm.name, "plant")))
-found = listappend(found, itm);
-endif
-endfor
-if (length(found) < 2)
-p:tell("Need 2x fiber. Have: " + tostr(length(found)));
-return;
-endif
-recycle(found[1]);
-recycle(found[2]);
-r = create($thing);
-r.name = "ration bar";
-r.description = "A compressed brick of processed plant fiber.";
-move(r, p);
-p:tell("You press the fibers into a dense ration bar. [+food item]");
-p.location:announce(p.name + " uses a crafting tool.", p);
-return;
-endif
-if (index(tgt, "water") || index(tgt, "canteen"))
-found_f = {};
-found_w = {};
-for itm in (p.contents)
-n = itm.name;
-if ((length(found_f) == 0) && (index(n, "fiber") || index(n, "plant")))
-found_f = listappend(found_f, itm);
-endif
-if ((length(found_w) == 0) && (index(n, "water") || index(n, "liquid")))
-found_w = listappend(found_w, itm);
-endif
-endfor
-if (length(found_f) == 0)
-p:tell("Need 1x fiber.");
-return;
-endif
-if (length(found_w) == 0)
-p:tell("Need 1x water sample.");
-return;
-endif
-recycle(found_f[1]);
-recycle(found_w[1]);
-r = create($thing);
-r.name = "water canteen";
-r.description = "A rough fiber-bound canteen containing filtered drinking water.";
-move(r, p);
-p:tell("You weave fiber around the water sample into a sealed canteen. [+drink item]");
-return;
-endif
-if (index(tgt, "inert") || index(tgt, "metal"))
-found = {};
-for itm in (p.contents)
-if (length(found) < 2)
-n = itm.name;
-if (((index(n, "ore") || index(n, "mineral")) || index(n, "rock")) || index(n, "stone"))
-found = listappend(found, itm);
-endif
-endif
-endfor
-if (length(found) < 2)
-p:tell("Need 2x ore/mineral. Have: " + tostr(length(found)));
-return;
-endif
-recycle(found[1]);
-recycle(found[2]);
-r = create($thing);
-r.name = "inert metal";
-r.description = "Smelted alien ore, shaped into a rough ingot. Foundation of all construction.";
-move(r, p);
-p:tell("You smelt the ore samples into an inert metal ingot. [+inert metal]");
-return;
-endif
-if (index(tgt, "wire") || index(tgt, "crude"))
-found_o = {};
-found_s = {};
-for itm in (p.contents)
-n = itm.name;
-if ((length(found_o) == 0) && (index(n, "ore") || index(n, "mineral")))
-found_o = listappend(found_o, itm);
-endif
-if ((length(found_s) == 0) && ((index(n, "salvage") || index(n, "scrap")) || index(n, "wreckage")))
-found_s = listappend(found_s, itm);
-endif
-endfor
-if (length(found_o) == 0)
-p:tell("Need 1x ore/mineral.");
-return;
-endif
-if (length(found_s) == 0)
-p:tell("Need 1x salvage/scrap.");
-return;
-endif
-recycle(found_o[1]);
-recycle(found_s[1]);
-r = create($thing);
-r.name = "crude wire";
-r.description = "Rough conductive wire pulled from salvage and ore.";
-move(r, p);
-p:tell("You draw ore through salvage frames into crude wire. [+crude wire]");
-return;
-endif
-if ((index(tgt, "shelter") || index(tgt, "prefab")) || index(tgt, "pre"))
-found_m = {};
-found_f = {};
-for itm in (p.contents)
-n = itm.name;
-if ((length(found_m) == 0) && index(n, "inert metal"))
-found_m = listappend(found_m, itm);
-endif
-if ((length(found_f) < 2) && (index(n, "fiber") || index(n, "plant")))
-found_f = listappend(found_f, itm);
-endif
-endfor
-if (length(found_m) == 0)
-p:tell("Need 1x inert metal.");
-return;
-endif
-if (length(found_f) < 2)
-p:tell("Need 2x fiber. Have: " + tostr(length(found_f)));
-return;
-endif
-recycle(found_m[1]);
-recycle(found_f[1]);
-recycle(found_f[2]);
-r = create($thing);
-r.name = "pre-fab shelter kit";
-r.description = "A collapsed alloy-frame shelter with fiber panels. Type 'place shelter' to deploy.";
-move(r, p);
-p:tell("You assemble metal frame and fiber panels into a pre-fab shelter kit. [+shelter kit]");
-return;
-endif
-"=== COLONIAL MACHETE (melee weapon) ===";
 if (index(tgt, "machete"))
 found_m = {};
 found_f = {};
@@ -153028,7 +152913,7 @@ n = itm.name;
 if ((length(found_m) == 0) && index(n, "inert metal"))
 found_m = listappend(found_m, itm);
 endif
-if ((length(found_f) == 0) && (index(n, "fiber") || index(n, "plant")))
+if ((length(found_f) == 0) && index(n, "fiber"))
 found_f = listappend(found_f, itm);
 endif
 endfor
@@ -153037,24 +152922,58 @@ p:tell("Need 1x inert metal.");
 return;
 endif
 if (length(found_f) == 0)
-p:tell("Need 1x fiber.");
+p:tell("Need 1x native fiber.");
 return;
 endif
 recycle(found_m[1]);
 recycle(found_f[1]);
 r = create($equipment);
 r.name = "colonial machete";
-r.description = "A crude but effective blade forged from alien ore. Standard colonial sidearm.";
+r.description = "A crude but effective blade forged from alien ore.";
 r.eq_slot = "weapon";
 r.eq_type = "melee";
 r.eq_tohit = 1;
 r.eq_dmg_bonus = 2;
 r.eq_actions = {"swing"};
 move(r, p);
-p:tell("You hammer an inert metal ingot into a brutal colonial machete. [+melee weapon]");
+p:tell("You craft a colonial machete. [+melee weapon]");
 return;
 endif
-"=== COLONIAL RIFLE (ranged weapon) ===";
+if (index(tgt, "javelin"))
+found_f = {};
+found_m = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(found_f) < 2) && index(n, "fiber"))
+found_f = listappend(found_f, itm);
+endif
+if ((length(found_m) == 0) && index(n, "inert metal"))
+found_m = listappend(found_m, itm);
+endif
+endfor
+if (length(found_f) < 2)
+p:tell("Need 2x native fiber. Have: " + tostr(length(found_f)));
+return;
+endif
+if (length(found_m) == 0)
+p:tell("Need 1x inert metal.");
+return;
+endif
+recycle(found_f[1]);
+recycle(found_f[2]);
+recycle(found_m[1]);
+r = create($equipment);
+r.name = "wilder javelin";
+r.description = "A balanced throwing spear tipped with hammered metal.";
+r.eq_slot = "weapon";
+r.eq_type = "melee";
+r.eq_tohit = 0;
+r.eq_dmg_bonus = 3;
+r.eq_actions = {"swing"};
+move(r, p);
+p:tell("You craft a wilder javelin. [+melee weapon]");
+return;
+endif
 if (index(tgt, "rifle"))
 found_m = {};
 found_w = {};
@@ -153080,26 +152999,25 @@ recycle(found_m[2]);
 recycle(found_w[1]);
 r = create($equipment);
 r.name = "colonial rifle";
-r.description = "A mag-rail rifle cobbled from colony metal and salvaged wire. Fires inert slugs.";
+r.description = "A mag-rail rifle cobbled from colony metal and salvaged wire.";
 r.eq_slot = "weapon";
 r.eq_type = "ranged";
 r.eq_tohit = 1;
 r.eq_dmg_bonus = 3;
 r.eq_actions = {"fire"};
 move(r, p);
-p:tell("You assemble a mag-rail colonial rifle from metal and wire. [+ranged weapon]");
+p:tell("You craft a colonial rifle. [+ranged weapon]");
 return;
 endif
-"=== HIDE ARMOR ===";
-if (index(tgt, "hide") || index(tgt, "armor"))
+if (index(tgt, "hide") || (index(tgt, "armor") && (!index(tgt, "scrap"))))
 found_f = {};
 for itm in (p.contents)
-if ((length(found_f) < 3) && (index(itm.name, "fiber") || index(itm.name, "plant")))
+if ((length(found_f) < 3) && index(itm.name, "fiber"))
 found_f = listappend(found_f, itm);
 endif
 endfor
 if (length(found_f) < 3)
-p:tell("Need 3x fiber. Have: " + tostr(length(found_f)));
+p:tell("Need 3x native fiber. Have: " + tostr(length(found_f)));
 return;
 endif
 recycle(found_f[1]);
@@ -153107,50 +153025,200 @@ recycle(found_f[2]);
 recycle(found_f[3]);
 r = create($equipment);
 r.name = "hide armor";
-r.description = "Thick alien plant fibers woven and hardened into crude body armor.";
+r.description = "Thick alien fibers woven into crude body armor.";
 r.eq_slot = "armor";
 r.eq_type = "armor";
 r.eq_defense = 2;
 r.eq_dodge = 1;
 r.eq_hp_bonus = 5;
 move(r, p);
-p:tell("You weave hardened fibers into crude hide armor. [+armor | def:2 dodge:1 hp:+5]");
+p:tell("You craft hide armor. [+armor | def:2 dodge:1 hp:+5]");
 return;
 endif
-"=== SECTOR CENTER KIT ===";
-if ((index(tgt, "sector") || index(tgt, "center")) || index(tgt, "sc kit"))
-found_m = {};
+if ((index(tgt, "soup") || index(tgt, "insta")) || index(tgt, "meat"))
+found_f = {};
 found_w = {};
 for itm in (p.contents)
 n = itm.name;
-if ((length(found_m) < 2) && index(n, "inert metal"))
-found_m = listappend(found_m, itm);
+if ((length(found_f) < 2) && index(n, "fiber"))
+found_f = listappend(found_f, itm);
 endif
-if ((length(found_w) < 2) && index(n, "crude wire"))
+if ((length(found_w) == 0) && index(n, "water"))
 found_w = listappend(found_w, itm);
 endif
 endfor
-if (length(found_m) < 2)
-p:tell("Need 2x inert metal. Have: " + tostr(length(found_m)));
+if (length(found_f) < 2)
+p:tell("Need 2x native fiber. Have: " + tostr(length(found_f)));
 return;
 endif
-if (length(found_w) < 2)
-p:tell("Need 2x crude wire. Have: " + tostr(length(found_w)));
+if (length(found_w) == 0)
+p:tell("Need 1x unpurified water.");
+return;
+endif
+recycle(found_f[1]);
+recycle(found_f[2]);
+recycle(found_w[1]);
+r = create($thing);
+r.name = "insta-meat soup";
+r.description = "A steaming bowl of processed alien protein. Eat to restore health.";
+move(r, p);
+p:tell("You cook insta-meat soup. [+food]");
+return;
+endif
+if (index(tgt, "bandage") || index(tgt, "fibrous"))
+found_f = {};
+for itm in (p.contents)
+if ((length(found_f) < 2) && index(itm.name, "fiber"))
+found_f = listappend(found_f, itm);
+endif
+endfor
+if (length(found_f) < 2)
+p:tell("Need 2x native fiber. Have: " + tostr(length(found_f)));
+return;
+endif
+recycle(found_f[1]);
+recycle(found_f[2]);
+r = create($thing);
+r.name = "fibrous bandage";
+r.description = "A rough bandage woven from alien fiber. Stops bleeding.";
+move(r, p);
+p:tell("You craft a fibrous bandage. [+medical]");
+return;
+endif
+if (index(tgt, "inert") || (index(tgt, "metal") && (!index(tgt, "solid"))))
+found = {};
+for itm in (p.contents)
+if (length(found) < 2)
+n = itm.name;
+if ((index(n, "ore") || index(n, "mineral")) || (index(n, "inert metal") && 0))
+found = listappend(found, itm);
+endif
+endif
+endfor
+if (length(found) < 2)
+p:tell("Need 2x ore/mineral. Have: " + tostr(length(found)));
+return;
+endif
+recycle(found[1]);
+recycle(found[2]);
+r = create($thing);
+r.name = "inert metal";
+r.description = "Smelted alien ore shaped into a rough ingot.";
+move(r, p);
+p:tell("You smelt ore into an inert metal ingot. [+component]");
+return;
+endif
+if (index(tgt, "wire") || index(tgt, "crude"))
+found_m = {};
+found_s = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(found_m) == 0) && index(n, "inert metal"))
+found_m = listappend(found_m, itm);
+endif
+if ((length(found_s) == 0) && (index(n, "salvage") || index(n, "component")))
+found_s = listappend(found_s, itm);
+endif
+endfor
+if (length(found_m) == 0)
+p:tell("Need 1x inert metal.");
+return;
+endif
+if (length(found_s) == 0)
+p:tell("Need 1x salvaged components.");
 return;
 endif
 recycle(found_m[1]);
-recycle(found_m[2]);
-recycle(found_w[1]);
-recycle(found_w[2]);
+recycle(found_s[1]);
 r = create($thing);
-r.name = "sector center kit";
-r.description = "A compressed prefab colony administration complex. Deploy with: place sector center";
+r.name = "crude wire";
+r.description = "Rough conductive wire drawn from salvage and ore.";
 move(r, p);
-p:tell("You assemble the components into a sector center kit. [+sector center kit]");
+p:tell("You draw crude wire. [+component]");
+return;
+endif
+if (index(tgt, "casing"))
+found_m = {};
+found_f = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(found_m) == 0) && index(n, "inert metal"))
+found_m = listappend(found_m, itm);
+endif
+if ((length(found_f) == 0) && index(n, "fiber"))
+found_f = listappend(found_f, itm);
+endif
+endfor
+if (length(found_m) == 0)
+p:tell("Need 1x inert metal.");
+return;
+endif
+if (length(found_f) == 0)
+p:tell("Need 1x native fiber.");
+return;
+endif
+recycle(found_m[1]);
+recycle(found_f[1]);
+r = create($thing);
+r.name = "inert casing";
+r.description = "A simple protective shell formed from metal and fiber.";
+move(r, p);
+p:tell("You craft an inert casing. [+component]");
+return;
+endif
+if (index(tgt, "backpack") || index(tgt, "pack"))
+found_f = {};
+for itm in (p.contents)
+if ((length(found_f) < 3) && index(itm.name, "fiber"))
+found_f = listappend(found_f, itm);
+endif
+endfor
+if (length(found_f) < 3)
+p:tell("Need 3x native fiber. Have: " + tostr(length(found_f)));
+return;
+endif
+recycle(found_f[1]);
+recycle(found_f[2]);
+recycle(found_f[3]);
+r = create($thing);
+r.name = "fiber backpack";
+r.description = "A woven fiber pack for carrying extra supplies.";
+move(r, p);
+p:tell("You weave a fiber backpack. [+container]");
+return;
+endif
+if ((index(tgt, "shelter") || index(tgt, "prefab")) || index(tgt, "pre-fab"))
+found_m = {};
+found_f = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(found_m) == 0) && index(n, "inert metal"))
+found_m = listappend(found_m, itm);
+endif
+if ((length(found_f) < 2) && index(n, "fiber"))
+found_f = listappend(found_f, itm);
+endif
+endfor
+if (length(found_m) == 0)
+p:tell("Need 1x inert metal.");
+return;
+endif
+if (length(found_f) < 2)
+p:tell("Need 2x native fiber. Have: " + tostr(length(found_f)));
+return;
+endif
+recycle(found_m[1]);
+recycle(found_f[1]);
+recycle(found_f[2]);
+r = create($thing);
+r.name = "pre-fab shelter kit";
+r.description = "A collapsed alloy-frame shelter. Type PLACE SHELTER to deploy.";
+move(r, p);
+p:tell("You craft a pre-fab shelter kit. [+kit]");
 return;
 endif
 p:tell(("Unknown recipe: '" + tgt) + "'");
-p:tell("Type 'craft' to see available recipes.");
+p:tell("Type CRAFT to see available recipes.");
 .
 #6:258
 "Full craft/eat/drink/build test.";
@@ -209669,7 +209737,7 @@ player:tell("  Exits: west");
 .
 0 clocks
 2 queued tasks
-0 6 1775768232 1608495619
+0 6 1775768772 499920050
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -209742,7 +209810,7 @@ WAIF
 11
 task_id
 0
-1608495619
+499920050
 this.beat_task = 0;
 this:_beat();
 .
