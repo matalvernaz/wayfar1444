@@ -36,8 +36,9 @@ def send(s, cmd, wait=0.65):
     s.sendall((cmd + '\r\n').encode())
     time.sleep(wait)
     out = b''
+    deadline = time.time() + max(wait + 0.3, 0.35)
     try:
-        while True:
+        while time.time() < deadline:
             chunk = s.recv(65536)
             if not chunk:
                 break

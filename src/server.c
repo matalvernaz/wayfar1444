@@ -51,6 +51,8 @@
 
 #include "execute.h"
 
+FILE *Dev_Random;  /* Global file pointer for /dev/random */
+
 static pid_t parent_pid;
 int in_child = 0;
 
@@ -440,7 +442,6 @@ main_loop(void)
     /* Open /dev/urandom and keep it open as long as the server is running
        so that our random() has a source of random bits.  Dev_Random is
        defined globally in server.h */
-    extern FILE *Dev_Random;
     Dev_Random = fopen("/dev/urandom", "r");
     if (Dev_Random == NULL) panic("Couldn't open /dev/urandom");
 

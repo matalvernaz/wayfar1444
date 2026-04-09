@@ -27,3 +27,12 @@ hellcore-*.tar.*
 
 # Ignore logs created when running the MOO.
 *.log
+*.log.*.gz
+
+# Database backups and runtime files
+hellcore.db.new
+hellcore.db.new.PANIC
+hellcore.db.old.gz
+
+# Python cache
+__pycache__/

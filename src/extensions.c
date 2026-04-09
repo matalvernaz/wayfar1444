@@ -370,6 +370,126 @@ bf_get_microsecond(Var arglist, Byte next, void *vdata, Objid progr)
     return make_var_pack(r);
 }
 
+/* ============================================================
+ * Perlin 2D Noise  (ported from genmac's Wayfar 1444 tutorial)
+ * ============================================================ */
+#include <math.h>
+
+static int _p[512];
+static int _permutation[] = {
+  151,160,137,91,90,15,131,13,201,95,96,53,194,233,7,225,140,36,103,30,
+  69,142,8,99,37,240,21,10,23,190,6,148,247,120,234,75,0,26,197,62,94,
+  252,219,203,117,35,11,32,57,177,33,88,237,149,56,87,174,20,125,136,
+  171,168,68,175,74,165,71,134,139,48,27,166,77,146,158,231,83,111,229,
+  122,60,211,133,230,220,105,92,41,55,46,245,40,244,102,143,54,65,25,63,
+  161,1,216,80,73,209,76,132,187,208,89,18,169,200,196,135,130,116,188,
+  159,86,164,100,109,198,173,186,3,64,52,217,226,250,124,123,5,202,38,
+  147,118,126,255,82,85,212,207,206,59,227,47,16,58,17,182,189,28,42,
+  223,183,170,213,119,248,152,2,44,154,163,70,221,153,101,155,167,43,
+  172,9,129,22,39,253,19,98,108,110,79,113,224,232,178,185,112,104,218,
+  246,97,228,251,34,242,193,238,210,144,12,191,179,162,241,81,51,145,
+  235,249,14,239,107,49,192,214,31,181,199,106,157,184,84,204,176,115,
+  121,50,45,127,4,150,254,138,236,205,93,222,114,67,29,24,72,243,141,
+  128,195,78,66,215,61,156,180
+};
+
+static void _pn_init(void) {
+    int i;
+    for (i = 0; i < 256; i++)
+        _p[256+i] = _p[i] = _permutation[i];
+}
+static double _pn_fade(double t) {
+    return t * t * t * (t * (t * 6.0 - 15.0) + 10.0);
+}
+static double _pn_lerp(double t, double a, double b) {
+    return a + t * (b - a);
+}
+static double _pn_grad(int hash, double x, double y, double z) {
+    int h = hash & 15;
+    double u = h < 8 ? x : y;
+    double v = h < 4 ? y : (h==12||h==14 ? x : z);
+    return ((h&1)==0 ? u : -u) + ((h&2)==0 ? v : -v);
+}
+static double _pnoise(double x, double y, double z) {
+    int X = (int)floor(x) & 255;
+    int Y = (int)floor(y) & 255;
+    int Z = (int)floor(z) & 255;
+    x -= floor(x); y -= floor(y); z -= floor(z);
+    double u = _pn_fade(x), v = _pn_fade(y), w = _pn_fade(z);
+    int A  = _p[X]+Y,   AA = _p[A]+Z,   AB = _p[A+1]+Z;
+    int B  = _p[X+1]+Y, BA = _p[B]+Z,   BB = _p[B+1]+Z;
+    return _pn_lerp(w,
+        _pn_lerp(v,
+            _pn_lerp(u, _pn_grad(_p[AA],   x,   y,   z),
+                        _pn_grad(_p[BA],   x-1, y,   z)),
+            _pn_lerp(u, _pn_grad(_p[AB],   x,   y-1, z),
+                        _pn_grad(_p[BB],   x-1, y-1, z))),
+        _pn_lerp(v,
+            _pn_lerp(u, _pn_grad(_p[AA+1], x,   y,   z-1),
+                        _pn_grad(_p[BA+1], x-1, y,   z-1)),
+            _pn_lerp(u, _pn_grad(_p[AB+1], x,   y-1, z-1),
+                        _pn_grad(_p[BB+1], x-1, y-1, z-1))));
+}
+static int _fbm2d(int x, int y, double scalex, double scaley,
+                  int size, int octaves)
+{
+    double xf = (double)x, yf = (double)y, sizef = (double)size;
+    double noiseval = 0.0;
+    int i, result;
+    _pn_init();
+    for (i = 1; i <= octaves; i++) {
+        double n = _pnoise(i * xf / (sizef * scalex),
+                           i * yf / (sizef * scaley), 0.5);
+        noiseval += sizef * ((n / 2.0) + 0.5) / (double)i;
+    }
+    result = (int)noiseval;
+    if (result < 0)    result = 0;
+    if (result >= size) result = size - 1;
+    return result;
+}
+/* chr(int) -> single-character string */
+static package
+bf_chr(Var arglist, Byte next, void *vdata, Objid progr)
+{
+    Var r;
+    int code = (int)arglist.v.list[1].v.num & 255;
+    char buf[2];
+    buf[0] = (char)code;
+    buf[1] = '\0';
+    r.type  = TYPE_STR;
+    r.v.str = str_dup(buf);
+    free_var(arglist);
+    return make_var_pack(r);
+}
+
+/* ord(str) -> integer code of first character */
+static package
+bf_ord(Var arglist, Byte next, void *vdata, Objid progr)
+{
+    Var r;
+    const char *s = arglist.v.list[1].v.str;
+    r.type  = TYPE_INT;
+    r.v.num = (s && *s) ? (unsigned char)s[0] : 0;
+    free_var(arglist);
+    return make_var_pack(r);
+}
+
+static package
+bf_perlin_2d(Var arglist, Byte next, void *vdata, Objid progr)
+{
+    Var r;
+    int    x      = (int)arglist.v.list[1].v.num;
+    int    y      = (int)arglist.v.list[2].v.num;
+    double alpha  = *arglist.v.list[3].v.fnum;
+    double beta   = *arglist.v.list[4].v.fnum;
+    int    n      = (int)arglist.v.list[5].v.num;
+    int    octaves= (int)arglist.v.list[6].v.num;
+    r.type  = TYPE_INT;
+    r.v.num = _fbm2d(x, y, alpha, beta, n, octaves);
+    free_var(arglist);
+    return make_var_pack(r);
+}
+
 void
 register_extensions()
 {
@@ -383,6 +503,10 @@ register_extensions()
 #endif
 	register_function("sha256", 1, 1, bf_sha256, TYPE_STR);
 	register_function("get_microsecond", 0, 0, bf_get_microsecond);
+    register_function("chr",      1, 1, bf_chr,      TYPE_INT);
+    register_function("ord",      1, 1, bf_ord,      TYPE_STR);
+    register_function("perlin_2d", 6, 6, bf_perlin_2d,
+                      TYPE_INT, TYPE_INT, TYPE_FLOAT, TYPE_FLOAT, TYPE_INT, TYPE_INT);
 }
 
 char rcsid_extensions[] = "$Id: extensions.c,v 1.3 2007/09/12 07:33:29 spunky Exp $";

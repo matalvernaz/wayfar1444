@@ -3,7 +3,7 @@
 ## Phase 1 — Survival (make the core loop match wiki design)
 
 - [x] **#19** Correct biome names — Mountain/Forest/Desert/Jungle/Volcanic with wiki-accurate descriptions, colors, map chars, resource mapping
-- [ ] **#11** Equipment slots — weapon, armor, gadget, special weapon slots; WIELD/WEAR/REMOVE verbs; item degradation + REPAIR
+- [x] **#11** Equipment slots — weapon/armor/gadget/special slots; WIELD/WEAR/EQUIP/REMOVE/GEAR/ACTIONS verbs; $equipment prototype; combat integration (tohit/dmg/defense/dodge); starter recipes (machete/rifle/hide armor)
 - [ ] **#13** Harvesting tools — WIELD in special weapon slot → SCAN → CONFIGURE (target type) → HARVEST; starter tools + upgrade path
 - [ ] **#14** Item quality — resources/items have quality 0–100+; crafting skill affects output quality
 - [ ] **#12** Expanded crafting tools — structure tool, equipment tool, food processor, maker block, cooking fire; each with own recipe list per wiki
