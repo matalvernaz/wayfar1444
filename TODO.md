@@ -4,7 +4,7 @@
 
 - [x] **#19** Correct biome names — Mountain/Forest/Desert/Jungle/Volcanic with wiki-accurate descriptions, colors, map chars, resource mapping
 - [x] **#11** Equipment slots — weapon/armor/gadget/special slots; WIELD/WEAR/EQUIP/REMOVE/GEAR/ACTIONS verbs; $equipment prototype; combat integration (tohit/dmg/defense/dodge); starter recipes (machete/rifle/hide armor)
-- [ ] **#13** Harvesting tools — WIELD in special weapon slot → SCAN → CONFIGURE (target type) → HARVEST; starter tools + upgrade path
+- [x] **#13** Harvesting tools — WIELD tool → SCAN (show nodes) → CONFIGURE (target type) → HARVEST (2x yield vs hand-gather); starter ion-driven mineral collector; h_resource property on $equipment
 - [ ] **#14** Item quality — resources/items have quality 0–100+; crafting skill affects output quality
 - [ ] **#12** Expanded crafting tools — structure tool, equipment tool, food processor, maker block, cooking fire; each with own recipe list per wiki
 - [ ] **#16** Exploration — EXPLORE fills room 0–100%; MEMORIZE (fast TRAVEL); DISCOVER (Unpaid Cartographer skill); terrain surveyor income
