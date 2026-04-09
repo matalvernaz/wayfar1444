@@ -7311,7 +7311,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--47
+-48
 361
 5
 4
@@ -71568,7 +71568,7 @@ visit
 361
 5
 0
-2088512710
+1930155551
 361
 5
 4
@@ -77015,6 +77015,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:56:46 2026 PDT Database checkpoint started.~1b[0m
+0
+1775768206
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:49:10 2026 PDT Database checkpoint started.~1b[0m
 0
 1775767750
@@ -77306,12 +77312,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 04:15:19 2026 PDT Database checkpoint started.~1b[0m
 0
 1775646919
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 03:15:19 2026 PDT Database checkpoint started.~1b[0m
-0
-1775643319
 361
 5
 5
@@ -94797,7 +94797,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1349560282
+1608495619
 361
 5
 4
@@ -97072,7 +97072,7 @@ hi
 4
 2
 0
-1775767059
+1775767585
 2
 localhost
 361
@@ -97082,7 +97082,7 @@ localhost
 361
 0
 0
-1775767082
+1775767758
 361
 1
 5
@@ -97751,7 +97751,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 41848
+port 7777 from localhost, port 45012
 361
 0
 5
@@ -97770,7 +97770,7 @@ port 7777 from localhost, port 41848
 361
 5
 0
-1775767585
+1775768042
 361
 1
 0
@@ -154204,20 +154204,17 @@ endif
 player:tell("OBJNUM=" + tostr($npc_worker));
 .
 #6:306
-"Hire a colonial worker. Usage: hire <ore|fiber|water|salvage>. Must be in factorium.";
+"Hire a colonial worker. Usage: crewhire <ore|fiber|water|salvage>.";
 p = player;
 loc = p.location;
-"Must be in a factorium";
 if (!("labor_cd" in properties(loc)))
 p:tell("You can only hire workers from inside your Factorium.");
 return;
 endif
-"Must own this factorium";
 if (("sc_owner" in properties(loc)) && (loc.sc_owner != p))
 p:tell("This is not your factorium.");
 return;
 endif
-"Parse job type";
 job = "";
 if ((typeof(dobjstr) == STR) && (dobjstr != ""))
 job = dobjstr;
@@ -154227,10 +154224,9 @@ endif
 valid_jobs = {"ore", "fiber", "water", "salvage"};
 if (!(job in valid_jobs))
 p:tell("Valid jobs: ore, fiber, water, salvage");
-p:tell("Usage: hire <job>");
+p:tell("Usage: crewhire <job>");
 return;
 endif
-"Check max workers (3 per factorium)";
 worker_count = 0;
 for itm in (loc.contents)
 if (is_a(itm, $npc_worker))
@@ -154238,33 +154234,29 @@ worker_count = worker_count + 1;
 endif
 endfor
 if (worker_count >= 3)
-p:tell("Your factorium is at capacity (3 workers max). Fire one first.");
+p:tell("Factorium at capacity (3 workers). CREWFIRE one first.");
 return;
 endif
-"Check cost";
 cost = 100;
 if (p.w_credits < cost)
 p:tell(((("Hiring costs " + tostr(cost)) + " cr. You have: ") + tostr(p.w_credits)) + " cr.");
 return;
 endif
-"Create worker";
 w = create($npc_worker);
 w.name = ("colonial worker (" + job) + ")";
-w.description = ("A hired colonist assigned to gather " + job) + " from the surrounding terrain.";
+w.description = ("A hired colonist gathering " + job) + " from the surrounding terrain.";
 w.w_job = job;
 w.w_owner = p;
 w.w_last_tick = time();
 move(w, loc);
-"Add to global worker list";
 $worker_list = listappend($worker_list, w);
-"Deduct credits";
 p.w_credits = p.w_credits - cost;
 p:tell(((((("You hire a " + job) + " gatherer. [-") + tostr(cost)) + " cr | Balance: ") + tostr(p.w_credits)) + " cr]");
-p:tell("Workers gather resources every 5 minutes and deposit them here.");
+p:tell("Workers deliver resources to the factorium every 12 hours.");
 loc:announce(p.name + " hires a colonial worker.", p);
 .
 #6:308
-"Show your colony workforce. Works from anywhere.";
+"Show colony workforce.";
 p = player;
 if (!valid(p.w_colony))
 p:tell("You have no colony. Place a sector center first.");
@@ -154287,18 +154279,20 @@ endif
 endfor
 p:tell(("=== " + plaza.name) + "  WORKFORCE ===");
 if (workers == {})
-p:tell("  No workers hired. Go to your Factorium and type: hire <ore|fiber|water|salvage>");
-p:tell("  Cost: 100 cr each | Max: 3 workers | Gathers every 5 min");
+p:tell("  No workers hired. Go to Factorium: CREWHIRE <ore|fiber|water|salvage>");
+p:tell("  Cost: 100 cr | Max: 3 | Delivers to warehouse every 12 hours");
 return;
 endif
 now = time();
 for w in (workers)
 elapsed = now - w.w_last_tick;
-next_in = 300 - elapsed;
+next_in = 43200 - elapsed;
 if (next_in < 0)
 next_in = 0;
 endif
-p:tell(((("  [" + w.w_job) + "] next gather in ") + tostr(next_in)) + "s");
+hrs = next_in / 3600;
+mins = (next_in % 3600) / 60;
+p:tell(((((("  [" + w.w_job) + "] next delivery in ") + tostr(hrs)) + "h ") + tostr(mins)) + "m");
 endfor
 items_here = {};
 for itm in (fact.contents)
@@ -154308,7 +154302,6 @@ endif
 endfor
 if (items_here != {})
 p:tell(("  Stockpile: " + tostr(length(items_here))) + "/50 item(s) in factorium");
-p:tell("  (Go to factorium, then 'sell all' to cash in)");
 endif
 .
 #6:309
@@ -209298,7 +209291,7 @@ if (!valid(w))
 "Skip recycled workers  will not be added to clean_list";
 else
 clean_list = listappend(clean_list, w);
-if ((now - w.w_last_tick) >= 300)
+if ((now - w.w_last_tick) >= 43200)
 w.w_last_tick = now;
 "Check stockpile cap: count non-worker items in factorium";
 stock_count = 0;
@@ -209316,17 +209309,17 @@ endif
 else
 "Produce item based on job";
 job = w.w_job;
-iname = "ore sample";
-idesc = "A rough chunk of alien mineral ore.";
+iname = "inert metal";
+idesc = "Raw alien ore, smelted into a rough ingot.";
 if (job == "fiber")
-iname = "fiber bundle";
-idesc = "A bundle of dried alien plant fiber.";
+iname = "native fiber";
+idesc = "A tough, fibrous stalk from alien vegetation.";
 elseif (job == "water")
-iname = "water sample";
-idesc = "A sealed flask of filtered water.";
+iname = "unpurified water";
+idesc = "Unprocessed alien water.";
 elseif (job == "salvage")
-iname = "salvage scrap";
-idesc = "Twisted metal and polymer pulled from ruins.";
+iname = "salvaged components";
+idesc = "Components salvaged from alien ruins.";
 endif
 item = create($thing);
 item.name = iname;
@@ -209676,7 +209669,7 @@ player:tell("  Exits: west");
 .
 0 clocks
 2 queued tasks
-0 6 1775767752 1349560282
+0 6 1775768232 1608495619
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -209749,11 +209742,11 @@ WAIF
 11
 task_id
 0
-1349560282
+1608495619
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775768043 2088512710
+0 6 1775768943 1930155551
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -209826,7 +209819,7 @@ WAIF
 11
 taskid
 0
-2088512710
+1930155551
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
