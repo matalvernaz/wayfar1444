@@ -24,7 +24,7 @@
 - [x] **Governor's office** (#20) — COLONY overview, SECTORMAP (11x11 building map), RESOURCES (biome/resource percentages), EVENTS/HISTORY log, CITIZENS/POPULATION (NPC worker list). Works from anywhere using landing coords.
 - [x] **Jobs** (#17) — 7 repeatable achievements with progress tracking: Ranger Patrol (kills), Harvester (resources), Explorer (areas), Merchant (sales), Builder (buildings), Crafter (items), Factorium Labor. JOBS command with progress bars. Auto-completes and awards SP+credits. Events logged.
 - [x] **Reroll/ascension** (#15) — VICTORY shows progress toward background goal. REROLL CONFIRM resets skills/SP, keeps buildings/items/credits, awards reroll points if victory met. SP cap +100 per reroll to 3500. Safety confirmation required.
-- [ ] **Blueprints** (#25) — discoverable recipes. `LOAD chip onto tool`. Found at pirate bases, discoveries. `lookup <thing> with datapad`.
+- [x] **Blueprints** (#25) — LOAD <chip> ONTO <tool> installs blueprint recipes. LOOKUP <item> searches installed blueprints. Blueprint chips are physical items with bp_recipe_name property. Discoverable via exploration, loot, etc.
 
 ## Phase 4 — The Wider World
 
