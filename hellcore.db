@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
-1934
-3566
+1944
+3571
 0
 6
 65
@@ -8468,7 +8468,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--163
+-168
 361
 5
 4
@@ -10255,7 +10255,7 @@ ex
 361
 45
 -1
-23
+24
 handed
 wield_msg
 unwield_msg
@@ -10279,7 +10279,8 @@ carried_msg
 w_durability
 w_durability_max
 w_made_with
-33
+w_quality
+34
 0
 1
 361
@@ -10378,6 +10379,10 @@ description,description
 basic
 361
 7
+0
+0
+361
+7
 4
 1
 2
@@ -10449,7 +10454,7 @@ generic player
 100
 33
 -1
-378
+382
 confunc
 361
 173
@@ -11962,6 +11967,22 @@ drink
 361
 29
 -1
+refinery
+361
+13
+-1
+massadd
+361
+29
+-1
+process
+361
+13
+-1
+reset
+361
+29
+-1
 108
 features
 previous_connection
@@ -13458,7 +13479,7 @@ open_fail_msg
 empty_msg
 opened
 open_key
-52
+53
 2
 closes %d.
 361
@@ -13595,6 +13616,9 @@ It is empty.
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -51676,7 +51700,7 @@ clean_start_msg
 oclean_start_msg
 clean_finish_msg
 oclean_finish_msg
-56
+57
 0
 10000
 29
@@ -51848,6 +51872,9 @@ closable,can it be closed?,1
 5
 29
 5
+5
+29
+7
 5
 29
 7
@@ -53049,7 +53076,7 @@ stat_spawn
 stat_recycle
 use_backup
 update_task
-51
+52
 4
 3
 1
@@ -53248,6 +53275,9 @@ update_task
 5
 29
 5
+5
+29
+7
 5
 29
 7
@@ -56319,7 +56349,7 @@ warehouse
 help_msg
 feature_verbs
 feature_ok
-37
+38
 1
 77
 29
@@ -56398,6 +56428,9 @@ Using
 5
 29
 5
+5
+29
+7
 5
 29
 7
@@ -59427,7 +59460,7 @@ list
 3
 1
 mailfeature
-53
+54
 1
 -1
 29
@@ -59551,6 +59584,9 @@ mailfeature
 5
 29
 5
+5
+29
+7
 5
 29
 7
@@ -62279,7 +62315,7 @@ require_funky_characters
 help_msg
 check_against_moo
 check_obscure_stuff
-42
+43
 0
 0
 361
@@ -62392,6 +62428,9 @@ The toggle switches for this checking are:
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -62833,7 +62872,7 @@ Pasting Feature
 29
 -1
 0
-37
+38
 5
 29
 1
@@ -62914,6 +62953,9 @@ The Pasting Feature is mostly useful to people with fancy clients (such as Emacs
 5
 29
 5
+5
+29
+7
 5
 29
 7
@@ -68817,7 +68859,7 @@ grind_ceiling
 max_mods
 throwability
 min_speed
-57
+58
 9
 5
 29
@@ -69011,6 +69053,9 @@ wield_msg,wield message
 5
 29
 5
+5
+29
+7
 5
 29
 7
@@ -72254,7 +72299,7 @@ feature_ok
 173
 -1
 0
-52
+53
 4
 1
 1
@@ -72380,6 +72425,9 @@ feature_ok
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -72926,7 +72974,7 @@ generic natural weapon
 -1
 0
 0
-57
+58
 5
 361
 5
@@ -73060,6 +73108,9 @@ generic natural weapon
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -73591,7 +73642,7 @@ visit
 361
 5
 0
-1048780477
+1067179198
 361
 5
 4
@@ -74923,7 +74974,7 @@ exitfunc
 173
 -1
 0
-56
+57
 5
 361
 5
@@ -75055,6 +75106,9 @@ A file cabinet labelled 'PATTERN FILE', bulging with papers, is shoved against t
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -77547,7 +77601,7 @@ water_weight_increase_coefficient
 fuel_value
 condition_msg
 wear_outermost
-54
+55
 4
 2
 1
@@ -77742,6 +77796,9 @@ description,description
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -78185,7 +78242,7 @@ _megasubsub
 29
 -1
 0
-37
+38
 5
 29
 1
@@ -78259,6 +78316,9 @@ _megasubsub
 5
 29
 5
+5
+29
+7
 5
 29
 7
@@ -78907,7 +78967,7 @@ damaged3_msg
 is_on_msg
 is_off_msg
 fix_start_msg
-45
+46
 0
 0
 361
@@ -79025,6 +79085,9 @@ It's turned off.
 5
 361
 7
+5
+361
+7
 4
 2
 2
@@ -79079,7 +79142,7 @@ sysnet
 -1
 0
 0
-52
+53
 4
 1
 1
@@ -79101,6 +79164,18 @@ sysnet
 5
 4
 50
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 08:59:26 2026 PDT Database checkpoint started.~1b[0m
+0
+1775836766
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 08:56:50 2026 PDT Database checkpoint started.~1b[0m
+0
+1775836610
 4
 2
 2
@@ -79389,18 +79464,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 20:02:09 2026 PDT Database checkpoint started.~1b[0m
 0
 1775790129
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:59:37 2026 PDT Database checkpoint started.~1b[0m
-0
-1775789977
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:50:15 2026 PDT Database checkpoint started.~1b[0m
-0
-1775789415
 361
 5
 5
@@ -79503,6 +79566,9 @@ sysnet
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -79561,7 +79627,7 @@ generic building
 1
 732
 120
-4
+5
 look_self
 361
 13
@@ -79578,7 +79644,11 @@ look_self
 361
 13
 -1
-12
+_init_refinery
+361
+45
+-1
+16
 b_type
 b_owner
 b_hp
@@ -79591,7 +79661,11 @@ b_econ
 b_rec
 b_ind
 b_quality
-22
+r_type_lock
+r_quality_equiv
+r_count
+r_class
+26
 2
 unknown
 361
@@ -79638,6 +79712,22 @@ unknown
 7
 0
 0
+361
+7
+2
+
+361
+7
+0
+0
+361
+7
+0
+0
+361
+7
+2
+
 361
 7
 4
@@ -79826,7 +79916,7 @@ announce_joins
 history_size
 commands
 no_admin_talk
-52
+53
 4
 0
 361
@@ -79967,6 +80057,9 @@ history
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -88204,7 +88297,7 @@ generic treasure
 130
 0
 0
-33
+34
 5
 29
 5
@@ -88266,6 +88359,9 @@ generic treasure
 5
 29
 5
+5
+29
+7
 5
 29
 7
@@ -88419,7 +88515,7 @@ lockable_on_otherside
 use_otherside_msg
 openable_on_otherside
 pick_duration
-58
+59
 0
 1
 361
@@ -88580,6 +88676,9 @@ A lock lever protrudes from under the handle.
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -89214,7 +89313,7 @@ name_add
 incompatible_with
 prop_mods_max
 add_weight
-48
+49
 4
 1
 1
@@ -89353,6 +89452,9 @@ handed
 5
 361
 7
+5
+361
+7
 4
 2
 2
@@ -89417,7 +89519,7 @@ use_finish
 173
 -1
 0
-33
+34
 5
 361
 5
@@ -89478,6 +89580,9 @@ use_finish
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -89602,7 +89707,7 @@ get_from_msg
 put_to_msg
 help_msg
 get_only
-45
+46
 1
 -1
 361
@@ -89725,6 +89830,9 @@ remaining -- host many of .spawn are left in the dispenser
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -89893,7 +90001,7 @@ history_on
 history_max
 history
 max_transactions
-45
+46
 2
 %N taps on %p %t.
 361
@@ -90004,6 +90112,9 @@ You tap your text message to %dn into your %t.
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -90360,7 +90471,7 @@ read_msg
 oread_msg
 text
 junk_on_read
-38
+39
 0
 1
 361
@@ -90441,6 +90552,9 @@ Written on %dt, you read:
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -90571,7 +90685,7 @@ start_msg
 burn_fuel_msg
 fuel_type
 dont_hibernate
-46
+47
 4
 2
 1
@@ -90908,6 +91022,9 @@ ounplug_msg -- What others see when you unplug the thing
 5
 361
 7
+5
+361
+7
 4
 1
 2
@@ -91098,7 +91215,7 @@ volatility
 detect_difficulty
 cause_explosion
 proximity_damage_multiplier
-55
+56
 0
 5
 361
@@ -91282,6 +91399,9 @@ You hear a %vol explosion from %dir.
 5
 361
 7
+5
+361
+7
 4
 1
 2
@@ -91339,7 +91459,7 @@ difficulty
 build_time
 materials
 product
-38
+39
 4
 0
 361
@@ -91420,6 +91540,9 @@ product
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -91597,7 +91720,7 @@ help_msg
 rise_failed_msg
 sit_full_msg
 is_cover
-58
+59
 0
 1
 361
@@ -91807,6 +91930,9 @@ You aren't sitting or reclining on %dt.
 5
 361
 7
+5
+361
+7
 4
 1
 2
@@ -91960,7 +92086,7 @@ mostly_gone_msg
 half_gone_msg
 some_gone_msg
 rot_msgs
-54
+55
 1
 895
 29
@@ -92110,6 +92236,9 @@ It's got a few bites missing.
 5
 29
 5
+5
+29
+7
 5
 29
 7
@@ -94572,7 +94701,7 @@ top_odetach_msg
 bottom_odetach_msg
 odetach_from_above_msg
 no_skill_msg
-51
+52
 0
 50
 29
@@ -94714,6 +94843,9 @@ You don't think you have the skill needed to climb the rope.
 5
 29
 7
+5
+29
+7
 4
 1
 2
@@ -94832,7 +94964,7 @@ discoverers
 breakdown_ingredients
 continue_msg
 time_mod
-49
+50
 1
 -1
 29
@@ -94990,6 +95122,9 @@ $recipe.skill_required => {{STR skill, INT difficulty}, ...}
 5
 29
 5
+5
+29
+7
 5
 29
 7
@@ -95235,7 +95370,7 @@ bolted
 bolted_by
 boltable_in_public
 boltable_duplicate
-78
+79
 4
 0
 29
@@ -95464,6 +95599,9 @@ boltable_duplicate
 5
 29
 7
+5
+29
+7
 4
 3
 2
@@ -95670,7 +95808,7 @@ craft_announce
 bolted_by
 boltable_in_public
 boltable_duplicate
-86
+87
 2
 You put %id on %dt.
 29
@@ -95944,6 +96082,9 @@ There is %it set up here.
 5
 29
 5
+5
+29
+7
 5
 29
 7
@@ -96585,7 +96726,7 @@ _do_social
 173
 -1
 0
-37
+38
 5
 29
 1
@@ -96659,6 +96800,9 @@ _do_social
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -97026,7 +97170,7 @@ queue_172
 queue_173
 queue_174
 queue_175
-228
+229
 4
 0
 361
@@ -97132,7 +97276,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1042855664
+1231268095
 361
 5
 4
@@ -98095,6 +98239,9 @@ the
 5
 361
 7
+5
+361
+7
 4
 1
 2
@@ -98185,7 +98332,7 @@ help_msg
 state
 listeners
 bad_state_msg
-42
+43
 4
 2
 2
@@ -98372,6 +98519,9 @@ There is %it here.
 5
 361
 7
+5
+361
+7
 4
 1
 2
@@ -98428,7 +98578,7 @@ generic camera
 124
 0
 0
-33
+34
 5
 361
 5
@@ -98490,6 +98640,9 @@ generic camera
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -98563,7 +98716,7 @@ set_keyed
 -1
 1
 keyed_to
-34
+35
 2
 
 29
@@ -98629,6 +98782,9 @@ keyed_to
 5
 29
 5
+5
+29
+7
 5
 29
 7
@@ -99470,7 +99626,7 @@ hi
 4
 2
 0
-1775835559
+1775836650
 2
 localhost
 361
@@ -99480,7 +99636,7 @@ localhost
 361
 0
 0
-1775835585
+1775836671
 361
 1
 5
@@ -99502,7 +99658,7 @@ localhost
 29
 1
 4
-520
+530
 1
 339
 1
@@ -100543,6 +100699,26 @@ localhost
 1931
 1
 1933
+1
+1934
+1
+1935
+1
+1936
+1
+1937
+1
+1938
+1
+1939
+1
+1940
+1
+1941
+1
+1942
+1
+1943
 361
 1
 5
@@ -100563,7 +100739,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 37796
+port 7777 from localhost, port 34192
 361
 0
 5
@@ -100582,11 +100758,11 @@ port 7777 from localhost, port 37796
 361
 5
 0
-1775835691
+1775836753
 361
 1
 0
-1410065156
+1410065146
 29
 0
 0
@@ -101833,7 +102009,7 @@ yield_desc
 count
 max_count
 is_node
-39
+40
 2
 inert metal
 361
@@ -101933,6 +102109,9 @@ Raw alien ore, smelted into a rough ingot. Foundation of all construction.
 5
 361
 7
+5
+361
+7
 4
 5
 2
@@ -102015,7 +102194,7 @@ yield_desc
 count
 max_count
 is_node
-39
+40
 2
 native fiber
 361
@@ -102115,6 +102294,9 @@ A tough, fibrous stalk harvested from alien vegetation.
 5
 361
 7
+5
+361
+7
 4
 5
 2
@@ -102197,7 +102379,7 @@ yield_desc
 count
 max_count
 is_node
-39
+40
 2
 unpurified water
 361
@@ -102297,6 +102479,9 @@ A sealed flask of unprocessed alien water. Drinkable in a pinch.
 5
 361
 7
+5
+361
+7
 4
 5
 2
@@ -102379,7 +102564,7 @@ yield_desc
 count
 max_count
 is_node
-39
+40
 2
 salvaged components
 361
@@ -102481,6 +102666,9 @@ Twisted metal and polymer pulled from alien ruins.
 5
 361
 7
+5
+361
+7
 4
 5
 2
@@ -102550,7 +102738,7 @@ p_type
 p_biome_map
 p_danger_mult
 p_pois
-42
+43
 4
 7
 2
@@ -102710,6 +102898,9 @@ balanced
 7
 5
 361
+7
+5
+361
 5
 2
 Kepler-7: a temperate colony world, breathable atmosphere, surface gravity 0.94g. Designated for colonization by the Colonial Development Authority. Status: active.
@@ -102831,7 +103022,7 @@ rp457_x19_y17
 rp457_x18_y16
 rp457_x17_y16
 rp457_x16_y19
-91
+92
 1
 466
 361
@@ -103124,6 +103315,9 @@ rp457_x16_y19
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -103612,7 +103806,7 @@ Your escape pod carved a scorched crater on impact. The hull is twisted open lik
 461
 0
 0
-33
+34
 5
 361
 5
@@ -103673,6 +103867,9 @@ Your escape pod carved a scorched crater on impact. The hull is twisted open lik
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -103731,7 +103928,7 @@ A cracked emergency survival kit from your escape pod. Dented but sealed. Stampe
 462
 0
 0
-33
+34
 5
 361
 5
@@ -103792,6 +103989,9 @@ A cracked emergency survival kit from your escape pod. Dented but sealed. Stampe
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -103850,7 +104050,7 @@ A standard-issue colonial multi-tool. Folding utility blade, basic mineral scann
 463
 0
 0
-33
+34
 5
 361
 5
@@ -103911,6 +104111,9 @@ A standard-issue colonial multi-tool. Folding utility blade, basic mineral scann
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -103969,7 +104172,7 @@ A dense compressed food bar. Tastes of nothing. Calories are calories.
 464
 0
 0
-33
+34
 5
 361
 5
@@ -104030,6 +104233,9 @@ A dense compressed food bar. Tastes of nothing. Calories are calories.
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -104088,7 +104294,7 @@ A dense compressed food bar. Tastes of nothing. Calories are calories.
 465
 0
 0
-33
+34
 5
 361
 5
@@ -104149,6 +104355,9 @@ A dense compressed food bar. Tastes of nothing. Calories are calories.
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -104207,7 +104416,7 @@ A durable metal canteen, currently empty. Fill it at a water source.
 506
 0
 0
-33
+34
 5
 361
 5
@@ -104268,6 +104477,9 @@ A durable metal canteen, currently empty. Fill it at a water source.
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -106198,7 +106410,7 @@ Broken Ground
 473
 0
 0
-39
+40
 5
 361
 5
@@ -106277,6 +106489,9 @@ Broken Ground
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -106334,7 +106549,7 @@ Broken Ground
 523
 0
 0
-39
+40
 5
 361
 5
@@ -106413,6 +106628,9 @@ Broken Ground
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -107755,7 +107973,7 @@ look
 45
 -1
 0
-33
+34
 5
 361
 5
@@ -107816,6 +108034,9 @@ look
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -107887,7 +108108,7 @@ npc_idle
 -1
 1
 npcs
-34
+35
 4
 2
 1
@@ -107967,6 +108188,9 @@ npcs
 7
 5
 361
+7
+5
+361
 5
 2
 A wall-mounted colony systems monitor. Status indicators show power, atmospheric readings, and colonist biometrics. It hums quietly.
@@ -108024,7 +108248,7 @@ look
 2
 talk_lines
 idle_lines
-35
+36
 4
 7
 2
@@ -108126,6 +108350,9 @@ The Xeris operation lost twenty-two people. We don't talk about why.
 7
 5
 361
+7
+5
+361
 5
 2
 Sergeant Vera is built like a bulkhead: short, broad-shouldered, and seemingly impervious to cold. Her standard-issue colony uniform is immaculate despite everything. A deep scar runs from her left ear to her jawline. She watches the room with the fixed attention of someone waiting for trouble.
@@ -108183,7 +108410,7 @@ look
 2
 talk_lines
 idle_lines
-35
+36
 4
 7
 2
@@ -108285,6 +108512,9 @@ Hunger below twenty and your cognition starts to go. Watch for it.
 7
 5
 361
+7
+5
+361
 5
 2
 Doc Harlan is tall and thin, permanently stooped as though always about to lean over a patient. His lab coat is layered over colony thermals and covered in pockets, all of them full. He moves with quiet precision and speaks the same way.
@@ -108332,7 +108562,7 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 511
 0
 0
-39
+40
 5
 361
 5
@@ -108411,6 +108641,9 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -108468,7 +108701,7 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 520
 0
 0
-39
+40
 5
 361
 5
@@ -108547,6 +108780,9 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -108612,7 +108848,7 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 521
 0
 0
-39
+40
 5
 361
 5
@@ -108691,6 +108927,9 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -108748,7 +108987,7 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 522
 0
 0
-39
+40
 5
 361
 5
@@ -108827,6 +109066,9 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -108884,7 +109126,7 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 472
 0
 0
-39
+40
 5
 361
 5
@@ -108963,6 +109205,9 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -109020,7 +109265,7 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 524
 0
 0
-39
+40
 5
 361
 5
@@ -109099,6 +109344,9 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -109156,7 +109404,7 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 525
 0
 0
-39
+40
 5
 361
 5
@@ -109235,6 +109483,9 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -109292,7 +109543,7 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 526
 0
 0
-39
+40
 5
 361
 5
@@ -109371,6 +109622,9 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -109428,7 +109682,7 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 528
 0
 0
-39
+40
 5
 361
 5
@@ -109507,6 +109761,9 @@ Doc Harlan is tall and thin, permanently stooped as though always about to lean 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -109565,7 +109822,7 @@ ore deposit
 530
 0
 0
-39
+40
 5
 361
 5
@@ -109656,6 +109913,9 @@ ore deposit
 7
 5
 361
+7
+5
+361
 5
 5
 361
@@ -109703,7 +109963,7 @@ ore deposit
 1872
 0
 0
-39
+40
 5
 361
 5
@@ -109784,6 +110044,9 @@ ore deposit
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -110154,7 +110417,7 @@ salvage pile
 534
 0
 0
-39
+40
 5
 361
 5
@@ -110234,6 +110497,9 @@ salvage pile
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -110303,7 +110569,7 @@ salvage pile
 535
 0
 0
-39
+40
 5
 361
 5
@@ -110383,6 +110649,9 @@ salvage pile
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -110452,7 +110721,7 @@ salvage pile
 1911
 0
 0
-39
+40
 5
 361
 5
@@ -110543,6 +110812,9 @@ salvage pile
 7
 5
 361
+7
+5
+361
 5
 5
 361
@@ -110594,7 +110866,7 @@ salvage pile
 0
 1
 npcs
-34
+35
 4
 0
 2
@@ -110659,6 +110931,9 @@ npcs
 5
 361
 5
+5
+2
+7
 5
 2
 7
@@ -110717,7 +110992,7 @@ npcs
 0
 1
 npcs
-34
+35
 4
 0
 2
@@ -110782,6 +111057,9 @@ npcs
 5
 361
 5
+5
+2
+7
 5
 2
 7
@@ -110840,7 +111118,7 @@ npcs
 0
 1
 npcs
-34
+35
 4
 0
 2
@@ -110905,6 +111183,9 @@ npcs
 5
 361
 5
+5
+2
+7
 5
 2
 7
@@ -110963,7 +111244,7 @@ npcs
 0
 1
 npcs
-34
+35
 4
 0
 2
@@ -111028,6 +111309,9 @@ npcs
 5
 361
 5
+5
+2
+7
 5
 2
 7
@@ -111135,7 +111419,7 @@ _status_effects
 -1
 1
 npcs
-34
+35
 4
 0
 361
@@ -111200,6 +111484,9 @@ npcs
 5
 361
 5
+5
+2
+7
 5
 2
 7
@@ -111257,7 +111544,7 @@ npcs
 547
 0
 0
-33
+34
 5
 361
 5
@@ -111318,6 +111605,9 @@ npcs
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -111375,7 +111665,7 @@ npcs
 564
 0
 0
-33
+34
 5
 361
 5
@@ -111436,6 +111726,9 @@ npcs
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -116484,7 +116777,7 @@ A row of drop pod launch tubes dominates the far wall, each one large enough for
 565
 0
 0
-33
+34
 5
 361
 5
@@ -116545,6 +116838,9 @@ A row of drop pod launch tubes dominates the far wall, each one large enough for
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -116602,7 +116898,7 @@ A row of drop pod launch tubes dominates the far wall, each one large enough for
 566
 0
 0
-33
+34
 5
 361
 5
@@ -116663,6 +116959,9 @@ A row of drop pod launch tubes dominates the far wall, each one large enough for
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -116720,7 +117019,7 @@ A row of drop pod launch tubes dominates the far wall, each one large enough for
 567
 0
 0
-33
+34
 5
 361
 5
@@ -116781,6 +117080,9 @@ A row of drop pod launch tubes dominates the far wall, each one large enough for
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -116838,7 +117140,7 @@ A row of drop pod launch tubes dominates the far wall, each one large enough for
 568
 0
 0
-33
+34
 5
 361
 5
@@ -116899,6 +117201,9 @@ A row of drop pod launch tubes dominates the far wall, each one large enough for
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -116960,7 +117265,7 @@ craft
 29
 -1
 0
-33
+34
 5
 361
 5
@@ -117021,6 +117326,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -117082,7 +117390,7 @@ craft
 29
 -1
 0
-33
+34
 5
 361
 5
@@ -117143,6 +117451,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -117200,7 +117511,7 @@ craft
 571
 0
 0
-33
+34
 5
 361
 5
@@ -117261,6 +117572,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -117318,7 +117632,7 @@ craft
 572
 0
 0
-33
+34
 5
 361
 5
@@ -117379,6 +117693,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -117436,7 +117753,7 @@ craft
 573
 0
 0
-33
+34
 5
 361
 5
@@ -117497,6 +117814,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -117554,7 +117874,7 @@ craft
 574
 0
 0
-33
+34
 5
 361
 5
@@ -117615,6 +117935,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -117672,7 +117995,7 @@ craft
 576
 0
 0
-33
+34
 5
 361
 5
@@ -117733,6 +118056,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -117790,7 +118116,7 @@ craft
 -1
 0
 0
-33
+34
 5
 361
 5
@@ -117851,6 +118177,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -117908,7 +118237,7 @@ craft
 577
 0
 0
-33
+34
 5
 361
 5
@@ -117969,6 +118298,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -118026,7 +118358,7 @@ craft
 578
 0
 0
-33
+34
 5
 361
 5
@@ -118087,6 +118419,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -118144,7 +118479,7 @@ craft
 579
 0
 0
-33
+34
 5
 361
 5
@@ -118205,6 +118540,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -118262,7 +118600,7 @@ craft
 580
 0
 0
-33
+34
 5
 361
 5
@@ -118323,6 +118661,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -118380,7 +118721,7 @@ craft
 581
 0
 0
-33
+34
 5
 361
 5
@@ -118441,6 +118782,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -118498,7 +118842,7 @@ craft
 582
 0
 0
-33
+34
 5
 361
 5
@@ -118559,6 +118903,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -118616,7 +118963,7 @@ craft
 583
 0
 0
-33
+34
 5
 361
 5
@@ -118677,6 +119024,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -118734,7 +119084,7 @@ craft
 584
 0
 0
-33
+34
 5
 361
 5
@@ -118795,6 +119145,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -118852,7 +119205,7 @@ craft
 585
 0
 0
-33
+34
 5
 361
 5
@@ -118913,6 +119266,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -118970,7 +119326,7 @@ craft
 586
 0
 0
-33
+34
 5
 361
 5
@@ -119031,6 +119387,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -119088,7 +119447,7 @@ craft
 587
 0
 0
-33
+34
 5
 361
 5
@@ -119149,6 +119508,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -119206,7 +119568,7 @@ craft
 588
 0
 0
-33
+34
 5
 361
 5
@@ -119267,6 +119629,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -119324,7 +119689,7 @@ craft
 589
 0
 0
-33
+34
 5
 361
 5
@@ -119385,6 +119750,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -119442,7 +119810,7 @@ craft
 592
 0
 0
-33
+34
 5
 361
 5
@@ -119503,6 +119871,9 @@ craft
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -120532,7 +120903,7 @@ _craft_matproc
 29
 -1
 0
-33
+34
 5
 361
 5
@@ -120593,6 +120964,9 @@ _craft_matproc
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -120650,7 +121024,7 @@ _craft_matproc
 596
 0
 0
-33
+34
 5
 361
 5
@@ -120711,6 +121085,9 @@ _craft_matproc
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -121585,7 +121962,7 @@ _craft_matproc
 1708
 0
 0
-33
+34
 5
 361
 5
@@ -121646,6 +122023,9 @@ _craft_matproc
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -121753,7 +122133,7 @@ _craft_matproc
 648
 0
 0
-33
+34
 5
 361
 5
@@ -121814,6 +122194,9 @@ _craft_matproc
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -121871,7 +122254,7 @@ _craft_matproc
 707
 0
 0
-33
+34
 5
 361
 5
@@ -121932,6 +122315,9 @@ _craft_matproc
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -122047,7 +122433,7 @@ pre-fab shelter kit
 719
 0
 0
-33
+34
 5
 361
 5
@@ -122108,6 +122494,9 @@ pre-fab shelter kit
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -122177,7 +122566,7 @@ pre-fab shelter kit
 759
 0
 0
-33
+34
 5
 361
 5
@@ -122238,6 +122627,9 @@ pre-fab shelter kit
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -122308,7 +122700,7 @@ pre-fab shelter
 745
 0
 0
-22
+26
 5
 361
 3
@@ -122327,6 +122719,18 @@ pre-fab shelter
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -122406,7 +122810,7 @@ pre-fab shelter
 867
 0
 0
-22
+26
 5
 361
 3
@@ -122425,6 +122829,18 @@ pre-fab shelter
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -122505,7 +122921,7 @@ A collapsed alloy-frame shelter with fiber panels. Type 'place shelter' to deplo
 760
 0
 0
-33
+34
 5
 361
 5
@@ -122566,6 +122982,9 @@ A collapsed alloy-frame shelter with fiber panels. Type 'place shelter' to deplo
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -122623,7 +123042,7 @@ A collapsed alloy-frame shelter with fiber panels. Type 'place shelter' to deplo
 761
 0
 0
-33
+34
 5
 361
 5
@@ -122684,6 +123103,9 @@ A collapsed alloy-frame shelter with fiber panels. Type 'place shelter' to deplo
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -122741,7 +123163,7 @@ A collapsed alloy-frame shelter with fiber panels. Type 'place shelter' to deplo
 762
 0
 0
-33
+34
 5
 361
 5
@@ -122802,6 +123224,9 @@ A collapsed alloy-frame shelter with fiber panels. Type 'place shelter' to deplo
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -122859,7 +123284,7 @@ A collapsed alloy-frame shelter with fiber panels. Type 'place shelter' to deplo
 763
 0
 0
-33
+34
 5
 361
 5
@@ -122920,6 +123345,9 @@ A collapsed alloy-frame shelter with fiber panels. Type 'place shelter' to deplo
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -122977,7 +123405,7 @@ A collapsed alloy-frame shelter with fiber panels. Type 'place shelter' to deplo
 764
 0
 0
-33
+34
 5
 361
 5
@@ -123038,6 +123466,9 @@ A collapsed alloy-frame shelter with fiber panels. Type 'place shelter' to deplo
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -123095,7 +123526,7 @@ A collapsed alloy-frame shelter with fiber panels. Type 'place shelter' to deplo
 815
 0
 0
-33
+34
 5
 361
 5
@@ -123156,6 +123587,9 @@ A collapsed alloy-frame shelter with fiber panels. Type 'place shelter' to deplo
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -125141,7 +125575,7 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 816
 0
 0
-33
+34
 5
 361
 5
@@ -125202,6 +125636,9 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -125259,7 +125696,7 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 817
 0
 0
-33
+34
 5
 361
 5
@@ -125320,6 +125757,9 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -125377,7 +125817,7 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 833
 0
 0
-33
+34
 5
 361
 5
@@ -125438,6 +125878,9 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -127913,7 +128356,7 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 834
 0
 0
-33
+34
 5
 361
 5
@@ -127974,6 +128417,9 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -128031,7 +128477,7 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 835
 0
 0
-33
+34
 5
 361
 5
@@ -128092,6 +128538,9 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -128149,7 +128598,7 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 836
 0
 0
-33
+34
 5
 361
 5
@@ -128210,6 +128659,9 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -128267,7 +128719,7 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 855
 0
 0
-33
+34
 5
 361
 5
@@ -128328,6 +128780,9 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -128403,7 +128858,7 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 856
 0
 0
-33
+34
 5
 361
 5
@@ -128464,6 +128919,9 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -128521,7 +128979,7 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 857
 0
 0
-33
+34
 5
 361
 5
@@ -128582,6 +129040,9 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -128639,7 +129100,7 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 858
 0
 0
-33
+34
 5
 361
 5
@@ -128700,6 +129161,9 @@ A cavernous work hall. A labor coordinator terminal glows on the far wall. Hard 
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -128760,7 +129224,7 @@ npc_worker prototype
 w_job
 w_owner
 w_last_tick
-36
+37
 2
 ore
 361
@@ -128844,6 +129308,9 @@ ore
 7
 5
 361
+7
+5
+361
 5
 5
 361
@@ -128899,7 +129366,7 @@ Wizard's sector center
 0
 1
 sc_plaza
-23
+27
 1
 864
 361
@@ -128928,6 +129395,18 @@ sector center
 0
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -128995,7 +129474,7 @@ colonial worker (ore)
 898
 0
 0
-36
+37
 2
 ore
 361
@@ -129079,6 +129558,9 @@ ore
 7
 5
 361
+7
+5
+361
 5
 2
 A hired colonist assigned to gather ore from the surrounding terrain.
@@ -129126,7 +129608,7 @@ ore sample
 1617
 0
 0
-33
+34
 5
 2
 5
@@ -129187,6 +129669,9 @@ ore sample
 5
 2
 5
+5
+2
+7
 5
 2
 7
@@ -129263,7 +129748,7 @@ Wizard's sector center
 0
 1
 sc_plaza
-23
+27
 1
 884
 361
@@ -129292,6 +129777,18 @@ sector center
 0
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -129369,7 +129866,7 @@ colonial worker (ore)
 1676
 0
 0
-36
+37
 2
 ore
 361
@@ -129442,6 +129939,9 @@ ore
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -130218,7 +130718,7 @@ ore sample
 1618
 0
 0
-33
+34
 5
 361
 5
@@ -130279,6 +130779,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -130337,7 +130840,7 @@ ore sample
 1619
 0
 0
-33
+34
 5
 361
 5
@@ -130398,6 +130901,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -130456,7 +130962,7 @@ ore sample
 1620
 0
 0
-33
+34
 5
 361
 5
@@ -130517,6 +131023,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -130575,7 +131084,7 @@ ore sample
 1621
 0
 0
-33
+34
 5
 361
 5
@@ -130636,6 +131145,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -130694,7 +131206,7 @@ ore sample
 1622
 0
 0
-33
+34
 5
 361
 5
@@ -130755,6 +131267,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -130813,7 +131328,7 @@ ore sample
 1623
 0
 0
-33
+34
 5
 361
 5
@@ -130874,6 +131389,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -130932,7 +131450,7 @@ ore sample
 1624
 0
 0
-33
+34
 5
 361
 5
@@ -130993,6 +131511,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -131051,7 +131572,7 @@ ore sample
 1625
 0
 0
-33
+34
 5
 361
 5
@@ -131112,6 +131633,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -131170,7 +131694,7 @@ ore sample
 1626
 0
 0
-33
+34
 5
 361
 5
@@ -131231,6 +131755,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -131289,7 +131816,7 @@ ore sample
 1627
 0
 0
-33
+34
 5
 361
 5
@@ -131350,6 +131877,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -131408,7 +131938,7 @@ ore sample
 1628
 0
 0
-33
+34
 5
 361
 5
@@ -131469,6 +131999,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -131527,7 +132060,7 @@ ore sample
 1629
 0
 0
-33
+34
 5
 361
 5
@@ -131588,6 +132121,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -131646,7 +132182,7 @@ ore sample
 1630
 0
 0
-33
+34
 5
 361
 5
@@ -131707,6 +132243,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -131765,7 +132304,7 @@ ore sample
 1631
 0
 0
-33
+34
 5
 361
 5
@@ -131826,6 +132365,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -131884,7 +132426,7 @@ ore sample
 1632
 0
 0
-33
+34
 5
 361
 5
@@ -131945,6 +132487,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -132003,7 +132548,7 @@ ore sample
 1633
 0
 0
-33
+34
 5
 361
 5
@@ -132064,6 +132609,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -132122,7 +132670,7 @@ ore sample
 1634
 0
 0
-33
+34
 5
 361
 5
@@ -132183,6 +132731,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -132241,7 +132792,7 @@ ore sample
 1635
 0
 0
-33
+34
 5
 361
 5
@@ -132302,6 +132853,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -132360,7 +132914,7 @@ ore sample
 1636
 0
 0
-33
+34
 5
 361
 5
@@ -132421,6 +132975,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -132479,7 +133036,7 @@ ore sample
 1637
 0
 0
-33
+34
 5
 361
 5
@@ -132540,6 +133097,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -132598,7 +133158,7 @@ ore sample
 1638
 0
 0
-33
+34
 5
 361
 5
@@ -132659,6 +133219,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -132717,7 +133280,7 @@ ore sample
 1639
 0
 0
-33
+34
 5
 361
 5
@@ -132778,6 +133341,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -132836,7 +133402,7 @@ ore sample
 1640
 0
 0
-33
+34
 5
 361
 5
@@ -132897,6 +133463,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -132955,7 +133524,7 @@ ore sample
 1641
 0
 0
-33
+34
 5
 361
 5
@@ -133016,6 +133585,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -133074,7 +133646,7 @@ ore sample
 1642
 0
 0
-33
+34
 5
 361
 5
@@ -133135,6 +133707,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -133193,7 +133768,7 @@ ore sample
 1643
 0
 0
-33
+34
 5
 361
 5
@@ -133254,6 +133829,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -133312,7 +133890,7 @@ ore sample
 1644
 0
 0
-33
+34
 5
 361
 5
@@ -133373,6 +133951,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -133431,7 +134012,7 @@ ore sample
 1645
 0
 0
-33
+34
 5
 361
 5
@@ -133492,6 +134073,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -133550,7 +134134,7 @@ ore sample
 1646
 0
 0
-33
+34
 5
 361
 5
@@ -133611,6 +134195,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -133669,7 +134256,7 @@ ore sample
 1647
 0
 0
-33
+34
 5
 361
 5
@@ -133730,6 +134317,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -133788,7 +134378,7 @@ ore sample
 1648
 0
 0
-33
+34
 5
 361
 5
@@ -133849,6 +134439,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -133907,7 +134500,7 @@ ore sample
 1649
 0
 0
-33
+34
 5
 361
 5
@@ -133968,6 +134561,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -134026,7 +134622,7 @@ ore sample
 1650
 0
 0
-33
+34
 5
 361
 5
@@ -134087,6 +134683,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -134145,7 +134744,7 @@ ore sample
 1651
 0
 0
-33
+34
 5
 361
 5
@@ -134206,6 +134805,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -134264,7 +134866,7 @@ ore sample
 1652
 0
 0
-33
+34
 5
 361
 5
@@ -134325,6 +134927,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -134383,7 +134988,7 @@ ore sample
 1653
 0
 0
-33
+34
 5
 361
 5
@@ -134444,6 +135049,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -134502,7 +135110,7 @@ ore sample
 1654
 0
 0
-33
+34
 5
 361
 5
@@ -134563,6 +135171,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -134621,7 +135232,7 @@ ore sample
 1655
 0
 0
-33
+34
 5
 361
 5
@@ -134682,6 +135293,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -134740,7 +135354,7 @@ ore sample
 1656
 0
 0
-33
+34
 5
 361
 5
@@ -134801,6 +135415,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -134859,7 +135476,7 @@ ore sample
 1657
 0
 0
-33
+34
 5
 361
 5
@@ -134920,6 +135537,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -134978,7 +135598,7 @@ ore sample
 1658
 0
 0
-33
+34
 5
 361
 5
@@ -135039,6 +135659,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -135097,7 +135720,7 @@ ore sample
 1659
 0
 0
-33
+34
 5
 361
 5
@@ -135158,6 +135781,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -135216,7 +135842,7 @@ ore sample
 1660
 0
 0
-33
+34
 5
 361
 5
@@ -135277,6 +135903,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -135335,7 +135964,7 @@ ore sample
 1661
 0
 0
-33
+34
 5
 361
 5
@@ -135396,6 +136025,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -135454,7 +136086,7 @@ ore sample
 1662
 0
 0
-33
+34
 5
 361
 5
@@ -135515,6 +136147,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -135573,7 +136208,7 @@ ore sample
 1663
 0
 0
-33
+34
 5
 361
 5
@@ -135634,6 +136269,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -135692,7 +136330,7 @@ ore sample
 1664
 0
 0
-33
+34
 5
 361
 5
@@ -135753,6 +136391,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -135811,7 +136452,7 @@ ore sample
 1665
 0
 0
-33
+34
 5
 361
 5
@@ -135872,6 +136513,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -135930,7 +136574,7 @@ ore sample
 1666
 0
 0
-33
+34
 5
 361
 5
@@ -135991,6 +136635,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -136049,7 +136696,7 @@ ore sample
 1679
 0
 0
-33
+34
 5
 361
 5
@@ -136110,6 +136757,9 @@ ore sample
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -137118,11 +137768,11 @@ Wizard's sector center
 -1
 117
 -1
--1
+1934
 0
 1
 sc_plaza
-23
+27
 1
 1672
 361
@@ -137151,6 +137801,18 @@ sector center
 0
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -137218,7 +137880,7 @@ colonial worker (fiber)
 -1
 0
 0
-36
+37
 2
 fiber
 361
@@ -137291,6 +137953,9 @@ fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -137994,7 +138659,7 @@ eq_aggr_bonus
 eq_actions
 h_resource
 h_tool_class
-46
+47
 2
 
 361
@@ -138107,6 +138772,9 @@ h_tool_class
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -138165,7 +138833,7 @@ inert metal
 1682
 0
 0
-33
+34
 5
 361
 5
@@ -138226,6 +138894,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -138283,7 +138954,7 @@ inert metal
 1687
 0
 0
-33
+34
 5
 361
 5
@@ -138344,6 +139015,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -138405,7 +139079,7 @@ alien plant fiber
 1688
 0
 0
-33
+34
 5
 361
 5
@@ -138466,6 +139140,9 @@ alien plant fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -138523,7 +139200,7 @@ alien plant fiber
 1713
 0
 0
-33
+34
 5
 361
 5
@@ -138584,6 +139261,9 @@ alien plant fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -138641,7 +139321,7 @@ colonial machete
 1690
 0
 0
-46
+47
 2
 weapon
 361
@@ -138759,6 +139439,9 @@ swing
 7
 5
 361
+7
+5
+361
 5
 2
 A crude but effective blade forged from alien ore. Standard colonial sidearm.
@@ -138806,7 +139489,7 @@ hide armor
 1709
 0
 0
-46
+47
 2
 armor
 361
@@ -138911,6 +139594,9 @@ armor
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -143590,7 +144276,7 @@ basic crafting tool
 1720
 0
 0
-33
+34
 5
 361
 5
@@ -143651,6 +144337,9 @@ basic crafting tool
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -143709,7 +144398,7 @@ ion-driven mineral collector
 1710
 0
 0
-46
+47
 2
 special
 361
@@ -143824,6 +144513,9 @@ mineral
 7
 5
 361
+7
+5
+361
 5
 2
 Starter mineral extraction device.
@@ -143871,7 +144563,7 @@ cheap orgo-reaper
 1711
 0
 0
-46
+47
 2
 special
 361
@@ -143986,6 +144678,9 @@ organic
 7
 5
 361
+7
+5
+361
 5
 2
 Starter organic matter harvester.
@@ -144033,7 +144728,7 @@ hand-held energy absorption unit
 1712
 0
 0
-46
+47
 2
 special
 361
@@ -144148,6 +144843,9 @@ energy
 7
 5
 361
+7
+5
+361
 5
 2
 Starter energy/kretherson collector.
@@ -144195,7 +144893,7 @@ atmo-thrasher condenser
 1721
 0
 0
-46
+47
 2
 special
 361
@@ -144310,6 +145008,9 @@ water
 7
 5
 361
+7
+5
+361
 5
 2
 Starter atmospheric water condenser.
@@ -144357,7 +145058,7 @@ native fiber
 1714
 0
 0
-33
+34
 5
 361
 5
@@ -144418,6 +145119,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -144475,7 +145179,7 @@ native fiber
 1715
 0
 0
-33
+34
 5
 361
 5
@@ -144536,6 +145240,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -144593,7 +145300,7 @@ native fiber
 1716
 0
 0
-33
+34
 5
 361
 5
@@ -144654,6 +145361,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -144711,7 +145421,7 @@ native fiber
 1717
 0
 0
-33
+34
 5
 361
 5
@@ -144772,6 +145482,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -144829,7 +145542,7 @@ inert metal
 1718
 0
 0
-33
+34
 5
 361
 5
@@ -144890,6 +145603,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -144947,7 +145663,7 @@ inert metal
 1725
 0
 0
-33
+34
 5
 361
 5
@@ -145008,6 +145724,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -145781,7 +146500,7 @@ basic crafting tool
 1732
 0
 0
-33
+34
 5
 361
 5
@@ -145842,6 +146561,9 @@ basic crafting tool
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -145900,7 +146622,7 @@ ion-driven mineral collector
 1722
 0
 0
-46
+47
 2
 special
 361
@@ -146004,6 +146726,9 @@ mineral
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -146062,7 +146787,7 @@ cheap orgo-reaper
 1723
 0
 0
-46
+47
 2
 special
 361
@@ -146166,6 +146891,9 @@ organic
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -146224,7 +146952,7 @@ hand-held energy absorption unit
 1724
 0
 0
-46
+47
 2
 special
 361
@@ -146328,6 +147056,9 @@ energy
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -146386,7 +147117,7 @@ atmo-thrasher condenser
 1733
 0
 0
-46
+47
 2
 special
 361
@@ -146490,6 +147221,9 @@ water
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -146548,7 +147282,7 @@ native fiber
 1726
 0
 0
-33
+34
 5
 361
 5
@@ -146609,6 +147343,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -146666,7 +147403,7 @@ native fiber
 1727
 0
 0
-33
+34
 5
 361
 5
@@ -146727,6 +147464,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -146784,7 +147524,7 @@ native fiber
 1728
 0
 0
-33
+34
 5
 361
 5
@@ -146845,6 +147585,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -146902,7 +147645,7 @@ native fiber
 1729
 0
 0
-33
+34
 5
 361
 5
@@ -146963,6 +147706,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -147020,7 +147766,7 @@ inert metal
 1730
 0
 0
-33
+34
 5
 361
 5
@@ -147081,6 +147827,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -147138,7 +147887,7 @@ inert metal
 1737
 0
 0
-33
+34
 5
 361
 5
@@ -147199,6 +147948,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -147257,7 +148009,7 @@ basic crafting tool
 1744
 0
 0
-33
+34
 5
 361
 5
@@ -147318,6 +148070,9 @@ basic crafting tool
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -147376,7 +148131,7 @@ ion-driven mineral collector
 1734
 0
 0
-46
+47
 2
 special
 361
@@ -147480,6 +148235,9 @@ mineral
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -147538,7 +148296,7 @@ cheap orgo-reaper
 1735
 0
 0
-46
+47
 2
 special
 361
@@ -147642,6 +148400,9 @@ organic
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -147700,7 +148461,7 @@ hand-held energy absorption unit
 1736
 0
 0
-46
+47
 2
 special
 361
@@ -147804,6 +148565,9 @@ energy
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -147862,7 +148626,7 @@ atmo-thrasher condenser
 1745
 0
 0
-46
+47
 2
 special
 361
@@ -147966,6 +148730,9 @@ water
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -148024,7 +148791,7 @@ native fiber
 1738
 0
 0
-33
+34
 5
 361
 5
@@ -148085,6 +148852,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -148142,7 +148912,7 @@ native fiber
 1739
 0
 0
-33
+34
 5
 361
 5
@@ -148203,6 +148973,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -148260,7 +149033,7 @@ native fiber
 1740
 0
 0
-33
+34
 5
 361
 5
@@ -148321,6 +149094,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -148378,7 +149154,7 @@ native fiber
 1741
 0
 0
-33
+34
 5
 361
 5
@@ -148439,6 +149215,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -148496,7 +149275,7 @@ inert metal
 1742
 0
 0
-33
+34
 5
 361
 5
@@ -148557,6 +149336,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -148614,7 +149396,7 @@ inert metal
 1749
 0
 0
-33
+34
 5
 361
 5
@@ -148675,6 +149457,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -148733,7 +149518,7 @@ basic crafting tool
 1756
 0
 0
-33
+34
 5
 361
 5
@@ -148794,6 +149579,9 @@ basic crafting tool
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -148852,7 +149640,7 @@ ion-driven mineral collector
 1746
 0
 0
-46
+47
 2
 special
 361
@@ -148956,6 +149744,9 @@ mineral
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -149014,7 +149805,7 @@ cheap orgo-reaper
 1747
 0
 0
-46
+47
 2
 special
 361
@@ -149118,6 +149909,9 @@ organic
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -149176,7 +149970,7 @@ hand-held energy absorption unit
 1748
 0
 0
-46
+47
 2
 special
 361
@@ -149280,6 +150074,9 @@ energy
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -149338,7 +150135,7 @@ atmo-thrasher condenser
 1757
 0
 0
-46
+47
 2
 special
 361
@@ -149442,6 +150239,9 @@ water
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -149500,7 +150300,7 @@ native fiber
 1750
 0
 0
-33
+34
 5
 361
 5
@@ -149561,6 +150361,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -149618,7 +150421,7 @@ native fiber
 1751
 0
 0
-33
+34
 5
 361
 5
@@ -149679,6 +150482,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -149736,7 +150542,7 @@ native fiber
 1752
 0
 0
-33
+34
 5
 361
 5
@@ -149797,6 +150603,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -149854,7 +150663,7 @@ native fiber
 1753
 0
 0
-33
+34
 5
 361
 5
@@ -149915,6 +150724,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -149972,7 +150784,7 @@ inert metal
 1754
 0
 0
-33
+34
 5
 361
 5
@@ -150033,6 +150845,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -150090,7 +150905,7 @@ inert metal
 1761
 0
 0
-33
+34
 5
 361
 5
@@ -150151,6 +150966,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -150209,7 +151027,7 @@ basic crafting tool
 1768
 0
 0
-33
+34
 5
 361
 5
@@ -150270,6 +151088,9 @@ basic crafting tool
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -150328,7 +151149,7 @@ ion-driven mineral collector
 1758
 0
 0
-46
+47
 2
 special
 361
@@ -150432,6 +151253,9 @@ mineral
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -150490,7 +151314,7 @@ cheap orgo-reaper
 1759
 0
 0
-46
+47
 2
 special
 361
@@ -150594,6 +151418,9 @@ organic
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -150652,7 +151479,7 @@ hand-held energy absorption unit
 1760
 0
 0
-46
+47
 2
 special
 361
@@ -150756,6 +151583,9 @@ energy
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -150814,7 +151644,7 @@ atmo-thrasher condenser
 1769
 0
 0
-46
+47
 2
 special
 361
@@ -150918,6 +151748,9 @@ water
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -150976,7 +151809,7 @@ native fiber
 1762
 0
 0
-33
+34
 5
 361
 5
@@ -151037,6 +151870,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -151094,7 +151930,7 @@ native fiber
 1763
 0
 0
-33
+34
 5
 361
 5
@@ -151155,6 +151991,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -151212,7 +152051,7 @@ native fiber
 1764
 0
 0
-33
+34
 5
 361
 5
@@ -151273,6 +152112,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -151330,7 +152172,7 @@ native fiber
 1765
 0
 0
-33
+34
 5
 361
 5
@@ -151391,6 +152233,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -151448,7 +152293,7 @@ inert metal
 1766
 0
 0
-33
+34
 5
 361
 5
@@ -151509,6 +152354,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -151566,7 +152414,7 @@ inert metal
 1773
 0
 0
-33
+34
 5
 361
 5
@@ -151627,6 +152475,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -151685,7 +152536,7 @@ basic crafting tool
 1780
 0
 0
-33
+34
 5
 361
 5
@@ -151746,6 +152597,9 @@ basic crafting tool
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -151804,7 +152658,7 @@ ion-driven mineral collector
 1770
 0
 0
-46
+47
 2
 special
 361
@@ -151908,6 +152762,9 @@ mineral
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -151966,7 +152823,7 @@ cheap orgo-reaper
 1771
 0
 0
-46
+47
 2
 special
 361
@@ -152070,6 +152927,9 @@ organic
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -152128,7 +152988,7 @@ hand-held energy absorption unit
 1772
 0
 0
-46
+47
 2
 special
 361
@@ -152232,6 +153092,9 @@ energy
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -152290,7 +153153,7 @@ atmo-thrasher condenser
 1781
 0
 0
-46
+47
 2
 special
 361
@@ -152394,6 +153257,9 @@ water
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -152452,7 +153318,7 @@ native fiber
 1774
 0
 0
-33
+34
 5
 361
 5
@@ -152513,6 +153379,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -152570,7 +153439,7 @@ native fiber
 1775
 0
 0
-33
+34
 5
 361
 5
@@ -152631,6 +153500,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -152688,7 +153560,7 @@ native fiber
 1776
 0
 0
-33
+34
 5
 361
 5
@@ -152749,6 +153621,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -152806,7 +153681,7 @@ native fiber
 1777
 0
 0
-33
+34
 5
 361
 5
@@ -152867,6 +153742,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -152924,7 +153802,7 @@ inert metal
 1778
 0
 0
-33
+34
 5
 361
 5
@@ -152985,6 +153863,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -153042,7 +153923,7 @@ inert metal
 1785
 0
 0
-33
+34
 5
 361
 5
@@ -153103,6 +153984,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -153161,7 +154045,7 @@ basic crafting tool
 1792
 0
 0
-33
+34
 5
 361
 5
@@ -153222,6 +154106,9 @@ basic crafting tool
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -153280,7 +154167,7 @@ ion-driven mineral collector
 1782
 0
 0
-46
+47
 2
 special
 361
@@ -153384,6 +154271,9 @@ mineral
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -153442,7 +154332,7 @@ cheap orgo-reaper
 1783
 0
 0
-46
+47
 2
 special
 361
@@ -153546,6 +154436,9 @@ organic
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -153604,7 +154497,7 @@ hand-held energy absorption unit
 1784
 0
 0
-46
+47
 2
 special
 361
@@ -153708,6 +154601,9 @@ energy
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -153766,7 +154662,7 @@ atmo-thrasher condenser
 1793
 0
 0
-46
+47
 2
 special
 361
@@ -153870,6 +154766,9 @@ water
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -153928,7 +154827,7 @@ native fiber
 1786
 0
 0
-33
+34
 5
 361
 5
@@ -153989,6 +154888,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -154046,7 +154948,7 @@ native fiber
 1787
 0
 0
-33
+34
 5
 361
 5
@@ -154107,6 +155009,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -154164,7 +155069,7 @@ native fiber
 1788
 0
 0
-33
+34
 5
 361
 5
@@ -154225,6 +155130,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -154282,7 +155190,7 @@ native fiber
 1789
 0
 0
-33
+34
 5
 361
 5
@@ -154343,6 +155251,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -154400,7 +155311,7 @@ inert metal
 1790
 0
 0
-33
+34
 5
 361
 5
@@ -154461,6 +155372,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -154518,7 +155432,7 @@ inert metal
 1797
 0
 0
-33
+34
 5
 361
 5
@@ -154579,6 +155493,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -154637,7 +155554,7 @@ basic crafting tool
 1804
 0
 0
-33
+34
 5
 361
 5
@@ -154698,6 +155615,9 @@ basic crafting tool
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -154756,7 +155676,7 @@ ion-driven mineral collector
 1794
 0
 0
-46
+47
 2
 special
 361
@@ -154860,6 +155780,9 @@ mineral
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -154918,7 +155841,7 @@ cheap orgo-reaper
 1795
 0
 0
-46
+47
 2
 special
 361
@@ -155033,6 +155956,9 @@ organic
 7
 5
 361
+7
+5
+361
 5
 2
 Starter organic matter harvester.
@@ -155080,7 +156006,7 @@ hand-held energy absorption unit
 1796
 0
 0
-46
+47
 2
 special
 361
@@ -155195,6 +156121,9 @@ energy
 7
 5
 361
+7
+5
+361
 5
 2
 Starter energy/kretherson collector.
@@ -155242,7 +156171,7 @@ atmo-thrasher condenser
 1805
 0
 0
-46
+47
 2
 special
 361
@@ -155357,6 +156286,9 @@ water
 7
 5
 361
+7
+5
+361
 5
 2
 Starter atmospheric water condenser.
@@ -155404,7 +156336,7 @@ native fiber
 1798
 0
 0
-33
+34
 5
 361
 5
@@ -155465,6 +156397,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -155522,7 +156457,7 @@ native fiber
 1799
 0
 0
-33
+34
 5
 361
 5
@@ -155583,6 +156518,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -155640,7 +156578,7 @@ native fiber
 1800
 0
 0
-33
+34
 5
 361
 5
@@ -155701,6 +156639,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -155758,7 +156699,7 @@ native fiber
 1801
 0
 0
-33
+34
 5
 361
 5
@@ -155819,6 +156760,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -155876,7 +156820,7 @@ inert metal
 1802
 0
 0
-33
+34
 5
 361
 5
@@ -155937,6 +156881,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -155994,7 +156941,7 @@ inert metal
 1809
 0
 0
-33
+34
 5
 361
 5
@@ -156055,6 +157002,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -156113,7 +157063,7 @@ basic crafting tool
 1817
 0
 0
-33
+34
 5
 361
 5
@@ -156174,6 +157124,9 @@ basic crafting tool
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -156232,7 +157185,7 @@ ion-driven mineral collector
 1806
 0
 0
-46
+47
 2
 special
 361
@@ -156347,6 +157300,9 @@ mineral
 7
 5
 361
+7
+5
+361
 5
 2
 Starter mineral extraction device.
@@ -156394,7 +157350,7 @@ cheap orgo-reaper
 1807
 0
 0
-46
+47
 2
 special
 361
@@ -156509,6 +157465,9 @@ organic
 7
 5
 361
+7
+5
+361
 5
 2
 Starter organic matter harvester.
@@ -156556,7 +157515,7 @@ hand-held energy absorption unit
 1808
 0
 0
-46
+47
 2
 special
 361
@@ -156671,6 +157630,9 @@ energy
 7
 5
 361
+7
+5
+361
 5
 2
 Starter energy/kretherson collector.
@@ -156718,7 +157680,7 @@ atmo-thrasher condenser
 1818
 0
 0
-46
+47
 2
 special
 361
@@ -156833,6 +157795,9 @@ water
 7
 5
 361
+7
+5
+361
 5
 2
 Starter atmospheric water condenser.
@@ -156880,7 +157845,7 @@ native fiber
 1810
 0
 0
-33
+34
 5
 361
 5
@@ -156941,6 +157906,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -156998,7 +157966,7 @@ native fiber
 1811
 0
 0
-33
+34
 5
 361
 5
@@ -157059,6 +158027,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -157116,7 +158087,7 @@ native fiber
 1812
 0
 0
-33
+34
 5
 361
 5
@@ -157177,6 +158148,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -157234,7 +158208,7 @@ native fiber
 1813
 0
 0
-33
+34
 5
 361
 5
@@ -157295,6 +158269,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -157352,7 +158329,7 @@ inert metal
 1814
 0
 0
-33
+34
 5
 361
 5
@@ -157413,6 +158390,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -157470,7 +158450,7 @@ inert metal
 1815
 0
 0
-33
+34
 5
 361
 5
@@ -157531,6 +158511,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -157588,7 +158571,7 @@ inert metal
 1822
 0
 0
-33
+34
 5
 361
 5
@@ -157649,6 +158632,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -157708,7 +158694,7 @@ basic crafting tool
 1831
 0
 0
-33
+34
 5
 361
 5
@@ -157769,6 +158755,9 @@ basic crafting tool
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -157827,7 +158816,7 @@ ion-driven mineral collector
 1819
 0
 0
-46
+47
 2
 special
 361
@@ -157942,6 +158931,9 @@ mineral
 7
 5
 361
+7
+5
+361
 5
 2
 Starter mineral extraction device.
@@ -157989,7 +158981,7 @@ cheap orgo-reaper
 1820
 0
 0
-46
+47
 2
 special
 361
@@ -158104,6 +159096,9 @@ organic
 7
 5
 361
+7
+5
+361
 5
 2
 Starter organic matter harvester.
@@ -158151,7 +159146,7 @@ hand-held energy absorption unit
 1821
 0
 0
-46
+47
 2
 special
 361
@@ -158266,6 +159261,9 @@ energy
 7
 5
 361
+7
+5
+361
 5
 2
 Starter energy/kretherson collector.
@@ -158313,7 +159311,7 @@ atmo-thrasher condenser
 1832
 0
 0
-46
+47
 2
 special
 361
@@ -158428,6 +159426,9 @@ water
 7
 5
 361
+7
+5
+361
 5
 2
 Starter atmospheric water condenser.
@@ -158475,7 +159476,7 @@ native fiber
 1823
 0
 0
-33
+34
 5
 361
 5
@@ -158536,6 +159537,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -158593,7 +159597,7 @@ native fiber
 1824
 0
 0
-33
+34
 5
 361
 5
@@ -158654,6 +159658,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -158711,7 +159718,7 @@ native fiber
 1825
 0
 0
-33
+34
 5
 361
 5
@@ -158772,6 +159779,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -158829,7 +159839,7 @@ native fiber
 1826
 0
 0
-33
+34
 5
 361
 5
@@ -158890,6 +159900,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -158947,7 +159960,7 @@ inert metal
 1827
 0
 0
-33
+34
 5
 361
 5
@@ -159008,6 +160021,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -159065,7 +160081,7 @@ inert metal
 1828
 0
 0
-33
+34
 5
 361
 5
@@ -159126,6 +160142,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -159183,7 +160202,7 @@ inert metal
 1829
 0
 0
-33
+34
 5
 361
 5
@@ -159244,6 +160263,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -159302,7 +160324,7 @@ inert metal
 1836
 0
 0
-33
+34
 5
 361
 5
@@ -159363,6 +160385,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -159422,7 +160447,7 @@ basic crafting tool
 1847
 0
 0
-33
+34
 5
 361
 5
@@ -159483,6 +160508,9 @@ basic crafting tool
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -159541,7 +160569,7 @@ ion-driven mineral collector
 1833
 0
 0
-46
+47
 2
 special
 361
@@ -159656,6 +160684,9 @@ mineral
 7
 5
 361
+7
+5
+361
 5
 2
 Starter mineral extraction device.
@@ -159703,7 +160734,7 @@ cheap orgo-reaper
 1834
 0
 0
-46
+47
 2
 special
 361
@@ -159818,6 +160849,9 @@ organic
 7
 5
 361
+7
+5
+361
 5
 2
 Starter organic matter harvester.
@@ -159865,7 +160899,7 @@ hand-held energy absorption unit
 1835
 0
 0
-46
+47
 2
 special
 361
@@ -159980,6 +161014,9 @@ energy
 7
 5
 361
+7
+5
+361
 5
 2
 Starter energy/kretherson collector.
@@ -160027,7 +161064,7 @@ atmo-thrasher condenser
 1848
 0
 0
-46
+47
 2
 special
 361
@@ -160142,6 +161179,9 @@ water
 7
 5
 361
+7
+5
+361
 5
 2
 Starter atmospheric water condenser.
@@ -160189,7 +161229,7 @@ native fiber
 1837
 0
 0
-33
+34
 5
 361
 5
@@ -160250,6 +161290,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -160307,7 +161350,7 @@ native fiber
 1838
 0
 0
-33
+34
 5
 361
 5
@@ -160368,6 +161411,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -160425,7 +161471,7 @@ native fiber
 1839
 0
 0
-33
+34
 5
 361
 5
@@ -160486,6 +161532,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -160543,7 +161592,7 @@ native fiber
 1840
 0
 0
-33
+34
 5
 361
 5
@@ -160604,6 +161653,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -160661,7 +161713,7 @@ inert metal
 1841
 0
 0
-33
+34
 5
 361
 5
@@ -160722,6 +161774,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -160779,7 +161834,7 @@ inert metal
 1842
 0
 0
-33
+34
 5
 361
 5
@@ -160840,6 +161895,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -160897,7 +161955,7 @@ inert metal
 1843
 0
 0
-33
+34
 5
 361
 5
@@ -160958,6 +162016,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -161016,7 +162077,7 @@ inert metal
 1844
 0
 0
-33
+34
 5
 361
 5
@@ -161077,6 +162138,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -161135,7 +162199,7 @@ inert metal
 1845
 0
 0
-33
+34
 5
 361
 5
@@ -161196,6 +162260,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -161254,7 +162321,7 @@ inert metal
 1852
 0
 0
-33
+34
 5
 361
 5
@@ -161315,6 +162382,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -161374,7 +162444,7 @@ basic crafting tool
 1899
 0
 0
-33
+34
 5
 361
 5
@@ -161435,6 +162505,9 @@ basic crafting tool
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -161493,7 +162566,7 @@ ion-driven mineral collector
 1849
 0
 0
-46
+47
 2
 special
 361
@@ -161608,6 +162681,9 @@ mineral
 7
 5
 361
+7
+5
+361
 5
 2
 Starter mineral extraction device.
@@ -161655,7 +162731,7 @@ cheap orgo-reaper
 1850
 0
 0
-46
+47
 2
 special
 361
@@ -161770,6 +162846,9 @@ organic
 7
 5
 361
+7
+5
+361
 5
 2
 Starter organic matter harvester.
@@ -161817,7 +162896,7 @@ hand-held energy absorption unit
 1851
 0
 0
-46
+47
 2
 special
 361
@@ -161932,6 +163011,9 @@ energy
 7
 5
 361
+7
+5
+361
 5
 2
 Starter energy/kretherson collector.
@@ -161979,7 +163061,7 @@ atmo-thrasher condenser
 1900
 0
 0
-46
+47
 2
 special
 361
@@ -162094,6 +163176,9 @@ water
 7
 5
 361
+7
+5
+361
 5
 2
 Starter atmospheric water condenser.
@@ -162141,7 +163226,7 @@ native fiber
 1853
 0
 0
-33
+34
 5
 361
 5
@@ -162202,6 +163287,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -162259,7 +163347,7 @@ native fiber
 1854
 0
 0
-33
+34
 5
 361
 5
@@ -162320,6 +163408,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -162377,7 +163468,7 @@ native fiber
 1855
 0
 0
-33
+34
 5
 361
 5
@@ -162438,6 +163529,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -162495,7 +163589,7 @@ native fiber
 1856
 0
 0
-33
+34
 5
 361
 5
@@ -162556,6 +163650,9 @@ native fiber
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -162613,7 +163710,7 @@ inert metal
 1857
 0
 0
-33
+34
 5
 361
 5
@@ -162674,6 +163771,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -162731,7 +163831,7 @@ inert metal
 1889
 0
 0
-33
+34
 5
 361
 5
@@ -162792,6 +163892,9 @@ inert metal
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -167292,7 +168395,7 @@ Desert
 -1
 0
 0
-39
+40
 5
 361
 5
@@ -167372,6 +168475,9 @@ Desert
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -172397,7 +173503,7 @@ c_loot_table
 c_roam_timer
 c_attack_timer
 c_alive
-45
+46
 0
 20
 361
@@ -172506,6 +173612,9 @@ c_alive
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -174469,7 +175578,7 @@ A serpentine creature. Venomous.
 1894
 0
 0
-45
+46
 5
 361
 7
@@ -174566,6 +175675,9 @@ A serpentine creature. Venomous.
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -174623,7 +175735,7 @@ A serpentine creature. Venomous.
 1915
 0
 0
-45
+46
 5
 361
 7
@@ -174720,6 +175832,9 @@ A serpentine creature. Venomous.
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -175090,7 +176205,7 @@ runner meat
 1933
 0
 0
-33
+34
 5
 361
 5
@@ -175151,6 +176266,9 @@ runner meat
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -175203,7 +176321,7 @@ testplayer
 361
 1921
 1899
--1
+1934
 33
 -1
 -1
@@ -175269,7 +176387,7 @@ testplayer
 4
 2
 0
-1775834576
+1775835804
 2
 localhost
 361
@@ -175278,7 +176396,7 @@ localhost
 361
 0
 0
-1775835499
+1775836736
 361
 1
 0
@@ -175317,7 +176435,7 @@ localhost
 361
 0
 2
-port 7777 from localhost, port 40892
+port 7777 from localhost, port 39206
 361
 0
 5
@@ -175336,7 +176454,7 @@ port 7777 from localhost, port 40892
 361
 5
 0
-1775835434
+1775836671
 361
 1
 5
@@ -175641,7 +176759,10 @@ first aid
 5
 361
 7
-5
+4
+1
+1
+1934
 361
 7
 5
@@ -175957,7 +177078,7 @@ basic crafting tool
 -1
 0
 0
-33
+34
 5
 361
 5
@@ -176018,6 +177139,9 @@ basic crafting tool
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -176076,7 +177200,7 @@ ion-driven mineral collector
 1901
 0
 0
-46
+47
 2
 special
 361
@@ -176191,6 +177315,9 @@ mineral
 7
 5
 361
+7
+5
+361
 5
 2
 Starter mineral extraction device.
@@ -176238,7 +177365,7 @@ cheap orgo-reaper
 1902
 0
 0
-46
+47
 2
 special
 361
@@ -176353,6 +177480,9 @@ organic
 7
 5
 361
+7
+5
+361
 5
 2
 Starter organic matter harvester.
@@ -176400,7 +177530,7 @@ hand-held energy absorption unit
 1903
 0
 0
-46
+47
 2
 special
 361
@@ -176515,6 +177645,9 @@ energy
 7
 5
 361
+7
+5
+361
 5
 2
 Starter energy/kretherson collector.
@@ -176556,13 +177689,13 @@ atmo-thrasher condenser
 361
 1898
 -1
--1
+1936
 1679
 -1
 -1
 0
 0
-46
+47
 2
 special
 361
@@ -176666,6 +177799,9 @@ water
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -177050,7 +178186,7 @@ Desert
 1928
 0
 0
-39
+40
 5
 361
 5
@@ -177130,6 +178266,9 @@ Desert
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -177507,7 +178646,7 @@ Forest
 -1
 0
 0
-39
+40
 5
 361
 5
@@ -177587,6 +178726,9 @@ Forest
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -177964,7 +179106,7 @@ bark beetle
 1917
 0
 0
-45
+46
 0
 13
 361
@@ -178081,6 +179223,9 @@ Hard insect chitin.
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -178464,7 +179609,7 @@ bark beetle
 -1
 0
 0
-45
+46
 0
 15
 361
@@ -178581,6 +179726,9 @@ Hard insect chitin.
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -181844,7 +182992,7 @@ Desert
 1930
 0
 0
-39
+40
 5
 361
 5
@@ -181924,6 +183072,9 @@ Desert
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -182301,7 +183452,7 @@ Desert
 -1
 0
 0
-39
+40
 5
 361
 5
@@ -182381,6 +183532,9 @@ Desert
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -182756,10 +183910,10 @@ runner meat
 -1
 5
 -1
--1
+1935
 0
 0
-33
+34
 5
 361
 5
@@ -182820,6 +183974,9 @@ runner meat
 5
 361
 5
+5
+361
+7
 5
 361
 7
@@ -182834,6 +183991,1208 @@ runner meat
 5
 2
 Stringy but edible.
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1934
+refinery
+
+0
+361
+1921
+-1
+-1
+117
+-1
+-1
+0
+0
+26
+2
+refinery
+361
+3
+1
+1898
+361
+3
+0
+100
+361
+3
+0
+100
+361
+3
+0
+16
+361
+3
+0
+17
+361
+3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+0
+30
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+2
+mineral
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1935
+ore sample
+
+0
+361
+-1
+-1
+-1
+5
+-1
+1936
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1936
+ore sample
+
+0
+361
+1898
+-1
+1937
+5
+-1
+1937
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+0
+16
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1937
+ore sample
+
+0
+361
+1898
+-1
+1938
+5
+-1
+1938
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+0
+20
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1938
+ore sample
+
+0
+361
+1898
+-1
+1939
+5
+-1
+1939
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+0
+14
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1939
+ore sample
+
+0
+361
+1898
+-1
+1940
+5
+-1
+1940
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+0
+25
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1940
+ore sample
+
+0
+361
+1898
+-1
+1941
+5
+-1
+1941
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+0
+21
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1941
+ore sample
+
+0
+361
+1898
+-1
+1942
+5
+-1
+1942
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+0
+13
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1942
+ore sample
+
+0
+361
+1898
+-1
+1943
+5
+-1
+1943
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+0
+8
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1943
+ore sample
+
+0
+361
+1898
+-1
+-1
+5
+-1
+-1
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+0
+6
+361
+7
+5
+361
+5
+5
 361
 5
 4
@@ -201560,6 +203919,291 @@ if (heal > 0)
 p.w_hp = p.w_hp + heal;
 p:tell(((((("Healed " + tostr(heal)) + " HP. [") + tostr(p.w_hp)) + "/") + tostr(hp_max)) + "]");
 endif
+.
+#6:378
+"Check refinery processor status. Stand in same room as refinery.";
+p = player;
+"Find refinery/processing/enrichment building in room";
+ref = $nothing;
+for OBJ in (p.location.contents)
+try
+bt = $string_utils:lowercase(OBJ.b_type);
+if (((index(bt, "refinery") > 0) || (index(bt, "processing") > 0)) || (index(bt, "enrichment") > 0))
+ref = OBJ;
+endif
+except e (ANY)
+endtry
+endfor
+if (!valid(ref))
+p:tell("There is no refinery here. Place one first.");
+return;
+endif
+p:tell(("=== " + ref.name) + " ===");
+rclass = "";
+try
+rclass = ref.r_class;
+except e (ANY)
+endtry
+if (rclass != "")
+p:tell("  Type: " + rclass);
+endif
+bqual = 0;
+try
+bqual = ref.b_quality;
+except e (ANY)
+endtry
+p:tell("  Building quality: " + tostr(bqual));
+lock = "";
+try
+lock = ref.r_type_lock;
+except e (ANY)
+endtry
+qe = 0;
+try
+qe = ref.r_quality_equiv;
+except e (ANY)
+endtry
+cnt = 0;
+try
+cnt = ref.r_count;
+except e (ANY)
+endtry
+if ((lock == "") || (lock == 0))
+p:tell("  Processor: EMPTY (add resources to begin)");
+else
+p:tell("  Locked to: " + lock);
+p:tell("  Items added: " + tostr(cnt));
+p:tell("  Quality equivalent: " + tostr(qe));
+"Estimate output";
+base_q = 25 + (bqual / 5);
+if (base_q > 95)
+base_q = 95;
+endif
+if (base_q > 0)
+est_out = qe / base_q;
+p:tell((("  Est. output: ~" + tostr(est_out)) + " units at quality ~") + tostr(base_q));
+endif
+endif
+p:tell("");
+p:tell("Commands: MASSADD <type> | PROCESS | RESET");
+.
+#6:379
+"Bulk-add resources to refinery. Usage: MASSADD <resource name>";
+p = player;
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+if (dstr == "")
+p:tell("Usage: MASSADD <resource type> (e.g. MASSADD inert metal)");
+return;
+endif
+"Find refinery in room";
+ref = $nothing;
+for OBJ in (p.location.contents)
+try
+bt = $string_utils:lowercase(OBJ.b_type);
+if (((index(bt, "refinery") > 0) || (index(bt, "processing") > 0)) || (index(bt, "enrichment") > 0))
+ref = OBJ;
+endif
+except e (ANY)
+endtry
+endfor
+if (!valid(ref))
+p:tell("There is no refinery here.");
+return;
+endif
+"Check type lock";
+lock = "";
+try
+lock = ref.r_type_lock;
+except e (ANY)
+endtry
+dstr_low = $string_utils:lowercase(dstr);
+if (((lock != "") && (lock != 0)) && ($string_utils:lowercase(lock) != dstr_low))
+p:tell(("This refinery is locked to \"" + lock) + "\". RESET to change.");
+return;
+endif
+"Find all matching items in inventory";
+to_add = {};
+total_qe = 0;
+for item in (p.contents)
+iname = $string_utils:lowercase(item.name);
+if ((iname == dstr_low) || (index(iname, dstr_low) > 0))
+"Check it is a raw resource (not a tool or kit)";
+is_tool = 0;
+if (((index(iname, "tool") > 0) || (index(iname, "kit") > 0)) || (index(iname, "crafting") > 0))
+is_tool = 1;
+endif
+if (!is_tool)
+to_add = listappend(to_add, item);
+q = 10;
+try
+q = item.w_quality;
+except e (ANY)
+endtry
+if (q < 1)
+q = 10;
+endif
+total_qe = total_qe + q;
+endif
+endif
+endfor
+if (length(to_add) == 0)
+p:tell(("You have no \"" + dstr) + "\" to add.");
+return;
+endif
+"Add them";
+ref.r_type_lock = dstr;
+old_qe = 0;
+try
+old_qe = ref.r_quality_equiv;
+except e (ANY)
+endtry
+old_cnt = 0;
+try
+old_cnt = ref.r_count;
+except e (ANY)
+endtry
+ref.r_quality_equiv = old_qe + total_qe;
+ref.r_count = old_cnt + length(to_add);
+"Destroy the items";
+for item in (to_add)
+recycle(item);
+endfor
+p:tell(((((("Added " + tostr(length(to_add))) + "x ") + dstr) + " (quality equiv +") + tostr(total_qe)) + ")");
+p:tell((((("Processor: " + tostr(ref.r_count)) + " items, QE ") + tostr(ref.r_quality_equiv)) + ", locked to ") + ref.r_type_lock);
+.
+#6:380
+"Process resources in the refinery. Converts bulk low-quality to fewer high-quality.";
+p = player;
+"Find refinery in room";
+ref = $nothing;
+for OBJ in (p.location.contents)
+try
+bt = $string_utils:lowercase(OBJ.b_type);
+if (((index(bt, "refinery") > 0) || (index(bt, "processing") > 0)) || (index(bt, "enrichment") > 0))
+ref = OBJ;
+endif
+except e (ANY)
+endtry
+endfor
+if (!valid(ref))
+p:tell("There is no refinery here.");
+return;
+endif
+lock = "";
+try
+lock = ref.r_type_lock;
+except e (ANY)
+endtry
+qe = 0;
+try
+qe = ref.r_quality_equiv;
+except e (ANY)
+endtry
+cnt = 0;
+try
+cnt = ref.r_count;
+except e (ANY)
+endtry
+if (((lock == "") || (lock == 0)) || (qe == 0))
+p:tell("Processor is empty. MASSADD resources first.");
+return;
+endif
+"Calculate output quality based on building quality";
+bqual = 0;
+try
+bqual = ref.b_quality;
+except e (ANY)
+endtry
+"Base refined quality: 25 + building quality bonus (1 per 5 bqual)";
+"Building quality 0 -> output quality 25";
+"Building quality 50 -> output quality 35";
+"Building quality 100 -> output quality 45";
+"Cap at 95";
+out_quality = 25 + (bqual / 5);
+if (out_quality > 95)
+out_quality = 95;
+endif
+if (out_quality < 10)
+out_quality = 10;
+endif
+"Output count = quality_equiv / out_quality";
+out_count = qe / out_quality;
+remainder = qe - (out_count * out_quality);
+if (out_count < 1)
+p:tell("Not enough quality equivalent for even 1 refined unit.");
+p:tell(((("Add more resources. (QE " + tostr(qe)) + " < ") + tostr(out_quality)) + " needed per unit)");
+return;
+endif
+"Create refined items";
+refined_name = "refined " + lock;
+for i in [1..out_count]
+item = create($thing);
+item.name = refined_name;
+item.description = ("Refined " + lock) + ". High-quality material for advanced crafting.";
+try
+item.w_quality = out_quality;
+except e (ANY)
+endtry
+move(item, p);
+endfor
+"Update processor  keep remainder";
+ref.r_quality_equiv = remainder;
+ref.r_count = 0;
+if (remainder == 0)
+ref.r_type_lock = "";
+endif
+p:tell("=== REFINING COMPLETE ===");
+p:tell((("  Input: " + tostr(cnt)) + "x ") + lock);
+p:tell(((((("  Output: " + tostr(out_count)) + "x ") + refined_name) + " (quality ") + tostr(out_quality)) + ")");
+if (remainder > 0)
+p:tell(("  Remainder: " + tostr(remainder)) + " QE left in processor");
+else
+p:tell("  Processor cleared.");
+endif
+p:tell("  Building quality bonus: +" + tostr(bqual / 5));
+.
+#6:381
+"Reset refinery processor. Destroys remaining raw material equivalent.";
+p = player;
+"Find refinery in room";
+ref = $nothing;
+for OBJ in (p.location.contents)
+try
+bt = $string_utils:lowercase(OBJ.b_type);
+if (((index(bt, "refinery") > 0) || (index(bt, "processing") > 0)) || (index(bt, "enrichment") > 0))
+ref = OBJ;
+endif
+except e (ANY)
+endtry
+endfor
+if (!valid(ref))
+p:tell("There is no refinery here.");
+return;
+endif
+lock = "";
+try
+lock = ref.r_type_lock;
+except e (ANY)
+endtry
+qe = 0;
+try
+qe = ref.r_quality_equiv;
+except e (ANY)
+endtry
+if ((lock == "") || (lock == 0))
+p:tell("Processor is already empty.");
+return;
+endif
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+if ($string_utils:lowercase(dstr) != "confirm")
+p:tell(((("WARNING: Resetting will destroy " + tostr(qe)) + " QE of ") + lock) + ".");
+p:tell("Type RESET CONFIRM to proceed.");
+return;
+endif
+ref.r_type_lock = "";
+ref.r_quality_equiv = 0;
+ref.r_count = 0;
+p:tell("Processor reset. All remaining material destroyed.");
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -247142,6 +249786,17 @@ endif
 coords = ((("(" + tostr(this.b_x)) + ", ") + tostr(this.b_y)) + ")";
 p:tell("Coordinates: " + coords);
 .
+#117:4
+"Initialize refinery properties based on building type.";
+bt = $string_utils:lowercase(this.b_type);
+if (index(bt, "refinery") > 0)
+this.r_class = "mineral";
+elseif ((index(bt, "organic") > 0) || (index(bt, "processing") > 0))
+this.r_class = "organic";
+elseif ((index(bt, "enrichment") > 0) || (index(bt, "nuclear") > 0))
+this.r_class = "energy";
+endif
+.
 #118:0
 {who, msg, ?verbatim = 0, ?subfilter = 0} = args;
 announce_verb = tostr("_", verb);
@@ -258092,7 +260747,7 @@ dest:announce_all(this.name + " wanders in.");
 .
 0 clocks
 2 queued tasks
-0 6 1775835807 1042855664
+0 6 1775836768 1231268095
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -258165,11 +260820,11 @@ WAIF
 11
 task_id
 0
-1042855664
+1231268095
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775836443 1048780477
+0 6 1775837343 1067179198
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -258242,7 +260897,7 @@ WAIF
 11
 taskid
 0
-1048780477
+1067179198
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .

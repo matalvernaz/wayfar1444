@@ -19,7 +19,7 @@
 
 ## Phase 3 — Colony Building (hours 5-20 of gameplay)
 
-- [ ] **Refining** (#23) — 3 buildings (refinery/organic plant/nuclear plant). Bulk low-quality → fewer high-quality. The quality loop that makes endgame crafting work.
+- [x] **Refining** (#23) — 3 building types (refinery/organic processing/nuclear enrichment). MASSADD for bulk input, PROCESS to refine, RESET to clear. Building quality affects output quality (min-max rebuild loop). REFINERY status command with estimate.
 - [ ] **Automated crafting** (#27) — engineering tool machines with input/output hoppers. Colony runs production without player input.
 - [ ] **Governor's office** (#20) — colony management verbs: citizens, sectormap, construction rights, collection config, events log, rollcall.
 - [ ] **Jobs** (#17) — ~30 repeatable achievements (FARMER, FACTORIUM LABOR, STRUCTURE CRAFTER, CENTER OF ATTENTION, PLANETARY HERO, etc.). Awards SP/credits. Drives progression.
