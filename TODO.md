@@ -4,10 +4,10 @@
 
 ## Phase 1 — The Planet (architectural foundation)
 
-- [ ] **Planet generation** — `@create-planet <name> <size> <type>` wizard verb. Bounded coords (e.g. -50 to +50), seed-based Perlin for consistent biomes, planet type affects biome ratios (jungle world, desert world, balanced). ODS creates rooms lazily within bounds. Edges are impassable/ocean. POIs placed during generation (pirate bases, ruins, NPC settlements).
-- [ ] **Random landing** — dispatch picks random coordinates far from other players' colonies. No shared crash site. Per-player landing zone. Wiki: shuttle ensures no colonies too close.
-- [ ] **Exploration** (#16) — `EXPLORE` fills room 0-100%. At 100%: `MEMORIZE` for fast `TRAVEL`, `DISCOVER` for artifacts/specimens (req Unpaid Cartographer skill). `map biomes` for surrounding area. Terrain surveyor income. This is how players navigate.
-- [ ] **Creatures** (#6) — biome-specific wildlife spawning naturally. Carnivores (dangerous), herbivores (resources), named bosses (Mother Muex, planet boss). Loot varies by species. `CON` to assess. Creature AI roaming between tiles. Makes the world alive.
+- [x] **Planet generation** — `@create-planet <name> <size> <type>` wizard verb. Bounded coords, seed-based Perlin, planet type affects biome ratios (6 types). ODS with biome remapping. MAP BIOMES for wide area view. @list-planets wizard verb. CONFIG command with screenreader mode.
+- [x] **Random landing** — dispatch picks random coords far from other colonies (min 15 tiles), avoids dangerous biomes and planet edges. LANDING command shows home coords + direction. Prevents double dispatch.
+- [x] **Exploration** (#16) — `EXPLORE` fills room 0-100% with progress bar + skill bonuses. MEMORIZE/TRAVEL/UNMEMORIZE for fast travel (up to 20 spots). DISCOVER for artifacts/specimens/features (req Unpaid Cartographer). Trinket finds while exploring.
+- [x] **Creatures** (#6) — biome-specific wildlife spawning. Carnivores (aggressive, attack on timer), herbivores (passive). 14 creature types across 7 biomes. CON to assess. Loot drops on death. Creature roaming AI. KILL/SWING/FIRE work on creatures. Heartbeat integration.
 
 ## Phase 2 — Survival Progression (first hours of gameplay)
 
