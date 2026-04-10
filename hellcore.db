@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
-2385
-3593
+2386
+3595
 0
 7
 65
@@ -6110,7 +6110,7 @@ tell_mytree
 2
 build_options
 who_visible
-247
+251
 4
 0
 361
@@ -6486,6 +6486,18 @@ who_visible
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -8527,7 +8539,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--30
+-33
 361
 5
 4
@@ -10519,7 +10531,7 @@ generic player
 100
 33
 -1
-397
+399
 confunc
 361
 173
@@ -12108,7 +12120,15 @@ _job_progress
 361
 45
 -1
-117
+victory
+361
+13
+-1
+reroll
+361
+29
+-1
+121
 features
 previous_connection
 email_address
@@ -12226,7 +12246,11 @@ w_job_builds
 w_job_crafts
 w_job_labor
 w_jobs_completed
-212
+w_reroll_points
+w_total_kills
+w_total_crafts_hq
+w_total_discoveries
+216
 4
 5
 1
@@ -12836,6 +12860,22 @@ none
 361
 7
 4
+0
+361
+7
+0
+0
+361
+7
+0
+0
+361
+7
+0
+0
+361
+7
+0
 0
 361
 7
@@ -32080,7 +32120,7 @@ default_description
 request
 extra_confunc_msg
 free_to_use
-250
+254
 2
 neuter
 29
@@ -32482,6 +32522,18 @@ By definition, guests appear nondescript.
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -33348,7 +33400,7 @@ init_for_core
 173
 -1
 0
-267
+271
 5
 29
 1
@@ -33993,6 +34045,18 @@ sddfs
 7
 5
 29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
 5
 0
 193
@@ -34518,7 +34582,7 @@ set_*
 -1
 1
 queued_task_limit
-229
+233
 0
 0
 361
@@ -34949,6 +35013,18 @@ showmap
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -35967,7 +36043,7 @@ autowield
 bug
 readied_weapon
 unread_mail
-228
+232
 0
 0
 361
@@ -36337,6 +36413,18 @@ white
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -45312,7 +45400,7 @@ toad_victim_msg
 toad_msg
 mail_identity
 advertised
-276
+280
 2
 
 361
@@ -45792,6 +45880,18 @@ really impossible password to type
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -46604,7 +46704,7 @@ p_pois
 biome_names
 biome_descs
 biome_chars
-267
+271
 4
 0
 29
@@ -47126,6 +47226,18 @@ WARNING: Volcanic zone. The ground radiates searing heat. Sulphur vents hiss. En
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -55006,7 +55118,7 @@ drop_off_msg
 move_player_task
 moveto_task
 cleaning_index
-284
+288
 4
 0
 29
@@ -55623,6 +55735,18 @@ Barry
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -66931,7 +67055,7 @@ real_aliases
 zots
 bedroom
 chillmin
-245
+249
 2
 You join %n.
 29
@@ -67322,6 +67446,18 @@ You teleport %n.
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -74045,7 +74181,7 @@ visit
 361
 5
 0
-1919957535
+407266537
 361
 5
 4
@@ -79574,6 +79710,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 13:57:51 2026 PDT Database checkpoint started.~1b[0m
+0
+1775854671
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 13:52:43 2026 PDT Database checkpoint started.~1b[0m
 0
 1775854363
@@ -79865,12 +80007,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 04:37:03 2026 PDT Database checkpoint started.~1b[0m
 0
 1775821023
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 04:35:33 2026 PDT Database checkpoint started.~1b[0m
-0
-1775820933
 361
 5
 5
@@ -92812,7 +92948,7 @@ player
 last_update_time
 active
 allow_update_time
-216
+220
 1
 -1
 361
@@ -93106,6 +93242,18 @@ allow_update_time
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -97723,7 +97871,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-315121326
+1219627988
 361
 5
 4
@@ -99828,7 +99976,7 @@ Wizard
 13
 -1
 0
-276
+280
 5
 361
 5
@@ -100073,7 +100221,7 @@ hi
 4
 2
 0
-1775854239
+1775854403
 2
 localhost
 361
@@ -100083,7 +100231,7 @@ localhost
 361
 0
 0
-1775854291
+1775854441
 361
 1
 5
@@ -101480,7 +101628,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 53636
+port 7777 from localhost, port 50492
 361
 0
 5
@@ -101499,7 +101647,7 @@ port 7777 from localhost, port 53636
 361
 5
 0
-1775854324
+1775854538
 361
 1
 0
@@ -101821,6 +101969,18 @@ Base Camp
 7
 0
 8
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
 361
 7
 5
@@ -118366,7 +118526,7 @@ craft
 -1
 0
 0
-212
+216
 5
 29
 1
@@ -118629,6 +118789,18 @@ craft
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -119615,7 +119787,7 @@ _craft_matproc
 -1
 0
 0
-276
+280
 5
 361
 5
@@ -120070,6 +120242,18 @@ _craft_matproc
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -137537,7 +137721,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1692
 0
 0
-228
+232
 5
 1691
 5
@@ -137848,6 +138032,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1691
+7
+5
+1691
+7
+5
+1691
+7
+5
+1691
+7
 5
 1691
 7
@@ -138236,7 +138432,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1693
 0
 0
-228
+232
 5
 1692
 5
@@ -138547,6 +138743,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1692
+7
+5
+1692
+7
+5
+1692
+7
+5
+1692
+7
 5
 1692
 7
@@ -138935,7 +139143,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1694
 0
 0
-228
+232
 5
 1693
 5
@@ -139246,6 +139454,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1693
+7
+5
+1693
+7
+5
+1693
+7
+5
+1693
+7
 5
 1693
 7
@@ -139634,7 +139854,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1695
 0
 0
-228
+232
 5
 361
 5
@@ -139945,6 +140165,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -140333,7 +140565,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1719
 0
 0
-228
+232
 5
 361
 5
@@ -140644,6 +140876,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -143849,7 +144093,7 @@ bob
 1947
 0
 0
-228
+232
 5
 361
 5
@@ -144206,6 +144450,18 @@ none
 7
 1
 -1
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
 361
 7
 5
@@ -162719,7 +162975,7 @@ sand viper
 1892
 0
 0
-267
+271
 5
 29
 1
@@ -163147,6 +163403,18 @@ sand viper
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -163546,7 +163814,7 @@ A serpentine creature. Venomous.
 -1
 0
 0
-267
+271
 5
 29
 1
@@ -163974,6 +164242,18 @@ A serpentine creature. Venomous.
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -167587,7 +167867,7 @@ tester
 2004
 0
 0
-228
+232
 5
 361
 5
@@ -167647,7 +167927,7 @@ tester
 4
 2
 0
-1775853969
+1775854238
 2
 localhost
 361
@@ -167656,7 +167936,7 @@ localhost
 361
 0
 0
-1775854291
+1775854441
 361
 1
 0
@@ -167695,7 +167975,7 @@ localhost
 361
 0
 2
-port 7777 from localhost, port 42814
+port 7777 from localhost, port 34766
 361
 0
 5
@@ -167714,7 +167994,7 @@ port 7777 from localhost, port 42814
 361
 5
 0
-1775854238
+1775854402
 361
 1
 5
@@ -167878,7 +168158,7 @@ port 7777 from localhost, port 42814
 361
 5
 0
-19
+18
 361
 5
 0
@@ -167886,11 +168166,11 @@ port 7777 from localhost, port 42814
 361
 5
 0
-0
+50
 361
 5
 0
-51
+57
 361
 5
 0
@@ -167905,7 +168185,7 @@ fabricator
 361
 5
 1
-2384
+2385
 361
 5
 4
@@ -168057,20 +168337,36 @@ disc_#457_-20_-20
 2348
 361
 7
+4
+1
+2
+Completed job: Ranger Patrol
+361
+7
+0
+0
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
 0
-9
-361
-7
-5
-361
-7
-5
-361
-7
-5
+1
 361
 7
 5
@@ -171703,7 +171999,7 @@ blart
 -1
 0
 0
-228
+232
 5
 361
 5
@@ -172083,6 +172379,18 @@ fabricator
 7
 0
 1
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
 361
 7
 5
@@ -204360,6 +204668,7 @@ Twisted metal and polymer pulled from alien ruins.
 361
 5
 #2384 recycled
+#2385 recycled
 #0:0
 "...This code should only be run as a server task...";
 if (callers())
@@ -223746,6 +224055,219 @@ endif
 return;
 endif
 endfor
+.
+#6:397
+"Check progress toward background victory condition.";
+p = player;
+bg = "none";
+try
+bg = p.w_background;
+except e (ANY)
+endtry
+p:tell("=== Victory Progress ===");
+p:tell("  Background: " + bg);
+p:tell("");
+rp = 0;
+try
+rp = p.w_reroll_points;
+except e (ANY)
+endtry
+p:tell("  Reroll points: " + tostr(rp));
+sp_cap = 2500;
+try
+sp_cap = p.w_sp_cap;
+except e (ANY)
+endtry
+p:tell(("  SP cap: " + tostr(sp_cap)) + " (max 3500)");
+p:tell("");
+if (bg == "ranger")
+kills = 0;
+try
+kills = p.w_total_kills;
+except e (ANY)
+endtry
+p:tell(("  Kill 100 wildlife: " + tostr(kills)) + "/100");
+if (kills >= 100)
+p:tell("  *** READY TO REROLL ***");
+endif
+elseif (bg == "fabricator")
+hq = 0;
+try
+hq = p.w_total_crafts_hq;
+except e (ANY)
+endtry
+p:tell(("  Craft 25 items quality 70+: " + tostr(hq)) + "/25");
+if (hq >= 25)
+p:tell("  *** READY TO REROLL ***");
+endif
+elseif (bg == "retiree")
+blist = {};
+try
+blist = p.w_buildings;
+except e (ANY)
+endtry
+cnt = 0;
+for b in (blist)
+if (valid(b))
+cnt = cnt + 1;
+endif
+endfor
+p:tell(("  Control 10 buildings: " + tostr(cnt)) + "/10");
+if (cnt >= 10)
+p:tell("  *** READY TO REROLL ***");
+endif
+elseif (bg == "student")
+p:tell("  Reroll from a starship cockpit in space.");
+p:tell("  (Requires building and flying a starship.)");
+elseif (bg == "lab tech")
+p:tell("  Research 25 artifacts at a Laboratory: (not yet implemented)");
+elseif (bg == "botanist")
+disc = 0;
+try
+disc = p.w_discoveries;
+except e (ANY)
+endtry
+p:tell(("  Discover 15 botanical specimens: " + tostr(disc)) + "/15");
+if (disc >= 15)
+p:tell("  *** READY TO REROLL ***");
+endif
+else
+p:tell("  No victory condition for this background.");
+endif
+p:tell("");
+p:tell("Type REROLL when ready. You will lose skills/SP but keep buildings and items.");
+.
+#6:398
+"Reroll your character. Lose skills/SP, keep buildings/items.";
+p = player;
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+bg = "none";
+try
+bg = p.w_background;
+except e (ANY)
+endtry
+"Check victory condition";
+ready = 0;
+rp_earned = 0;
+if (bg == "ranger")
+kills = 0;
+try
+kills = p.w_total_kills;
+except e (ANY)
+endtry
+if (kills >= 100)
+ready = 1;
+rp_earned = 1;
+endif
+elseif (bg == "fabricator")
+hq = 0;
+try
+hq = p.w_total_crafts_hq;
+except e (ANY)
+endtry
+if (hq >= 25)
+ready = 1;
+rp_earned = 1;
+endif
+elseif (bg == "retiree")
+blist = {};
+try
+blist = p.w_buildings;
+except e (ANY)
+endtry
+cnt = 0;
+for b in (blist)
+if (valid(b))
+cnt = cnt + 1;
+endif
+endfor
+if (cnt >= 10)
+ready = 1;
+rp_earned = 1;
+endif
+elseif (bg == "botanist")
+disc = 0;
+try
+disc = p.w_discoveries;
+except e (ANY)
+endtry
+if (disc >= 15)
+ready = 1;
+rp_earned = 1;
+endif
+endif
+"Confirmation check";
+if ($string_utils:lowercase(dstr) != "confirm")
+if (ready)
+p:tell(("Victory condition MET! You will earn " + tostr(rp_earned)) + " reroll point(s).");
+else
+p:tell("Victory condition NOT met. You can still reroll but will earn 0 points.");
+endif
+p:tell("You will LOSE: all skills, all SP");
+p:tell("You will KEEP: buildings, inventory, credits, reroll points");
+sp_cap = 2500;
+try
+sp_cap = p.w_sp_cap;
+except e (ANY)
+endtry
+new_cap = sp_cap + 100;
+if (new_cap > 3500)
+new_cap = 3500;
+endif
+p:tell((("SP cap will increase: " + tostr(sp_cap)) + " -> ") + tostr(new_cap));
+p:tell("");
+p:tell("Type REROLL CONFIRM to proceed.");
+return;
+endif
+"Do the reroll";
+if (ready)
+rp = 0;
+try
+rp = p.w_reroll_points;
+except e (ANY)
+endtry
+p.w_reroll_points = rp + rp_earned;
+p:tell(("*** REROLL POINT EARNED: +" + tostr(rp_earned)) + " ***");
+endif
+"Reset skills and SP";
+p.w_learned = {};
+p.w_sp = 0;
+sp_cap = 2500;
+try
+sp_cap = p.w_sp_cap;
+except e (ANY)
+endtry
+new_cap = sp_cap + 100;
+if (new_cap > 3500)
+new_cap = 3500;
+endif
+p.w_sp_cap = new_cap;
+"Reset background";
+p.w_background = "none";
+p.w_dispatched = 0;
+"Reset combat counters";
+p.w_total_kills = 0;
+p.w_total_crafts_hq = 0;
+p.w_total_discoveries = 0;
+"Reset dice to base";
+p.w_stam = 3;
+p.w_stam_max = 3;
+p.w_clar = 3;
+p.w_clar_max = 3;
+p.w_agg = 3;
+p.w_agg_max = 3;
+p.w_hp = 50;
+p.w_hp_max = 50;
+"Move to Alpha Complex lobby";
+move(p, #1704);
+p:tell("");
+p:tell("======================================================");
+p:tell("  REROLL COMPLETE");
+p:tell("======================================================");
+p:tell("  SP cap: " + tostr(new_cap));
+p:tell("  Reroll points: " + tostr(p.w_reroll_points));
+p:tell("  Choose a new BACKGROUND and DISPATCH again.");
+p:tell("======================================================");
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -280467,7 +280989,7 @@ this:out();
 .
 0 clocks
 2 queued tasks
-0 6 1775854365 315121326
+0 6 1775854695 1219627988
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -280540,11 +281062,11 @@ WAIF
 11
 task_id
 0
-315121326
+1219627988
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775854484 1919957535
+0 6 1775855384 407266537
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -280617,7 +281139,7 @@ WAIF
 11
 taskid
 0
-1919957535
+407266537
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .

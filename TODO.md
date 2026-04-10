@@ -23,7 +23,7 @@
 - [x] **Automated crafting** (#27) — Factory building with interior room. INSTALL machines, LOAD materials into input hopper, ACTIVATE for automated production, COLLECT from output. Machine heartbeat processing. Known polish: OUT from factory, RUNNING display.
 - [x] **Governor's office** (#20) — COLONY overview, SECTORMAP (11x11 building map), RESOURCES (biome/resource percentages), EVENTS/HISTORY log, CITIZENS/POPULATION (NPC worker list). Works from anywhere using landing coords.
 - [x] **Jobs** (#17) — 7 repeatable achievements with progress tracking: Ranger Patrol (kills), Harvester (resources), Explorer (areas), Merchant (sales), Builder (buildings), Crafter (items), Factorium Labor. JOBS command with progress bars. Auto-completes and awards SP+credits. Events logged.
-- [ ] **Reroll/ascension** (#15) — complete background victory condition → reroll points. Lose skills/SP, keep buildings/inventory. SP cap +100 per reroll to 3500.
+- [x] **Reroll/ascension** (#15) — VICTORY shows progress toward background goal. REROLL CONFIRM resets skills/SP, keeps buildings/items/credits, awards reroll points if victory met. SP cap +100 per reroll to 3500. Safety confirmation required.
 - [ ] **Blueprints** (#25) — discoverable recipes. `LOAD chip onto tool`. Found at pirate bases, discoveries. `lookup <thing> with datapad`.
 
 ## Phase 4 — The Wider World
