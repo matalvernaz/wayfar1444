@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
-1881
-3539
+1884
+3545
 0
 5
 65
@@ -108,7 +108,7 @@ bf_occupants
 361
 173
 -1
-355
+357
 builder
 login
 last_restart_time
@@ -464,7 +464,9 @@ worker_list
 equipment
 skill_data
 energy_node
-365
+planet_proto
+active_planets
+367
 1
 2
 361
@@ -5391,6 +5393,16 @@ electronic warfare on ships
 -1
 361
 7
+1
+50
+361
+7
+4
+1
+1
+457
+361
+7
 4
 1
 2
@@ -6055,7 +6067,7 @@ tell_mytree
 2
 build_options
 who_visible
-223
+225
 4
 0
 361
@@ -6431,6 +6443,12 @@ who_visible
 5
 361
 3
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -8400,7 +8418,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--122
+-127
 361
 5
 4
@@ -10366,7 +10384,7 @@ generic player
 100
 33
 -1
-354
+358
 confunc
 361
 173
@@ -11783,7 +11801,23 @@ _node_class
 361
 29
 -1
-93
+screenreader
+361
+13
+-1
+map
+361
+29
+-1
+config
+361
+29
+-1
+toggle
+361
+29
+-1
+95
 features
 previous_connection
 email_address
@@ -11877,7 +11911,9 @@ w_clarity_max
 w_aggression
 w_aggression_max
 w_target
-188
+w_screenreader
+w_brief
+190
 4
 5
 1
@@ -12424,6 +12460,14 @@ none
 7
 1
 -1
+361
+7
+0
+0
+361
+7
+0
+0
 361
 7
 5
@@ -31623,7 +31667,7 @@ default_description
 request
 extra_confunc_msg
 free_to_use
-226
+228
 2
 neuter
 29
@@ -32025,6 +32069,12 @@ By definition, guests appear nondescript.
 5
 361
 3
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -32819,7 +32869,7 @@ init_for_core
 173
 -1
 0
-234
+245
 5
 29
 1
@@ -32853,6 +32903,33 @@ init_for_core
 5
 29
 5
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 5
@@ -33345,6 +33422,12 @@ sddfs
 5
 361
 3
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -33890,7 +33973,7 @@ set_*
 -1
 1
 queued_task_limit
-205
+207
 0
 0
 361
@@ -34321,6 +34404,12 @@ showmap
 5
 361
 3
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -35246,7 +35335,7 @@ autowield
 bug
 readied_weapon
 unread_mail
-204
+206
 0
 0
 361
@@ -35616,6 +35705,12 @@ white
 5
 361
 3
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -44308,7 +44403,7 @@ generic wizard
 50
 361
 65
-48
+50
 @chown*#
 361
 93
@@ -44501,6 +44596,14 @@ coredat
 361
 173
 -1
+@create-planet
+361
+29
+-1
+@list-planets
+361
+13
+-1
 9
 newt_victim_msg
 newt_msg
@@ -44511,7 +44614,7 @@ toad_victim_msg
 toad_msg
 mail_identity
 advertised
-243
+254
 2
 
 361
@@ -44581,6 +44684,33 @@ Have a nice life...
 5
 361
 5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 5
@@ -44964,6 +45094,12 @@ really impossible password to type
 5
 361
 3
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -45683,7 +45819,7 @@ seccheck
 361
 29
 -1
-11
+20
 eval_subs
 eval_ticks
 prog_options
@@ -45695,7 +45831,16 @@ heal_msg
 heal_self_msg
 revert_form_msg
 eval_env
-234
+p_size
+p_seed
+p_type
+p_biome_map
+p_danger_mult
+p_pois
+biome_names
+biome_descs
+biome_chars
+245
 4
 0
 29
@@ -45740,6 +45885,94 @@ The form of %name% fades away, revealing %DT.
 here=player.location;me=player
 361
 1
+0
+50
+361
+7
+0
+0
+361
+7
+2
+balanced
+361
+7
+4
+5
+0
+0
+0
+1
+0
+2
+0
+3
+0
+4
+361
+7
+0
+1
+361
+7
+4
+0
+361
+7
+4
+7
+2
+Mountain
+2
+Forest
+2
+Desert
+2
+Jungle
+2
+Underwater
+2
+Fungal Zone
+2
+Volcanic
+361
+7
+4
+7
+2
+Jagged peaks and exposed rock faces rise around you. Mineral veins glint in the cliff walls. The air is thin and cold.
+2
+Towering alien trees form a dense canopy overhead. Fibrous undergrowth crunches underfoot. The air is thick with spores.
+2
+Endless dunes of amber sand stretch to the horizon. Half-buried wreckage and ancient ruins poke through the surface.
+2
+Dense tropical vegetation chokes every surface. Moisture drips from broad alien leaves. Hidden water sources trickle nearby.
+2
+Shallow alien waters lap at your suit. Bioluminescent organisms pulse beneath the surface. The ground is soft silt.
+2
+WARNING: Fungal zone. Towering alien mushrooms release clouds of spores. The air is thick and acrid. Diseases likely.
+2
+WARNING: Volcanic zone. The ground radiates searing heat. Sulphur vents hiss. Energy readings spike. Move quickly.
+361
+7
+4
+7
+2
+ ^ 
+2
+ T 
+2
+ . 
+2
+ % 
+2
+ ~ 
+2
+ * 
+2
+ ! 
+361
+7
 5
 361
 5
@@ -46129,6 +46362,12 @@ here=player.location;me=player
 5
 361
 3
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -53913,7 +54152,7 @@ drop_off_msg
 move_player_task
 moveto_task
 cleaning_index
-251
+262
 4
 0
 29
@@ -54018,6 +54257,33 @@ cleaning_index
 5
 29
 5
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 5
@@ -54503,6 +54769,12 @@ Barry
 5
 361
 3
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -65691,7 +65963,7 @@ real_aliases
 zots
 bedroom
 chillmin
-221
+223
 2
 You join %n.
 29
@@ -66082,6 +66354,12 @@ You teleport %n.
 5
 361
 3
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -72697,7 +72975,7 @@ visit
 361
 5
 0
-1160048252
+1372414737
 361
 5
 4
@@ -78172,6 +78450,18 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 03:46:42 2026 PDT Database checkpoint started.~1b[0m
+0
+1775818002
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 03:40:53 2026 PDT Database checkpoint started.~1b[0m
+0
+1775817653
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 02:56:37 2026 PDT Database checkpoint started.~1b[0m
 0
 1775814997
@@ -78457,18 +78747,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:23:57 2026 PDT Database checkpoint started.~1b[0m
 0
 1775766237
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:12:30 2026 PDT Database checkpoint started.~1b[0m
-0
-1775765550
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:01:19 2026 PDT Database checkpoint started.~1b[0m
-0
-1775764879
 361
 5
 5
@@ -91205,7 +91483,7 @@ player
 last_update_time
 active
 allow_update_time
-192
+194
 1
 -1
 361
@@ -91499,6 +91777,12 @@ allow_update_time
 5
 361
 3
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -95984,7 +96268,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-664340665
+1144029354
 361
 5
 4
@@ -98017,7 +98301,7 @@ Wizard
 
 23
 361
-1678
+1883
 596
 -1
 49
@@ -98041,7 +98325,7 @@ Wizard
 13
 -1
 0
-243
+254
 5
 361
 5
@@ -98102,6 +98386,33 @@ Wizard
 5
 362
 1
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 5
@@ -98259,7 +98570,7 @@ hi
 4
 2
 0
-1775814828
+1775817681
 2
 localhost
 361
@@ -98269,7 +98580,7 @@ localhost
 361
 0
 0
-1775814938
+1775817756
 361
 1
 5
@@ -98291,7 +98602,7 @@ localhost
 29
 1
 4
-475
+478
 1
 339
 1
@@ -99242,6 +99553,12 @@ localhost
 1879
 1
 1880
+1
+1881
+1
+1882
+1
+1883
 361
 1
 5
@@ -99262,7 +99579,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 60110
+port 7777 from localhost, port 56808
 361
 0
 5
@@ -99281,11 +99598,11 @@ port 7777 from localhost, port 60110
 361
 5
 0
-1775814962
+1775817822
 361
 1
 0
-1410065201
+1410065198
 29
 0
 0
@@ -99535,6 +99852,13 @@ First Aid
 361
 7
 5
+361
+7
+5
+361
+7
+0
+0
 361
 7
 5
@@ -101125,11 +101449,17 @@ Kepler-7
 -1
 458
 0
-3
+9
 biome_names
 biome_descs
 biome_chars
-33
+p_size
+p_seed
+p_type
+p_biome_map
+p_danger_mult
+p_pois
+39
 4
 7
 2
@@ -101184,6 +101514,40 @@ WARNING: Volcanic zone. The ground radiates searing heat. Sulphur vents hiss. En
  ! 
 361
 5
+0
+50
+361
+7
+0
+42
+361
+7
+2
+balanced
+361
+7
+4
+5
+0
+0
+0
+1
+0
+2
+0
+3
+0
+4
+361
+7
+0
+1
+361
+7
+4
+0
+361
+7
 5
 361
 5
@@ -101304,7 +101668,7 @@ clean
 361
 45
 -1
-32
+35
 rp457_x0_y1
 rp457_x1_y1
 rp457_x1_y2
@@ -101337,7 +101701,10 @@ rp457_x2_y1
 rp457_x3_ym1
 rp457_x3_y0
 rp457_x3_y1
-62
+rp457_x10_y10
+rp457_x10_y11
+rp457_x50_y50
+65
 1
 466
 361
@@ -101464,6 +101831,18 @@ rp457_x3_y1
 5
 1
 1880
+361
+5
+1
+1881
+361
+5
+1
+1882
+361
+5
+1
+1883
 361
 5
 5
@@ -117405,7 +117784,7 @@ craft
 -1
 0
 0
-188
+190
 5
 29
 1
@@ -117668,6 +118047,12 @@ craft
 5
 361
 3
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -118550,7 +118935,7 @@ _craft_matproc
 -1
 0
 0
-243
+254
 5
 361
 5
@@ -118613,6 +118998,33 @@ _craft_matproc
 1
 5
 361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
 5
 5
 361
@@ -118978,6 +119390,12 @@ _craft_matproc
 5
 361
 3
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -134688,7 +135106,7 @@ Jungle
 0
 361
 -1
-361
+-1
 -1
 452
 -1
@@ -134882,7 +135300,7 @@ Jungle
 361
 5
 0
-1
+0
 361
 5
 5
@@ -135932,7 +136350,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1692
 0
 0
-204
+206
 5
 1691
 5
@@ -136243,6 +136661,12 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1691
+7
+5
+1691
+7
 5
 1691
 7
@@ -136559,7 +136983,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1693
 0
 0
-204
+206
 5
 1692
 5
@@ -136870,6 +137294,12 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1692
+7
+5
+1692
+7
 5
 1692
 7
@@ -137186,7 +137616,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1694
 0
 0
-204
+206
 5
 1693
 5
@@ -137497,6 +137927,12 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1693
+7
+5
+1693
+7
 5
 1693
 7
@@ -137813,7 +138249,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1695
 0
 0
-204
+206
 5
 361
 5
@@ -138124,6 +138560,12 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -138440,7 +138882,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1719
 0
 0
-204
+206
 5
 361
 5
@@ -138751,6 +139193,12 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -141675,7 +142123,7 @@ bob
 -1
 0
 0
-204
+206
 5
 361
 5
@@ -142032,6 +142480,12 @@ none
 7
 1
 -1
+361
+7
+5
+361
+7
+5
 361
 7
 5
@@ -164972,7 +165426,7 @@ Forest
 -1
 452
 -1
--1
+1881
 0
 0
 94
@@ -165207,6 +165661,942 @@ Forest
 361
 5
 5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1881
+Desert
+
+0
+361
+-1
+-1
+-1
+452
+-1
+1882
+0
+0
+94
+1
+457
+361
+5
+0
+2
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+10
+361
+5
+0
+10
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1882
+Desert
+
+0
+361
+-1
+-1
+-1
+452
+-1
+1883
+0
+0
+94
+1
+457
+361
+5
+0
+2
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+10
+361
+5
+0
+11
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1883
+Desert
+
+0
+361
+-1
+361
+-1
+452
+-1
+-1
+0
+0
+94
+1
+457
+361
+5
+0
+2
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+50
+361
+5
+0
+50
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+1
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
 361
 5
 5
@@ -179032,6 +180422,10 @@ if (parent(loc) == $wroom)
 new_x = loc.x + 0;
 new_y = loc.y + 1;
 dest = $ods:spawn_room(loc.planet, new_x, new_y);
+if (!valid(dest))
+p:tell("You have reached the edge of the planet. You cannot go north.");
+return;
+endif
 move(p, dest);
 return;
 endif
@@ -179043,12 +180437,6 @@ endtry
 if (!valid(dest))
 try
 dest = loc.north;
-except e (ANY)
-endtry
-endif
-if (!valid(dest))
-try
-dest = loc.n_exit;
 except e (ANY)
 endtry
 endif
@@ -179095,6 +180483,10 @@ if (parent(loc) == $wroom)
 new_x = loc.x + 0;
 new_y = loc.y + -1;
 dest = $ods:spawn_room(loc.planet, new_x, new_y);
+if (!valid(dest))
+p:tell("You have reached the edge of the planet. You cannot go south.");
+return;
+endif
 move(p, dest);
 return;
 endif
@@ -179106,12 +180498,6 @@ endtry
 if (!valid(dest))
 try
 dest = loc.south;
-except e (ANY)
-endtry
-endif
-if (!valid(dest))
-try
-dest = loc.s_exit;
 except e (ANY)
 endtry
 endif
@@ -179158,6 +180544,10 @@ if (parent(loc) == $wroom)
 new_x = loc.x + 1;
 new_y = loc.y + 0;
 dest = $ods:spawn_room(loc.planet, new_x, new_y);
+if (!valid(dest))
+p:tell("You have reached the edge of the planet. You cannot go east.");
+return;
+endif
 move(p, dest);
 return;
 endif
@@ -179169,12 +180559,6 @@ endtry
 if (!valid(dest))
 try
 dest = loc.east;
-except e (ANY)
-endtry
-endif
-if (!valid(dest))
-try
-dest = loc.e_exit;
 except e (ANY)
 endtry
 endif
@@ -179221,6 +180605,10 @@ if (parent(loc) == $wroom)
 new_x = loc.x + -1;
 new_y = loc.y + 0;
 dest = $ods:spawn_room(loc.planet, new_x, new_y);
+if (!valid(dest))
+p:tell("You have reached the edge of the planet. You cannot go west.");
+return;
+endif
 move(p, dest);
 return;
 endif
@@ -179232,12 +180620,6 @@ endtry
 if (!valid(dest))
 try
 dest = loc.west;
-except e (ANY)
-endtry
-endif
-if (!valid(dest))
-try
-dest = loc.w_exit;
 except e (ANY)
 endtry
 endif
@@ -179599,6 +180981,10 @@ if (parent(loc) == $wroom)
 new_x = loc.x + 1;
 new_y = loc.y + 1;
 dest = $ods:spawn_room(loc.planet, new_x, new_y);
+if (!valid(dest))
+p:tell("You have reached the edge of the planet. You cannot go northeast.");
+return;
+endif
 move(p, dest);
 return;
 endif
@@ -179610,12 +180996,6 @@ endtry
 if (!valid(dest))
 try
 dest = loc.northeast;
-except e (ANY)
-endtry
-endif
-if (!valid(dest))
-try
-dest = loc.ne_exit;
 except e (ANY)
 endtry
 endif
@@ -179633,6 +181013,10 @@ if (parent(loc) == $wroom)
 new_x = loc.x + 1;
 new_y = loc.y + -1;
 dest = $ods:spawn_room(loc.planet, new_x, new_y);
+if (!valid(dest))
+p:tell("You have reached the edge of the planet. You cannot go southeast.");
+return;
+endif
 move(p, dest);
 return;
 endif
@@ -179644,12 +181028,6 @@ endtry
 if (!valid(dest))
 try
 dest = loc.southeast;
-except e (ANY)
-endtry
-endif
-if (!valid(dest))
-try
-dest = loc.se_exit;
 except e (ANY)
 endtry
 endif
@@ -179667,6 +181045,10 @@ if (parent(loc) == $wroom)
 new_x = loc.x + -1;
 new_y = loc.y + -1;
 dest = $ods:spawn_room(loc.planet, new_x, new_y);
+if (!valid(dest))
+p:tell("You have reached the edge of the planet. You cannot go southwest.");
+return;
+endif
 move(p, dest);
 return;
 endif
@@ -179678,12 +181060,6 @@ endtry
 if (!valid(dest))
 try
 dest = loc.southwest;
-except e (ANY)
-endtry
-endif
-if (!valid(dest))
-try
-dest = loc.sw_exit;
 except e (ANY)
 endtry
 endif
@@ -182347,6 +183723,256 @@ if (index(nn, "salvage"))
 return "mineral";
 endif
 return "unknown";
+.
+#6:354
+"Redirect to config command.";
+player:tell("Use CONFIG SCREENREADER to toggle. Type CONFIG for all settings.");
+.
+#6:355
+"Display area map. Usage: MAP or MAP BIOMES for larger view.";
+p = player;
+loc = p.location;
+if (parent(loc) != $wroom)
+p:tell("You need to be in the wilderness to use the map.");
+return;
+endif
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+rx = loc.x;
+ry = loc.y;
+planet = loc.planet;
+seed = 0;
+try
+seed = planet.p_seed;
+except e (ANY)
+endtry
+bmap = {0, 1, 2, 3, 4};
+try
+bmap = planet.p_biome_map;
+except e (ANY)
+endtry
+dmult = 1;
+try
+dmult = planet.p_danger_mult;
+except e (ANY)
+endtry
+bnames = planet.biome_names;
+sz = 50;
+try
+sz = planet.p_size;
+except e (ANY)
+endtry
+"Screenreader check";
+sr = 0;
+try
+sr = p.w_screenreader;
+except e (ANY)
+endtry
+"Determine map size: default 7x5, biomes = 15x11";
+if ((dstr == "biomes") || (dstr == "biome"))
+hradius = 7;
+vradius = 5;
+else
+hradius = 3;
+vradius = 2;
+endif
+if (sr)
+"--- SCREENREADER BIOME MAP ---";
+pname = "Unknown";
+try
+pname = planet.name;
+except e (ANY)
+endtry
+p:tell(((((("Biome map centered on (" + tostr(rx)) + ", ") + tostr(ry)) + ") [") + pname) + "]");
+p:tell(("Range: " + tostr(hradius)) + " tiles in each direction.");
+"Count biomes in range";
+counts = {0, 0, 0, 0, 0, 0, 0};
+total = 0;
+dy = vradius;
+while (dy >= (-vradius))
+dx = -hradius;
+while (dx <= hradius)
+mx = rx + dx;
+my = ry + dy;
+if ((((mx >= (-sz)) && (mx <= sz)) && (my >= (-sz))) && (my <= sz))
+mb = perlin_2d(mx + seed, my + seed, 1.0, 1.5, 5, 1);
+if (mb < 0)
+mb = 0;
+elseif (mb > 4)
+mb = 4;
+endif
+mb = bmap[mb + 1];
+mdr = perlin_2d(((mx + seed) * 3) + 97, ((my + seed) * 3) + 53, 3.0, 2.5, 7, 1);
+if (dmult == 1)
+if (mdr == 9)
+mb = 5;
+elseif (mdr == 0)
+mb = 6;
+endif
+elseif (dmult == 2)
+if (mdr >= 8)
+mb = 5;
+elseif (mdr <= 1)
+mb = 6;
+endif
+elseif (dmult >= 3)
+if (mdr >= 7)
+mb = 5;
+elseif (mdr <= 2)
+mb = 6;
+endif
+endif
+counts = listset(counts, counts[mb + 1] + 1, mb + 1);
+total = total + 1;
+endif
+dx = dx + 1;
+endwhile
+dy = dy - 1;
+endwhile
+p:tell("Surrounding biome summary:");
+idx = 1;
+while (idx <= length(bnames))
+if (counts[idx] > 0)
+pct = (counts[idx] * 100) / total;
+p:tell(((((("  " + bnames[idx]) + ": ") + tostr(pct)) + "% (") + tostr(counts[idx])) + " tiles)");
+endif
+idx = idx + 1;
+endwhile
+else
+"--- VISUAL BIOME MAP ---";
+esc = chr(27);
+reset = esc + "[0m";
+bold = esc + "[1m";
+bcolor = {esc + "[37m", esc + "[32m", esc + "[33m", esc + "[36m", esc + "[34m", esc + "[35m", esc + "[31m"};
+bchar = {" ^ ", " T ", " . ", " % ", " ~ ", " * ", " ! "};
+pcell = (((" " + esc) + "[1;36m@") + reset) + " ";
+pname = "Unknown";
+try
+pname = planet.name;
+except e (ANY)
+endtry
+p:tell(((((((((bold + "Biome Map") + reset) + "  ") + pname) + " (") + tostr(rx)) + ", ") + tostr(ry)) + ")");
+dy = vradius;
+while (dy >= (-vradius))
+row = "";
+dx = -hradius;
+while (dx <= hradius)
+if ((dx == 0) && (dy == 0))
+row = row + pcell;
+else
+mx = rx + dx;
+my = ry + dy;
+if ((((mx < (-sz)) || (mx > sz)) || (my < (-sz))) || (my > sz))
+row = (((row + esc) + "[90m") + " ~ ") + reset;
+else
+mb = perlin_2d(mx + seed, my + seed, 1.0, 1.5, 5, 1);
+if (mb < 0)
+mb = 0;
+elseif (mb > 4)
+mb = 4;
+endif
+mb = bmap[mb + 1];
+mdr = perlin_2d(((mx + seed) * 3) + 97, ((my + seed) * 3) + 53, 3.0, 2.5, 7, 1);
+if (dmult == 1)
+if (mdr == 9)
+mb = 5;
+elseif (mdr == 0)
+mb = 6;
+endif
+elseif (dmult == 2)
+if (mdr >= 8)
+mb = 5;
+elseif (mdr <= 1)
+mb = 6;
+endif
+elseif (dmult >= 3)
+if (mdr >= 7)
+mb = 5;
+elseif (mdr <= 2)
+mb = 6;
+endif
+endif
+row = ((row + bcolor[mb + 1]) + bchar[mb + 1]) + reset;
+endif
+endif
+dx = dx + 1;
+endwhile
+p:tell(row);
+dy = dy - 1;
+endwhile
+"Legend";
+p:tell("");
+legend = "";
+idx = 1;
+while (idx <= length(bnames))
+legend = ((((legend + bcolor[idx]) + bchar[idx]) + reset) + bnames[idx]) + "  ";
+idx = idx + 1;
+endwhile
+p:tell(legend);
+endif
+.
+#6:356
+"Player settings. Usage: CONFIG or CONFIG <setting>";
+p = player;
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+dstr = $string_utils:lowercase(dstr);
+if (dstr == "")
+"Show all settings";
+p:tell("=== Player Settings ===");
+p:tell("");
+sr = 0;
+try
+sr = p.w_screenreader;
+except e (ANY)
+endtry
+br = 0;
+try
+br = p.w_brief;
+except e (ANY)
+endtry
+p:tell("  screenreader  " + (sr ? "[ON]  No colors, text-only map descriptions" | "[OFF] Visual ANSI color map"));
+p:tell("  brief         " + (br ? "[ON]  Short room descriptions" | "[OFF] Full room descriptions"));
+p:tell("");
+p:tell("Toggle a setting: CONFIG <name>");
+return;
+endif
+if ((dstr == "screenreader") || (dstr == "sr"))
+sr = 0;
+try
+sr = p.w_screenreader;
+except e (ANY)
+endtry
+if (sr)
+p.w_screenreader = 0;
+p:tell("[SCREENREADER OFF] Visual ANSI map enabled.");
+else
+p.w_screenreader = 1;
+p:tell("[SCREENREADER ON] Text descriptions replace visual map. No color codes.");
+p:tell("  Room descriptions list surrounding biomes by direction.");
+p:tell("  Type CONFIG SCREENREADER again to turn off.");
+endif
+return;
+endif
+if ((dstr == "brief") || (dstr == "br"))
+br = 0;
+try
+br = p.w_brief;
+except e (ANY)
+endtry
+if (br)
+p.w_brief = 0;
+p:tell("[BRIEF OFF] Full room descriptions.");
+else
+p.w_brief = 1;
+p:tell("[BRIEF ON] Short room descriptions.");
+endif
+return;
+endif
+p:tell("Unknown setting: " + dstr);
+p:tell("Type CONFIG to see available settings.");
+.
+#6:357
+"Alias for config.";
+this:config();
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -203973,6 +205599,112 @@ add_property(this, "mcd_pos", toint(max_object()), {player, "r"});
 add_property(this, "mcd_save", {saved, saved_props}, {player, "r"});
 suspend(0);
 this:mcd_2(saved, saved_props);
+.
+#49:48
+"Wizard verb: @create-planet <name> <size> <type>";
+"Usage: @create-planet Kepler-9 30 jungle";
+if ((!is_player(player)) || (!$perm_utils:controls(player, #0)))
+player:tell("Permission denied.");
+return;
+endif
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+parts = $string_utils:explode(dstr);
+if (length(parts) < 3)
+player:tell("Usage: @create-planet <name> <size> <type>");
+player:tell("Types: balanced, jungle, desert, mountain, ocean, volcanic");
+player:tell("Example: @create-planet Kepler-9 30 jungle");
+return;
+endif
+pname = parts[1];
+psize = 0;
+try
+psize = toint(parts[2]);
+except e (ANY)
+endtry
+if ((psize < 5) || (psize > 200))
+player:tell("Size must be 5-200 (radius in tiles).");
+return;
+endif
+ptype = parts[3];
+"Planet type configurations (biome_map + danger_mult)";
+types = {};
+types = listappend(types, {"balanced", {0, 1, 2, 3, 4}, 1, "Temperate world with balanced biomes."});
+types = listappend(types, {"jungle", {1, 3, 3, 3, 4}, 1, "Lush world dominated by dense jungle."});
+types = listappend(types, {"desert", {0, 2, 2, 2, 0}, 1, "Arid world of endless sand and exposed rock."});
+types = listappend(types, {"mountain", {0, 0, 2, 0, 4}, 1, "Rugged world of towering peaks and deep valleys."});
+types = listappend(types, {"ocean", {4, 1, 4, 3, 4}, 1, "Water world with scattered island chains."});
+types = listappend(types, {"volcanic", {0, 1, 2, 3, 4}, 3, "Unstable world with frequent volcanic activity."});
+"Look up the type";
+found = 0;
+bmap = {0, 1, 2, 3, 4};
+dmult = 1;
+tdesc = "";
+for entry in (types)
+if (entry[1] == ptype)
+found = 1;
+bmap = entry[2];
+dmult = entry[3];
+tdesc = entry[4];
+endif
+endfor
+if (!found)
+player:tell("Unknown type: " + ptype);
+player:tell("Valid types: balanced, jungle, desert, mountain, ocean, volcanic");
+return;
+endif
+"Create the planet";
+planet = create($planet_proto);
+planet.name = pname;
+planet.p_size = psize;
+planet.p_seed = random(99999);
+planet.p_type = ptype;
+planet.p_biome_map = bmap;
+planet.p_danger_mult = dmult;
+planet.description = tdesc;
+player:tell(((("Created planet: " + pname) + " (#") + tostr(toint(tostr(planet)[2..$]))) + ")");
+player:tell(("  Size: " + tostr(psize)) + " (radius)");
+player:tell((("  Type: " + ptype) + "  ") + tdesc);
+player:tell("  Seed: " + tostr(planet.p_seed));
+player:tell("  Biome map: " + tostr(bmap));
+player:tell("");
+player:tell("Register as active: ;#0.active_planets = {@#0.active_planets, planet}");
+.
+#49:49
+"List all registered planets.";
+if ((!is_player(player)) || (!$perm_utils:controls(player, #0)))
+player:tell("Permission denied.");
+return;
+endif
+planets = {};
+try
+planets = $active_planets;
+except e (ANY)
+endtry
+if (length(planets) == 0)
+player:tell("No planets registered.");
+return;
+endif
+player:tell("=== Active Planets ===");
+for p in (planets)
+if (valid(p))
+ptype = "unknown";
+try
+ptype = p.p_type;
+except e (ANY)
+endtry
+psz = 0;
+try
+psz = p.p_size;
+except e (ANY)
+endtry
+pseed = 0;
+try
+pseed = p.p_seed;
+except e (ANY)
+endtry
+player:tell((((((((("  " + p.name) + " (") + tostr(p)) + ")  ") + ptype) + ", radius ") + tostr(psz)) + ", seed ") + tostr(pseed));
+endif
+endfor
 .
 #50:0
 set_task_perms(player);
@@ -235547,17 +237279,100 @@ endfor
 endfor
 .
 #452:0
-"Render wilderness room: ANSI 7x5 map + biome description.";
+"Render wilderness room: ANSI map or screenreader text.";
 rx = this.x;
 ry = this.y;
 planet = this.planet;
+seed = 0;
+try
+seed = planet.p_seed;
+except e (ANY)
+endtry
+bmap = {0, 1, 2, 3, 4};
+try
+bmap = planet.p_biome_map;
+except e (ANY)
+endtry
+dmult = 1;
+try
+dmult = planet.p_danger_mult;
+except e (ANY)
+endtry
+bnames = planet.biome_names;
+bdescs = planet.biome_descs;
+b = this.biome;
+sr = 0;
+try
+sr = player.w_screenreader;
+except e (ANY)
+endtry
+pname = "Unknown";
+try
+pname = planet.name;
+except e (ANY)
+endtry
+if (sr)
+"--- SCREENREADER OUTPUT (no colors) ---";
+player:tell("");
+player:tell(((((((this.name + "  (") + tostr(rx)) + ", ") + tostr(ry)) + ")  [") + pname) + "]");
+if ((b >= 0) && (b < length(bdescs)))
+player:tell(bdescs[b + 1]);
+endif
+player:tell("");
+dirs = {{"North", 0, 1}, {"Northeast", 1, 1}, {"East", 1, 0}, {"Southeast", 1, -1}, {"South", 0, -1}, {"Southwest", -1, -1}, {"West", -1, 0}, {"Northwest", -1, 1}};
+sz = 50;
+try
+sz = planet.p_size;
+except e (ANY)
+endtry
+for d in (dirs)
+nx = rx + d[2];
+ny = ry + d[3];
+if ((((nx < (-sz)) || (nx > sz)) || (ny < (-sz))) || (ny > sz))
+player:tell(("  " + d[1]) + ": Planet edge (impassable)");
+else
+nb = perlin_2d(nx + seed, ny + seed, 1.0, 1.5, 5, 1);
+if (nb < 0)
+nb = 0;
+elseif (nb > 4)
+nb = 4;
+endif
+nb = bmap[nb + 1];
+ndr = perlin_2d(((nx + seed) * 3) + 97, ((ny + seed) * 3) + 53, 3.0, 2.5, 7, 1);
+if (dmult == 1)
+if (ndr == 9)
+nb = 5;
+elseif (ndr == 0)
+nb = 6;
+endif
+elseif (dmult == 2)
+if (ndr >= 8)
+nb = 5;
+elseif (ndr <= 1)
+nb = 6;
+endif
+elseif (dmult >= 3)
+if (ndr >= 7)
+nb = 5;
+elseif (ndr <= 2)
+nb = 6;
+endif
+endif
+bname = "Unknown";
+if ((nb >= 0) && (nb < length(bnames)))
+bname = bnames[nb + 1];
+endif
+player:tell((("  " + d[1]) + ": ") + bname);
+endif
+endfor
+else
+"--- VISUAL MAP OUTPUT ---";
 esc = chr(27);
 reset = esc + "[0m";
 bold = esc + "[1m";
 bcolor = {esc + "[37m", esc + "[32m", esc + "[33m", esc + "[36m", esc + "[34m", esc + "[35m", esc + "[31m"};
 bchar = {" ^ ", " T ", " . ", " % ", " ~ ", " * ", " ! "};
-pcell = (((" " + esc) + "[36m@") + reset) + " ";
-"draw 7-wide x 5-tall map (dy 2..-2, dx -3..3)";
+pcell = (((" " + esc) + "[1;36m@") + reset) + " ";
 dy = 2;
 while (dy >= -2)
 row = "";
@@ -235566,13 +237381,45 @@ while (dx <= 3)
 if ((dx == 0) && (dy == 0))
 row = row + pcell;
 else
-b = perlin_2d(rx + dx, ry + dy, 1.0, 1.5, 5, 1);
-if (b < 0)
-b = 0;
-elseif (b > 4)
-b = 4;
+mx = rx + dx;
+my = ry + dy;
+mb = perlin_2d(mx + seed, my + seed, 1.0, 1.5, 5, 1);
+if (mb < 0)
+mb = 0;
+elseif (mb > 4)
+mb = 4;
 endif
-row = ((row + bcolor[b + 1]) + bchar[b + 1]) + reset;
+mb = bmap[mb + 1];
+mdr = perlin_2d(((mx + seed) * 3) + 97, ((my + seed) * 3) + 53, 3.0, 2.5, 7, 1);
+if (dmult == 1)
+if (mdr == 9)
+mb = 5;
+elseif (mdr == 0)
+mb = 6;
+endif
+elseif (dmult == 2)
+if (mdr >= 8)
+mb = 5;
+elseif (mdr <= 1)
+mb = 6;
+endif
+elseif (dmult >= 3)
+if (mdr >= 7)
+mb = 5;
+elseif (mdr <= 2)
+mb = 6;
+endif
+endif
+sz = 50;
+try
+sz = planet.p_size;
+except e (ANY)
+endtry
+if ((((mx < (-sz)) || (mx > sz)) || (my < (-sz))) || (my > sz))
+row = (((row + esc) + "[90m") + " ~ ") + reset;
+else
+row = ((row + bcolor[mb + 1]) + bchar[mb + 1]) + reset;
+endif
 endif
 dx = dx + 1;
 endwhile
@@ -235580,18 +237427,15 @@ player:tell(row);
 dy = dy - 1;
 endwhile
 player:tell("");
-"Room name and coordinates";
-bnames = planet.biome_names;
-bdescs = planet.biome_descs;
-b = this.biome;
-if (b < 0)
-b = 0;
-elseif (b > 4)
-b = 4;
-endif
-player:tell(((((((((bold + this.name) + reset) + "  (") + tostr(rx)) + ", ") + tostr(ry)) + ")  [") + planet.name) + "]");
+esc = chr(27);
+bold = esc + "[1m";
+reset = esc + "[0m";
+player:tell(((((((((bold + this.name) + reset) + "  (") + tostr(rx)) + ", ") + tostr(ry)) + ")  [") + pname) + "]");
+if ((b >= 0) && (b < length(bdescs)))
 player:tell(bdescs[b + 1]);
-"List visible contents";
+endif
+endif
+"Contents (both modes)";
 items = {};
 for OBJ in (this.contents)
 if (OBJ != player)
@@ -235609,7 +237453,7 @@ endwhile
 player:tell("You see here: " + listing);
 endif
 player:tell("");
-player:tell("Exits: n  s  e  w");
+player:tell("Exits: n  s  e  w  ne  se  sw  nw");
 .
 #452:1
 "Look at current room  dispatches to look_self.";
@@ -235758,16 +237602,22 @@ this:salvage();
 .
 #458:0
 "Spawn or retrieve a wilderness room at (planet, x, y).";
-"Usage: $ods:spawn_room(planet_obj, x_int, y_int) -> room";
 {planet, x, y} = args;
 set_task_perms(this.owner);
-"Build property key: strip # from planet ref so name is a valid identifier";
+"Check planet boundaries";
+try
+sz = planet.p_size;
+if ((((x < (-sz)) || (x > sz)) || (y < (-sz))) || (y > sz))
+return $nothing;
+endif
+except e (ANY)
+endtry
+"Build property key for cache";
 pkey = strsub(tostr(planet), "#", "p");
-"Encode negative coords: replace - with m (minus)";
 xkey = strsub(tostr(x), "-", "m");
 ykey = strsub(tostr(y), "-", "m");
 prop = (((("r" + pkey) + "_x") + xkey) + "_y") + ykey;
-"Check if room already exists";
+"Check cache";
 if (prop in properties(this))
 r = this.(prop);
 if (valid(r))
@@ -235779,26 +237629,64 @@ r = create($wroom);
 r.x = x;
 r.y = y;
 r.planet = planet;
-"5 major biomes from perlin (0-4), then rare dangerous overlay (5-6)";
-b = perlin_2d(x, y, 1.0, 1.5, 5, 1);
-if (b < 0)
-b = 0;
-elseif (b > 4)
-b = 4;
+"Get planet seed and biome map";
+seed = 0;
+try
+seed = planet.p_seed;
+except e (ANY)
+endtry
+bmap = {0, 1, 2, 3, 4};
+try
+bmap = planet.p_biome_map;
+except e (ANY)
+endtry
+"Raw biome from seeded Perlin";
+raw_b = perlin_2d(x + seed, y + seed, 1.0, 1.5, 5, 1);
+if (raw_b < 0)
+raw_b = 0;
+elseif (raw_b > 4)
+raw_b = 4;
 endif
-"~5% chance of dangerous biome overlay (fungal=5, volcanic=6)";
-danger_roll = perlin_2d((x * 3) + 97, (y * 3) + 53, 3.0, 2.5, 7, 1);
-if (danger_roll == 9)
+"Remap through planet biome table";
+b = bmap[raw_b + 1];
+"Dangerous overlay  frequency scaled by planet danger_mult";
+dmult = 1;
+try
+dmult = planet.p_danger_mult;
+except e (ANY)
+endtry
+dr = perlin_2d(((x + seed) * 3) + 97, ((y + seed) * 3) + 53, 3.0, 2.5, 7, 1);
+"Default: dr==9 -> fungal, dr==0 -> volcanic (each ~10%)";
+"With dmult=3 (volcanic planet): dr>=7 -> fungal, dr<=2 -> volcanic";
+if (dmult == 1)
+if (dr == 9)
 b = 5;
-elseif (danger_roll == 0)
+elseif (dr == 0)
 b = 6;
 endif
+elseif (dmult == 2)
+if (dr >= 8)
+b = 5;
+elseif (dr <= 1)
+b = 6;
+endif
+elseif (dmult >= 3)
+if (dr >= 7)
+b = 5;
+elseif (dr <= 2)
+b = 6;
+endif
+endif
 r.biome = b;
+"Set room name from planet biome names";
 bnames = planet.biome_names;
+if ((b >= 0) && (b < length(bnames)))
 r.name = bnames[b + 1];
-"Store the room";
+else
+r.name = "Unknown Terrain";
+endif
+"Cache the room and populate with resources";
 add_property(this, prop, r, {player, "rc"});
-"Possibly spawn a resource node";
 this:populate(r, planet);
 return r;
 .
@@ -238171,7 +240059,7 @@ move(player, #1703);
 .
 0 clocks
 2 queued tasks
-0 6 1775815013 664340665
+0 6 1775818014 1144029354
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -238244,11 +240132,11 @@ WAIF
 11
 task_id
 0
-664340665
+1144029354
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775815743 1160048252
+0 6 1775818443 1372414737
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -238321,7 +240209,7 @@ WAIF
 11
 taskid
 0
-1160048252
+1372414737
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
