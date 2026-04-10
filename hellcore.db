@@ -1,5 +1,5 @@
 ** LambdaMOO Database, Format Version 6 **
-1743
+1755
 3536
 0
 5
@@ -8395,7 +8395,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--93
+-95
 361
 5
 4
@@ -73036,7 +73036,7 @@ completely destroyed
 361
 5
 4
-8
+9
 1
 171054
 1
@@ -73053,6 +73053,8 @@ completely destroyed
 1719
 1
 1731
+1
+1743
 361
 5
 2
@@ -78137,6 +78139,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 22:15:25 2026 PDT Database checkpoint started.~1b[0m
+0
+1775798125
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 22:09:17 2026 PDT Database checkpoint started.~1b[0m
 0
 1775797757
@@ -78428,12 +78436,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 03:33:56 2026 PDT Database checkpoint started.~1b[0m
 0
 1775730836
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 03:32:23 2026 PDT Database checkpoint started.~1b[0m
-0
-1775730743
 361
 5
 5
@@ -95949,7 +95951,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1888907489
+1771749903
 361
 5
 4
@@ -98224,7 +98226,7 @@ hi
 4
 2
 0
-1775797626
+1775797755
 2
 localhost
 361
@@ -98234,7 +98236,7 @@ localhost
 361
 0
 0
-1775797726
+1775797760
 361
 1
 5
@@ -98256,7 +98258,7 @@ localhost
 29
 1
 4
-347
+358
 1
 339
 1
@@ -98951,6 +98953,28 @@ localhost
 1741
 1
 1742
+1
+1744
+1
+1745
+1
+1746
+1
+1747
+1
+1748
+1
+1749
+1
+1750
+1
+1751
+1
+1752
+1
+1753
+1
+1754
 361
 1
 5
@@ -98971,7 +98995,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 45032
+port 7777 from localhost, port 49408
 361
 0
 5
@@ -98990,11 +99014,11 @@ port 7777 from localhost, port 45032
 361
 5
 0
-1775797755
+1775797883
 361
 1
 0
-1410065329
+1410065318
 29
 0
 0
@@ -138753,7 +138777,7 @@ out_exit
 361
 5
 4
-5
+6
 4
 3
 1
@@ -138794,6 +138818,14 @@ out_exit
 1775797335
 0
 1775797344
+4
+3
+1
+1743
+0
+1775797784
+0
+1775797792
 361
 5
 5
@@ -139111,7 +139143,7 @@ w west
 361
 5
 4
-1
+2
 4
 3
 1
@@ -139120,6 +139152,14 @@ w west
 1775797344
 0
 0
+4
+3
+1
+1743
+0
+1775797792
+0
+0
 361
 5
 5
@@ -139276,7 +139316,7 @@ w west
 361
 5
 0
-1
+2
 361
 5
 5
@@ -143137,7 +143177,7 @@ basic crafting tool
 -1
 592
 -1
--1
+1744
 0
 0
 30
@@ -143706,7 +143746,7 @@ atmo-thrasher condenser
 -1
 1679
 -1
--1
+1745
 0
 0
 43
@@ -144395,6 +144435,1383 @@ inert metal
 361
 5
 #1742
+inert metal
+
+0
+361
+-1
+-1
+-1
+5
+-1
+1749
+0
+0
+30
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1743 recycled
+#1744
+basic crafting tool
+
+0
+361
+-1
+-1
+-1
+592
+-1
+-1
+0
+0
+30
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+2
+Battered multi-tool. CRAFT to see recipes.
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1745
+ion-driven mineral collector
+
+0
+361
+-1
+-1
+-1
+1679
+-1
+1746
+0
+0
+43
+2
+special
+361
+3
+2
+harvest
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+2
+
+361
+7
+2
+mineral
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+2
+Starter mineral extraction device.
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1746
+cheap orgo-reaper
+
+0
+361
+-1
+-1
+-1
+1679
+-1
+1747
+0
+0
+43
+2
+special
+361
+3
+2
+harvest
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+2
+
+361
+7
+2
+organic
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+2
+Starter organic matter harvester.
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1747
+hand-held energy absorption unit
+
+0
+361
+-1
+-1
+-1
+1679
+-1
+1748
+0
+0
+43
+2
+special
+361
+3
+2
+harvest
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+2
+
+361
+7
+2
+energy
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+2
+Starter energy/kretherson collector.
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1748
+atmo-thrasher condenser
+
+0
+361
+-1
+-1
+-1
+1679
+-1
+-1
+0
+0
+43
+2
+special
+361
+3
+2
+harvest
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+5
+361
+3
+2
+
+361
+7
+2
+water
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+2
+Starter atmospheric water condenser.
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1749
+native fiber
+
+0
+361
+-1
+-1
+-1
+5
+-1
+1750
+0
+0
+30
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1750
+native fiber
+
+0
+361
+-1
+-1
+-1
+5
+-1
+1751
+0
+0
+30
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1751
+native fiber
+
+0
+361
+-1
+-1
+-1
+5
+-1
+1752
+0
+0
+30
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1752
+native fiber
+
+0
+361
+-1
+-1
+-1
+5
+-1
+1753
+0
+0
+30
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1753
+inert metal
+
+0
+361
+-1
+-1
+-1
+5
+-1
+1754
+0
+0
+30
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1754
 inert metal
 
 0
@@ -158255,33 +159672,27 @@ move(player, dest);
 player.location:announce(player.name + " arrives from the south.", player);
 .
 #6:215
-"Move north  supports room exit or wilderness movement.";
-"--- check for a room exit property first ---";
-exit_prop = "north_exit";
-if (parent(player.location) != $wroom)
-if (exit_prop in properties(player.location))
-dest = player.location.(exit_prop);
+"Move north.";
+p = player;
+loc = p.location;
+"Wilderness movement";
+if (parent(loc) == $wroom)
+new_x = loc.x + 0;
+new_y = loc.y + 1;
+dest = $ods:spawn_room(loc.planet, new_x, new_y);
+move(p, dest);
+return;
+endif
+"Non-wilderness: check room exit property";
+try
+dest = loc.n;
 if (valid(dest))
-player.location:announce(player.name + " heads north.", player);
-move(player, dest);
-player.location:announce(player.name + " arrives from the south.", player);
+move(p, dest);
 return;
 endif
-endif
-player:tell("You cannot go that way.");
-return;
-endif
-nx = player.location.x + 0;
-ny = player.location.y + 1;
-planet = player.location.planet;
-dest = $ods:spawn_room(planet, nx, ny);
-if (!valid(dest))
-player:tell("The way is blocked.");
-return;
-endif
-player.location:announce(player.name + " heads north.", player);
-move(player, dest);
-player.location:announce(player.name + " arrives from the south.", player);
+except e (ANY)
+endtry
+p:tell("You cannot go north.");
 .
 #6:216
 "Move south  supports room exit or wilderness movement.";
@@ -158313,33 +159724,27 @@ move(player, dest);
 player.location:announce(player.name + " arrives from the north.", player);
 .
 #6:217
-"Move south  supports room exit or wilderness movement.";
-"--- check for a room exit property first ---";
-exit_prop = "south_exit";
-if (parent(player.location) != $wroom)
-if (exit_prop in properties(player.location))
-dest = player.location.(exit_prop);
+"Move south.";
+p = player;
+loc = p.location;
+"Wilderness movement";
+if (parent(loc) == $wroom)
+new_x = loc.x + 0;
+new_y = loc.y + -1;
+dest = $ods:spawn_room(loc.planet, new_x, new_y);
+move(p, dest);
+return;
+endif
+"Non-wilderness: check room exit property";
+try
+dest = loc.s;
 if (valid(dest))
-player.location:announce(player.name + " heads south.", player);
-move(player, dest);
-player.location:announce(player.name + " arrives from the north.", player);
+move(p, dest);
 return;
 endif
-endif
-player:tell("You cannot go that way.");
-return;
-endif
-nx = player.location.x + 0;
-ny = player.location.y + -1;
-planet = player.location.planet;
-dest = $ods:spawn_room(planet, nx, ny);
-if (!valid(dest))
-player:tell("The way is blocked.");
-return;
-endif
-player.location:announce(player.name + " heads south.", player);
-move(player, dest);
-player.location:announce(player.name + " arrives from the north.", player);
+except e (ANY)
+endtry
+p:tell("You cannot go south.");
 .
 #6:218
 "Move east  supports room exit or wilderness movement.";
@@ -158371,33 +159776,27 @@ move(player, dest);
 player.location:announce(player.name + " arrives from the west.", player);
 .
 #6:219
-"Move east  supports room exit or wilderness movement.";
-"--- check for a room exit property first ---";
-exit_prop = "east_exit";
-if (parent(player.location) != $wroom)
-if (exit_prop in properties(player.location))
-dest = player.location.(exit_prop);
+"Move east.";
+p = player;
+loc = p.location;
+"Wilderness movement";
+if (parent(loc) == $wroom)
+new_x = loc.x + 1;
+new_y = loc.y + 0;
+dest = $ods:spawn_room(loc.planet, new_x, new_y);
+move(p, dest);
+return;
+endif
+"Non-wilderness: check room exit property";
+try
+dest = loc.e;
 if (valid(dest))
-player.location:announce(player.name + " heads east.", player);
-move(player, dest);
-player.location:announce(player.name + " arrives from the west.", player);
+move(p, dest);
 return;
 endif
-endif
-player:tell("You cannot go that way.");
-return;
-endif
-nx = player.location.x + 1;
-ny = player.location.y + 0;
-planet = player.location.planet;
-dest = $ods:spawn_room(planet, nx, ny);
-if (!valid(dest))
-player:tell("The way is blocked.");
-return;
-endif
-player.location:announce(player.name + " heads east.", player);
-move(player, dest);
-player.location:announce(player.name + " arrives from the west.", player);
+except e (ANY)
+endtry
+p:tell("You cannot go east.");
 .
 #6:220
 "Move west  supports room exit or wilderness movement.";
@@ -158429,33 +159828,27 @@ move(player, dest);
 player.location:announce(player.name + " arrives from the east.", player);
 .
 #6:221
-"Move west  supports room exit or wilderness movement.";
-"--- check for a room exit property first ---";
-exit_prop = "west_exit";
-if (parent(player.location) != $wroom)
-if (exit_prop in properties(player.location))
-dest = player.location.(exit_prop);
+"Move west.";
+p = player;
+loc = p.location;
+"Wilderness movement";
+if (parent(loc) == $wroom)
+new_x = loc.x + -1;
+new_y = loc.y + 0;
+dest = $ods:spawn_room(loc.planet, new_x, new_y);
+move(p, dest);
+return;
+endif
+"Non-wilderness: check room exit property";
+try
+dest = loc.w;
 if (valid(dest))
-player.location:announce(player.name + " heads west.", player);
-move(player, dest);
-player.location:announce(player.name + " arrives from the east.", player);
+move(p, dest);
 return;
 endif
-endif
-player:tell("You cannot go that way.");
-return;
-endif
-nx = player.location.x + -1;
-ny = player.location.y + 0;
-planet = player.location.planet;
-dest = $ods:spawn_room(planet, nx, ny);
-if (!valid(dest))
-player:tell("The way is blocked.");
-return;
-endif
-player.location:announce(player.name + " heads west.", player);
-move(player, dest);
-player.location:announce(player.name + " arrives from the east.", player);
+except e (ANY)
+endtry
+p:tell("You cannot go west.");
 .
 #6:222
 "Toggle or check the colony communication relay.";
@@ -158802,56 +160195,96 @@ endif
 endif
 .
 #6:234
-"Move ne.";
+"Move northeast.";
 p = player;
 loc = p.location;
-if (parent(loc) != $wroom)
-p:tell("You can only move in the wilderness.");
-return;
-endif
+"Wilderness movement";
+if (parent(loc) == $wroom)
 new_x = loc.x + 1;
 new_y = loc.y + 1;
 dest = $ods:spawn_room(loc.planet, new_x, new_y);
 move(p, dest);
+return;
+endif
+"Non-wilderness: check room exit property";
+try
+dest = loc.ne;
+if (valid(dest))
+move(p, dest);
+return;
+endif
+except e (ANY)
+endtry
+p:tell("You cannot go northeast.");
 .
 #6:235
-"Move se.";
+"Move southeast.";
 p = player;
 loc = p.location;
-if (parent(loc) != $wroom)
-p:tell("You can only move in the wilderness.");
-return;
-endif
+"Wilderness movement";
+if (parent(loc) == $wroom)
 new_x = loc.x + 1;
 new_y = loc.y + -1;
 dest = $ods:spawn_room(loc.planet, new_x, new_y);
 move(p, dest);
-.
-#6:236
-"Move sw.";
-p = player;
-loc = p.location;
-if (parent(loc) != $wroom)
-p:tell("You can only move in the wilderness.");
 return;
 endif
+"Non-wilderness: check room exit property";
+try
+dest = loc.se;
+if (valid(dest))
+move(p, dest);
+return;
+endif
+except e (ANY)
+endtry
+p:tell("You cannot go southeast.");
+.
+#6:236
+"Move southwest.";
+p = player;
+loc = p.location;
+"Wilderness movement";
+if (parent(loc) == $wroom)
 new_x = loc.x + -1;
 new_y = loc.y + -1;
 dest = $ods:spawn_room(loc.planet, new_x, new_y);
 move(p, dest);
-.
-#6:237
-"Move nw.";
-p = player;
-loc = p.location;
-if (parent(loc) != $wroom)
-p:tell("You can only move in the wilderness.");
 return;
 endif
+"Non-wilderness: check room exit property";
+try
+dest = loc.sw;
+if (valid(dest))
+move(p, dest);
+return;
+endif
+except e (ANY)
+endtry
+p:tell("You cannot go southwest.");
+.
+#6:237
+"Move northwest.";
+p = player;
+loc = p.location;
+"Wilderness movement";
+if (parent(loc) == $wroom)
 new_x = loc.x + -1;
 new_y = loc.y + 1;
 dest = $ods:spawn_room(loc.planet, new_x, new_y);
 move(p, dest);
+return;
+endif
+"Non-wilderness: check room exit property";
+try
+dest = loc.nw;
+if (valid(dest))
+move(p, dest);
+return;
+endif
+except e (ANY)
+endtry
+p:tell("You cannot go northwest.");
 .
 #6:240
 "Show status.";
@@ -217171,7 +218604,7 @@ move(player, #1703);
 .
 0 clocks
 2 queued tasks
-0 6 1775797759 1888907489
+0 6 1775798149 1771749903
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -217244,7 +218677,7 @@ WAIF
 11
 task_id
 0
-1888907489
+1771749903
 this.beat_task = 0;
 this:_beat();
 .
