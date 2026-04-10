@@ -14,8 +14,8 @@
 - [x] **#41** Sector center recipe fix — needs structure crafting tool from #12. Wiki recipe: 2x simple structure base + 10x inert beam + 8x inert siding + 4x structure power core. Complexity 85.0. Up to 5 per player.
 - [x] **#14** Item quality — resources get quality 0-100+ on harvest (varies by tool quality and skill). Crafted item quality = avg ingredient quality + skill bonus. Refining converts bulk low-quality → fewer high-quality. Core to endgame loop.
 - [x] **#24** Material processor — tool (3x weak power emitter + 4x solid-phase metal + 4x inert casing). Raw → crafting materials: fiber cloth, solid-phase alloy, rare earth metal, polymer brick, electronics-grade silica, ceramic plate, nano-silk fabric etc. Needed for advanced crafting.
-- [ ] **#43** Building stats — buildings have crime/civ/econ/rec/ind ratings. Ingredient quality affects building quality.
-- [ ] **#9b** Combat polish — dice regen over time; Nourished effect (eating → bonus dice + max HP + faster regen); health does NOT regen naturally (heal manually per wiki); `ST` shows active effects.
+- [x] **#43** Building stats — buildings have crime/civ/econ/rec/ind ratings. Ingredient quality affects building quality.
+- [x] **#9b** Combat polish — dice regen over time; Nourished effect (eating → bonus dice + max HP + faster regen); health does NOT regen naturally (heal manually per wiki); `ST` shows active effects.
 - [ ] **#6** Creatures — biome-specific wildlife (carnivores/herbivores); named bosses (Mother Muex); catbug; loot varies by species; creature AI roaming; `CON` assessment.
 - [ ] **#44** Item degradation — weapons wear with use, armor degrades on damage. `REPAIR <item>` with the crafting tool that made it.
 

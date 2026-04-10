@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
-1705
-3526
+1707
+3530
 0
 4
 65
@@ -8394,7 +8394,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--77
+-86
 361
 5
 4
@@ -10360,7 +10360,7 @@ generic player
 100
 33
 -1
-348
+351
 confunc
 361
 173
@@ -11752,6 +11752,18 @@ list
 _calc_craft_quality
 361
 29
+-1
+_set_building_stats
+361
+29
+-1
+_regen_dice
+361
+13
+-1
+_player_tick
+361
+13
 -1
 93
 features
@@ -72663,7 +72675,7 @@ visit
 361
 5
 0
-1901558984
+5159786
 361
 5
 4
@@ -73019,13 +73031,17 @@ completely destroyed
 361
 5
 4
-3
+5
 1
 171054
 1
 361
 1
 1701
+1
+1705
+1
+1706
 361
 5
 2
@@ -78110,6 +78126,30 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 21:46:02 2026 PDT Database checkpoint started.~1b[0m
+0
+1775796362
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 21:45:27 2026 PDT Database checkpoint started.~1b[0m
+0
+1775796327
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 21:40:51 2026 PDT Database checkpoint started.~1b[0m
+0
+1775796051
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 20:41:17 2026 PDT Database checkpoint started.~1b[0m
+0
+1775792477
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 20:24:17 2026 PDT Database checkpoint started.~1b[0m
 0
 1775791457
@@ -78383,30 +78423,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 02:56:09 2026 PDT Database checkpoint started.~1b[0m
 0
 1775728569
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 02:51:39 2026 PDT Database checkpoint started.~1b[0m
-0
-1775728299
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 01:52:45 2026 PDT Database checkpoint started.~1b[0m
-0
-1775724765
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 00:52:45 2026 PDT Database checkpoint started.~1b[0m
-0
-1775721165
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 23:52:45 2026 PDT Database checkpoint started.~1b[0m
-0
-1775717565
 361
 5
 5
@@ -78575,14 +78591,20 @@ look_self
 361
 13
 -1
-6
+12
 b_type
 b_owner
 b_hp
 b_hp_max
 b_x
 b_y
-16
+b_crime
+b_civ
+b_econ
+b_rec
+b_ind
+b_quality
+22
 2
 unknown
 361
@@ -78607,6 +78629,30 @@ unknown
 0
 361
 3
+0
+0
+361
+7
+0
+0
+361
+7
+0
+0
+361
+7
+0
+0
+361
+7
+0
+0
+361
+7
+0
+0
+361
+7
 4
 1
 2
@@ -95892,7 +95938,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1920545284
+302531324
 361
 5
 4
@@ -98167,7 +98213,7 @@ hi
 4
 2
 0
-1775789986
+1775796290
 2
 localhost
 361
@@ -98177,7 +98223,7 @@ localhost
 361
 0
 0
-1775790137
+1775796335
 361
 1
 5
@@ -98846,7 +98892,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 44524
+port 7777 from localhost, port 49028
 361
 0
 5
@@ -98865,7 +98911,7 @@ port 7777 from localhost, port 44524
 361
 5
 0
-1775791297
+1775796350
 361
 1
 0
@@ -108644,7 +108690,7 @@ survival monitor
 5
 -1
 546
-7
+8
 tick
 361
 45
@@ -108670,6 +108716,10 @@ kickstart
 13
 -1
 tick_now
+361
+13
+-1
+_post_tick
 361
 13
 -1
@@ -119399,7 +119449,7 @@ pre-fab shelter
 745
 0
 0
-16
+22
 5
 361
 3
@@ -119418,6 +119468,24 @@ pre-fab shelter
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 5
@@ -119479,7 +119547,7 @@ pre-fab shelter
 867
 0
 0
-16
+22
 5
 361
 3
@@ -119498,6 +119566,24 @@ pre-fab shelter
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 5
@@ -125801,7 +125887,7 @@ Wizard's sector center
 0
 1
 sc_plaza
-17
+23
 1
 864
 361
@@ -125830,6 +125916,24 @@ sector center
 0
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 5
@@ -126129,7 +126233,7 @@ Wizard's sector center
 0
 1
 sc_plaza
-17
+23
 1
 884
 361
@@ -126158,6 +126262,24 @@ sector center
 0
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 5
@@ -126216,7 +126338,7 @@ Wizard's sector center
 0
 1
 sc_plaza
-17
+23
 1
 893
 361
@@ -126245,6 +126367,24 @@ sector center
 0
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 5
@@ -133589,7 +133729,7 @@ Wizard's sector center
 0
 1
 sc_plaza
-17
+23
 1
 1672
 361
@@ -133618,6 +133758,24 @@ sector center
 0
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 5
@@ -138503,7 +138661,23 @@ exit out
 361
 5
 4
+2
+4
+3
+1
+1705
 0
+1775795845
+0
+1775796356
+4
+3
+1
+1706
+0
+1775796072
+0
+1775796321
 361
 5
 5
@@ -138704,7 +138878,12 @@ exit out
 5
 361
 5
-5
+4
+2
+0
+0
+0
+1775796098
 361
 5
 5
@@ -139374,6 +139553,8 @@ A circular atrium lined with shuttered storefronts. A background selection termi
 5
 361
 5
+#1705 recycled
+#1706 recycled
 #0:0
 "...This code should only be run as a server task...";
 if (callers())
@@ -148298,33 +148479,19 @@ endif
 this:examine();
 .
 #6:0
-if (length(connected_players()) < 6)
-f5 = 1;
-for x in (connected_players())
-if ((!x.programmer) && (x != this))
-f5 = 0;
-endif
-endfor
-endif
+"Called on player connect.";
+"Register with heart system";
+try
 if (!this.heart)
 $heart:register(this);
 endif
-if (((valid(cp = caller_perms()) && (caller != this)) && (!$perm_utils:controls(cp, this))) && (caller != #0))
-return E_PERM;
-endif
-$news:check();
-$nets.sysnet:announce(this, this.name + " connected", 1);
-if (is_a(this.party, $party))
-this.party:announce(this:real_name() + " has connected.");
-endif
-this.location:update_watch(1);
-if (this:check_pref("mxp"))
-$mxp:activate(this);
-endif
-if ((total = length(connected_players())) > $login.highest_connected_players)
-$login.highest_connected_players = total;
-$nets.prognet:announce($archwiz, tostr(total, " -- all time high!"));
-endif
+except e (ANY)
+endtry
+"Call our Wayfar connect verb";
+try
+this:connect();
+except e (ANY)
+endtry
 .
 #6:1
 this.client = 0;
@@ -153430,74 +153597,47 @@ player:tell("  ** You are critically injured. Rest or find the Med Bay. **");
 endif
 .
 #6:225
-"Eat food. Grants Nourished effect (+HP, better dice regen).";
-"Works via command (eat <item>) or programmatic call (this:eat(args)).";
-found = 0;
-if (valid(dobj) && (dobj.location == player))
-found = dobj;
-else
-query = (typeof(dobjstr) == STR) ? dobjstr | "";
-if ((query == "") && (args != {}))
+"Eat food. Restores hunger + applies Nourished (10min dice regen bonus).";
+p = player;
+tstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+if ((tstr == "") && (args != {}))
 for w in (args)
 if (typeof(w) == STR)
-query = (query == "") ? w | ((query + " ") + w);
+tstr = (tstr == "") ? w | ((tstr + " ") + w);
 endif
 endfor
 endif
-if (query == "")
-player:tell("Eat what? (Type i to see inventory)");
+if (tstr == "")
+p:tell("Eat what?");
 return;
 endif
-for itm in (player.contents)
-nm = "";
-try
-nm = tostr(itm.name);
-except e (ANY)
-nm = "";
-endtry
-if (index(nm, query))
-found = itm;
+"Find food in inventory";
+food = 0;
+for itm in (p.contents)
+n = itm.name;
+if (index(n, tstr) && ((((((((index(n, "soup") || index(n, "ration")) || index(n, "berries")) || index(n, "meat")) || index(n, "food")) || index(n, "donut")) || index(n, "pie")) || index(n, "fungus")) || index(n, "slush")))
+food = itm;
 break;
 endif
 endfor
-endif
-if (found == 0)
-player:tell("You are not carrying that.");
+if (food == 0)
+p:tell(("You don't have any edible '" + tstr) + "'.");
 return;
 endif
-fname = "";
-try
-fname = tostr(found.name);
-except e (ANY)
-fname = "";
-endtry
-edible = 0;
-for kw in ({"berry", "berries", "fungus", "tuber", "soup", "ration", "food", "snack", "fruit", "meat", "pie", "paste", "donut", "slush", "vita", "canteen", "water"})
-if (index(fname, kw))
-edible = 1;
-break;
+fname = food.name;
+recycle(food);
+p.hunger = p.hunger + 30;
+if (p.hunger > 100)
+p.hunger = 100;
 endif
-endfor
-if ((!edible) && ("is_food" in properties(found)))
-edible = found.is_food;
+p.w_hp = p.w_hp + 5;
+if (p.w_hp > p.w_hp_max)
+p.w_hp = p.w_hp_max;
 endif
-if (!edible)
-player:tell("That doesn't look edible.");
-return;
-endif
-player.w_nourished = time() + 600;
-heal = 5;
-if (index(fname, "canteen") || index(fname, "water"))
-heal = 3;
-endif
-"survival_1 bonus: +3 HP on eat/drink";
-if ("survival_1" in player.w_learned)
-heal = heal + 3;
-endif
-player.w_hp = min(player.w_hp + heal, player.w_hp_max);
-recycle(found);
-player:tell(((("You consume the " + fname) + ". [+") + tostr(heal)) + " HP | Nourished for 10 min]");
-player.location:announce(player.name + " eats.", player);
+"Apply Nourished effect (10 minutes)";
+p.w_nourished = time() + 600;
+p:tell(("You eat the " + fname) + ". [hunger +30, HP +5, Nourished 10min]");
+p:tell("  Nourished: +1 dice regen rate for 10 minutes.");
 .
 #6:226
 "Alias for eat  consume a liquid.";
@@ -154220,24 +154360,52 @@ p:tell(("You unfold and anchor the " + bname) + " to the ground. [building place
 loc:announce(((p.name + " constructs a ") + bname) + " here.", p);
 .
 #6:268
-"List all buildings placed in the current room.";
+"List buildings in current room with stats.";
 p = player;
 loc = p.location;
-found = {};
-for itm in (loc.contents)
-if (is_a(itm, $building))
-found = listappend(found, itm);
+buildings = {};
+for OBJ in (loc.contents)
+if (is_a(OBJ, $building))
+buildings = listappend(buildings, OBJ);
 endif
 endfor
-if (found == {})
-p:tell("No structures have been built here.");
+if (buildings == {})
+p:tell("No buildings here.");
 return;
 endif
-p:tell("=== STRUCTURES AT THIS LOCATION ===");
-for b in (found)
-owner = valid(b.b_owner) ? b.b_owner.name | "unknown";
-hpstr = (tostr(b.b_hp) + "/") + tostr(b.b_hp_max);
-p:tell((((("  [" + b.b_type) + "]  HP: ") + hpstr) + "  Owner: ") + owner);
+p:tell("=== BUILDINGS ===");
+for b in (buildings)
+line = (((("  [" + b.b_type) + "] HP:") + tostr(b.b_hp)) + "/") + tostr(b.b_hp_max);
+try
+q = b.b_quality;
+if (q > 0)
+line = (line + " Q:") + tostr(q);
+endif
+stats = "";
+if (b.b_crime != 0)
+stats = (stats + " crm:") + tostr(b.b_crime);
+endif
+if (b.b_civ != 0)
+stats = (stats + " civ:") + tostr(b.b_civ);
+endif
+if (b.b_econ != 0)
+stats = (stats + " eco:") + tostr(b.b_econ);
+endif
+if (b.b_rec != 0)
+stats = (stats + " rec:") + tostr(b.b_rec);
+endif
+if (b.b_ind != 0)
+stats = (stats + " ind:") + tostr(b.b_ind);
+endif
+if (stats != "")
+line = line + stats;
+endif
+except e (ANY)
+endtry
+p:tell(line);
+if (("b_owner" in properties(b)) && valid(b.b_owner))
+p:tell("    Owner: " + b.b_owner.name);
+endif
 endfor
 .
 #6:270
@@ -156193,6 +156361,82 @@ if (result > 100)
 result = 100;
 endif
 return result;
+.
+#6:348
+"Set default stats on a building based on type.";
+b = args[1];
+if (!valid(b))
+return;
+endif
+bt = b.b_type;
+if (index(bt, "sector center"))
+b.b_civ = 10;
+b.b_econ = 5;
+b.b_ind = 5;
+b.b_rec = 2;
+elseif (index(bt, "shelter"))
+b.b_civ = 2;
+elseif (index(bt, "factory"))
+b.b_ind = 15;
+b.b_econ = 5;
+elseif (index(bt, "cantina"))
+b.b_rec = 10;
+b.b_civ = 5;
+b.b_crime = 3;
+elseif (index(bt, "infirmary") || index(bt, "clinic"))
+b.b_civ = 8;
+b.b_rec = 3;
+elseif (index(bt, "warehouse"))
+b.b_econ = 8;
+b.b_ind = 3;
+elseif (index(bt, "laboratory"))
+b.b_ind = 10;
+b.b_econ = 3;
+elseif (index(bt, "refinery"))
+b.b_ind = 12;
+b.b_econ = 5;
+endif
+.
+#6:349
+"Regen dice pools by 1 (2 if nourished). Called by heartbeat.";
+p = player;
+rate = 1;
+"Nourished bonus";
+try
+if (p.w_nourished > time())
+rate = 2;
+endif
+except e (ANY)
+endtry
+if (p.w_stam < p.w_stam_max)
+p.w_stam = p.w_stam + rate;
+if (p.w_stam > p.w_stam_max)
+p.w_stam = p.w_stam_max;
+endif
+endif
+if (p.w_clarity < p.w_clarity_max)
+p.w_clarity = p.w_clarity + rate;
+if (p.w_clarity > p.w_clarity_max)
+p.w_clarity = p.w_clarity_max;
+endif
+endif
+if (p.w_aggression < p.w_aggression_max)
+p.w_aggression = p.w_aggression + rate;
+if (p.w_aggression > p.w_aggression_max)
+p.w_aggression = p.w_aggression_max;
+endif
+endif
+.
+#6:350
+"Per-player tick called by heartbeat every 5 minutes.";
+p = player;
+"Dice regen";
+this:_regen_dice();
+"SP from survival (1 SP per tick for being alive)";
+try
+this:award_sp(1);
+except e (ANY)
+endtry
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -210469,18 +210713,10 @@ this:tick();
 endfork
 .
 #545:2
-"Fire random idle chatter for NPCs registered on this monitor.";
-for npc in (this.npcs)
-if (!valid(npc))
-break;
-endif
-lines = npc.idle_lines;
-if (length(lines) == 0)
-break;
-endif
-idx = random(length(lines));
-npc.location:announce(((npc.name + " says, \"") + lines[idx]) + "\"");
-endfor
+"NPC idle + player tick.";
+set_task_perms(this.owner);
+"Player dice regen";
+this:_post_tick();
 .
 #545:3
 "Run tick immediately (test/debug only).";
@@ -210540,6 +210776,16 @@ fork (0)
 #545:tick();
 endfork
 player:tell("Heartbeat kicked.");
+.
+#545:7
+"Post-tick: dice regen for all connected players.";
+set_task_perms(this.owner);
+for p in (connected_players())
+try
+p:_player_tick();
+except e (ANY)
+endtry
+endfor
 .
 #561:0
 "Sell a resource to the CAC.";
@@ -211943,7 +212189,7 @@ player:tell("  Exits: west");
 .
 0 clocks
 2 queued tasks
-0 6 1775791488 1920545284
+0 6 1775796379 302531324
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -212016,11 +212262,11 @@ WAIF
 11
 task_id
 0
-1920545284
+302531324
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775792343 1901558984
+0 6 1775796843 5159786
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -212093,7 +212339,7 @@ WAIF
 11
 taskid
 0
-1901558984
+5159786
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
