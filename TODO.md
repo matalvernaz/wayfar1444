@@ -20,7 +20,7 @@
 ## Phase 3 — Colony Building (hours 5-20 of gameplay)
 
 - [x] **Refining** (#23) — 3 building types (refinery/organic processing/nuclear enrichment). MASSADD for bulk input, PROCESS to refine, RESET to clear. Building quality affects output quality (min-max rebuild loop). REFINERY status command with estimate.
-- [ ] **Automated crafting** (#27) — engineering tool machines with input/output hoppers. Colony runs production without player input.
+- [x] **Automated crafting** (#27) — Factory building with interior room. INSTALL machines, LOAD materials into input hopper, ACTIVATE for automated production, COLLECT from output. Machine heartbeat processing. Known polish: OUT from factory, RUNNING display.
 - [ ] **Governor's office** (#20) — colony management verbs: citizens, sectormap, construction rights, collection config, events log, rollcall.
 - [ ] **Jobs** (#17) — ~30 repeatable achievements (FARMER, FACTORIUM LABOR, STRUCTURE CRAFTER, CENTER OF ATTENTION, PLANETARY HERO, etc.). Awards SP/credits. Drives progression.
 - [ ] **Reroll/ascension** (#15) — complete background victory condition → reroll points. Lose skills/SP, keep buildings/inventory. SP cap +100 per reroll to 3500.
