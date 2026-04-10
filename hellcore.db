@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
 1705
-3518
+3519
 0
 4
 65
@@ -8394,7 +8394,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--70
+-72
 361
 5
 4
@@ -10360,7 +10360,7 @@ generic player
 100
 33
 -1
-345
+346
 confunc
 361
 173
@@ -11740,6 +11740,10 @@ _clean_skills
 skills score
 361
 29
+-1
+_mk_energy_node
+361
+13
 -1
 93
 features
@@ -72651,7 +72655,7 @@ visit
 361
 5
 0
-516160321
+692386379
 361
 5
 4
@@ -78098,6 +78102,18 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:25:01 2026 PDT Database checkpoint started.~1b[0m
+0
+1775787901
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:23:11 2026 PDT Database checkpoint started.~1b[0m
+0
+1775787791
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:13:41 2026 PDT Database checkpoint started.~1b[0m
 0
 1775787221
@@ -78383,18 +78399,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 19:36:59 2026 PDT Database checkpoint started.~1b[0m
 0
 1775702219
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 18:36:59 2026 PDT Database checkpoint started.~1b[0m
-0
-1775698619
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 17:36:59 2026 PDT Database checkpoint started.~1b[0m
-0
-1775695019
 361
 5
 5
@@ -95880,7 +95884,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1995849639
+1071772809
 361
 5
 4
@@ -98155,7 +98159,7 @@ hi
 4
 2
 0
-1775787035
+1775787528
 2
 localhost
 361
@@ -98165,7 +98169,7 @@ localhost
 361
 0
 0
-1775787104
+1775787799
 361
 1
 5
@@ -98834,7 +98838,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 44866
+port 7777 from localhost, port 36742
 361
 0
 5
@@ -98853,7 +98857,7 @@ port 7777 from localhost, port 44866
 361
 5
 0
-1775787123
+1775787834
 361
 1
 0
@@ -134372,7 +134376,7 @@ equipment prototype
 1689
 1681
 0
-12
+13
 eq_slot
 eq_type
 eq_tohit
@@ -134385,7 +134389,8 @@ eq_clarity_bonus
 eq_aggr_bonus
 eq_actions
 h_resource
-42
+h_tool_class
+43
 2
 
 361
@@ -134430,6 +134435,10 @@ h_resource
 0
 361
 3
+2
+
+361
+7
 2
 
 361
@@ -134983,7 +134992,7 @@ colonial machete
 1690
 0
 0
-42
+43
 2
 weapon
 361
@@ -135024,6 +135033,9 @@ melee
 swing
 361
 3
+5
+361
+7
 5
 361
 7
@@ -135136,7 +135148,7 @@ hide armor
 -1
 0
 0
-42
+43
 2
 armor
 361
@@ -135175,6 +135187,9 @@ armor
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -155702,7 +155717,7 @@ endif
 endif
 .
 #6:329
-"Initialize new player stats and items.";
+"Initialize new player with all starter items.";
 p = player;
 has_tool = 0;
 for itm in (p.contents)
@@ -155738,19 +155753,44 @@ p.w_armor = $nothing;
 p.w_gadget = $nothing;
 p.w_special = $nothing;
 p.w_target = $nothing;
-"Starter items  wiki-accurate";
+"Basic crafting tool";
 tool = create(#592);
 tool.name = "basic crafting tool";
-tool.description = "A battered multi-tool issued to all colonists. Type CRAFT to see recipes.";
+tool.description = "Battered multi-tool. CRAFT to see recipes.";
 move(tool, p);
-"Ion-driven mineral collector (starter harvesting tool per wiki)";
-ht = create($equipment);
-ht.name = "ion-driven mineral collector";
-ht.description = "Starter-issue handheld scanner and extraction device. WIELD it, then SURVEY and HARVEST.";
-ht.eq_slot = "special";
-ht.eq_type = "harvest";
-ht.h_resource = "";
-move(ht, p);
+"4 starter harvesting tools (wiki: one per resource class)";
+ht1 = create($equipment);
+ht1.name = "ion-driven mineral collector";
+ht1.description = "Starter mineral extraction device.";
+ht1.eq_slot = "special";
+ht1.eq_type = "harvest";
+ht1.h_resource = "";
+ht1.h_tool_class = "mineral";
+move(ht1, p);
+ht2 = create($equipment);
+ht2.name = "cheap orgo-reaper";
+ht2.description = "Starter organic matter harvester.";
+ht2.eq_slot = "special";
+ht2.eq_type = "harvest";
+ht2.h_resource = "";
+ht2.h_tool_class = "organic";
+move(ht2, p);
+ht3 = create($equipment);
+ht3.name = "hand-held energy absorption unit";
+ht3.description = "Starter energy/kretherson collector.";
+ht3.eq_slot = "special";
+ht3.eq_type = "harvest";
+ht3.h_resource = "";
+ht3.h_tool_class = "energy";
+move(ht3, p);
+ht4 = create($equipment);
+ht4.name = "atmo-thrasher condenser";
+ht4.description = "Starter atmospheric water condenser.";
+ht4.eq_slot = "special";
+ht4.eq_type = "harvest";
+ht4.h_resource = "";
+ht4.h_tool_class = "water";
+move(ht4, p);
 "Starting resources";
 for i in [1..4]
 f = create($thing);
@@ -155764,7 +155804,7 @@ move(o, p);
 endfor
 .
 #6:330
-"Scan for resources in current area. Requires harvesting tool in special slot.";
+"Scan for resources. Requires harvesting tool.";
 p = player;
 if ((!valid(p.w_special)) || (p.w_special.eq_type != "harvest"))
 p:tell("You need a harvesting tool wielded. (WIELD <tool>)");
@@ -155781,19 +155821,32 @@ except e (ANY)
 endtry
 endfor
 tool = p.w_special;
-p:tell(("=== SCAN: " + tool.name) + " ===");
+tc = "";
+try
+tc = tool.h_tool_class;
+except e (ANY)
+endtry
+p:tell(("=== SURVEY: " + tool.name) + " ===");
+if (tc != "")
+p:tell("  Tool class: " + tc);
+endif
 if (nodes == {})
-p:tell("  No harvestable resources detected in this area.");
-p:tell("  Move to a different tile and try again.");
+p:tell("  No resources detected. Move to a different tile.");
 else
 for nd in (nodes)
-p:tell(((((("  [" + nd.name) + "] ") + tostr(nd.count)) + "/") + tostr(nd.max_count)) + " remaining");
+nc = "";
+try
+nc = nd.node_class;
+except e (ANY)
+endtry
+compat = (((tc == "") || (nc == "")) || (tc == nc)) ? "" | " [INCOMPATIBLE]";
+p:tell((((((((("  [" + nd.name) + "] ") + tostr(nd.count)) + "/") + tostr(nd.max_count)) + " (") + nc) + ")") + compat);
 endfor
 endif
 if (tool.h_resource != "")
-p:tell("  Configured target: " + tool.h_resource);
+p:tell("  Configured: " + tool.h_resource);
 else
-p:tell("  Target: any (use CONFIGURE <type> to focus)");
+p:tell("  Target: any (CONFIGURE <type> to focus)");
 endif
 .
 #6:331
@@ -155825,56 +155878,101 @@ p.w_special.h_resource = tstr;
 p:tell("Harvesting tool configured to target: " + tstr);
 .
 #6:332
-"Harvest resources using your wielded harvesting tool.";
+"Harvest resources. Tool class must match node class.";
 p = player;
-"Check for harvesting tool";
 if ((!valid(p.w_special)) || (p.w_special.eq_type != "harvest"))
 p:tell("You need a harvesting tool wielded. (WIELD <tool>)");
-p:tell("You can still GATHER by hand (slower, 1 unit).");
 return;
 endif
 loc = p.location;
 tool = p.w_special;
 target_type = tool.h_resource;
-"Find matching node";
+tool_class = "";
+try
+tool_class = tool.h_tool_class;
+except e (ANY)
+endtry
 node = 0;
 for OBJ in (loc.contents)
 try
 if (OBJ.is_node)
 if ((target_type == "") || index(OBJ.name, target_type))
+nc = "";
+try
+nc = OBJ.node_class;
+except e (ANY)
+endtry
+if ((((tool_class == "") || (nc == "")) || (tool_class == nc)) || (tool_class == "any"))
 node = OBJ;
 break;
+endif
 endif
 endif
 except e (ANY)
 endtry
 endfor
 if (node == 0)
-if (target_type != "")
-p:tell(("No " + target_type) + " resource here. Try CONFIGURE ANY or move to another tile.");
-else
-p:tell("No harvestable resources here. Move to another tile.");
-endif
+tc_msg = (tool_class != "") ? (" (tool harvests " + tool_class) + ")" | "";
+p:tell("No matching resources here." + tc_msg);
 return;
 endif
 if (node.count <= 0)
 p:tell(("The " + node.name) + " is depleted.");
 return;
 endif
-"Harvest  tool gets 2 units instead of 1";
 amt = 2;
 if (node.count < amt)
 amt = node.count;
 endif
+nc = "";
+try
+nc = node.node_class;
+except e (ANY)
+endtry
 for i in [1..amt]
 item = create($thing);
+roll = random(100);
+if (nc == "mineral")
+if (roll <= 60)
+item.name = "inert metal";
+elseif (roll <= 85)
+item.name = "solid-phase metal";
+elseif (roll <= 95)
+item.name = "responsive metal";
+else
+item.name = "sand";
+endif
+elseif (nc == "organic")
+if (roll <= 50)
+item.name = "native fiber";
+elseif (roll <= 75)
+item.name = "native lumber";
+elseif (roll <= 90)
+item.name = "native fungus";
+else
+item.name = "native berries";
+endif
+elseif (nc == "energy")
+if (roll <= 60)
+item.name = "solar kretherson";
+elseif (roll <= 85)
+item.name = "thermal kretherson";
+else
+item.name = "intrinsic field kretherson";
+endif
+elseif (nc == "water")
+item.name = "unpurified water";
+else
 item.name = node.yield_name;
-item.description = node.yield_desc;
+endif
+item.description = "Harvested resource.";
+item.q_quality = 10 + random(40);
 move(item, p);
 endfor
 node.count = node.count - amt;
-p:tell(((((((((("You harvest " + tostr(amt)) + "x ") + node.yield_name) + " with your ") + tool.name) + ". [") + tostr(node.count)) + "/") + tostr(node.max_count)) + " remaining]");
-p.location:announce(((p.name + " harvests resources with a ") + tool.name) + ".", p);
+p:tell(((((("You harvest with " + tool.name) + ". [") + tostr(node.count)) + "/") + tostr(node.max_count)) + " remaining]");
+this:award_sp(1);
+p.location:announce(p.name + " harvests resources.", p);
 .
 #6:333
 "Create the 3 starting rooms for the alpha complex.";
@@ -156188,6 +156286,27 @@ if (shown == 0)
 p:tell("No category matching: " + arg);
 endif
 p:tell("");
+.
+#6:345
+set_task_perms(#2);
+if (("energy_node" in properties(#0)) && valid($energy_node))
+player:tell("ENERGY=" + tostr($energy_node));
+return;
+endif
+if (!("energy_node" in properties(#0)))
+add_property(#0, "energy_node", $nothing, {player, "rwc"});
+endif
+en = create($thing);
+en.name = "energy source";
+en.description = "A pulsing vein of kretherson energy.";
+add_property(en, "is_node", 1, {player, "rwc"});
+add_property(en, "yield_name", "solar kretherson", {player, "rwc"});
+add_property(en, "yield_desc", "A crystallized packet of solar energy.", {player, "rwc"});
+add_property(en, "count", 10, {player, "rwc"});
+add_property(en, "max_count", 10, {player, "rwc"});
+add_property(en, "node_class", "energy", {player, "rwc"});
+$energy_node = en;
+player:tell("ENERGY=" + tostr(en));
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -209644,33 +209763,34 @@ this:populate(r, planet);
 return r;
 .
 #458:1
-"Possibly spawn a resource node in room based on biome + coords.";
+"Spawn resource node based on biome.";
 {room, planet} = args;
 set_task_perms(this.owner);
 x = room.x;
 y = room.y;
 b = room.biome;
-"Use offset perlin call for resources (decorrelated from biome)";
 roll = perlin_2d((x * 7) + 13, (y * 5) + 7, 2.0, 2.0, 10, 1);
-"roll range 0-9; spawn resource if roll >= 7 (30%)";
 if (roll < 7)
 return;
 endif
-"Select node prototype by biome (wiki-accurate)";
-"  0=Mountain   -> ore (mineral veins)";
-"  1=Forest     -> fiber (organic matter)";
-"  2=Desert     -> salvage (buried ruins)";
-"  3=Jungle     -> water + fiber";
-"  4=Underwater -> water (ocean resources)";
-"  5=Fungal     -> fiber (rare organics)";
-"  6=Volcanic   -> ore (energy/mineral deposits)";
+"  0=Mountain  -> mineral (ore)";
+"  1=Forest    -> organic (fiber)";
+"  2=Desert    -> mineral (salvage/sand)";
+"  3=Jungle    -> water + organic";
+"  4=Underwater -> water";
+"  5=Fungal    -> organic (rare)";
+"  6=Volcanic  -> energy (kretherson)";
 proto = 0;
 if (b == 0)
 proto = $ore_node;
 elseif (b == 1)
 proto = $fiber_node;
 elseif (b == 2)
+if (roll > 8)
 proto = $salvage_pile;
+else
+proto = $ore_node;
+endif
 elseif (b == 3)
 if (roll > 8)
 proto = $fiber_node;
@@ -209682,13 +209802,12 @@ proto = $water_node;
 elseif (b == 5)
 proto = $fiber_node;
 elseif (b == 6)
-proto = $ore_node;
+proto = $energy_node;
 endif
 if (!valid(proto))
 return;
 endif
 node = create(proto);
-"Reset count to parent default";
 node.count = proto.max_count;
 move(node, room);
 .
@@ -210785,7 +210904,7 @@ player:tell("  Exits: west");
 .
 0 clocks
 2 queued tasks
-0 6 1775787227 1995849639
+0 6 1775787917 1071772809
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -210858,11 +210977,11 @@ WAIF
 11
 task_id
 0
-1995849639
+1071772809
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775787843 516160321
+0 6 1775788743 692386379
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -210935,7 +211054,7 @@ WAIF
 11
 taskid
 0
-516160321
+692386379
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
