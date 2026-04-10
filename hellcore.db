@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
 1898
-3559
+3562
 0
 5
 65
@@ -8452,7 +8452,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--150
+-151
 361
 5
 4
@@ -10433,7 +10433,7 @@ generic player
 100
 33
 -1
-370
+375
 confunc
 361
 173
@@ -11913,6 +11913,26 @@ chatnet
 repair
 361
 29
+-1
+gather
+361
+29
+-1
+help
+361
+29
+-1
+tac
+361
+13
+-1
+st
+361
+13
+-1
+status
+361
+13
 -1
 103
 features
@@ -78905,6 +78925,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 05:00:24 2026 PDT Database checkpoint started.~1b[0m
+0
+1775822424
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 04:54:51 2026 PDT Database checkpoint started.~1b[0m
 0
 1775822091
@@ -79196,12 +79222,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:08:41 2026 PDT Database checkpoint started.~1b[0m
 0
 1775786921
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:05:48 2026 PDT Database checkpoint started.~1b[0m
-0
-1775786748
 361
 5
 5
@@ -96918,7 +96938,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1193035265
+479489606
 361
 5
 4
@@ -99256,7 +99276,7 @@ hi
 4
 2
 0
-1775821710
+1775821885
 2
 localhost
 361
@@ -99266,7 +99286,7 @@ localhost
 361
 0
 0
-1775821868
+1775822101
 361
 1
 5
@@ -100291,7 +100311,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 38486
+port 7777 from localhost, port 39164
 361
 0
 5
@@ -100310,7 +100330,7 @@ port 7777 from localhost, port 38486
 361
 5
 0
-1775821885
+1775822216
 361
 1
 0
@@ -188998,46 +189018,8 @@ player:tell(("You rest for a while. Stamina: " + tostr(player.stamina)) + "/100"
 player.location:announce(player.name + " sits down to rest.", player);
 .
 #6:228
-"Show player survival stats and credit balance.";
-p = player;
-loc = p.location;
-p:tell("=== STATUS ===");
-"HP";
-hpbar = "";
-hpfill = (p.w_hp * 10) / p.w_hp_max;
-for i in [1..10]
-hpbar = hpbar + ((i <= hpfill) ? "#" | ".");
-endfor
-p:tell((((("  HP      : [" + hpbar) + "] ") + tostr(p.w_hp)) + "/") + tostr(p.w_hp_max));
-"Stamina";
-stbar = "";
-stfill = (p.w_stam * 10) / p.w_stam_max;
-for i in [1..10]
-stbar = stbar + ((i <= stfill) ? "#" | ".");
-endfor
-p:tell((((("  Stamina : [" + stbar) + "] ") + tostr(p.w_stam)) + "/") + tostr(p.w_stam_max));
-"Hunger / nourished";
-if (p.w_nourished > time())
-mins = (p.w_nourished - time()) / 60;
-p:tell(("  Nourished (" + tostr(mins)) + " min remaining)");
-else
-hunger = p.w_hp_max - p.w_hp;
-if (hunger <= 0)
-p:tell("  Hunger  : Well fed");
-elseif (hunger < 20)
-p:tell("  Hunger  : Peckish");
-elseif (hunger < 40)
-p:tell("  Hunger  : Hungry");
-else
-p:tell("  Hunger  : Starving!");
-endif
-endif
-"Credits";
-p:tell(("  Credits : " + tostr(p.w_credits)) + " cr");
-"Location";
-if ("x" in properties(loc))
-p:tell(((("  Coords  : (" + tostr(loc.x)) + ", ") + tostr(loc.y)) + ")");
-endif
+"Alias for st.";
+this:st();
 .
 #6:229
 "Construct a colony structure from materials in your inventory.";
@@ -189325,41 +189307,91 @@ endif
 p:tell("You cannot go northwest.");
 .
 #6:240
-"Show status.";
-loc = player.location;
-if (parent(loc) != $wroom)
-player:tell("=== STATUS ===");
-player:tell("  Location: " + loc.name);
-else
-x = loc.x;
-y = loc.y;
-bnames = {"Mountain", "Forest", "Desert", "Jungle", "Underwater", "Fungal Zone", "Volcanic"};
-b = loc.biome;
-if (b < 0)
-b = 0;
-elseif (b > 6)
-b = 6;
-endif
-player:tell("=== STATUS ===");
-player:tell(((("  Coords : (" + tostr(x)) + ", ") + tostr(y)) + ")");
-player:tell("  Biome  : " + bnames[b + 1]);
-endif
+"Status  show your combat stats, hunger, dice pools.";
 p = player;
-player:tell((("  HP     : " + tostr(p.w_hp)) + "/") + tostr(p.w_hp_max));
-player:tell((((((((((("  STM    : " + tostr(p.w_stam)) + "/") + tostr(p.w_stam_max)) + "  CLR: ") + tostr(p.w_clarity)) + "/") + tostr(p.w_clarity_max)) + "  AGG: ") + tostr(p.w_aggression)) + "/") + tostr(p.w_aggression_max));
-player:tell(("  Hunger : " + tostr(p.hunger)) + "/100");
-player:tell((((("  Credits: " + tostr(p.w_credits)) + "  SP: ") + tostr(p.w_sp)) + "/") + tostr(p.w_sp_cap));
-player:tell("  Class  : " + p.w_background);
-"Show equipment";
-if (valid(p.w_weapon))
-player:tell("  Weapon : " + p.w_weapon.name);
+hp = 0;
+hp_max = 50;
+try
+hp = p.w_hp;
+except e (ANY)
+endtry
+try
+hp_max = p.w_hp_max;
+except e (ANY)
+endtry
+hunger = 0;
+try
+hunger = p.w_hunger;
+except e (ANY)
+endtry
+stam = 0;
+stam_max = 3;
+try
+stam = p.w_stam;
+except e (ANY)
+endtry
+try
+stam_max = p.w_stam_max;
+except e (ANY)
+endtry
+clar = 0;
+clar_max = 3;
+try
+clar = p.w_clar;
+except e (ANY)
+endtry
+try
+clar_max = p.w_clar_max;
+except e (ANY)
+endtry
+agg = 0;
+agg_max = 3;
+try
+agg = p.w_agg;
+except e (ANY)
+endtry
+try
+agg_max = p.w_agg_max;
+except e (ANY)
+endtry
+sp = 0;
+sp_cap = 2500;
+try
+sp = p.w_sp;
+except e (ANY)
+endtry
+try
+sp_cap = p.w_sp_cap;
+except e (ANY)
+endtry
+credits = 0;
+try
+credits = p.w_credits;
+except e (ANY)
+endtry
+bg = "none";
+try
+bg = p.w_background;
+except e (ANY)
+endtry
+nourished = 0;
+try
+nourished = p.w_nourished;
+except e (ANY)
+endtry
+p:tell(("=== " + p.name) + " ===");
+p:tell("  Background: " + bg);
+p:tell((("  Health:  " + tostr(hp)) + "/") + tostr(hp_max));
+p:tell(("  Hunger:  " + tostr(hunger)) + "/100");
+p:tell("");
+p:tell((("  Stamina dice:    " + tostr(stam)) + "/") + tostr(stam_max));
+p:tell((("  Clarity dice:    " + tostr(clar)) + "/") + tostr(clar_max));
+p:tell((("  Aggression dice: " + tostr(agg)) + "/") + tostr(agg_max));
+if (nourished > 0)
+p:tell("  [Nourished] +dice regen");
 endif
-if (valid(p.w_armor))
-player:tell("  Armor  : " + p.w_armor.name);
-endif
-if (valid(p.w_special))
-player:tell("  Tool   : " + p.w_special.name);
-endif
+p:tell("");
+p:tell((((("  SP: " + tostr(sp)) + "/") + tostr(sp_cap)) + "  Credits: ") + tostr(credits));
 .
 #6:241
 "Set combat target. Usage: KILL <target>";
@@ -192965,6 +192997,157 @@ endif
 p:tell(((((((("  " + cp.name) + "  [") + bg) + "]  ") + loc_name) + "  (") + idle_str) + ")");
 endfor
 p:tell("");
+.
+#6:370
+"Hand-gather resources. Slow, 1 unit, no quality. No tool needed.";
+p = player;
+loc = p.location;
+if (parent(loc) != $wroom)
+p:tell("There is nothing to gather here.");
+return;
+endif
+"Find a resource node in the room";
+node = $nothing;
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+dstr_low = $string_utils:lowercase(dstr);
+for OBJ in (loc.contents)
+if (OBJ != p)
+try
+if (OBJ.count > 0)
+if ((dstr == "") || (index($string_utils:lowercase(OBJ.name), dstr_low) > 0))
+node = OBJ;
+endif
+endif
+except e (ANY)
+endtry
+endif
+endfor
+if (!valid(node))
+p:tell("You don't see anything to gather here.");
+p:tell("Use SURVEY to scan for resources, or move to a new area.");
+return;
+endif
+if (node.count <= 0)
+p:tell(node.name + " is depleted.");
+return;
+endif
+"Hand-gathering: slow, 1 unit, no quality";
+p:tell(("You scrabble at the " + node.name) + " with your bare hands...");
+node.count = node.count - 1;
+"Create raw resource item";
+item = create($thing);
+item.name = node.yield_name;
+try
+item.aliases = node.yield_aliases;
+except e (ANY)
+endtry
+try
+item.description = node.yield_desc;
+except e (ANY)
+endtry
+try
+item.w_quality = 5 + random(10);
+except e (ANY)
+endtry
+move(item, p);
+p:tell(((("You manage to gather 1 " + item.name) + ". [") + tostr(node.count)) + " remaining]");
+p:tell("(Tip: WIELD a harvesting tool and use HARVEST for better results.)");
+.
+#6:371
+"Show available commands.";
+p = player;
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+dstr = $string_utils:lowercase(dstr);
+if (dstr == "")
+p:tell("=== Wayfar 1444  Command Reference ===");
+p:tell("");
+p:tell("  MOVEMENT: n s e w ne se sw nw");
+p:tell("  LOOK / MAP BIOMES  see surroundings");
+p:tell("");
+p:tell("  GATHERING:");
+p:tell("    GATHER           hand-gather (slow, 1 unit)");
+p:tell("    WIELD <tool>     equip harvesting tool");
+p:tell("    SURVEY           scan for resources");
+p:tell("    HARVEST          gather with tool (faster, more)");
+p:tell("");
+p:tell("  CRAFTING:");
+p:tell("    CRAFT            list recipes");
+p:tell("    CRAFT <item> ON <tool>  craft something");
+p:tell("");
+p:tell("  COMBAT:");
+p:tell("    CON <creature>   assess strength");
+p:tell("    KILL <target>    set target");
+p:tell("    SWING / FIRE     attack (melee/ranged)");
+p:tell("    ST               status (HP, dice)");
+p:tell("    TAC              tactical (room health)");
+p:tell("");
+p:tell("  EXPLORATION:");
+p:tell("    EXPLORE          explore area (0-100%)");
+p:tell("    MEMORIZE <name>  save location for travel");
+p:tell("    TRAVEL           list / fast travel");
+p:tell("    DISCOVER         find artifacts (req skill)");
+p:tell("");
+p:tell("  ECONOMY:");
+p:tell("    SELL / SELL ALL  sell resources for credits");
+p:tell("    BALANCE          check credits");
+p:tell("    SKILLS / BUY SKILL <name>  skill shop");
+p:tell("");
+p:tell("  COLONY:");
+p:tell("    PLACE <kit>      deploy a building");
+p:tell("    BUILDINGS        list your buildings");
+p:tell("    COLONY           colony overview");
+p:tell("");
+p:tell("  SOCIAL:");
+p:tell("    SAY <msg>        talk locally");
+p:tell("    CHAT <msg>       global chatnet");
+p:tell("    PAGE <name> <msg>  private message");
+p:tell("    WHO              online players");
+p:tell("    CHATNET HISTORY  view chat log");
+p:tell("");
+p:tell("  OTHER:");
+p:tell("    INVENTORY / I    carried items");
+p:tell("    EXAMINE <item>   inspect item");
+p:tell("    REPAIR <item>    fix damaged gear");
+p:tell("    LANDING          your landing coordinates");
+p:tell("    CONFIG           player settings");
+p:tell("    BACKGROUND       view/choose background");
+p:tell("    STATUS / ST      your stats");
+return;
+endif
+p:tell("Type HELP for the full command list.");
+.
+#6:372
+"Tactical display  show HP of all entities in room.";
+p = player;
+p:tell("=== Tactical ===");
+for OBJ in (p.location.contents)
+if (is_player(OBJ))
+hp = 0;
+hp_max = 50;
+try
+hp = OBJ.w_hp;
+except e (ANY)
+endtry
+try
+hp_max = OBJ.w_hp_max;
+except e (ANY)
+endtry
+p:tell((((("  " + OBJ.name) + "  HP: ") + tostr(hp)) + "/") + tostr(hp_max));
+else
+try
+if (OBJ.c_alive)
+chp = OBJ.c_hp;
+chp_max = OBJ.c_hp_max;
+agg = "";
+if (OBJ.c_aggressive)
+agg = " [HOSTILE]";
+endif
+p:tell(((((("  " + OBJ.name) + "  HP: ") + tostr(chp)) + "/") + tostr(chp_max)) + agg);
+endif
+except e (ANY)
+endtry
+endif
+endfor
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -249292,7 +249475,7 @@ dest:announce_all(this.name + " wanders in.");
 .
 0 clocks
 2 queued tasks
-0 6 1775822094 1193035265
+0 6 1775822424 479489606
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -249365,7 +249548,7 @@ WAIF
 11
 task_id
 0
-1193035265
+479489606
 this.beat_task = 0;
 this:_beat();
 .

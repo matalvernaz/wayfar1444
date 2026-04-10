@@ -11,7 +11,7 @@
 
 ## Phase 2 — Survival Progression (first hours of gameplay)
 
-- [ ] **Early game polish** — hand-gathering is slow (1 unit, no quality). Tool-gathering is better (2 units, quality). Cooking fire for food. Eating raw food = less benefit. Shelter protects (future: weather/creature raids). Hunger/health pressure creates urgency.
+- [x] **Early game polish** — GATHER (hand-gathering, slow, 1 unit, low quality), HELP (comprehensive command reference), TAC (tactical display), ST/STATUS (dice pools, hunger, SP/credits). Tool-gathering via HARVEST still better.
 - [ ] **Building progression** — enforce crafting chain: shelter → refinery → processing plant → automated harvester → factory. Sector center is a MILESTONE deep in the tree, not early game. Each building step is meaningful and unlocks new capabilities.
 - [x] **Item degradation** (#44) — weapons/tools lose durability on use. REPAIR command restores 25% per use. Examine shows condition (Good/Worn/Damaged/Nearly broken/BROKEN). SWING/FIRE degrade weapons on hit.
 - [ ] **Medical + status effects** (#31, #32) — `BANDAGE` (First Aid skill), bleeding/burns/diseases. Infirmary building heals over time. Dangerous biomes cause diseases. Real consequences for combat and exploration.
