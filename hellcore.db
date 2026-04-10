@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
 1705
-3517
+3518
 0
 4
 65
@@ -107,7 +107,7 @@ bf_occupants
 361
 173
 -1
-353
+354
 builder
 login
 last_restart_time
@@ -461,7 +461,8 @@ sc_room
 npc_worker
 worker_list
 equipment
-363
+skill_data
+364
 1
 2
 361
@@ -4303,6 +4304,1088 @@ Settings to tweak 'who' behavior.
 361
 3
 4
+77
+4
+6
+2
+Tech Weapons
+2
+Power Operation
+0
+50
+2
+
+2
++1 clarity max
+2
+
+4
+6
+2
+Tech Weapons
+2
+Touchpanel Training
+0
+100
+2
+Power Operation
+2
++1 success
+2
+
+4
+6
+2
+Tech Weapons
+2
+Non-Standard Ammunition Experience
+0
+150
+2
+Touchpanel Training
+2
++5 max HP
+2
+
+4
+6
+2
+Tech Weapons
+2
+Machine Spirit
+0
+200
+2
+Non-Standard Ammunition Experience
+2
++5 max HP
+2
+Gun Thug
+4
+6
+2
+Primitive Weapons
+2
+Knows Which End Hurts People
+0
+50
+2
+
+2
++1 success, assists throw+hunt
+2
+
+4
+6
+2
+Primitive Weapons
+2
+Self Defense Training
+0
+100
+2
+Knows Which End Hurts People
+2
++1 defense, +5 HP, grants PUNCH+KICK
+2
+
+4
+6
+2
+Primitive Weapons
+2
+Advanced Slashing and Shooting
+0
+150
+2
+Self Defense Training
+2
++1 success, +1 aggression max
+2
+
+4
+6
+2
+Primitive Weapons
+2
+Land Warrior
+0
+200
+2
+Advanced Slashing and Shooting
+2
++10 HP, +2 aggression max
+2
+Da Chopper
+4
+6
+2
+Off-World Weapons
+2
+Public Murder License
+0
+100
+2
+Non-Standard Ammunition Experience
+2
++5 HP, +1 aggression max
+2
+
+4
+6
+2
+Off-World Weapons
+2
+Beam Gunnery School
+0
+100
+2
+Non-Standard Ammunition Experience
+2
++1 success
+2
+
+4
+6
+2
+Off-World Weapons
+2
+War-Glove Adept
+0
+100
+2
+Non-Standard Ammunition Experience
+2
++1 success
+2
+
+4
+6
+2
+Off-World Weapons
+2
+Professional Combatant
+0
+200
+2
+Public Murder License
+2
++5 HP
+2
+
+4
+6
+2
+Primitive Assembly
+2
+Improvisation
+0
+50
+2
+
+2
+grants IMPROVISE command
+2
+
+4
+6
+2
+Primitive Assembly
+2
+Crude Planning
+0
+100
+2
+Improvisation
+2
+-0.8s action time
+2
+
+4
+6
+2
+Primitive Assembly
+2
+Better Materials
+0
+150
+2
+Crude Planning
+2
++5 HP, grants PURIFY command
+2
+
+4
+6
+2
+Primitive Assembly
+2
+Crafter
+0
+200
+2
+Better Materials
+2
++1 success, -1.0s, grants STAMP
+2
+
+4
+6
+2
+Primitive Assembly
+2
+Artisan
+0
+400
+2
+Crafter
+2
++10 HP, +2 success, -2.0s, +1 stamina max, +1 clarity max
+2
+material magician
+4
+6
+2
+Tech Operation
+2
+Basic Shiftscreen Operation
+0
+75
+2
+
+2
+assists salvage, uninstall_module
+2
+
+4
+6
+2
+Tech Operation
+2
+Tech Practice
+0
+75
+2
+Basic Shiftscreen Operation
+2
++2 success, -0.5s, +1 clarity max
+2
+
+4
+6
+2
+Tech Operation
+2
+Low-Data Interfacing
+0
+150
+2
+Tech Practice
+2
++1 stamina max, +1 clarity max
+2
+
+4
+6
+2
+Tech Operation
+2
+Has Read A Few Manuals
+0
+200
+2
+Low-Data Interfacing
+2
++5 HP, +2 clarity max
+2
+
+4
+6
+2
+Off-World Operation
+2
+Technology Buff
+0
+75
+2
+
+2
++1 success, +1 clarity max
+2
+
+4
+6
+2
+Off-World Operation
+2
+Data Decryption
+0
+75
+2
+Technology Buff
+2
++5 HP
+2
+
+4
+6
+2
+Off-World Operation
+2
+Data Interception
+0
+150
+2
+Data Decryption
+2
++1 success
+2
+
+4
+6
+2
+Off-World Operation
+2
+Off-World Expertise
+0
+200
+2
+Data Interception
+2
++5 HP, +1 success
+2
+
+4
+6
+2
+Off-World Operation
+2
+Off-World Resource Extraction
+0
+500
+2
+Off-World Expertise
+2
+-2.5s starship mining
+2
+
+4
+6
+2
+Security
+2
+Matrix Coder
+0
+75
+2
+Low-Data Interfacing
+2
+prereq for hacking
+2
+
+4
+6
+2
+Security
+2
+Novice Hacker
+0
+75
+2
+Matrix Coder
+2
++1 success, grants HACK command
+2
+
+4
+6
+2
+Security
+2
+System Repurposing
+0
+150
+2
+Novice Hacker
+2
+-1.0s
+2
+
+4
+6
+2
+Security
+2
+Data Pro
+0
+200
+2
+System Repurposing
+2
++5 HP, +1 success
+2
+
+4
+6
+2
+Medicine
+2
+First Aid
+0
+50
+2
+
+2
++1 success, grants BANDAGE command
+2
+
+4
+6
+2
+Medicine
+2
+Pharmacy
+0
+100
+2
+First Aid
+2
++5 HP, +1 success
+2
+
+4
+6
+2
+Medicine
+2
+Neurosurgeon
+0
+150
+2
+Pharmacy
+2
++1 success
+2
+
+4
+6
+2
+Medicine
+2
+Xenomedicine
+0
+200
+2
+Neurosurgeon
+2
++5 HP, +2 success
+2
+
+4
+6
+2
+Exploration
+2
+Sightseer
+0
+25
+2
+
+2
+assists survey+explore+discover
+2
+
+4
+6
+2
+Exploration
+2
+Developing Observation
+0
+75
+2
+Sightseer
+2
+assists survey+explore+discover
+2
+
+4
+6
+2
+Exploration
+2
+Terrain Details
+0
+150
+2
+Developing Observation
+2
++1 success, grants SURVEY command
+2
+
+4
+6
+2
+Exploration
+2
+Unpaid Cartographer
+0
+250
+2
+Terrain Details
+2
++5 HP, +1 success, grants DISCOVER command
+2
+Scout
+4
+6
+2
+Tech Assembly
+2
+Zoning License
+0
+50
+2
+Crafter
+2
++1 stamina max
+2
+
+4
+6
+2
+Tech Assembly
+2
+Factory Operation
+0
+100
+2
+Zoning License
+2
++5 HP
+2
+
+4
+6
+2
+Tech Assembly
+2
+Line Management
+0
+150
+2
+Factory Operation
+2
+-1.2s
+2
+
+4
+6
+2
+Tech Assembly
+2
+Quality Control
+0
+200
+2
+Line Management
+2
++1 success, grants INSPECT command
+2
+
+4
+6
+2
+Off-World Assembly
+2
+Schematic Mastery
+0
+75
+2
+Quality Control
+2
+
+2
+
+4
+6
+2
+Off-World Assembly
+2
+Advanced Assembly Platforms
+0
+75
+2
+Schematic Mastery
+2
++5 HP, -3.0s
+2
+
+4
+6
+2
+Off-World Assembly
+2
+Particle Recombination
+0
+150
+2
+Advanced Assembly Platforms
+2
++1 success
+2
+
+4
+6
+2
+Off-World Assembly
+2
+Nanofactory Baron
+0
+200
+2
+Particle Recombination
+2
+
+2
+Off-World Specialist
+4
+6
+2
+Science
+2
+Lab Operation
+0
+150
+2
+
+2
+
+2
+Tube Handler
+4
+6
+2
+Science
+2
+Research Focus
+0
+150
+2
+Lab Operation
+2
++1 success, assists research
+2
+Unsanctioned Researcher
+4
+6
+2
+Science
+2
+Experimental Process
+0
+100
+2
+
+2
++1 success
+2
+
+4
+6
+2
+Science
+2
+Multidisciplinarian
+0
+100
+2
+Experimental Process
+2
++10 HP
+2
+President of the Orb Fan Club
+4
+6
+2
+Vehicles
+2
+Driving
+0
+100
+2
+
+2
+required for land vehicles
+2
+Driver
+4
+6
+2
+Vehicles
+2
+Flying
+0
+100
+2
+
+2
+required for aircraft
+2
+Pilot
+4
+6
+2
+Vehicles
+2
+Expert Control Operation
+0
+150
+2
+Driving
+2
++5 HP
+2
+
+4
+6
+2
+Vehicles
+2
+Experienced Pilot
+0
+150
+2
+Flying
+2
++5 HP, +1 success
+2
+Ace
+4
+6
+2
+Cunning
+2
+Underhanded
+0
+125
+2
+
+2
++1 dodge, +1 success
+2
+
+4
+6
+2
+Cunning
+2
+Shadow Fiend
+0
+125
+2
+Underhanded
+2
+
+2
+Night Strangler
+4
+6
+2
+Cunning
+2
+Under the Radar
+0
+125
+2
+Shadow Fiend
+2
++5 HP
+2
+
+4
+6
+2
+Cunning
+2
+Ghost Profile
+0
+125
+2
+Under the Radar
+2
++1 dodge, grants BACKSTAB command
+2
+Terrorist
+4
+6
+2
+Survival
+2
+Heavy Tan
+0
+75
+2
+
+2
++10 HP
+2
+
+4
+6
+2
+Survival
+2
+Situational Awareness
+0
+75
+2
+
+2
++1 dodge, +1 stamina max, grants FOCUS command
+2
+
+4
+6
+2
+Survival
+2
+I Work Out
+0
+100
+2
+Situational Awareness
+2
++1 defense, +1 stamina max
+2
+
+4
+6
+2
+Survival
+2
+Tough Guy
+0
+250
+2
+I Work Out
+2
++10 HP, +2 stamina max
+2
+
+4
+6
+2
+Survival
+2
+Strong Back
+0
+100
+2
+
+2
+carry 40% more weight
+2
+
+4
+6
+2
+Survival
+2
+Packrat
+0
+100
+2
+
+2
+carry 25% more items
+2
+
+4
+6
+2
+Social
+2
+Theology
+0
+250
+2
+
+2
++1 stamina max, +1 clarity max, -2 aggression max, +5 HP, grants BLESS+PREACH
+2
+
+4
+6
+2
+Social
+2
+Musician
+0
+500
+2
+
+2
+exclusive with Theology/Consultant
+2
+
+4
+6
+2
+Social
+2
+Consultant
+0
+500
+2
+
+2
+exclusive with Theology/Musician
+2
+
+4
+6
+2
+Economics
+2
+Negotiation
+0
+100
+2
+
+2
+grants CONTRACTS command
+2
+
+4
+6
+2
+Economics
+2
+Supply Expert
+0
+200
+2
+Negotiation
+2
+grants REQUISITION command
+2
+
+4
+6
+2
+Starships
+2
+Void Gunnery
+0
+100
+2
+Technology Buff
+2
++1 success
+2
+
+4
+6
+2
+Starships
+2
+Starship Operation
+0
+100
+2
+
+2
++5 HP
+2
+
+4
+6
+2
+Starships
+2
+Void Piloting
+0
+100
+2
+
+2
++1 success
+2
+
+4
+6
+2
+Starships
+2
+Starship Command
+0
+200
+2
+Starship Operation
+2
++10 HP, +2 success
+2
+Space Captain
+4
+6
+2
+Starships
+2
+Starship Engineering
+0
+250
+2
+Starship Operation
+2
++2 HP, +2 success
+2
+
+4
+6
+2
+Starships
+2
+Starship Repair
+0
+250
+2
+Starship Engineering
+2
++2 HP
+2
+
+4
+6
+2
+Starships
+2
+EVA Specialization
+0
+250
+2
+
+2
++2 HP
+2
+
+4
+6
+2
+Starships
+2
+Void Data Analyst
+0
+250
+2
+Data Decryption
+2
+electronic warfare on ships
+2
+
+361
+7
+4
 1
 2
 The System Object
@@ -7311,7 +8394,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--51
+-70
 361
 5
 4
@@ -10246,18 +11329,6 @@ kill
 361
 29
 -1
-swing
-361
-13
--1
-fire
-361
-13
--1
-skills
-361
-13
--1
 forget
 361
 29
@@ -10415,18 +11486,6 @@ bg_menu
 13
 -1
 connect
-361
-13
--1
-background
-361
-29
--1
-bg_test
-361
-13
--1
-skills
 361
 13
 -1
@@ -10657,6 +11716,30 @@ crewfire
 survey
 361
 13
+-1
+_load_skills
+361
+13
+-1
+award_sp
+361
+29
+-1
+cr_die
+361
+29
+-1
+_argtest
+361
+29
+-1
+_clean_skills
+361
+13
+-1
+skills score
+361
+29
 -1
 93
 features
@@ -71568,7 +72651,7 @@ visit
 361
 5
 0
-933609782
+516160321
 361
 5
 4
@@ -77015,6 +78098,72 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:13:41 2026 PDT Database checkpoint started.~1b[0m
+0
+1775787221
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:11:36 2026 PDT Database checkpoint started.~1b[0m
+0
+1775787096
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:08:41 2026 PDT Database checkpoint started.~1b[0m
+0
+1775786921
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:05:48 2026 PDT Database checkpoint started.~1b[0m
+0
+1775786748
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 18:16:48 2026 PDT Database checkpoint started.~1b[0m
+0
+1775783808
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 18:01:29 2026 PDT Database checkpoint started.~1b[0m
+0
+1775782889
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 17:09:52 2026 PDT Database checkpoint started.~1b[0m
+0
+1775779792
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 17:04:55 2026 PDT Database checkpoint started.~1b[0m
+0
+1775779495
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 16:39:22 2026 PDT Database checkpoint started.~1b[0m
+0
+1775777962
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 15:39:22 2026 PDT Database checkpoint started.~1b[0m
+0
+1775774362
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 14:39:22 2026 PDT Database checkpoint started.~1b[0m
+0
+1775770762
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 14:26:08 2026 PDT Database checkpoint started.~1b[0m
 0
 1775769968
@@ -77246,72 +78395,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 17:36:59 2026 PDT Database checkpoint started.~1b[0m
 0
 1775695019
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 16:36:59 2026 PDT Database checkpoint started.~1b[0m
-0
-1775691419
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 15:36:59 2026 PDT Database checkpoint started.~1b[0m
-0
-1775687819
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 15:20:13 2026 PDT Database checkpoint started.~1b[0m
-0
-1775686813
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 14:25:09 2026 PDT Database checkpoint started.~1b[0m
-0
-1775683509
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 13:42:16 2026 PDT Database checkpoint started.~1b[0m
-0
-1775680936
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 13:36:26 2026 PDT Database checkpoint started.~1b[0m
-0
-1775680586
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 13:23:07 2026 PDT Database checkpoint started.~1b[0m
-0
-1775679787
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 12:50:16 2026 PDT Database checkpoint started.~1b[0m
-0
-1775677816
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 12:25:17 2026 PDT Database checkpoint started.~1b[0m
-0
-1775676317
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 11:25:17 2026 PDT Database checkpoint started.~1b[0m
-0
-1775672717
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 10:25:17 2026 PDT Database checkpoint started.~1b[0m
-0
-1775669117
 361
 5
 5
@@ -94797,7 +95880,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1582065898
+1995849639
 361
 5
 4
@@ -97072,7 +98155,7 @@ hi
 4
 2
 0
-1775769281
+1775787035
 2
 localhost
 361
@@ -97082,7 +98165,7 @@ localhost
 361
 0
 0
-1775769481
+1775787104
 361
 1
 5
@@ -97751,7 +98834,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 47464
+port 7777 from localhost, port 44866
 361
 0
 5
@@ -97770,7 +98853,7 @@ port 7777 from localhost, port 47464
 361
 5
 0
-1775769937
+1775787123
 361
 1
 0
@@ -97960,7 +99043,7 @@ test
 361
 5
 0
-0
+450
 361
 5
 0
@@ -97978,7 +99061,9 @@ hunter
 361
 5
 4
-0
+1
+2
+First Aid
 361
 5
 0
@@ -152620,226 +153705,47 @@ player:tell(("You set your sights on " + dobj.name) + ".");
 player.location:announce(((player.name + " eyes ") + dobj.name) + " dangerously.", player);
 .
 #6:242
-"Melee attack. Weapon gives tohit + damage bonus. Unarmed = half aggression dice.";
+"Forget a learned skill. Refunds 75% of SP cost. Usage: forget <skill name>.";
 p = player;
-"Validate target";
-if (!valid(p.w_target))
-p:tell("No target set. Use: kill <creature>");
-return;
-endif
-target = p.w_target;
-if (target.location != p.location)
-p:tell("Your target is no longer here.");
-p.w_target = $nothing;
-return;
-endif
-"Check stamina dice";
-if (p.w_stam < 1)
-p:tell("No stamina dice remaining. Rest or wait for them to recover.");
-return;
-endif
-"Weapon check";
-tohit_bonus = 0;
-dmg_bonus = 0;
-armed = 0;
-wname = "bare fists";
-if ((valid(p.w_weapon) && (p.w_weapon.location == p)) && (p.w_weapon.eq_type == "melee"))
-tohit_bonus = p.w_weapon.eq_tohit;
-dmg_bonus = p.w_weapon.eq_dmg_bonus;
-armed = 1;
-wname = p.w_weapon.name;
-endif
-"Spend 1 stamina die and roll to hit";
-p.w_stam = p.w_stam - 1;
-hit_roll = random(6) + tohit_bonus;
-if (hit_roll < 3)
-p:tell(((("[MISS] You swing at the " + target.name) + " but miss! (rolled ") + tostr(hit_roll)) + ")");
-p.location:announce(((p.name + " swings at the ") + target.name) + " and misses.", p);
-else
-"Hit  roll aggression dice for damage";
-dice_to_spend = armed ? p.w_aggression | ((p.w_aggression + 1) / 2);
-if (dice_to_spend < 1)
-dice_to_spend = 1;
-endif
-dmg = 0;
-for i in [1..dice_to_spend]
-dmg = dmg + random(6);
-endfor
-if (armed)
-p.w_aggression = 0;
-else
-p.w_aggression = p.w_aggression - dice_to_spend;
-if (p.w_aggression < 0)
-p.w_aggression = 0;
-endif
-endif
-dmg = dmg + dmg_bonus;
-target.cr_hp = target.cr_hp - dmg;
-p:tell(((((("[HIT] You strike the " + target.name) + " with ") + wname) + " for ") + tostr(dmg)) + " damage!");
-p.location:announce(((((p.name + " strikes the ") + target.name) + " for ") + tostr(dmg)) + " damage!", p);
-"Creature retaliation";
-this:cr_retaliate(target);
-"Check creature death";
-if (target.cr_hp <= 0)
-this:cr_die(target);
-endif
-endif
-p:tell((((((((("[ST] HP:" + tostr(p.health)) + " STM:") + tostr(p.w_stam)) + "/") + tostr(p.w_stam_max)) + " AGG:") + tostr(p.w_aggression)) + "/") + tostr(p.w_aggression_max));
-.
-#6:243
-"Ranged attack. Requires ranged weapon for full damage. No weapon = throw a rock.";
-p = player;
-if (!valid(p.w_target))
-p:tell("No target set. Use: kill <creature>");
-return;
-endif
-target = p.w_target;
-if (target.location != p.location)
-p:tell("Your target is no longer here.");
-p.w_target = $nothing;
-return;
-endif
-if (p.w_clarity < 1)
-p:tell("No clarity dice remaining. Rest or wait for them to recover.");
-return;
-endif
-"Weapon check";
-tohit_bonus = 0;
-dmg_bonus = 0;
-armed = 0;
-wname = "a thrown rock";
-if ((valid(p.w_weapon) && (p.w_weapon.location == p)) && (p.w_weapon.eq_type == "ranged"))
-tohit_bonus = p.w_weapon.eq_tohit;
-dmg_bonus = p.w_weapon.eq_dmg_bonus;
-armed = 1;
-wname = p.w_weapon.name;
-endif
-p.w_clarity = p.w_clarity - 1;
-hit_roll = random(6) + tohit_bonus;
-if (hit_roll < 3)
-p:tell(((("[MISS] You fire at the " + target.name) + " but miss! (rolled ") + tostr(hit_roll)) + ")");
-p.location:announce(((p.name + " fires at the ") + target.name) + " and misses.", p);
-else
-dmg = 0;
-if (armed)
-for i in [1..p.w_aggression]
-dmg = dmg + random(6);
-endfor
-p.w_aggression = 0;
-else
-"No ranged weapon  just 1d6";
-dmg = random(6);
-endif
-dmg = dmg + dmg_bonus;
-target.cr_hp = target.cr_hp - dmg;
-p:tell(((((("[HIT] You hit the " + target.name) + " with ") + wname) + " for ") + tostr(dmg)) + " damage!");
-p.location:announce(((((p.name + " shoots the ") + target.name) + " for ") + tostr(dmg)) + " damage!", p);
-this:cr_retaliate(target);
-if (target.cr_hp <= 0)
-this:cr_die(target);
-endif
-endif
-p:tell((((((((("[ST] HP:" + tostr(p.health)) + " CLR:") + tostr(p.w_clarity)) + "/") + tostr(p.w_clarity_max)) + " AGG:") + tostr(p.w_aggression)) + "/") + tostr(p.w_aggression_max));
-.
-#6:244
-"Show known skills and purchasable skills.";
-p = player;
-known = p.w_learned;
-p:tell(("=== SKILLS === (" + tostr(p.w_credits)) + " cr available)");
-"Tier 1  50 cr each";
-p:tell("Tier 1 (50 cr):");
-for sk in ({"gathering_1", "crafting_1", "survival_1", "commerce_1", "combat_1"})
-tag = (sk in known) ? "[known]" | "[buy]";
-if (sk == "gathering_1")
-p:tell(("  " + tag) + " gathering_1   Expert Forager: gather yields bonus items");
-elseif (sk == "crafting_1")
-p:tell(("  " + tag) + " crafting_1    Field Fabricator: additional craft recipes");
-elseif (sk == "survival_1")
-p:tell(("  " + tag) + " survival_1    Field Medicine: eat/drink heals +3 HP");
-elseif (sk == "commerce_1")
-p:tell(("  " + tag) + " commerce_1    Trade Contacts: sell prices +1 cr each");
-elseif (sk == "combat_1")
-p:tell(("  " + tag) + " combat_1      Combat Training: +5 HP max");
+arg = (typeof(dobjstr) == STR) ? dobjstr | "";
+if ((arg == "") && (args != {}))
+for w in (args)
+if (typeof(w) == STR)
+arg = (arg == "") ? w | ((arg + " ") + w);
 endif
 endfor
-"Tier 2  200 cr, requires Tier 1";
-p:tell("Tier 2 (200 cr, requires Tier 1):");
-for sk in ({"gathering_2", "survival_2", "commerce_2"})
-tag = (sk in known) ? "[known]" | "[buy]";
-if (sk == "gathering_2")
-req = ("gathering_1" in known) ? "" | " [requires gathering_1]";
-p:tell((("  " + tag) + " gathering_2   Resource Expert: guaranteed bonus gather") + req);
-elseif (sk == "survival_2")
-req = ("survival_1" in known) ? "" | " [requires survival_1]";
-p:tell((("  " + tag) + " survival_2    Combat Medic: treat verb heals full HP") + req);
-elseif (sk == "commerce_2")
-req = ("commerce_1" in known) ? "" | " [requires commerce_1]";
-p:tell((("  " + tag) + " commerce_2    CAC Partnership: ore/salvage prices x2") + req);
 endif
-endfor
-p:tell("Usage: buy skill <name>  (e.g. buy skill survival_1)");
-.
-#6:245
-"Forget a skill for 75% SP refund. Usage: forget <skill_name>";
-skill = dobjstr;
-if (skill == "")
-player:tell("Forget what skill?");
+if (arg == "")
+p:tell("Forget what? Usage: forget <skill name>");
 return;
 endif
-learned = player.w_learned;
-idx = 0;
-found = 0;
-for i in [1..length(learned)]
-if (learned[i] == skill)
-idx = i;
-found = 1;
+"Find skill in learned list";
+found = {};
+for sk in ($skill_data)
+if (index(sk[2], arg) && (sk[2] in p.w_learned))
+found = sk;
 break;
 endif
 endfor
-if (!found)
-player:tell(("You don't know " + skill) + ".");
+if (found == {})
+p:tell("You don't know any skill matching: " + arg);
 return;
 endif
-_sd0 = {{"heavy_tan", 75, "", "Heavy Tan: +10 max HP", "w_hp_max", 10}, {"situational_awareness", 75, "", "Situational Awareness: +1 stamina max", "w_stam_max", 1}, {"i_work_out", 100, "situational_awareness", "I Work Out: +1 stam max", "w_stam_max", 1}, {"tough_guy", 250, "i_work_out", "Tough Guy: +10 HP, +2 stam max", "w_hp_max", 10}, {"knows_end", 50, "", "Knows Which End Hurts: +1 agg max", "w_agg_max", 1}, {"self_defense", 100, "knows_end", "Self Defense: +1 stam max", "w_stam_max", 1}, {"slashing", 150, "knows_end", "Advanced Slashing: +1 agg max", "w_agg_max", 1}, {"power_operation", 50, "", "Power Operation: +1 clarity max", "w_clar_max", 1}, {"touchpanel", 100, "power_operation", "Touchpanel Training: +1 clar max", "w_clar_max", 1}};
-_sd1 = {{"machine_spirit", 200, "touchpanel", "Machine Spirit: +5 max HP", "w_hp_max", 5}, {"improvisation", 50, "", "Improvisation: grants IMPROVISE", "", 0}, {"crude_planning", 100, "", "Crude Planning: faster crafting", "", 0}, {"better_materials", 150, "crude_planning", "Better Materials: grants PURIFY", "", 0}, {"crafter", 200, "better_materials", "Crafter: +1 success, grants STAMP", "", 0}, {"sightseer", 25, "", "Sightseer: helps explore/discover", "", 0}, {"developing_obs", 75, "sightseer", "Developing Obs: better explore", "", 0}, {"terrain_details", 150, "developing_obs", "Terrain Details: grants SURVEY", "", 0}, {"cartographer", 250, "terrain_details", "Cartographer: grants DISCOVER", "", 0}};
-_sd2 = {{"first_aid", 50, "", "First Aid: grants BANDAGE", "w_hp_max", 2}, {"pharmacy", 100, "first_aid", "Pharmacy: +5 max HP", "w_hp_max", 5}, {"neurosurgeon", 150, "pharmacy", "Neurosurgeon: medical mastery", "", 0}, {"matrix_coder", 75, "", "Matrix Coder: prereq for hacking", "", 0}, {"novice_hacker", 75, "matrix_coder", "Novice Hacker: +1 clarity max", "w_clar_max", 1}, {"lab_operation", 150, "", "Lab Operation: research access", "", 0}, {"research_focus", 150, "", "Research Focus: research bonus", "", 0}, {"driving", 100, "", "Driving: operate land vehicles", "", 0}, {"flying", 100, "", "Flying: operate aircraft", "", 0}};
-skill_defs = {@_sd0, @_sd1, @_sd2};
-cost = 0;
-bprop = "";
-bamt = 0;
-for def in (skill_defs)
-if (def[1] == skill)
-cost = def[2];
-bprop = def[5];
-bamt = def[6];
-break;
-endif
-endfor
+name = found[2];
+cost = found[3];
 refund = (cost * 3) / 4;
-player.w_learned = listdelete(learned, idx);
-player.w_sp = min(player.w_sp + refund, player.w_sp_cap);
-if (bprop == "w_hp_max")
-player.w_hp_max = player.w_hp_max - bamt;
-player.w_hp = min(player.w_hp, player.w_hp_max);
-elseif (bprop == "w_stam_max")
-player.w_stam_max = max(1, player.w_stam_max - bamt);
-player.w_stam = min(player.w_stam, player.w_stam_max);
-elseif (bprop == "w_clar_max")
-player.w_clar_max = max(1, player.w_clar_max - bamt);
-player.w_clar = min(player.w_clar, player.w_clar_max);
-elseif (bprop == "w_agg_max")
-player.w_agg_max = max(1, player.w_agg_max - bamt);
-player.w_agg = min(player.w_agg, player.w_agg_max);
-endif
-player:tell(((((("You forget " + skill) + ". Refunded ") + tostr(refund)) + " SP. [SP: ") + tostr(player.w_sp)) + "]");
+p.w_learned = setremove(p.w_learned, name);
+p.w_sp = p.w_sp + refund;
+p:tell(((("[SKILL] Forgot: " + name) + " [+") + tostr(refund)) + " SP refund]");
+p:tell((("SP: " + tostr(p.w_sp)) + "/") + tostr(p.w_sp_cap));
 .
-#6:251
+#6:248
 "Test writing w_sp";
 old = player.w_sp;
 player.w_sp = old - 1;
 player:tell("ok: " + tostr(player.w_sp));
 .
-#6:257
+#6:254
 "Craft items. Usage: craft <recipe> on <tool>. Partial names work.";
 p = player;
 "Parse args  strip 'on <tool>' suffix";
@@ -153208,7 +154114,7 @@ endif
 p:tell(("Unknown recipe: '" + tgt) + "'");
 p:tell("Type CRAFT to see available recipes.");
 .
-#6:258
+#6:255
 "Full craft/eat/drink/build test.";
 player:tell("=== WF_TEST BEGIN ===");
 player.w_hp = 50;
@@ -153289,7 +154195,7 @@ endif
 endfor
 player:tell("=== WF_TEST END ===");
 .
-#6:260
+#6:257
 "Test if move works from verb context.";
 a = create($thing);
 a.name = "move test item";
@@ -153304,7 +154210,7 @@ endif
 "clean up";
 recycle(a);
 .
-#6:262
+#6:259
 "Debug: create ration bar, then trace eat lookup.";
 rb = create($thing);
 rb.name = "ration bar";
@@ -153327,7 +154233,7 @@ player:tell("  dobjstr val: " + tostr(dobjstr));
 player:tell("  args: " + tostr(args));
 recycle(rb);
 .
-#6:267
+#6:264
 "Trace canteen craft with debug output.";
 "Clean inventory first";
 for itm in (player.contents)
@@ -153374,7 +154280,7 @@ else
 player:tell("SUCCESS: craft canteen!");
 endif
 .
-#6:269
+#6:266
 "Test canteen recipe inline with debug.";
 "clean inv";
 for itm in (player.contents)
@@ -153415,7 +154321,7 @@ else
 player:tell("SUCCESS: both found!");
 endif
 .
-#6:270
+#6:267
 "Deploy a building kit at current location. Usage: place <kit name>.";
 p = player;
 query = (typeof(dobjstr) == STR) ? dobjstr | "";
@@ -153472,7 +154378,7 @@ recycle(kit);
 p:tell(("You unfold and anchor the " + bname) + " to the ground. [building placed]");
 loc:announce(((p.name + " constructs a ") + bname) + " here.", p);
 .
-#6:271
+#6:268
 "List all buildings placed in the current room.";
 p = player;
 loc = p.location;
@@ -153493,7 +154399,7 @@ hpstr = (tostr(b.b_hp) + "/") + tostr(b.b_hp_max);
 p:tell((((("  [" + b.b_type) + "]  HP: ") + hpstr) + "  Owner: ") + owner);
 endfor
 .
-#6:273
+#6:270
 "Sell items for credits. Quality affects price. In factorium: sells room items too.";
 p = player;
 query = (typeof(dobjstr) == STR) ? dobjstr | "";
@@ -153595,11 +154501,11 @@ endif
 p.w_credits = p.w_credits + total;
 p:tell(((((("[CAC] Purchased " + tostr(sold)) + " item(s) for ") + tostr(total)) + " cr.  Balance: ") + tostr(p.w_credits)) + " cr");
 .
-#6:274
+#6:271
 "Show your CAC credit balance.";
 player:tell(("Credit balance: " + tostr(player.w_credits)) + " cr");
 .
-#6:275
+#6:272
 "Show current CAC resource buy rates.";
 p = player;
 p:tell("=== CAC BUY RATES (radio uplink) ===");
@@ -153616,7 +154522,7 @@ p:tell("    ration bar              8 cr");
 p:tell("    water canteen           6 cr");
 p:tell("Usage: sell <item>  or  sell all");
 .
-#6:276
+#6:273
 "Test: sell resources, check balance.";
 player:tell("=== ECON_TEST BEGIN ===");
 "Reset credits";
@@ -153661,7 +154567,7 @@ recycle(itm);
 endif
 endfor
 .
-#6:283
+#6:280
 "Display background selection menu  wiki-accurate.";
 p = player;
 p:tell("");
@@ -153688,7 +154594,7 @@ p:tell("     Developing Observation. Recommended first run.  ");
 p:tell("");
 p:tell("Type: background <number or name>");
 .
-#6:284
+#6:281
 "Called on login.";
 p = player;
 if ((p.w_background == "none") || (p.w_background == ""))
@@ -153713,8 +154619,8 @@ p:tell(("Welcome back, " + p.name) + ".");
 p:tell(((((((("[" + p.w_background) + " | HP:") + tostr(p.w_hp)) + "/") + tostr(p.w_hp_max)) + " | Credits:") + tostr(p.w_credits)) + "]");
 endif
 .
-#6:285
-"Choose background  wiki-accurate.";
+#6:282
+"Buy a skill. Usage: buy <skill name>.";
 p = player;
 arg = (typeof(dobjstr) == STR) ? dobjstr | "";
 if ((arg == "") && (args != {}))
@@ -153725,182 +154631,90 @@ endif
 endfor
 endif
 if (arg == "")
-if ((p.w_background == "none") || (p.w_background == ""))
-this:bg_menu();
-else
-p:tell("Background: " + p.w_background);
-endif
+p:tell("Buy what? Usage: buy <skill name>");
 return;
 endif
-if ((p.w_background != "none") && (p.w_background != ""))
-p:tell(("You are already a " + p.w_background) + ".");
-return;
-endif
-"Map arg to background";
-bg = "";
-if ((arg == "1") || index(arg, "ranger"))
-bg = "ranger";
-elseif ((arg == "2") || index(arg, "fabricator"))
-bg = "fabricator";
-elseif ((arg == "3") || index(arg, "retiree"))
-bg = "retiree";
-elseif ((arg == "4") || index(arg, "student"))
-bg = "student";
-elseif (((arg == "5") || index(arg, "lab")) || index(arg, "tech"))
-bg = "lab tech";
-elseif ((arg == "6") || index(arg, "botanist"))
-bg = "botanist";
-endif
-if (bg == "")
-p:tell("Unknown. Try: background <1-6 or name>");
-this:bg_menu();
-return;
-endif
-"Apply background-specific starting bonuses";
-if (bg == "ranger")
-"Innate: Keen Eye  +2 success, +5 clarity max";
-p.w_clarity_max = p.w_clarity_max + 5;
-p.w_clarity = p.w_clarity_max;
-elseif (bg == "fabricator")
-"Crafting focus  no innate combat bonus";
-elseif (bg == "retiree")
-"Building focus  no innate combat bonus";
-elseif (bg == "student")
-"Starship focus  no innate combat bonus";
-elseif (bg == "lab tech")
-"Research focus  no innate combat bonus";
-elseif (bg == "botanist")
-"Starting skills: Heavy Tan (+10 HP), Sightseer, Developing Observation";
-p.w_hp_max = p.w_hp_max + 10;
-p.w_hp = p.w_hp_max;
-endif
-p.w_stam = p.w_stam_max;
-p.w_clarity = p.w_clarity_max;
-p.w_aggression = p.w_aggression_max;
-p.w_background = bg;
-p:tell("");
-p:tell("[TERMINAL] Background registered: " + bg);
-p:tell((((((("  HP:" + tostr(p.w_hp_max)) + " STM:") + tostr(p.w_stam_max)) + " CLR:") + tostr(p.w_clarity_max)) + " AGG:") + tostr(p.w_aggression_max));
-p:tell("");
-p:tell("Type DISPATCH to deploy to the planet surface.");
-.
-#6:286
-"Test background chooser.";
-player:tell("=== BG_TEST BEGIN ===");
-"Show menu";
-this:bg_menu();
-player:tell("---");
-"Check w_background current value";
-player:tell("Current background: " + player.w_background);
-"Test choosing scavenger";
-old_bg = player.w_background;
-old_hp_max = player.w_hp_max;
-old_stam_max = player.w_stam_max;
-player.w_background = "none";
-player.w_hp_max = 100;
-player.w_hp = 100;
-player.w_stam_max = 100;
-player.w_stam = 100;
-this:background("scavenger");
-player:tell((((("  bg=" + player.w_background) + " hp_max=") + tostr(player.w_hp_max)) + " stam_max=") + tostr(player.w_stam_max));
-player:tell("  Expected: scavenger hp_max=110 stam_max=110");
-"Restore";
-player.w_background = old_bg;
-player.w_hp_max = old_hp_max;
-player.w_hp = old_hp_max;
-player.w_stam_max = old_stam_max;
-player.w_stam = old_stam_max;
-"Test scavenger sell bonus";
-player.w_background = "scavenger";
-player.w_credits = 0;
-sc1 = create($thing);
-sc1.name = "salvage fragment";
-move(sc1, player);
-this:sell("salvage");
-player:tell(("  Scav salvage price: " + tostr(player.w_credits)) + " cr (expect 6)");
-"Test non-scavenger";
-player.w_background = "colonist";
-player.w_credits = 0;
-sc2 = create($thing);
-sc2.name = "salvage fragment";
-move(sc2, player);
-this:sell("salvage");
-player:tell(("  Normal salvage price: " + tostr(player.w_credits)) + " cr (expect 4)");
-"Restore";
-player.w_background = old_bg;
-player.w_credits = 0;
-player:tell("=== BG_TEST END ===");
-.
-#6:288
-"Purchase a skill with credits. Usage: buy skill <name>";
-p = player;
-"Build skill name from args";
-sk = (typeof(dobjstr) == STR) ? dobjstr | "";
-if ((sk == "") && (args != {}))
-for w in (args)
-if (typeof(w) == STR)
-sk = (sk == "") ? w | ((sk + "_") + w);
+"Find matching skill";
+found = {};
+for sk in ($skill_data)
+if (index(sk[2], arg))
+found = sk;
+break;
 endif
 endfor
-endif
-"Strip leading 'skill ' prefix if typed";
-if (index(sk, "skill ") == 1)
-sk = strsub(sk, "skill ", "");
-endif
-if (sk == "")
-p:tell("Buy what skill? (Type 'skills' to see options)");
+if (found == {})
+p:tell("Unknown skill: " + arg);
+p:tell("Type SKILLS <category> to see available skills.");
 return;
 endif
-"Normalize: replace spaces with underscores";
-sk = strsub(sk, " ", "_");
-"Validate skill name and get cost";
-tier1 = {"gathering_1", "crafting_1", "survival_1", "commerce_1", "combat_1"};
-tier2 = {"gathering_2", "survival_2", "commerce_2"};
-cost = 0;
-req = "";
-if (sk in tier1)
-cost = 50;
-elseif (sk in tier2)
-cost = 200;
-if (sk == "gathering_2")
-req = "gathering_1";
-elseif (sk == "survival_2")
-req = "survival_1";
-elseif (sk == "commerce_2")
-req = "commerce_1";
-endif
-else
-p:tell(("Unknown skill: '" + sk) + "'. Type 'skills' to see options.");
+name = found[2];
+cost = found[3];
+prereq = found[4];
+desc = found[5];
+"Already learned?";
+if (name in p.w_learned)
+p:tell(("You already know " + name) + ".");
 return;
 endif
-"Check already known";
-if (sk in p.w_learned)
-p:tell(("You already know " + sk) + ".");
+"Check prereq";
+if ((prereq != "") && (!(prereq in p.w_learned)))
+p:tell("Requires: " + prereq);
 return;
 endif
-"Check prerequisite";
-if ((req != "") && (!(req in p.w_learned)))
-p:tell(("Requires " + req) + " first.");
-return;
-endif
-"Check credits";
-if (p.w_credits < cost)
-p:tell(((("Not enough credits. Need " + tostr(cost)) + " cr, have ") + tostr(p.w_credits)) + " cr.");
+"Check SP";
+if (p.w_sp < cost)
+p:tell((("Need " + tostr(cost)) + " SP. You have: ") + tostr(p.w_sp));
 return;
 endif
 "Purchase";
-p.w_credits = p.w_credits - cost;
-p.w_learned = listappend(p.w_learned, sk);
-"Apply immediate effects";
-if (sk == "combat_1")
-p.w_hp_max = p.w_hp_max + 5;
-p.w_hp = min(p.w_hp + 5, p.w_hp_max);
-p:tell(((("Skill learned: " + sk) + ". [HP max +5]  Balance: ") + tostr(p.w_credits)) + " cr");
-else
-p:tell(((("Skill learned: " + sk) + ".  Balance: ") + tostr(p.w_credits)) + " cr");
+p.w_sp = p.w_sp - cost;
+p.w_learned = listappend(p.w_learned, name);
+p:tell(((("[SKILL] Learned: " + name) + " [-") + tostr(cost)) + " SP]");
+p:tell("  " + desc);
+"Apply stat bonuses encoded in desc";
+"Parse bonuses from desc string  look for +N patterns";
+if (index(desc, "+1 clarity max") || index(desc, "+1 clarity"))
+p.w_clarity_max = p.w_clarity_max + 1;
 endif
+if (index(desc, "+2 clarity max"))
+p.w_clarity_max = p.w_clarity_max + 2;
+endif
+if (index(desc, "+5 clarity max"))
+p.w_clarity_max = p.w_clarity_max + 5;
+endif
+if (index(desc, "+1 aggression max"))
+p.w_aggression_max = p.w_aggression_max + 1;
+endif
+if (index(desc, "+2 aggression max"))
+p.w_aggression_max = p.w_aggression_max + 2;
+endif
+if (index(desc, "+1 stamina max"))
+p.w_stam_max = p.w_stam_max + 1;
+endif
+if (index(desc, "+2 stamina max"))
+p.w_stam_max = p.w_stam_max + 2;
+endif
+if (index(desc, "+1 defense"))
+"defense tracked on player for future use";
+endif
+if (index(desc, "+1 dodge"))
+"dodge tracked on player for future use";
+endif
+if (index(desc, "+5 HP") || index(desc, "+5 max HP"))
+p.w_hp_max = p.w_hp_max + 5;
+p.w_hp = p.w_hp + 5;
+endif
+if (index(desc, "+10 HP"))
+p.w_hp_max = p.w_hp_max + 10;
+p.w_hp = p.w_hp + 10;
+endif
+"Refresh dice to new max";
+p.w_stam = p.w_stam_max;
+p.w_clarity = p.w_clarity_max;
+p.w_aggression = p.w_aggression_max;
+p:tell((("SP remaining: " + tostr(p.w_sp)) + "/") + tostr(p.w_sp_cap));
 .
-#6:289
+#6:283
 "Test skill purchase and effects.";
 player:tell("=== SKILL_TEST BEGIN ===");
 "Reset state";
@@ -153944,7 +154758,7 @@ player.w_learned = {};
 player.w_credits = 0;
 player:tell("=== SKILL_TEST END ===");
 .
-#6:290
+#6:284
 "Spawn 3-room sector center complex for the player. Called by place verb.";
 p = player;
 loc = p.location;
@@ -154011,7 +154825,7 @@ p:tell("  south  Factorium (earn credits via 'labor')");
 p:tell("  out    Return to wilderness");
 loc:announce(p.name + " erects a sector center here.", p);
 .
-#6:291
+#6:285
 "Exit current room (sector center, buildings, etc.) via out_exit.";
 loc = player.location;
 if (parent(loc) == $wroom)
@@ -154029,7 +154843,7 @@ endif
 endif
 player:tell("There's no exit that way.");
 .
-#6:292
+#6:286
 "Enter a building in the current room. Usage: enter sector center (or just: enter)";
 p = player;
 query = (typeof(dobjstr) == STR) ? dobjstr | "";
@@ -154069,7 +154883,7 @@ p.location:announce(((p.name + " enters ") + target.name) + ".", p);
 move(p, dest);
 p.location:announce(p.name + " arrives.", p);
 .
-#6:293
+#6:287
 "Teleport to your sector center, or show colony status if already inside.";
 p = player;
 if (!valid(p.w_colony))
@@ -154098,7 +154912,7 @@ move(p, p.w_colony);
 p:tell("You return to your sector center.");
 endif
 .
-#6:294
+#6:288
 "Perform manual labor in the factorium for credits. 1-hour cooldown.";
 p = player;
 loc = p.location;
@@ -154121,7 +154935,7 @@ p:tell(("You spend an hour on the factorium floor. [+" + tostr(earn)) + " cr]");
 p:tell(("Balance: " + tostr(p.w_credits)) + " cr");
 loc:announce(p.name + " works the floor.", p);
 .
-#6:295
+#6:289
 "Test sector center craft + placement.";
 player:tell("=== COLONY_TEST BEGIN ===");
 "Always clean up portals and stale colony at start";
@@ -154224,7 +155038,7 @@ endif
 endfor
 player:tell("=== COLONY_TEST END ===");
 .
-#6:304
+#6:298
 "Cleanup all stale sector center rooms and portals.";
 for itm in (player.location.contents)
 if (is_a(itm, $building) && ("sc_plaza" in properties(itm)))
@@ -154244,7 +155058,7 @@ endfor
 player.w_colony = $nothing;
 player:tell("Cleanup complete. w_colony=" + tostr(player.w_colony));
 .
-#6:305
+#6:299
 "Create $npc_worker prototype and register on #0.";
 if (!("npc_worker" in properties(#0)))
 add_property(#0, "npc_worker", $nothing, {player, "rw"});
@@ -154259,7 +155073,7 @@ $npc_worker = nw;
 endif
 player:tell("OBJNUM=" + tostr($npc_worker));
 .
-#6:306
+#6:300
 "Hire a colonial worker. Usage: crewhire <ore|fiber|water|salvage>.";
 p = player;
 loc = p.location;
@@ -154311,7 +155125,7 @@ p:tell(((((("You hire a " + job) + " gatherer. [-") + tostr(cost)) + " cr | Bala
 p:tell("Workers deliver resources to the factorium every 12 hours.");
 loc:announce(p.name + " hires a colonial worker.", p);
 .
-#6:308
+#6:302
 "Show colony workforce.";
 p = player;
 if (!valid(p.w_colony))
@@ -154360,7 +155174,7 @@ if (items_here != {})
 p:tell(("  Stockpile: " + tostr(length(items_here))) + "/50 item(s) in factorium");
 endif
 .
-#6:309
+#6:303
 "Test NPC worker hire/fire/tick.";
 p = player;
 p:tell("=== WORKER_TEST BEGIN ===");
@@ -154488,7 +155302,7 @@ endfor
 player.w_credits = old_cr;
 p:tell("=== WORKER_TEST END ===");
 .
-#6:314
+#6:308
 if (!("creature" in properties(#0)))
 add_property(#0, "creature", $nothing, {player, "rw"});
 endif
@@ -154504,7 +155318,7 @@ $creature = cr;
 endif
 player:tell("OBJNUM=" + tostr($creature));
 .
-#6:319
+#6:313
 "Clean up excess items in factorium, keep max 50.";
 if (!valid(player.w_colony))
 player:tell("No colony.");
@@ -154535,7 +155349,7 @@ recycle(items[i]);
 endfor
 player:tell("Done. Factorium now has 50 items.");
 .
-#6:321
+#6:315
 if (!valid(player.w_colony))
 player:tell("NO_COLONY");
 return;
@@ -154563,7 +155377,7 @@ else
 player:tell("NO_EXCESS");
 endif
 .
-#6:322
+#6:316
 set_task_perms(#2);
 plaza = player.w_colony;
 fact = plaza.south_exit;
@@ -154575,7 +155389,7 @@ endif
 endfor
 player:tell("MARKER_STOCK=" + tostr(cnt));
 .
-#6:323
+#6:317
 set_task_perms(#2);
 plaza = player.w_colony;
 fact = plaza.south_exit;
@@ -154600,7 +155414,7 @@ endif
 endfor
 player:tell("MARKER_CLEAN=" + tostr(removed));
 .
-#6:324
+#6:318
 set_task_perms(#2);
 old_names = {"Mineral Flats", "Scrublands", "Broken Ground", "Dust Plains", "Thermal Zone"};
 new_names = {"Mountain", "Forest", "Desert", "Jungle", "Volcanic"};
@@ -154627,7 +155441,7 @@ endif
 endfor
 player:tell((("MARKER_FIXED=" + tostr(fixed)) + "/") + tostr(total));
 .
-#6:325
+#6:319
 "Create $equipment prototype and register on #0.";
 if (!("equipment" in properties(#0)))
 add_property(#0, "equipment", $nothing, {player, "rw"});
@@ -154650,7 +155464,7 @@ $equipment = eq;
 endif
 player:tell("OBJNUM=" + tostr($equipment));
 .
-#6:326
+#6:320
 "Apply equipment stat bonuses. Called as this:_apply_stats(item).";
 item = args[1];
 if (!valid(item))
@@ -154671,7 +155485,7 @@ if (item.eq_aggr_bonus != 0)
 p.w_aggression_max = p.w_aggression_max + item.eq_aggr_bonus;
 endif
 .
-#6:327
+#6:321
 "Remove equipment stat bonuses. Called as this:_unequip_stats(item).";
 item = args[1];
 if (!valid(item))
@@ -154715,7 +155529,7 @@ p.w_aggression = p.w_aggression_max;
 endif
 endif
 .
-#6:328
+#6:322
 "Equip a weapon or special tool. Usage: wield <item name>.";
 p = player;
 tstr = ((typeof(dobjstr) == STR) && (dobjstr != "")) ? dobjstr | "";
@@ -154772,7 +155586,7 @@ return;
 endif
 p.location:announce(((p.name + " readies a ") + item.name) + ".", p);
 .
-#6:330
+#6:324
 "Equip a gadget. Usage: equip <gadget name>.";
 p = player;
 tstr = ((typeof(dobjstr) == STR) && (dobjstr != "")) ? dobjstr | "";
@@ -154807,7 +155621,7 @@ this:_apply_stats(item);
 p:tell(("You equip the " + item.name) + " in your gadget slot.");
 p.location:announce(((p.name + " equips a ") + item.name) + ".", p);
 .
-#6:333
+#6:327
 "Show available combat actions from equipped weapon.";
 p = player;
 if (!valid(p.w_weapon))
@@ -154827,7 +155641,7 @@ p:tell("  TAC     tactical display (all entities in room)");
 p:tell("  CON <target>  consider enemy strength");
 p:tell("  GEAR    show equipped items");
 .
-#6:334
+#6:328
 "Creature strikes back. Armor provides defense and dodge.";
 p = player;
 creature = args[1];
@@ -154887,7 +155701,7 @@ endif
 endif
 endif
 .
-#6:335
+#6:329
 "Initialize new player stats and items.";
 p = player;
 has_tool = 0;
@@ -154949,7 +155763,7 @@ o.name = "inert metal";
 move(o, p);
 endfor
 .
-#6:336
+#6:330
 "Scan for resources in current area. Requires harvesting tool in special slot.";
 p = player;
 if ((!valid(p.w_special)) || (p.w_special.eq_type != "harvest"))
@@ -154982,7 +155796,7 @@ else
 p:tell("  Target: any (use CONFIGURE <type> to focus)");
 endif
 .
-#6:337
+#6:331
 "Configure harvesting tool to target a resource type. Usage: configure <ore|fiber|water|salvage|any>.";
 p = player;
 if ((!valid(p.w_special)) || (p.w_special.eq_type != "harvest"))
@@ -155010,7 +155824,7 @@ endif
 p.w_special.h_resource = tstr;
 p:tell("Harvesting tool configured to target: " + tstr);
 .
-#6:338
+#6:332
 "Harvest resources using your wielded harvesting tool.";
 p = player;
 "Check for harvesting tool";
@@ -155062,7 +155876,7 @@ node.count = node.count - amt;
 p:tell(((((((((("You harvest " + tostr(amt)) + "x ") + node.yield_name) + " with your ") + tool.name) + ". [") + tostr(node.count)) + "/") + tostr(node.max_count)) + " remaining]");
 p.location:announce(((p.name + " harvests resources with a ") + tool.name) + ".", p);
 .
-#6:339
+#6:333
 "Create the 3 starting rooms for the alpha complex.";
 set_task_perms(#2);
 "--- Shuttle ---";
@@ -155086,7 +155900,7 @@ player:tell("SHUTTLE=#" + tostr(shuttle));
 player:tell("JUNCTION=#" + tostr(junction));
 player:tell("LOBBY=#" + tostr(lobby));
 .
-#6:340
+#6:334
 set_task_perms(#2);
 sh = create(#3);
 sh.name = "Shuttle Interior";
@@ -155108,7 +155922,7 @@ player:tell("SH=" + tostr(sh));
 player:tell("JN=" + tostr(jn));
 player:tell("LB=" + tostr(lb));
 .
-#6:341
+#6:335
 "Colony dispatch terminal. Deploys you to the planet.";
 p = player;
 if (p.location != #1704)
@@ -155138,17 +155952,242 @@ p:tell("  Type CRAFT for recipes. LOOK for the map.");
 p:tell("  Move: n/s/e/w. SELL ALL to earn credits.");
 p:tell("");
 .
-#6:342
+#6:336
 "Alias for hire  wiki-accurate command name.";
 return this:hire(@args);
 .
-#6:343
+#6:337
 "Alias for fire  wiki-accurate command name.";
 return this:fire(@args);
 .
-#6:344
+#6:338
 "Alias for scan  wiki-accurate command name.";
 return this:scan(@args);
+.
+#6:339
+sd = {};
+sd = listappend(sd, {"Tech Weapons", "Power Operation", 50, "", "+1 clarity max", ""});
+sd = listappend(sd, {"Tech Weapons", "Touchpanel Training", 100, "Power Operation", "+1 success", ""});
+sd = listappend(sd, {"Tech Weapons", "Non-Standard Ammunition Experience", 150, "Touchpanel Training", "+5 max HP", ""});
+sd = listappend(sd, {"Tech Weapons", "Machine Spirit", 200, "Non-Standard Ammunition Experience", "+5 max HP", "Gun Thug"});
+sd = listappend(sd, {"Primitive Weapons", "Knows Which End Hurts People", 50, "", "+1 success, assists throw+hunt", ""});
+sd = listappend(sd, {"Primitive Weapons", "Self Defense Training", 100, "Knows Which End Hurts People", "+1 defense, +5 HP, grants PUNCH+KICK", ""});
+sd = listappend(sd, {"Primitive Weapons", "Advanced Slashing and Shooting", 150, "Self Defense Training", "+1 success, +1 aggression max", ""});
+sd = listappend(sd, {"Primitive Weapons", "Land Warrior", 200, "Advanced Slashing and Shooting", "+10 HP, +2 aggression max", "Da Chopper"});
+sd = listappend(sd, {"Off-World Weapons", "Public Murder License", 100, "Non-Standard Ammunition Experience", "+5 HP, +1 aggression max", ""});
+sd = listappend(sd, {"Off-World Weapons", "Beam Gunnery School", 100, "Non-Standard Ammunition Experience", "+1 success", ""});
+sd = listappend(sd, {"Off-World Weapons", "War-Glove Adept", 100, "Non-Standard Ammunition Experience", "+1 success", ""});
+sd = listappend(sd, {"Off-World Weapons", "Professional Combatant", 200, "Public Murder License", "+5 HP", ""});
+sd = listappend(sd, {"Primitive Assembly", "Improvisation", 50, "", "grants IMPROVISE command", ""});
+sd = listappend(sd, {"Primitive Assembly", "Crude Planning", 100, "Improvisation", "-0.8s action time", ""});
+sd = listappend(sd, {"Primitive Assembly", "Better Materials", 150, "Crude Planning", "+5 HP, grants PURIFY command", ""});
+sd = listappend(sd, {"Primitive Assembly", "Crafter", 200, "Better Materials", "+1 success, -1.0s, grants STAMP", ""});
+sd = listappend(sd, {"Primitive Assembly", "Artisan", 400, "Crafter", "+10 HP, +2 success, -2.0s, +1 stamina max, +1 clarity max", "material magician"});
+sd = listappend(sd, {"Tech Operation", "Basic Shiftscreen Operation", 75, "", "assists salvage, uninstall_module", ""});
+sd = listappend(sd, {"Tech Operation", "Tech Practice", 75, "Basic Shiftscreen Operation", "+2 success, -0.5s, +1 clarity max", ""});
+sd = listappend(sd, {"Tech Operation", "Low-Data Interfacing", 150, "Tech Practice", "+1 stamina max, +1 clarity max", ""});
+sd = listappend(sd, {"Tech Operation", "Has Read A Few Manuals", 200, "Low-Data Interfacing", "+5 HP, +2 clarity max", ""});
+sd = listappend(sd, {"Off-World Operation", "Technology Buff", 75, "", "+1 success, +1 clarity max", ""});
+sd = listappend(sd, {"Off-World Operation", "Data Decryption", 75, "Technology Buff", "+5 HP", ""});
+sd = listappend(sd, {"Off-World Operation", "Data Interception", 150, "Data Decryption", "+1 success", ""});
+sd = listappend(sd, {"Off-World Operation", "Off-World Expertise", 200, "Data Interception", "+5 HP, +1 success", ""});
+sd = listappend(sd, {"Off-World Operation", "Off-World Resource Extraction", 500, "Off-World Expertise", "-2.5s starship mining", ""});
+sd = listappend(sd, {"Security", "Matrix Coder", 75, "Low-Data Interfacing", "prereq for hacking", ""});
+sd = listappend(sd, {"Security", "Novice Hacker", 75, "Matrix Coder", "+1 success, grants HACK command", ""});
+sd = listappend(sd, {"Security", "System Repurposing", 150, "Novice Hacker", "-1.0s", ""});
+sd = listappend(sd, {"Security", "Data Pro", 200, "System Repurposing", "+5 HP, +1 success", ""});
+sd = listappend(sd, {"Medicine", "First Aid", 50, "", "+1 success, grants BANDAGE command", ""});
+sd = listappend(sd, {"Medicine", "Pharmacy", 100, "First Aid", "+5 HP, +1 success", ""});
+sd = listappend(sd, {"Medicine", "Neurosurgeon", 150, "Pharmacy", "+1 success", ""});
+sd = listappend(sd, {"Medicine", "Xenomedicine", 200, "Neurosurgeon", "+5 HP, +2 success", ""});
+sd = listappend(sd, {"Exploration", "Sightseer", 25, "", "assists survey+explore+discover", ""});
+sd = listappend(sd, {"Exploration", "Developing Observation", 75, "Sightseer", "assists survey+explore+discover", ""});
+sd = listappend(sd, {"Exploration", "Terrain Details", 150, "Developing Observation", "+1 success, grants SURVEY command", ""});
+sd = listappend(sd, {"Exploration", "Unpaid Cartographer", 250, "Terrain Details", "+5 HP, +1 success, grants DISCOVER command", "Scout"});
+sd = listappend(sd, {"Tech Assembly", "Zoning License", 50, "Crafter", "+1 stamina max", ""});
+sd = listappend(sd, {"Tech Assembly", "Factory Operation", 100, "Zoning License", "+5 HP", ""});
+sd = listappend(sd, {"Tech Assembly", "Line Management", 150, "Factory Operation", "-1.2s", ""});
+sd = listappend(sd, {"Tech Assembly", "Quality Control", 200, "Line Management", "+1 success, grants INSPECT command", ""});
+sd = listappend(sd, {"Off-World Assembly", "Schematic Mastery", 75, "Quality Control", "", ""});
+sd = listappend(sd, {"Off-World Assembly", "Advanced Assembly Platforms", 75, "Schematic Mastery", "+5 HP, -3.0s", ""});
+sd = listappend(sd, {"Off-World Assembly", "Particle Recombination", 150, "Advanced Assembly Platforms", "+1 success", ""});
+sd = listappend(sd, {"Off-World Assembly", "Nanofactory Baron", 200, "Particle Recombination", "", "Off-World Specialist"});
+sd = listappend(sd, {"Science", "Lab Operation", 150, "", "", "Tube Handler"});
+sd = listappend(sd, {"Science", "Research Focus", 150, "Lab Operation", "+1 success, assists research", "Unsanctioned Researcher"});
+sd = listappend(sd, {"Science", "Experimental Process", 100, "", "+1 success", ""});
+sd = listappend(sd, {"Science", "Multidisciplinarian", 100, "Experimental Process", "+10 HP", "President of the Orb Fan Club"});
+sd = listappend(sd, {"Vehicles", "Driving", 100, "", "required for land vehicles", "Driver"});
+sd = listappend(sd, {"Vehicles", "Flying", 100, "", "required for aircraft", "Pilot"});
+sd = listappend(sd, {"Vehicles", "Expert Control Operation", 150, "Driving", "+5 HP", ""});
+sd = listappend(sd, {"Vehicles", "Experienced Pilot", 150, "Flying", "+5 HP, +1 success", "Ace"});
+sd = listappend(sd, {"Cunning", "Underhanded", 125, "", "+1 dodge, +1 success", ""});
+sd = listappend(sd, {"Cunning", "Shadow Fiend", 125, "Underhanded", "", "Night Strangler"});
+sd = listappend(sd, {"Cunning", "Under the Radar", 125, "Shadow Fiend", "+5 HP", ""});
+sd = listappend(sd, {"Cunning", "Ghost Profile", 125, "Under the Radar", "+1 dodge, grants BACKSTAB command", "Terrorist"});
+sd = listappend(sd, {"Survival", "Heavy Tan", 75, "", "+10 HP", ""});
+sd = listappend(sd, {"Survival", "Situational Awareness", 75, "", "+1 dodge, +1 stamina max, grants FOCUS command", ""});
+sd = listappend(sd, {"Survival", "I Work Out", 100, "Situational Awareness", "+1 defense, +1 stamina max", ""});
+sd = listappend(sd, {"Survival", "Tough Guy", 250, "I Work Out", "+10 HP, +2 stamina max", ""});
+sd = listappend(sd, {"Survival", "Strong Back", 100, "", "carry 40% more weight", ""});
+sd = listappend(sd, {"Survival", "Packrat", 100, "", "carry 25% more items", ""});
+sd = listappend(sd, {"Social", "Theology", 250, "", "+1 stamina max, +1 clarity max, -2 aggression max, +5 HP, grants BLESS+PREACH", ""});
+sd = listappend(sd, {"Social", "Musician", 500, "", "exclusive with Theology/Consultant", ""});
+sd = listappend(sd, {"Social", "Consultant", 500, "", "exclusive with Theology/Musician", ""});
+sd = listappend(sd, {"Economics", "Negotiation", 100, "", "grants CONTRACTS command", ""});
+sd = listappend(sd, {"Economics", "Supply Expert", 200, "Negotiation", "grants REQUISITION command", ""});
+sd = listappend(sd, {"Starships", "Void Gunnery", 100, "Technology Buff", "+1 success", ""});
+sd = listappend(sd, {"Starships", "Starship Operation", 100, "", "+5 HP", ""});
+sd = listappend(sd, {"Starships", "Void Piloting", 100, "", "+1 success", ""});
+sd = listappend(sd, {"Starships", "Starship Command", 200, "Starship Operation", "+10 HP, +2 success", "Space Captain"});
+sd = listappend(sd, {"Starships", "Starship Engineering", 250, "Starship Operation", "+2 HP, +2 success", ""});
+sd = listappend(sd, {"Starships", "Starship Repair", 250, "Starship Engineering", "+2 HP", ""});
+sd = listappend(sd, {"Starships", "EVA Specialization", 250, "", "+2 HP", ""});
+sd = listappend(sd, {"Starships", "Void Data Analyst", 250, "Data Decryption", "electronic warfare on ships", ""});
+$skill_data = sd;
+player:tell("SKILLS_LOADED=" + tostr(length(sd)));
+.
+#6:340
+"Award SP to player. Called as this:award_sp(amount). Respects cap.";
+amt = args[1];
+p = player;
+if ((p.w_sp + amt) > p.w_sp_cap)
+amt = p.w_sp_cap - p.w_sp;
+endif
+if (amt <= 0)
+return;
+endif
+p.w_sp = p.w_sp + amt;
+p.w_sp_earned = p.w_sp_earned + amt;
+p:tell(("[+" + tostr(amt)) + " SP]");
+.
+#6:341
+"Handle creature death: loot, credits, SP.";
+p = player;
+creature = args[1];
+if (!valid(creature))
+return;
+endif
+loc = creature.location;
+p:tell(("The " + creature.name) + " collapses and dies!");
+loc:announce(("The " + creature.name) + " dies!", p);
+"Drop loot";
+loot = create($thing);
+loot.name = "salvaged components";
+loot.description = "Remains salvaged from a dead creature.";
+move(loot, loc);
+p:tell("Loot: salvaged components");
+"Clear target";
+if (p.w_target == creature)
+p.w_target = $nothing;
+endif
+"Remove and recycle";
+$creature_list = setremove($creature_list, creature);
+recycle(creature);
+"Rewards";
+p.w_credits = p.w_credits + 5;
+p:tell("[+5 cr]");
+this:award_sp(3);
+.
+#6:342
+p = player;
+p:tell("DOBJSTR_TYPE=" + tostr(typeof(dobjstr)));
+p:tell(("DOBJSTR_VAL=[" + tostr(dobjstr)) + "]");
+p:tell("ARGS=" + tostr(args));
+p:tell("ARGLEN=" + tostr(length(args)));
+if (args != {})
+p:tell(("ARG1=[" + tostr(args[1])) + "]");
+endif
+.
+#6:343
+set_task_perms(#2);
+"Delete all skills verbs except skills score";
+deleted = 0;
+again = 1;
+while (again)
+again = 0;
+vs = verbs(#6);
+for i in [1..length(vs)]
+if ((vs[i] == "skills") && (verb_args(#6, vs[i]) != {"any", "none", "none"}))
+delete_verb(#6, i - 1);
+deleted = deleted + 1;
+again = 1;
+break;
+endif
+endfor
+endwhile
+player:tell("DELETED=" + tostr(deleted));
+.
+#6:344
+"Display skill tree.";
+set_task_perms(caller_perms());
+p = player;
+arg = (typeof(dobjstr) == STR) ? dobjstr | "";
+if ((arg == "") && (args != {}))
+for w in (args)
+if (typeof(w) == STR)
+arg = (arg == "") ? w | ((arg + " ") + w);
+endif
+endfor
+endif
+p:tell((("=== SKILL TREE === SP: " + tostr(p.w_sp)) + "/") + tostr(p.w_sp_cap));
+p:tell("");
+sd = $skill_data;
+sdlen = length(sd);
+if (arg == "")
+last_cat = "";
+cat_ct = 0;
+cat_total = 0;
+for i in [1..sdlen]
+sk = sd[i];
+if (sk[1] != last_cat)
+if (last_cat != "")
+p:tell(((((("  " + last_cat) + " (") + tostr(cat_ct)) + "/") + tostr(cat_total)) + ")");
+endif
+last_cat = sk[1];
+cat_ct = 0;
+cat_total = 0;
+endif
+cat_total = cat_total + 1;
+if (sk[2] in p.w_learned)
+cat_ct = cat_ct + 1;
+endif
+endfor
+if (last_cat != "")
+p:tell(((((("  " + last_cat) + " (") + tostr(cat_ct)) + "/") + tostr(cat_total)) + ")");
+endif
+p:tell("");
+p:tell("Type SKILLS <category> for details. BUY <skill> to purchase.");
+return;
+endif
+shown = 0;
+for i in [1..sdlen]
+sk = sd[i];
+if (index(sk[1], arg))
+if (shown == 0)
+p:tell(("=== " + sk[1]) + " ===");
+p:tell("");
+endif
+shown = shown + 1;
+name = sk[2];
+cost = sk[3];
+prereq = sk[4];
+desc = sk[5];
+learned = name in p.w_learned;
+marker = learned ? "[X]" | "[ ]";
+line = ((((("  " + marker) + " ") + name) + " (") + tostr(cost)) + " SP)";
+if (prereq != "")
+line = ((line + " [req: ") + prereq) + "]";
+endif
+p:tell(line);
+if (desc != "")
+p:tell("      " + desc);
+endif
+endif
+endfor
+if (shown == 0)
+p:tell("No category matching: " + arg);
+endif
+p:tell("");
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -209746,7 +210785,7 @@ player:tell("  Exits: west");
 .
 0 clocks
 2 queued tasks
-0 6 1775769973 1582065898
+0 6 1775787227 1995849639
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -209819,11 +210858,11 @@ WAIF
 11
 task_id
 0
-1582065898
+1995849639
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775770743 933609782
+0 6 1775787843 516160321
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -209896,7 +210935,7 @@ WAIF
 11
 taskid
 0
-933609782
+516160321
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
