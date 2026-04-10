@@ -267,6 +267,56 @@ def run_tests():
     check('PLACE shelter', t.cmd('place shelter'), expect='deploy')
 
     # ============================================================
+    # COLONY MANAGEMENT (Phase 3)
+    # ============================================================
+    print('\n=== COLONY MANAGEMENT ===')
+    w.cmd('; for p in (players()) if (p.name == "tester") p.w_background = "ranger"; p.w_dispatched = 1; move(p, $ods:spawn_room(#457, 25, 25)); endif endfor', 3.0)
+    check('COLONY', t.cmd('colony'), expect=['Colony Overview', 'Buildings:', 'Credits:'])
+    check('SECTORMAP', t.cmd('sectormap', 3.0), expect='Sector Map')
+    check('RESOURCES', t.cmd('resources', 3.0), expect='Resources Near')
+    check('EVENTS', t.cmd('events'), expect='Colony Events')
+    check('CITIZENS', t.cmd('citizens'), expect='Colony Citizens')
+
+    # ============================================================
+    # JOBS (Phase 3)
+    # ============================================================
+    print('\n=== JOBS ===')
+    check('JOBS list', t.cmd('jobs', 3.0), expect=['Available Jobs', 'Ranger Patrol', 'Harvester'])
+
+    # ============================================================
+    # VICTORY / REROLL (Phase 3)
+    # ============================================================
+    print('\n=== VICTORY / REROLL ===')
+    check('VICTORY', t.cmd('victory'), expect=['Victory Progress', 'ranger'])
+    check('REROLL preview', t.cmd('reroll'), expect=['LOSE', 'KEEP', 'REROLL CONFIRM'])
+
+    # ============================================================
+    # BLUEPRINTS (Phase 3)
+    # ============================================================
+    print('\n=== BLUEPRINTS ===')
+    check('LOOKUP (no results)', t.cmd('lookup asdfxyz'), expect='No matching')
+    # Give a blueprint chip and test loading
+    w.cmd('; for p in (players()) if (p.name == "tester") chip = create($thing); chip.name = "test blueprint"; chip.bp_recipe_name = "test recipe"; chip.bp_tool_type = "basic"; move(chip, p); endif endfor', 1.0)
+    check('LOAD blueprint ONTO tool', t.cmd('load test onto basic', 2.0), expect='Blueprint loaded')
+    check('LOOKUP (found)', t.cmd('lookup test recipe', 2.0), expect=['Found', 'test recipe'])
+
+    # ============================================================
+    # FACTORY (Phase 3)
+    # ============================================================
+    print('\n=== FACTORY ===')
+    # Give factory kit, place it, enter
+    w.cmd('; for p in (players()) if (p.name == "tester") kit = create($thing); kit.name = "factory kit"; move(kit, p); endif endfor', 1.0)
+    check('PLACE factory', t.cmd('place factory'), expect='deploy')
+    check('ENTER factory', t.cmd('enter factory', 2.0), expect='Factory Interior')
+    # Give machine, install, load, activate
+    w.cmd('; for p in (players()) if (p.name == "tester") m = create($machine_proto); m.name = "test processor"; m.m_automated = 1; m.m_active = 0; m.m_recipe = "test output"; m.m_time_per = 1; m.m_input_count = 0; m.m_output = {}; move(m, p); r = create($thing); r.name = "raw input"; move(r, p); endif endfor', 1.0)
+    check('INSTALL machine', t.cmd('install processor', 2.0), expect='install')
+    check('LOAD into machine', t.cmd('load raw', 2.0), expect='Loaded')
+    check('ACTIVATE machine', t.cmd('activate processor', 2.0), expect='hums to life')
+    check('DEACTIVATE machine', t.cmd('deactivate processor', 2.0), expect='powers down')
+    check('COLLECT (empty)', t.cmd('collect', 2.0), expect='Nothing')
+
+    # ============================================================
     # SUMMARY
     # ============================================================
     w.close()
