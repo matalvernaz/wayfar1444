@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
 1886
-3546
+3551
 0
 5
 65
@@ -6067,7 +6067,7 @@ tell_mytree
 2
 build_options
 who_visible
-229
+233
 4
 0
 361
@@ -6443,6 +6443,18 @@ who_visible
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -8430,7 +8442,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--134
+-135
 361
 5
 4
@@ -10396,7 +10408,7 @@ generic player
 100
 33
 -1
-359
+364
 confunc
 361
 173
@@ -11833,7 +11845,27 @@ landing
 361
 13
 -1
-99
+explore
+361
+13
+-1
+memorize
+361
+29
+-1
+travel
+361
+29
+-1
+unmemorize
+361
+29
+-1
+discover
+361
+13
+-1
+103
 features
 previous_connection
 email_address
@@ -11933,7 +11965,11 @@ w_land_x
 w_land_y
 w_land_planet
 w_dispatched
-194
+w_explored
+w_memorized
+w_discoveries
+w_last_explore
+198
 4
 5
 1
@@ -12500,6 +12536,22 @@ none
 7
 1
 -1
+361
+7
+0
+0
+361
+7
+4
+0
+361
+7
+4
+0
+361
+7
+0
+0
 361
 7
 0
@@ -31703,7 +31755,7 @@ default_description
 request
 extra_confunc_msg
 free_to_use
-232
+236
 2
 neuter
 29
@@ -32105,6 +32157,18 @@ By definition, guests appear nondescript.
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -32917,7 +32981,7 @@ init_for_core
 173
 -1
 0
-249
+253
 5
 29
 1
@@ -33508,6 +33572,18 @@ sddfs
 7
 5
 29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
 5
 0
 193
@@ -34033,7 +34109,7 @@ set_*
 -1
 1
 queued_task_limit
-211
+215
 0
 0
 361
@@ -34464,6 +34540,18 @@ showmap
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -35407,7 +35495,7 @@ autowield
 bug
 readied_weapon
 unread_mail
-210
+214
 0
 0
 361
@@ -35777,6 +35865,18 @@ white
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -44698,7 +44798,7 @@ toad_victim_msg
 toad_msg
 mail_identity
 advertised
-258
+262
 2
 
 361
@@ -45178,6 +45278,18 @@ really impossible password to type
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -45936,7 +46048,7 @@ p_pois
 biome_names
 biome_descs
 biome_chars
-249
+253
 4
 0
 29
@@ -46458,6 +46570,18 @@ WARNING: Volcanic zone. The ground radiates searing heat. Sulphur vents hiss. En
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -54260,7 +54384,7 @@ drop_off_msg
 move_player_task
 moveto_task
 cleaning_index
-266
+270
 4
 0
 29
@@ -54877,6 +55001,18 @@ Barry
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -66083,7 +66219,7 @@ real_aliases
 zots
 bedroom
 chillmin
-227
+231
 2
 You join %n.
 29
@@ -66474,6 +66610,18 @@ You teleport %n.
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -73107,7 +73255,7 @@ visit
 361
 5
 0
-1959022679
+938862986
 361
 5
 4
@@ -78582,6 +78730,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 04:09:30 2026 PDT Database checkpoint started.~1b[0m
+0
+1775819370
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 03:59:10 2026 PDT Database checkpoint started.~1b[0m
 0
 1775818750
@@ -78873,12 +79027,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 14:17:53 2026 PDT Database checkpoint started.~1b[0m
 0
 1775769473
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 14:05:52 2026 PDT Database checkpoint started.~1b[0m
-0
-1775768752
 361
 5
 5
@@ -91615,7 +91763,7 @@ player
 last_update_time
 active
 allow_update_time
-198
+202
 1
 -1
 361
@@ -91909,6 +92057,18 @@ allow_update_time
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -96412,7 +96572,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-956338745
+1107692743
 361
 5
 4
@@ -98469,7 +98629,7 @@ Wizard
 13
 -1
 0
-258
+262
 5
 361
 5
@@ -98714,7 +98874,7 @@ hi
 4
 2
 0
-1775818595
+1775818680
 2
 localhost
 361
@@ -98724,7 +98884,7 @@ localhost
 361
 0
 0
-1775818654
+1775818758
 361
 1
 5
@@ -99727,7 +99887,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 45764
+port 7777 from localhost, port 47754
 361
 0
 5
@@ -99746,7 +99906,7 @@ port 7777 from localhost, port 45764
 361
 5
 0
-1775818680
+1775818919
 361
 1
 0
@@ -100026,6 +100186,18 @@ First Aid
 7
 0
 0
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
 361
 7
 5
@@ -100599,7 +100771,7 @@ Wizard
 3
 459
 504
-4
+5
 look_self
 361
 45
@@ -100615,6 +100787,10 @@ l
 gather
 361
 29
+-1
+_explore_info
+361
+45
 -1
 2
 planet
@@ -117963,7 +118139,7 @@ craft
 -1
 0
 0
-194
+198
 5
 29
 1
@@ -118226,6 +118402,18 @@ craft
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -119126,7 +119314,7 @@ _craft_matproc
 -1
 0
 0
-258
+262
 5
 361
 5
@@ -119581,6 +119769,18 @@ _craft_matproc
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -136553,7 +136753,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1692
 0
 0
-210
+214
 5
 1691
 5
@@ -136864,6 +137064,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1691
+7
+5
+1691
+7
+5
+1691
+7
+5
+1691
+7
 5
 1691
 7
@@ -137198,7 +137410,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1693
 0
 0
-210
+214
 5
 1692
 5
@@ -137509,6 +137721,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1692
+7
+5
+1692
+7
+5
+1692
+7
+5
+1692
+7
 5
 1692
 7
@@ -137843,7 +138067,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1694
 0
 0
-210
+214
 5
 1693
 5
@@ -138154,6 +138378,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1693
+7
+5
+1693
+7
+5
+1693
+7
+5
+1693
+7
 5
 1693
 7
@@ -138488,7 +138724,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1695
 0
 0
-210
+214
 5
 361
 5
@@ -138799,6 +139035,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -139133,7 +139381,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1719
 0
 0
-210
+214
 5
 361
 5
@@ -139444,6 +139692,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -142391,7 +142651,7 @@ bob
 -1
 0
 0
-210
+214
 5
 361
 5
@@ -142748,6 +143008,18 @@ none
 7
 1
 -1
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
 361
 7
 5
@@ -178555,73 +178827,143 @@ player:tell_lines(rendered_long);
 endif
 .
 #6:82
-all = 0;
-if (player.programmer)
-target = $su:match_player(dobjstr);
-if (is_a(target, $player))
-who = target;
-category = verb;
-else
-who = player;
-category = dobjstr;
-endif
-else
-who = player;
-category = dobjstr;
-endif
-types = [];
-types["journal"] = {#63664, "unique experiences"};
-types["achievements"] = {#82907, "achievements"};
-types["kills"] = {#197494, "species killed"};
-types["travels"] = {#437441, "places explored"};
-if (!all)
-if (!category)
-wanted = verb;
-else
-wanted = category;
-endif
-if (wanted == "achievement")
-wanted = "achievements";
-elseif (wanted == "journals")
-wanted = "journal";
-elseif ((wanted == "explored") || (wanted == "travel"))
-wanted = "travels";
-endif
-if (!(wanted in types))
-player:tell(tostr("I'm sorry, surely you meant ", $su:english_list(keys(types), "nothing", " or ")), ".");
+"Fast travel to a memorized location, or list them.";
+p = player;
+if (parent(p.location) != $wroom)
+p:tell("You can only travel from the wilderness.");
 return;
 endif
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+memorized = {};
+try
+memorized = p.w_memorized;
+except e (ANY)
+endtry
+if (dstr == "")
+"List memorized locations";
+p:tell("=== Memorized Locations ===");
+if (length(memorized) == 0)
+p:tell("  None. Fully EXPLORE areas and MEMORIZE them.");
 else
-wanted = "journal";
+for entry in (memorized)
+pname = "Unknown";
+try
+pname = entry[2].name;
+except e (ANY)
+endtry
+p:tell(((((((("  " + entry[1]) + "  (") + tostr(entry[3])) + ", ") + tostr(entry[4])) + ")  [") + pname) + "]");
+endfor
 endif
-got = {0, 0};
-parent = types[wanted][1];
-tagline = types[wanted][2];
-player:tell(($ansi.header + "Unique XP awards you've earned:") + $ansi.reset);
-quests = who:occupants(parent, "quest_xp");
-if (who:check_pref("sortjournal"))
-quests = $lu:reverse($lu:sort_prop(quests, "xp_award"));
+p:tell("");
+"Show landing site if dispatched";
+dispatched = 0;
+try
+dispatched = p.w_dispatched;
+except e (ANY)
+endtry
+if (dispatched)
+lx = 0;
+ly = 0;
+try
+lx = p.w_land_x;
+except e (ANY)
+endtry
+try
+ly = p.w_land_y;
+except e (ANY)
+endtry
+pname = "Unknown";
+try
+pname = p.w_land_planet.name;
+except e (ANY)
+endtry
+p:tell(((((("  [Landing Site]  (" + tostr(lx)) + ", ") + tostr(ly)) + ")  [") + pname) + "]");
 endif
-for quest in (quests)
-desc = quest:description_for(who);
-if (desc)
-player:tell(tostr($ansi.cyan, $su:left(tostr(quest.xp_award), -4), $ansi.reset, " ", $ansi.yellow, $ansi.bold_on, $su:left(quest:name_for(who), -27), $ansi.bold_off, " ", desc, $ansi.reset));
+p:tell("");
+p:tell("TRAVEL <name> to move to a memorized location.");
+return;
+endif
+"Find matching memorized location";
+dstr_low = $string_utils:lowercase(dstr);
+match = 0;
+"Check for landing site special keyword";
+if (((dstr_low == "landing") || (dstr_low == "landing site")) || (dstr_low == "home"))
+dispatched = 0;
+try
+dispatched = p.w_dispatched;
+except e (ANY)
+endtry
+if (dispatched)
+lx = 0;
+ly = 0;
+try
+lx = p.w_land_x;
+except e (ANY)
+endtry
+try
+ly = p.w_land_y;
+except e (ANY)
+endtry
+planet = $nothing;
+try
+planet = p.w_land_planet;
+except e (ANY)
+endtry
+if (valid(planet))
+match = {"Landing Site", planet, lx, ly};
+endif
+endif
+endif
+if (!match)
+for entry in (memorized)
+if (($string_utils:lowercase(entry[1]) == dstr_low) || (index($string_utils:lowercase(entry[1]), dstr_low) > 0))
+match = entry;
+endif
+endfor
+endif
+if (!match)
+p:tell(("No memorized location matching \"" + dstr) + "\". Type TRAVEL to list.");
+return;
+endif
+"Calculate travel distance and time";
+tx = match[3];
+ty = match[4];
+cx = p.location.x;
+cy = p.location.y;
+dx = tx - cx;
+dy = ty - cy;
+dist = 0;
+if (dx < 0)
+dist = dist - dx;
 else
-player:tell(tostr($ansi.cyan, $su:left(tostr(quest.xp_award), -4)), $ansi.reset, " ", $ansi.yellow, $ansi.bold_on, quest:name_for(who), $ansi.reset);
+dist = dist + dx;
 endif
-got[1] = got[1] + quest.xp_award;
-got[2] = got[2] + 1;
-endfor
-if (!got[2])
-player:tell("You haven't earned a single one yet.  What a lazy bastard you are.");
+if (dy < 0)
+dist = dist - dy;
+else
+dist = dist + dy;
 endif
-total = {0, 0};
-for x in ($ou:leaves_suspended(parent))
-total[1] = total[1] + x.xp_award;
-total[2] = total[2] + 1;
-endfor
-player:tell(tostr($ansi.bold_on, "You've had ", got[2], "/", total[2], " ", tagline, ", for ", got[1], "/", total[1], " XP.", $ansi.reset));
-player:tell("You probably have others too! Check out '", $su:english_list(setremove(keys(types), wanted), "nothing", " and '", "', '", "',"), "'.");
+if (dist == 0)
+p:tell("You are already here.");
+return;
+endif
+"Must be on same planet";
+if (match[2] != p.location.planet)
+p:tell("That location is on a different planet. You need a ship.");
+return;
+endif
+"Travel! Move directly (instant for now, can add delay later)";
+dest = $ods:spawn_room(match[2], tx, ty);
+if (!valid(dest))
+p:tell("ERROR: Could not reach destination.");
+return;
+endif
+p:tell(((("Traveling to " + match[1]) + " (") + tostr(dist)) + " tiles)...");
+p.location:announce(p.name + " sets off traveling.", p);
+move(p, dest);
+p.location:announce(p.name + " arrives from a long journey.", p);
+p:tell(("You arrive at " + match[1]) + ".");
+p.location:look_self();
 .
 #6:83
 r = pass(@args);
@@ -185102,6 +185444,320 @@ else
 dir = "you are here";
 endif
 p:tell(((("Direction: " + dir) + " (") + tostr(dist)) + " tiles away)");
+endif
+.
+#6:359
+"Explore the current wilderness room. Fills 0-100%.";
+p = player;
+loc = p.location;
+if (parent(loc) != $wroom)
+p:tell("There is nothing to explore here.");
+return;
+endif
+"Cooldown: 5 seconds between explores";
+now = time();
+last = 0;
+try
+last = p.w_last_explore;
+except e (ANY)
+endtry
+if ((now - last) < 5)
+p:tell("You are still surveying the area. Wait a moment.");
+return;
+endif
+p.w_last_explore = now;
+"Build location key";
+pkey = tostr(loc.planet);
+lockey = (((pkey + "_") + tostr(loc.x)) + "_") + tostr(loc.y);
+"Get current exploration percentage";
+explored = {};
+try
+explored = p.w_explored;
+except e (ANY)
+endtry
+pct = 0;
+for entry in (explored)
+if (entry[1] == lockey)
+pct = entry[2];
+endif
+endfor
+if (pct >= 100)
+p:tell("You have fully explored this area.");
+p:tell("Use MEMORIZE to save this location, or DISCOVER to search for artifacts.");
+return;
+endif
+"Calculate exploration gain (base 15-25, skills add more)";
+base_gain = 15 + random(11);
+"Check exploration skills: Sightseer, Developing Observation, Terrain Details, Unpaid Cartographer";
+skills = {};
+try
+skills = p.w_learned;
+except e (ANY)
+endtry
+skill_bonus = 0;
+for sk in (skills)
+sname = sk;
+if (typeof(sk) == LIST)
+sname = sk[1];
+endif
+if (sname == "sightseer")
+skill_bonus = skill_bonus + 3;
+endif
+if (sname == "developing observation")
+skill_bonus = skill_bonus + 5;
+endif
+if (sname == "terrain details")
+skill_bonus = skill_bonus + 7;
+endif
+if (sname == "unpaid cartographer")
+skill_bonus = skill_bonus + 10;
+endif
+endfor
+gain = base_gain + skill_bonus;
+pct = pct + gain;
+if (pct > 100)
+pct = 100;
+endif
+"Update explored list";
+new_explored = {};
+found_key = 0;
+for entry in (explored)
+if (entry[1] == lockey)
+new_explored = listappend(new_explored, {lockey, pct});
+found_key = 1;
+else
+new_explored = listappend(new_explored, entry);
+endif
+endfor
+if (!found_key)
+new_explored = listappend(new_explored, {lockey, pct});
+endif
+p.w_explored = new_explored;
+"Output";
+bname = loc.name;
+bar_len = pct / 5;
+bar = "";
+i = 0;
+while (i < 20)
+if (i < bar_len)
+bar = bar + "#";
+else
+bar = bar + "-";
+endif
+i = i + 1;
+endwhile
+p:tell(("Exploring " + bname) + "...");
+p:tell(((("[" + bar) + "] ") + tostr(pct)) + "%");
+"Chance to find something while exploring";
+if (random(100) <= 15)
+"15% chance of finding a trinket/oddity";
+trinkets = {"a smooth alien pebble", "a fragment of corroded metal", "a tiny crystalline shard", "a fossilized shell", "a scrap of woven fiber", "a charred bone fragment", "an odd fungal growth", "a faintly glowing mineral"};
+trinket = trinkets[random(length(trinkets))];
+p:tell(("While exploring, you find " + trinket) + ".");
+endif
+if (pct >= 100)
+p:tell("");
+p:tell("*** Area fully explored! ***");
+p:tell("You can now MEMORIZE this location for fast travel.");
+p:tell("Use DISCOVER to search for unique finds (requires Unpaid Cartographer skill).");
+endif
+.
+#6:360
+"Memorize current location for fast travel. Optionally name it.";
+p = player;
+loc = p.location;
+if (parent(loc) != $wroom)
+p:tell("You can only memorize wilderness locations.");
+return;
+endif
+"Check 100% explored";
+pkey = tostr(loc.planet);
+lockey = (((pkey + "_") + tostr(loc.x)) + "_") + tostr(loc.y);
+explored = {};
+try
+explored = p.w_explored;
+except e (ANY)
+endtry
+pct = 0;
+for entry in (explored)
+if (entry[1] == lockey)
+pct = entry[2];
+endif
+endfor
+if (pct < 100)
+p:tell(("You must fully EXPLORE this area first (" + tostr(pct)) + "% explored).");
+return;
+endif
+"Name the location";
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+if (dstr == "")
+dstr = ((((loc.name + " (") + tostr(loc.x)) + ",") + tostr(loc.y)) + ")";
+endif
+"Check if already memorized (max 20 spots)";
+memorized = {};
+try
+memorized = p.w_memorized;
+except e (ANY)
+endtry
+"Check for duplicate coordinates";
+for entry in (memorized)
+if (((entry[2] == loc.planet) && (entry[3] == loc.x)) && (entry[4] == loc.y))
+p:tell(("You have already memorized this location as \"" + entry[1]) + "\".");
+return;
+endif
+endfor
+if (length(memorized) >= 20)
+p:tell("You can memorize up to 20 locations. Use FORGET <name> to remove one.");
+return;
+endif
+memorized = listappend(memorized, {dstr, loc.planet, loc.x, loc.y});
+p.w_memorized = memorized;
+p:tell(((((("Location memorized: \"" + dstr) + "\" at (") + tostr(loc.x)) + ", ") + tostr(loc.y)) + ")");
+.
+#6:362
+"Remove a memorized location. Usage: UNMEMORIZE <name>";
+p = player;
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+if (dstr == "")
+p:tell("Usage: UNMEMORIZE <name>");
+return;
+endif
+memorized = {};
+try
+memorized = p.w_memorized;
+except e (ANY)
+endtry
+dstr_low = $string_utils:lowercase(dstr);
+new_list = {};
+removed = 0;
+for entry in (memorized)
+if (($string_utils:lowercase(entry[1]) == dstr_low) || (index($string_utils:lowercase(entry[1]), dstr_low) > 0))
+if (!removed)
+p:tell("Removed: " + entry[1]);
+removed = 1;
+else
+new_list = listappend(new_list, entry);
+endif
+else
+new_list = listappend(new_list, entry);
+endif
+endfor
+if (!removed)
+p:tell(("No memorized location matching \"" + dstr) + "\".");
+return;
+endif
+p.w_memorized = new_list;
+.
+#6:363
+"Search for unique discoveries in a fully explored area.";
+"Requires Unpaid Cartographer skill.";
+p = player;
+loc = p.location;
+if (parent(loc) != $wroom)
+p:tell("There is nothing to discover here.");
+return;
+endif
+"Check skill requirement";
+has_skill = 0;
+skills = {};
+try
+skills = p.w_learned;
+except e (ANY)
+endtry
+for sk in (skills)
+sname = sk;
+if (typeof(sk) == LIST)
+sname = sk[1];
+endif
+if (sname == "unpaid cartographer")
+has_skill = 1;
+endif
+endfor
+if (!has_skill)
+p:tell("You lack the skill to make discoveries here.");
+p:tell("Requires: Unpaid Cartographer (Exploration skill tree, 250 SP).");
+return;
+endif
+"Check 100% explored";
+pkey = tostr(loc.planet);
+lockey = (((pkey + "_") + tostr(loc.x)) + "_") + tostr(loc.y);
+explored = {};
+try
+explored = p.w_explored;
+except e (ANY)
+endtry
+pct = 0;
+for entry in (explored)
+if (entry[1] == lockey)
+pct = entry[2];
+endif
+endfor
+if (pct < 100)
+p:tell(("Area not fully explored (" + tostr(pct)) + "%). Keep exploring.");
+return;
+endif
+"Check if already discovered this tile";
+disc_key = "disc_" + lockey;
+already = 0;
+for entry in (explored)
+if (entry[1] == disc_key)
+already = 1;
+endif
+endfor
+if (already)
+p:tell("You have already made a discovery at this location.");
+return;
+endif
+"Roll for discovery type based on biome";
+b = loc.biome;
+roll = random(100);
+disc_type = 0;
+"60% something, 40% nothing special";
+if (roll <= 25)
+disc_type = 1;
+"Botanical specimen";
+elseif (roll <= 45)
+disc_type = 2;
+"Landscape feature (new landmark)";
+elseif (roll <= 60)
+disc_type = 3;
+"Artifact/researchable";
+endif
+"Record discovery attempt";
+explored = listappend(explored, {disc_key, 1});
+p.w_explored = explored;
+if (disc_type == 0)
+p:tell("You search the area thoroughly but find nothing of note.");
+return;
+endif
+p.w_discoveries = p.w_discoveries + 1;
+if (disc_type == 1)
+"Botanical discovery";
+specimens = {"a bioluminescent moss colony", "an alien orchid with crystalline petals", "a carnivorous pitcher plant the size of a person", "a network of fungal threads pulsing with light", "a parasitic vine with metallic leaves", "a tuber formation releasing rhythmic spore clouds", "a bush bearing translucent berry-like structures"};
+spec = specimens[random(length(specimens))];
+p:tell("*** BOTANICAL DISCOVERY ***");
+p:tell(("You document " + spec) + ".");
+p:tell("This specimen is unique to this region.");
+p:tell(("Discovery #" + tostr(p.w_discoveries)) + " recorded.");
+elseif (disc_type == 2)
+"Landscape feature";
+features = {"an ancient dried riverbed with unusual mineral deposits", "a perfectly circular depression  possible ancient impact crater", "a natural cave entrance partially hidden by vegetation", "unusual rock formations arranged in a geometric pattern", "a thermal vent releasing intermittent steam plumes", "a fossilized tree trunk of massive proportions", "a cliff face covered in what appear to be pre-starfarer markings"};
+feat = features[random(length(features))];
+p:tell("*** LANDSCAPE DISCOVERY ***");
+p:tell(("You discover " + feat) + ".");
+p:tell(("Discovery #" + tostr(p.w_discoveries)) + " recorded.");
+elseif (disc_type == 3)
+"Artifact  create a physical item";
+artifacts = {{"odd trinket", "A strange pre-starfarer artifact. Take it to a Laboratory for research."}, {"fossilized remains", "Ancient alien bones, partially mineralized. Scientifically interesting."}, {"corroded data core", "A heavily degraded electronic storage device. Might be restorable."}, {"sealed specimen jar", "A jar of thick alien glass containing preserved biological matter."}, {"chipped stone tablet", "A fragment of carved stone bearing alien script."}};
+art = artifacts[random(length(artifacts))];
+item = create($thing);
+item.name = art[1];
+item.description = art[2];
+move(item, p);
+p:tell("*** ARTIFACT DISCOVERY ***");
+p:tell(("You unearth " + art[1]) + "!");
+p:tell(art[2]);
+p:tell(("Discovery #" + tostr(p.w_discoveries)) + " recorded.");
 endif
 .
 #7:0
@@ -238442,7 +239098,6 @@ pname = planet.name;
 except e (ANY)
 endtry
 if (sr)
-"--- SCREENREADER OUTPUT (no colors) ---";
 player:tell("");
 player:tell(((((((this.name + "  (") + tostr(rx)) + ", ") + tostr(ry)) + ")  [") + pname) + "]");
 if ((b >= 0) && (b < length(bdescs)))
@@ -238496,7 +239151,6 @@ player:tell((("  " + d[1]) + ": ") + bname);
 endif
 endfor
 else
-"--- VISUAL MAP OUTPUT ---";
 esc = chr(27);
 reset = esc + "[0m";
 bold = esc + "[1m";
@@ -238565,7 +239219,7 @@ if ((b >= 0) && (b < length(bdescs)))
 player:tell(bdescs[b + 1]);
 endif
 endif
-"Contents (both modes)";
+"Contents";
 items = {};
 for OBJ in (this.contents)
 if (OBJ != player)
@@ -238582,6 +239236,8 @@ idx = idx + 1;
 endwhile
 player:tell("You see here: " + listing);
 endif
+"Exploration status";
+this:_explore_info();
 player:tell("");
 player:tell("Exits: n  s  e  w  ne  se  sw  nw");
 .
@@ -238635,6 +239291,27 @@ endif
 endfor
 if (!mined)
 player:tell(("No " + dobjstr) + " here. Type gather (no args) to list.");
+endif
+.
+#452:4
+"Show exploration percentage for this room to the player.";
+pkey = tostr(this.planet);
+lockey = (((pkey + "_") + tostr(this.x)) + "_") + tostr(this.y);
+explored = {};
+try
+explored = player.w_explored;
+except e (ANY)
+endtry
+pct = 0;
+for entry in (explored)
+if (entry[1] == lockey)
+pct = entry[2];
+endif
+endfor
+if ((pct > 0) && (pct < 100))
+player:tell(("Explored: " + tostr(pct)) + "%");
+elseif (pct >= 100)
+player:tell("Fully explored.");
 endif
 .
 #453:0
@@ -241189,7 +241866,7 @@ move(player, #1703);
 .
 0 clocks
 2 queued tasks
-0 6 1775818764 956338745
+0 6 1775819394 1107692743
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -241262,11 +241939,11 @@ WAIF
 11
 task_id
 0
-956338745
+1107692743
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775819343 1959022679
+0 6 1775820243 938862986
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -241339,7 +242016,7 @@ WAIF
 11
 taskid
 0
-1959022679
+938862986
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
