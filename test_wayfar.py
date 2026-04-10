@@ -226,6 +226,7 @@ def run_tests():
     # ============================================================
     print('\n=== EXPLORATION ===')
     w.cmd('; for p in (players()) if (p.name == "tester") p.w_hp = 50; '
+          'p.w_explored = {}; p.w_last_explore = 0; '
           'move(p, $ods:spawn_room(#457, 25, 25)); endif endfor', 2.0)
     check('EXPLORE', t.cmd('explore'), expect=['Exploring', '%'])
 
