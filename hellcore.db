@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
 1881
-3538
+3539
 0
 5
 65
@@ -8400,7 +8400,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--120
+-122
 361
 5
 4
@@ -72697,7 +72697,7 @@ visit
 361
 5
 0
-292404993
+1160048252
 361
 5
 4
@@ -78172,6 +78172,18 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 02:56:37 2026 PDT Database checkpoint started.~1b[0m
+0
+1775814997
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 02:55:30 2026 PDT Database checkpoint started.~1b[0m
+0
+1775814930
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 02:49:33 2026 PDT Database checkpoint started.~1b[0m
 0
 1775814573
@@ -78457,18 +78469,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:01:19 2026 PDT Database checkpoint started.~1b[0m
 0
 1775764879
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 12:01:19 2026 PDT Database checkpoint started.~1b[0m
-0
-1775761279
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 11:08:01 2026 PDT Database checkpoint started.~1b[0m
-0
-1775758081
 361
 5
 5
@@ -95984,7 +95984,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1631839182
+664340665
 361
 5
 4
@@ -98259,7 +98259,7 @@ hi
 4
 2
 0
-1775804952
+1775814828
 2
 localhost
 361
@@ -98269,7 +98269,7 @@ localhost
 361
 0
 0
-1775805064
+1775814938
 361
 1
 5
@@ -99262,7 +99262,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 45504
+port 7777 from localhost, port 60110
 361
 0
 5
@@ -99281,7 +99281,7 @@ port 7777 from localhost, port 45504
 361
 5
 0
-1775814478
+1775814962
 361
 1
 0
@@ -109202,7 +109202,7 @@ survival monitor
 5
 -1
 546
-8
+9
 tick
 361
 45
@@ -109232,6 +109232,10 @@ tick_now
 13
 -1
 _post_tick
+361
+13
+-1
+_respawn_resources
 361
 13
 -1
@@ -181613,7 +181617,7 @@ move(o, p);
 endfor
 .
 #6:330
-"Scan for resources.";
+"Scan for resources in area.";
 p = player;
 if ((!valid(p.w_special)) || (p.w_special.eq_type != "harvest"))
 p:tell("You need a harvesting tool wielded.");
@@ -181635,27 +181639,18 @@ tc = tool.h_tool_class;
 except e (ANY)
 endtry
 p:tell(("=== SURVEY: " + tool.name) + " ===");
-if (tc != "")
-p:tell("  Tool class: " + tc);
-endif
 if (nodes == {})
-p:tell("  No resources detected.");
+p:tell("  No resources detected. Try another tile.");
+p:tell("  Resources respawn over time.");
 else
 for nd in (nodes)
 nc = this:_node_class(nd);
-compat = ((tc == "") || (tc == nc)) ? "" | " [WRONG TOOL]";
+compat = "";
+if ((tc != "") && (nc != tc))
+compat = (" [need " + nc) + " tool]";
+endif
 p:tell((((((((("  [" + nd.name) + "] ") + tostr(nd.count)) + "/") + tostr(nd.max_count)) + " (") + nc) + ")") + compat);
 endfor
-endif
-target = "";
-try
-target = tool.h_resource;
-except e (ANY)
-endtry
-if (target != "")
-p:tell("  Configured: " + target);
-else
-p:tell("  Target: any");
 endif
 .
 #6:331
@@ -236625,10 +236620,10 @@ this:tick();
 endfork
 .
 #545:2
-"NPC idle + player tick.";
+"NPC idle + player tick + resource respawn.";
 set_task_perms(this.owner);
-"Player dice regen";
 this:_post_tick();
+this:_respawn_resources();
 .
 #545:3
 "Run tick immediately (test/debug only).";
@@ -236697,6 +236692,44 @@ try
 p:_player_tick();
 except e (ANY)
 endtry
+endfor
+.
+#545:8
+"Respawn resources. Only in rooms with players. Max 3 nodes per room.";
+set_task_perms(this.owner);
+checked = {};
+for p in (connected_players())
+loc = p.location;
+if (loc in checked)
+continue p;
+endif
+checked = listappend(checked, loc);
+if (parent(loc) != $wroom)
+continue p;
+endif
+node_count = 0;
+for OBJ in (loc.contents)
+try
+if (OBJ.is_node)
+node_count = node_count + 1;
+if (OBJ.count < OBJ.max_count)
+gain = 1 + random(2);
+OBJ.count = OBJ.count + gain;
+if (OBJ.count > OBJ.max_count)
+OBJ.count = OBJ.max_count;
+endif
+endif
+endif
+except e (ANY)
+endtry
+endfor
+"Spawn new node if room has fewer than 3 and 33% chance";
+if ((node_count < 3) && (random(3) == 1))
+try
+$ods:populate(loc, loc.planet);
+except e (ANY)
+endtry
+endif
 endfor
 .
 #561:0
@@ -238138,7 +238171,7 @@ move(player, #1703);
 .
 0 clocks
 2 queued tasks
-0 6 1775814593 1631839182
+0 6 1775815013 664340665
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -238211,11 +238244,11 @@ WAIF
 11
 task_id
 0
-1631839182
+664340665
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775814843 292404993
+0 6 1775815743 1160048252
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -238288,7 +238321,7 @@ WAIF
 11
 taskid
 0
-292404993
+1160048252
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
