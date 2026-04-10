@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
 1898
-3558
+3559
 0
 5
 65
@@ -108,7 +108,7 @@ bf_occupants
 361
 173
 -1
-358
+359
 builder
 login
 last_restart_time
@@ -467,7 +467,8 @@ energy_node
 planet_proto
 active_planets
 creature_proto
-368
+chatnet_history
+369
 1
 2
 361
@@ -5409,6 +5410,10 @@ electronic warfare on ships
 361
 7
 4
+0
+361
+7
+4
 1
 2
 The System Object
@@ -8447,7 +8452,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--147
+-149
 361
 5
 4
@@ -10413,7 +10418,7 @@ generic player
 100
 33
 -1
-367
+369
 confunc
 361
 173
@@ -11881,6 +11886,14 @@ swing
 fire
 361
 13
+-1
+who
+361
+13
+-1
+chatnet
+361
+29
 -1
 103
 features
@@ -78747,6 +78760,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 04:50:58 2026 PDT Database checkpoint started.~1b[0m
+0
+1775821858
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 04:45:24 2026 PDT Database checkpoint started.~1b[0m
 0
 1775821524
@@ -79038,12 +79057,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 18:16:48 2026 PDT Database checkpoint started.~1b[0m
 0
 1775783808
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 18:01:29 2026 PDT Database checkpoint started.~1b[0m
-0
-1775782889
 361
 5
 5
@@ -96589,7 +96602,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1582242998
+744917928
 361
 5
 4
@@ -98891,7 +98904,7 @@ hi
 4
 2
 0
-1775821128
+1775821600
 2
 localhost
 361
@@ -98901,7 +98914,7 @@ localhost
 361
 0
 0
-1775821309
+1775821646
 361
 1
 5
@@ -99926,7 +99939,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 38414
+port 7777 from localhost, port 39524
 361
 0
 5
@@ -99945,7 +99958,7 @@ port 7777 from localhost, port 38414
 361
 5
 0
-1775821348
+1775821710
 361
 1
 0
@@ -182065,37 +182078,48 @@ endif
 return r;
 .
 #6:62
-{?whostr = "", @text} = args;
-if (!whostr)
-player:tell("Usage: page <person> <message>");
+"Private message. Usage: PAGE <player> <message>";
+p = player;
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+if (dstr == "")
+p:tell("Usage: PAGE <player> <message>");
 return;
 endif
-if (whostr != "help")
-if ((!area(player):may_chat()) || (!player:may_chat()))
-player:tell("Something seems to be blocking your wristpad signal.");
+"Split into target and message";
+parts = $string_utils:explode(dstr);
+if (length(parts) < 2)
+p:tell("Usage: PAGE <player> <message>");
 return;
 endif
+target_name = parts[1];
+"Reconstruct message from remaining parts";
+msg = "";
+idx = 2;
+while (idx <= length(parts))
+if (msg != "")
+msg = msg + " ";
 endif
-if (whostr == "npc")
-if (!text)
-return player:tell("usage: page npc <name> <message>");
+msg = msg + parts[idx];
+idx = idx + 1;
+endwhile
+"Find target player";
+target = $nothing;
+tname_low = $string_utils:lowercase(target_name);
+for cp in (connected_players())
+if (($string_utils:lowercase(cp.name) == tname_low) || (index($string_utils:lowercase(cp.name), tname_low) == 1))
+target = cp;
 endif
-whostr = text[1];
-text = text[2..$];
-who = $mu:match(whostr, {@$rpg.page_npcs});
-if (!valid(who))
-player:tell("There's no npc named '", whostr, "' on the comm network.");
-else
-player:_page(who, @text);
+endfor
+if (!valid(target))
+p:tell(("No player named \"" + target_name) + "\" is online.");
+return;
 endif
-else
-who = $su:match_player(whostr);
-if (!valid(who))
-player:tell("There's no one named '", whostr, "' on the comm network.");
-else
-player:_page(who, @text);
+if (target == p)
+p:tell("Talking to yourself?");
+return;
 endif
-endif
+target:tell((("[PAGE from " + p.name) + "] ") + msg);
+p:tell((("[PAGE to " + target.name) + "] ") + msg);
 .
 #6:63
 if (length(verb) > 1)
@@ -185728,42 +185752,57 @@ endif
 p:tell("You cannot go west.");
 .
 #6:222
-"Toggle or check the colony communication relay.";
-if ((dobjstr == "") || (dobjstr == "status"))
-if (player.chatnet_on)
-player:tell("[CHATNET] Relay active.");
-else
-player:tell("[CHATNET] Relay offline. Type 'chatnet on' to activate.");
-endif
+"Chatnet commands. Usage: CHATNET HISTORY";
+p = player;
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+dstr = $string_utils:lowercase(dstr);
+if ((dstr == "history") || (dstr == "hist"))
+history = {};
+try
+history = $chatnet_history;
+except e (ANY)
+endtry
+if (length(history) == 0)
+p:tell("No chat history.");
 return;
 endif
-if (index(dobjstr, "on"))
-player.chatnet_on = 1;
-player:tell("[CHATNET] Colony relay activated.");
-elseif (index(dobjstr, "off"))
-player.chatnet_on = 0;
-player:tell("[CHATNET] Colony relay deactivated.");
-else
-player:tell("[CHATNET] Usage: chatnet on  |  chatnet off  |  chatnet");
+p:tell(("=== Chatnet History (last " + tostr(length(history))) + ") ===");
+for entry in (history)
+p:tell((("  " + entry[2]) + ": ") + entry[3]);
+endfor
+return;
 endif
+p:tell("Usage: CHATNET HISTORY");
 .
 #6:223
-"Broadcast a message over the colony communication relay.";
-"Usage: chat <message>";
-if (dobjstr == "")
-player:tell("[CHATNET] Usage: chat <message>");
+"Global chatnet message. Usage: CHAT <message>";
+p = player;
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+if (dstr == "")
+p:tell("Usage: CHAT <message>");
 return;
 endif
-if (!player.chatnet_on)
-player:tell("[CHATNET] Your relay is offline. Type 'chatnet on' first.");
-return;
-endif
-msg = (("[CHATNET] " + player.name) + ": ") + dobjstr;
-for p in (connected_players())
-if (p.chatnet_on)
-p:tell(msg);
-endif
+"Broadcast to all connected players";
+msg = (("[CHATNET] " + p.name) + ": ") + dstr;
+for cp in (connected_players())
+cp:tell(msg);
 endfor
+"Store in history";
+history = {};
+try
+history = $chatnet_history;
+except e (ANY)
+endtry
+entry = {time(), p.name, dstr};
+history = listappend(history, entry);
+"Keep last 50 messages";
+if (length(history) > 50)
+history = history[length(history) - 49..$];
+endif
+try
+$chatnet_history = history;
+except e (ANY)
+endtry
 .
 #6:224
 "Show the player their current survival stats.";
@@ -189781,6 +189820,43 @@ except e (ANY)
 p:tell("You cannot attack that.");
 endtry
 endif
+.
+#6:367
+"List connected players.";
+p = player;
+players_list = connected_players();
+p:tell(("=== Who Is Online (" + tostr(length(players_list))) + ") ===");
+p:tell("");
+for cp in (players_list)
+loc_name = "Unknown";
+try
+if (parent(cp.location) == $wroom)
+loc_name = ((((cp.location.name + " (") + tostr(cp.location.x)) + ",") + tostr(cp.location.y)) + ")";
+else
+loc_name = cp.location.name;
+endif
+except e (ANY)
+endtry
+idle_secs = idle_seconds(cp);
+idle_str = "";
+if (idle_secs < 60)
+idle_str = "active";
+elseif (idle_secs < 3600)
+idle_str = tostr(idle_secs / 60) + "m idle";
+else
+idle_str = tostr(idle_secs / 3600) + "h idle";
+endif
+bg = "";
+try
+bg = cp.w_background;
+except e (ANY)
+endtry
+if ((bg == "none") || (bg == ""))
+bg = "";
+endif
+p:tell(((((((("  " + cp.name) + "  [") + bg) + "]  ") + loc_name) + "  (") + idle_str) + ")");
+endfor
+p:tell("");
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -246108,7 +246184,7 @@ dest:announce_all(this.name + " wanders in.");
 .
 0 clocks
 2 queued tasks
-0 6 1775821554 1582242998
+0 6 1775821884 744917928
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -246181,7 +246257,7 @@ WAIF
 11
 task_id
 0
-1582242998
+744917928
 this.beat_task = 0;
 this:_beat();
 .
