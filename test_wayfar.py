@@ -296,9 +296,11 @@ def run_tests():
     print('\n=== BLUEPRINTS ===')
     check('LOOKUP (no results)', t.cmd('lookup asdfxyz'), expect='No matching')
     # Give a blueprint chip and test loading
-    w.cmd('; for p in (players()) if (p.name == "tester") chip = create($thing); chip.name = "test blueprint"; chip.bp_recipe_name = "test recipe"; chip.bp_tool_type = "basic"; move(chip, p); endif endfor', 1.0)
+    # Use unique name to avoid duplicate install error across runs
+    bp_name = 'test recipe ' + str(int(time.time()) % 10000)
+    w.cmd(f'; for p in (players()) if (p.name == "tester") chip = create($thing); chip.name = "test blueprint"; chip.bp_recipe_name = "{bp_name}"; chip.bp_tool_type = "basic"; move(chip, p); endif endfor', 1.0)
     check('LOAD blueprint ONTO tool', t.cmd('load test onto basic', 2.0), expect='Blueprint loaded')
-    check('LOOKUP (found)', t.cmd('lookup test recipe', 2.0), expect=['Found', 'test recipe'])
+    check('LOOKUP (found)', t.cmd(f'lookup {bp_name[:10]}', 2.0), expect='Found')
 
     # ============================================================
     # FACTORY (Phase 3)
@@ -315,6 +317,37 @@ def run_tests():
     check('ACTIVATE machine', t.cmd('activate processor', 2.0), expect='hums to life')
     check('DEACTIVATE machine', t.cmd('deactivate processor', 2.0), expect='powers down')
     check('COLLECT (empty)', t.cmd('collect', 2.0), expect='Nothing')
+
+    # ============================================================
+    # DEATH/RESPAWN
+    # ============================================================
+    print('\n=== DEATH/RESPAWN ===')
+    w.cmd('; for p in (players()) if (p.name == "tester") p.w_hp = 0; p.w_dead = 0; endif endfor', 0.5)
+    w.cmd('; #545:_death_check()', 3.0)
+    time.sleep(1)  # fork needs a moment
+    w.cmd('; #545:_death_check()', 3.0)
+    time.sleep(1)
+    check('RESPAWN (HP>0)', t.cmd('st'), expect='Health:')
+
+    # ============================================================
+    # SHELTER SHOP
+    # ============================================================
+    print('\n=== SHELTER SHOP ===')
+    w.cmd('; for p in (players()) if (p.name == "tester") p.w_hp = 50; p.w_credits = 200; p.w_dispatched = 1; move(p, $ods:spawn_room(#457, 25, 25)); endif endfor', 3.0)
+    time.sleep(1)
+    # Place shelter if not already there
+    w.cmd('; for p in (players()) if (p.name == "tester") kit = create($thing); kit.name = "pre-fab shelter kit"; move(kit, p); endif endfor', 1.0)
+    t.cmd('place shelter', 2.0)
+    check('ORDER catalog', t.cmd('order'), expect=['Supply Terminal', 'first aid kit'])
+    check('ORDER bandage', t.cmd('order bandage'), expect='Purchased')
+    check('ORDER no credits', t.cmd('order return', 2.0), expect='shuttle')  # return ticket works (100 cr)
+
+    # ============================================================
+    # HINT
+    # ============================================================
+    print('\n=== HINT ===')
+    w.cmd('; for p in (players()) if (p.name == "tester") move(p, $ods:spawn_room(#457, 25, 25)); endif endfor', 2.0)
+    check('HINT', t.cmd('hint'), expect=['Hints:', 'Use:'])
 
     # ============================================================
     # SUMMARY
