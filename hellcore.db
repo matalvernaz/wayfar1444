@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
-2357
-3586
+2371
+3592
 0
 7
 65
@@ -6110,7 +6110,7 @@ tell_mytree
 2
 build_options
 who_visible
-238
+239
 4
 0
 361
@@ -6486,6 +6486,9 @@ who_visible
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -8500,7 +8503,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--14
+-23
 361
 5
 4
@@ -10492,7 +10495,7 @@ generic player
 100
 33
 -1
-389
+395
 confunc
 361
 173
@@ -12049,7 +12052,31 @@ load
 361
 29
 -1
-108
+sectormap
+361
+13
+-1
+resources
+361
+13
+-1
+events
+361
+13
+-1
+history
+361
+13
+-1
+citizens
+361
+13
+-1
+population
+361
+13
+-1
+109
 features
 previous_connection
 email_address
@@ -12158,7 +12185,8 @@ w_burned
 w_diseased
 w_bandaged
 w_buildings
-203
+w_events
+204
 4
 5
 1
@@ -12760,6 +12788,10 @@ none
 361
 7
 0
+0
+361
+7
+4
 0
 361
 7
@@ -31976,7 +32008,7 @@ default_description
 request
 extra_confunc_msg
 free_to_use
-241
+242
 2
 neuter
 29
@@ -32378,6 +32410,9 @@ By definition, guests appear nondescript.
 5
 361
 3
+5
+29
+7
 5
 29
 7
@@ -33217,7 +33252,7 @@ init_for_core
 173
 -1
 0
-258
+259
 5
 29
 1
@@ -33835,6 +33870,9 @@ sddfs
 7
 5
 29
+7
+5
+29
 5
 0
 193
@@ -34360,7 +34398,7 @@ set_*
 -1
 1
 queued_task_limit
-220
+221
 0
 0
 361
@@ -34791,6 +34829,9 @@ showmap
 5
 361
 3
+5
+29
+7
 5
 29
 7
@@ -35782,7 +35823,7 @@ autowield
 bug
 readied_weapon
 unread_mail
-219
+220
 0
 0
 361
@@ -36152,6 +36193,9 @@ white
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -45100,7 +45144,7 @@ toad_victim_msg
 toad_msg
 mail_identity
 advertised
-267
+268
 2
 
 361
@@ -45580,6 +45624,9 @@ really impossible password to type
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -46365,7 +46412,7 @@ p_pois
 biome_names
 biome_descs
 biome_chars
-258
+259
 4
 0
 29
@@ -46887,6 +46934,9 @@ WARNING: Volcanic zone. The ground radiates searing heat. Sulphur vents hiss. En
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -54740,7 +54790,7 @@ drop_off_msg
 move_player_task
 moveto_task
 cleaning_index
-275
+276
 4
 0
 29
@@ -55357,6 +55407,9 @@ Barry
 5
 361
 3
+5
+29
+7
 5
 29
 7
@@ -66638,7 +66691,7 @@ real_aliases
 zots
 bedroom
 chillmin
-236
+237
 2
 You join %n.
 29
@@ -67029,6 +67082,9 @@ You teleport %n.
 5
 361
 3
+5
+29
+7
 5
 29
 7
@@ -73725,7 +73781,7 @@ visit
 361
 5
 0
-503628777
+1919957535
 361
 5
 4
@@ -79254,6 +79310,18 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 13:45:00 2026 PDT Database checkpoint started.~1b[0m
+0
+1775853900
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 13:42:23 2026 PDT Database checkpoint started.~1b[0m
+0
+1775853743
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 12:46:42 2026 PDT Database checkpoint started.~1b[0m
 0
 1775850402
@@ -79539,18 +79607,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 04:27:56 2026 PDT Database checkpoint started.~1b[0m
 0
 1775820476
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 04:17:14 2026 PDT Database checkpoint started.~1b[0m
-0
-1775819834
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 04:09:30 2026 PDT Database checkpoint started.~1b[0m
-0
-1775819370
 361
 5
 5
@@ -92492,7 +92548,7 @@ player
 last_update_time
 active
 allow_update_time
-207
+208
 1
 -1
 361
@@ -92786,6 +92842,9 @@ allow_update_time
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -97376,7 +97435,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-2137760746
+1415649812
 361
 5
 4
@@ -99481,7 +99540,7 @@ Wizard
 13
 -1
 0
-267
+268
 5
 361
 5
@@ -99726,7 +99785,7 @@ hi
 4
 2
 0
-1775850243
+1775853493
 2
 localhost
 361
@@ -99736,7 +99795,7 @@ localhost
 361
 0
 0
-1775850290
+1775853753
 361
 1
 5
@@ -99758,7 +99817,7 @@ localhost
 29
 1
 4
-664
+669
 1
 339
 1
@@ -100810,8 +100869,6 @@ localhost
 1
 2076
 1
-2083
-1
 2084
 1
 2085
@@ -101032,10 +101089,6 @@ localhost
 1
 2318
 1
-2321
-1
-2322
-1
 2323
 1
 2324
@@ -101082,11 +101135,27 @@ localhost
 1
 2353
 1
-2354
-1
 2355
 1
 2356
+1
+2362
+1
+2363
+1
+2364
+1
+2365
+1
+2366
+1
+2367
+1
+2368
+1
+2369
+1
+2370
 361
 1
 5
@@ -101107,7 +101176,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 46936
+port 7777 from localhost, port 45758
 361
 0
 5
@@ -101126,11 +101195,11 @@ port 7777 from localhost, port 46936
 361
 5
 0
-1775850318
+1775853860
 361
 1
 0
-1410065012
+1410065007
 29
 0
 0
@@ -101448,6 +101517,9 @@ Base Camp
 7
 0
 8
+361
+7
+5
 361
 7
 5
@@ -117966,7 +118038,7 @@ craft
 -1
 0
 0
-203
+204
 5
 29
 1
@@ -118229,6 +118301,9 @@ craft
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -119188,7 +119263,7 @@ _craft_matproc
 -1
 0
 0
-267
+268
 5
 361
 5
@@ -119643,6 +119718,9 @@ _craft_matproc
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -137083,7 +137161,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1692
 0
 0
-219
+220
 5
 1691
 5
@@ -137394,6 +137472,9 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1691
+7
 5
 1691
 7
@@ -137755,7 +137836,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1693
 0
 0
-219
+220
 5
 1692
 5
@@ -138066,6 +138147,9 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1692
+7
 5
 1692
 7
@@ -138427,7 +138511,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1694
 0
 0
-219
+220
 5
 1693
 5
@@ -138738,6 +138822,9 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1693
+7
 5
 1693
 7
@@ -139099,7 +139186,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1695
 0
 0
-219
+220
 5
 361
 5
@@ -139410,6 +139497,9 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -139771,7 +139861,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1719
 0
 0
-219
+220
 5
 361
 5
@@ -140082,6 +140172,9 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -143260,7 +143353,7 @@ bob
 1947
 0
 0
-219
+220
 5
 361
 5
@@ -143617,6 +143710,9 @@ none
 7
 1
 -1
+361
+7
+5
 361
 7
 5
@@ -162103,7 +162199,7 @@ sand viper
 1892
 0
 0
-258
+259
 5
 29
 1
@@ -162531,6 +162627,9 @@ sand viper
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -162903,7 +163002,7 @@ A serpentine creature. Venomous.
 -1
 0
 0
-258
+259
 5
 29
 1
@@ -163331,6 +163430,9 @@ A serpentine creature. Venomous.
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -166911,13 +167013,13 @@ tester
 361
 2350
 1948
-2351
+-1
 33
 -1
 2004
 0
 0
-219
+220
 5
 361
 5
@@ -166977,7 +167079,7 @@ tester
 4
 2
 0
-1775849745
+1775850556
 2
 localhost
 361
@@ -166986,7 +167088,7 @@ localhost
 361
 0
 0
-1775850251
+1775853824
 361
 1
 0
@@ -167025,7 +167127,7 @@ localhost
 361
 0
 2
-port 7777 from localhost, port 45592
+port 7777 from localhost, port 40850
 361
 0
 5
@@ -167044,7 +167146,7 @@ port 7777 from localhost, port 45592
 361
 5
 0
-1775850159
+1775853773
 361
 1
 5
@@ -167192,7 +167294,7 @@ port 7777 from localhost, port 45592
 361
 5
 0
-16
+20
 361
 5
 0
@@ -167200,7 +167302,7 @@ port 7777 from localhost, port 45592
 361
 5
 0
-19
+20
 361
 5
 0
@@ -167208,7 +167310,7 @@ port 7777 from localhost, port 45592
 361
 5
 0
-15
+20
 361
 5
 0
@@ -167220,7 +167322,7 @@ port 7777 from localhost, port 45592
 361
 5
 0
-44
+47
 361
 5
 0
@@ -167251,7 +167353,7 @@ first aid
 361
 5
 0
-14
+17
 361
 5
 5
@@ -167385,6 +167487,9 @@ disc_#457_-20_-20
 2337
 1
 2348
+361
+7
+5
 361
 7
 5
@@ -171005,7 +171110,7 @@ blart
 -1
 0
 0
-219
+220
 5
 361
 5
@@ -171385,6 +171490,9 @@ fabricator
 7
 0
 1
+361
+7
+5
 361
 7
 5
@@ -176181,7 +176289,7 @@ fibrous bandage
 2062
 5
 -1
-2083
+2084
 0
 0
 34
@@ -176301,7 +176409,7 @@ colonial machete
 361
 1947
 -1
-2083
+2084
 1679
 -1
 -1
@@ -177117,128 +177225,7 @@ A pre-fab shelter placed by tester.
 #2080 recycled
 #2081 recycled
 #2082 recycled
-#2083
-inert metal
-
-0
-361
-1947
--1
-2084
-5
--1
-2084
-0
-0
-34
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-7
-5
-361
-7
-0
-12
-361
-7
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
+#2083 recycled
 #2084
 inert metal
 
@@ -186615,10 +186602,10 @@ salvaged components
 361
 1947
 -1
-2321
+2323
 5
 -1
-2321
+2323
 0
 0
 34
@@ -196760,9 +196747,9 @@ Desert
 1
 1947
 0
-1775848338
+1775850557
 0
-1775849745
+1775850576
 361
 5
 5
@@ -197187,250 +197174,8 @@ A scattered field of pre-colony debris: twisted metal, cracked panels, and unide
 5
 #2319 recycled
 #2320 recycled
-#2321
-native fiber
-
-0
-361
-1947
--1
-2322
-5
--1
-2322
-0
-0
-34
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-7
-5
-361
-7
-0
-15
-361
-7
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-#2322
-native fiber
-
-0
-361
-1947
--1
-2323
-5
--1
-2323
-0
-0
-34
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-7
-5
-361
-7
-0
-15
-361
-7
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
+#2321 recycled
+#2322 recycled
 #2323
 inert metal
 
@@ -199417,9 +199162,9 @@ Forest
 1
 1947
 0
-1775849745
+1775850440
 0
-1775850174
+1775850453
 361
 5
 5
@@ -200881,7 +200626,7 @@ Factory Interior
 0
 361
 -1
-1947
+2351
 -1
 2338
 -1
@@ -200925,7 +200670,7 @@ Factory Interior
 1
 1947
 0
-1775850174
+1775850576
 0
 0
 361
@@ -201249,7 +200994,8 @@ inert casing
 2350
 361
 7
-5
+0
+4
 361
 7
 5
@@ -201488,129 +201234,7 @@ inert metal
 361
 1947
 -1
-2354
-5
--1
-2354
-0
-0
-34
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-7
-5
-361
-7
-0
-20
-361
-7
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-#2354
-inert metal
-
-0
-361
-1947
--1
--1
+2362
 5
 -1
 2355
@@ -201725,6 +201349,7 @@ inert metal
 5
 361
 5
+#2354 recycled
 #2355
 inert metal
 
@@ -201732,7 +201357,7 @@ inert metal
 361
 2350
 -1
--1
+1947
 5
 -1
 2356
@@ -201857,7 +201482,7 @@ inert metal
 2355
 5
 -1
--1
+2362
 0
 0
 34
@@ -201938,6 +201563,1106 @@ inert metal
 361
 5
 5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#2357 recycled
+#2358 recycled
+#2359 recycled
+#2360 recycled
+#2361 recycled
+#2362
+native fiber
+
+0
+361
+1947
+-1
+2363
+5
+-1
+2363
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+0
+15
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#2363
+native fiber
+
+0
+361
+1947
+-1
+2364
+5
+-1
+2364
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+0
+15
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#2364
+inert metal
+
+0
+361
+1947
+-1
+2365
+5
+-1
+2365
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+0
+12
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#2365
+inert metal
+
+0
+361
+1947
+-1
+2366
+5
+-1
+2366
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+0
+12
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#2366
+cooked meat
+
+0
+361
+1947
+-1
+2367
+5
+-1
+2367
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#2367
+runner meat
+
+0
+361
+1947
+-1
+2368
+5
+-1
+2368
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#2368
+raw water
+
+0
+361
+1947
+-1
+2369
+5
+-1
+2369
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#2369
+fibrous bandage
+
+0
+361
+1947
+-1
+2370
+5
+-1
+2370
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+5
+2
+Rough bandage. Stops bleeding.
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#2370
+pre-fab shelter kit
+
+0
+361
+1947
+-1
+-1
+5
+-1
+-1
+0
+0
+34
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+5
+2
+Collapsed shelter. PLACE SHELTER to deploy.
 361
 5
 4
@@ -217728,33 +218453,97 @@ p.location:announce(p.name + " arrives.", p);
 dest:look_self();
 .
 #6:286
-"Teleport to your sector center, or show colony status if already inside.";
+"Colony overview  works from anywhere.";
 p = player;
-if (!valid(p.w_colony))
-p:tell("You have not established a colony yet.");
-p:tell("Craft a sector center kit (2x inert metal + 2x crude wire) and use 'place sector center'.");
+p:tell("=== Colony Overview ===");
+p:tell("");
+"Landing/home info";
+dispatched = 0;
+try
+dispatched = p.w_dispatched;
+except e (ANY)
+endtry
+if (!dispatched)
+p:tell("  You have not been dispatched yet.");
 return;
 endif
-if (p.location == p.w_colony)
-"Already here  show colony summary";
-p:tell(("=== COLONY: " + p.w_colony.name) + " ===");
-buildings_here = {};
-for itm in (p.location.contents)
-if (is_a(itm, $building))
-buildings_here = listappend(buildings_here, itm);
+lx = 0;
+ly = 0;
+try
+lx = p.w_land_x;
+except e (ANY)
+endtry
+try
+ly = p.w_land_y;
+except e (ANY)
+endtry
+pname = "Unknown";
+try
+pname = p.w_land_planet.name;
+except e (ANY)
+endtry
+p:tell(((((("  Location: " + pname) + " (") + tostr(lx)) + ", ") + tostr(ly)) + ")");
+p:tell("");
+"Buildings";
+blist = {};
+try
+blist = p.w_buildings;
+except e (ANY)
+endtry
+valid_buildings = {};
+for b in (blist)
+if (valid(b))
+valid_buildings = listappend(valid_buildings, b);
 endif
 endfor
-if (buildings_here == {})
-p:tell("No structures in this room.");
-else
-for b in (buildings_here)
-p:tell((((("  [" + b.b_type) + "] HP: ") + tostr(b.b_hp)) + "/") + tostr(b.b_hp_max));
+p.w_buildings = valid_buildings;
+p:tell("  Buildings: " + tostr(length(valid_buildings)));
+for b in (valid_buildings)
+loc_str = "";
+try
+loc_str = (((" (" + tostr(b.b_x)) + ",") + tostr(b.b_y)) + ")";
+except e (ANY)
+endtry
+p:tell(("    " + b.name) + loc_str);
 endfor
+p:tell("");
+"NPC workers";
+workers = {};
+try
+workers = $worker_list;
+except e (ANY)
+endtry
+my_workers = {};
+for w in (workers)
+try
+if (valid(w) && (w.w_owner == p))
+my_workers = listappend(my_workers, w);
 endif
-else
-move(p, p.w_colony);
-p:tell("You return to your sector center.");
-endif
+except e (ANY)
+endtry
+endfor
+p:tell(("  Workers: " + tostr(length(my_workers))) + "/3");
+for w in (my_workers)
+p:tell("    " + w.name);
+endfor
+p:tell("");
+"Credits + SP";
+credits = 0;
+try
+credits = p.w_credits;
+except e (ANY)
+endtry
+sp = 0;
+try
+sp = p.w_sp;
+except e (ANY)
+endtry
+sp_cap = 2500;
+try
+sp_cap = p.w_sp_cap;
+except e (ANY)
+endtry
+p:tell((((("  Credits: " + tostr(credits)) + "  SP: ") + tostr(sp)) + "/") + tostr(sp_cap));
 .
 #6:287
 "Perform manual labor in the factorium for credits. 1-hour cooldown.";
@@ -221157,6 +221946,196 @@ recycle(target);
 machine.m_input_count = machine.m_input_count + 1;
 p:tell(((("Loaded " + tname) + " into ") + machine.name) + " input hopper.");
 p:tell(("Input: " + tostr(machine.m_input_count)) + " item(s)");
+.
+#6:389
+"Show map of buildings around your colony.";
+p = player;
+dispatched = 0;
+try
+dispatched = p.w_dispatched;
+except e (ANY)
+endtry
+if (!dispatched)
+p:tell("You have not been dispatched yet.");
+return;
+endif
+cx = 0;
+cy = 0;
+try
+cx = p.w_land_x;
+except e (ANY)
+endtry
+try
+cy = p.w_land_y;
+except e (ANY)
+endtry
+"Build a 11x11 grid centered on colony";
+blist = {};
+try
+blist = p.w_buildings;
+except e (ANY)
+endtry
+"Map building coords";
+bmap = {};
+for b in (blist)
+if (valid(b))
+try
+bmap = listappend(bmap, {b.b_x, b.b_y, b.name[1]});
+except e (ANY)
+endtry
+endif
+endfor
+p:tell("=== Sector Map ===");
+p:tell(((("  Center: (" + tostr(cx)) + ", ") + tostr(cy)) + ")");
+p:tell("  B = building, @ = you, . = empty");
+p:tell("");
+dy = 5;
+while (dy >= -5)
+row = "  ";
+dx = -5;
+while (dx <= 5)
+mx = cx + dx;
+my = cy + dy;
+if ((dx == 0) && (dy == 0))
+row = row + "@ ";
+else
+found = 0;
+for bm in (bmap)
+if ((bm[1] == mx) && (bm[2] == my))
+row = (row + bm[3]) + " ";
+found = 1;
+endif
+endfor
+if (!found)
+row = row + ". ";
+endif
+endif
+dx = dx + 1;
+endwhile
+p:tell(row);
+dy = dy - 1;
+endwhile
+.
+#6:390
+"Show resource availability near you or your colony.";
+p = player;
+rx = 0;
+ry = 0;
+planet = $nothing;
+if (parent(p.location) == $wroom)
+rx = p.location.x;
+ry = p.location.y;
+planet = p.location.planet;
+else
+"Use landing coords";
+try
+rx = p.w_land_x;
+except e (ANY)
+endtry
+try
+ry = p.w_land_y;
+except e (ANY)
+endtry
+try
+planet = p.w_land_planet;
+except e (ANY)
+endtry
+endif
+if (!valid(planet))
+p:tell("You have not been dispatched yet.");
+return;
+endif
+bnames = planet.biome_names;
+seed = 0;
+try
+seed = planet.p_seed;
+except e (ANY)
+endtry
+bmap = {0, 1, 2, 3, 4};
+try
+bmap = planet.p_biome_map;
+except e (ANY)
+endtry
+counts = {0, 0, 0, 0, 0, 0, 0};
+for dx in [-5..5]
+for dy in [-5..5]
+mx = rx + dx;
+my = ry + dy;
+b = perlin_2d(mx + seed, my + seed, 1.0, 1.5, 5, 1);
+if (b < 0)
+b = 0;
+elseif (b > 4)
+b = 4;
+endif
+b = bmap[b + 1];
+counts = listset(counts, counts[b + 1] + 1, b + 1);
+endfor
+endfor
+p:tell(((("=== Resources Near (" + tostr(rx)) + ", ") + tostr(ry)) + ") ===");
+p:tell("");
+resource_map = {"minerals/ore", "fiber/lumber", "salvage/scrap", "water/fiber", "water/ocean", "rare organics", "energy/minerals"};
+for i in [1..7]
+if (counts[i] > 0)
+pct = (counts[i] * 100) / 121;
+p:tell((((("  " + bnames[i]) + ": ") + tostr(pct)) + "%  ") + resource_map[i]);
+endif
+endfor
+.
+#6:391
+"Show recent colony events.";
+p = player;
+events = {};
+try
+events = p.w_events;
+except e (ANY)
+endtry
+p:tell("=== Colony Events ===");
+if (length(events) == 0)
+p:tell("  No events recorded yet.");
+else
+for ev in (events)
+p:tell("  " + ev);
+endfor
+endif
+.
+#6:392
+this:events();
+.
+#6:393
+"List NPC workers in your colony.";
+p = player;
+workers = {};
+try
+workers = $worker_list;
+except e (ANY)
+endtry
+my_workers = {};
+for w in (workers)
+try
+if (valid(w) && (w.w_owner == p))
+my_workers = listappend(my_workers, w);
+endif
+except e (ANY)
+endtry
+endfor
+p:tell(("=== Colony Citizens (" + tostr(length(my_workers))) + "/3) ===");
+if (length(my_workers) == 0)
+p:tell("  No workers. Use CREWHIRE to recruit.");
+else
+for w in (my_workers)
+status = "idle";
+try
+if (w.w_job != "")
+status = w.w_job;
+endif
+except e (ANY)
+endtry
+p:tell((("  " + w.name) + "  ") + status);
+endfor
+endif
+.
+#6:394
+this:citizens();
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -277875,7 +278854,7 @@ this:out();
 .
 0 clocks
 2 queued tasks
-0 6 1775850404 2137760746
+0 6 1775853915 1415649812
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -277948,11 +278927,11 @@ WAIF
 11
 task_id
 0
-2137760746
+1415649812
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775850884 503628777
+0 6 1775854484 1919957535
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -278025,7 +279004,7 @@ WAIF
 11
 taskid
 0
-503628777
+1919957535
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
