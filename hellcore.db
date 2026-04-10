@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
-1884
-3545
+1886
+3546
 0
 5
 65
@@ -6067,7 +6067,7 @@ tell_mytree
 2
 build_options
 who_visible
-225
+229
 4
 0
 361
@@ -6443,6 +6443,18 @@ who_visible
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -8418,7 +8430,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--127
+-134
 361
 5
 4
@@ -10384,7 +10396,7 @@ generic player
 100
 33
 -1
-358
+359
 confunc
 361
 173
@@ -11817,7 +11829,11 @@ toggle
 361
 29
 -1
-95
+landing
+361
+13
+-1
+99
 features
 previous_connection
 email_address
@@ -11913,7 +11929,11 @@ w_aggression_max
 w_target
 w_screenreader
 w_brief
-190
+w_land_x
+w_land_y
+w_land_planet
+w_dispatched
+194
 4
 5
 1
@@ -12464,6 +12484,22 @@ none
 7
 0
 0
+361
+7
+0
+0
+361
+7
+0
+0
+361
+7
+0
+0
+361
+7
+1
+-1
 361
 7
 0
@@ -31667,7 +31703,7 @@ default_description
 request
 extra_confunc_msg
 free_to_use
-228
+232
 2
 neuter
 29
@@ -32069,6 +32105,18 @@ By definition, guests appear nondescript.
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -32869,7 +32917,7 @@ init_for_core
 173
 -1
 0
-245
+249
 5
 29
 1
@@ -33448,6 +33496,18 @@ sddfs
 7
 5
 29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
 5
 0
 193
@@ -33973,7 +34033,7 @@ set_*
 -1
 1
 queued_task_limit
-207
+211
 0
 0
 361
@@ -34404,6 +34464,18 @@ showmap
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -35335,7 +35407,7 @@ autowield
 bug
 readied_weapon
 unread_mail
-206
+210
 0
 0
 361
@@ -35705,6 +35777,18 @@ white
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -44614,7 +44698,7 @@ toad_victim_msg
 toad_msg
 mail_identity
 advertised
-254
+258
 2
 
 361
@@ -45094,6 +45178,18 @@ really impossible password to type
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -45840,7 +45936,7 @@ p_pois
 biome_names
 biome_descs
 biome_chars
-245
+249
 4
 0
 29
@@ -46362,6 +46458,18 @@ WARNING: Volcanic zone. The ground radiates searing heat. Sulphur vents hiss. En
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -54152,7 +54260,7 @@ drop_off_msg
 move_player_task
 moveto_task
 cleaning_index
-262
+266
 4
 0
 29
@@ -54769,6 +54877,18 @@ Barry
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -65963,7 +66083,7 @@ real_aliases
 zots
 bedroom
 chillmin
-223
+227
 2
 You join %n.
 29
@@ -66354,6 +66474,18 @@ You teleport %n.
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -72975,7 +73107,7 @@ visit
 361
 5
 0
-1372414737
+1959022679
 361
 5
 4
@@ -78450,6 +78582,30 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 03:59:10 2026 PDT Database checkpoint started.~1b[0m
+0
+1775818750
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 03:57:26 2026 PDT Database checkpoint started.~1b[0m
+0
+1775818646
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 03:56:15 2026 PDT Database checkpoint started.~1b[0m
+0
+1775818575
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 03:52:36 2026 PDT Database checkpoint started.~1b[0m
+0
+1775818356
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 03:46:42 2026 PDT Database checkpoint started.~1b[0m
 0
 1775818002
@@ -78723,30 +78879,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 14:05:52 2026 PDT Database checkpoint started.~1b[0m
 0
 1775768752
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:56:46 2026 PDT Database checkpoint started.~1b[0m
-0
-1775768206
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:49:10 2026 PDT Database checkpoint started.~1b[0m
-0
-1775767750
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:34:44 2026 PDT Database checkpoint started.~1b[0m
-0
-1775766884
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 13:23:57 2026 PDT Database checkpoint started.~1b[0m
-0
-1775766237
 361
 5
 5
@@ -91483,7 +91615,7 @@ player
 last_update_time
 active
 allow_update_time
-194
+198
 1
 -1
 361
@@ -91777,6 +91909,18 @@ allow_update_time
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -96268,7 +96412,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1144029354
+956338745
 361
 5
 4
@@ -98301,7 +98445,7 @@ Wizard
 
 23
 361
-1883
+591
 596
 -1
 49
@@ -98325,7 +98469,7 @@ Wizard
 13
 -1
 0
-254
+258
 5
 361
 5
@@ -98570,7 +98714,7 @@ hi
 4
 2
 0
-1775817681
+1775818595
 2
 localhost
 361
@@ -98580,7 +98724,7 @@ localhost
 361
 0
 0
-1775817756
+1775818654
 361
 1
 5
@@ -98602,7 +98746,7 @@ localhost
 29
 1
 4
-478
+480
 1
 339
 1
@@ -99559,6 +99703,10 @@ localhost
 1882
 1
 1883
+1
+1884
+1
+1885
 361
 1
 5
@@ -99579,7 +99727,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 56808
+port 7777 from localhost, port 45764
 361
 0
 5
@@ -99598,11 +99746,11 @@ port 7777 from localhost, port 56808
 361
 5
 0
-1775817822
+1775818680
 361
 1
 0
-1410065198
+1410065196
 29
 0
 0
@@ -99862,6 +100010,22 @@ First Aid
 361
 7
 5
+361
+7
+0
+-15
+361
+7
+0
+-33
+361
+7
+1
+457
+361
+7
+0
+0
 361
 7
 5
@@ -101668,7 +101832,7 @@ clean
 361
 45
 -1
-35
+37
 rp457_x0_y1
 rp457_x1_y1
 rp457_x1_y2
@@ -101704,7 +101868,9 @@ rp457_x3_y1
 rp457_x10_y10
 rp457_x10_y11
 rp457_x50_y50
-65
+rp457_x5_y5
+rp457_xm15_ym33
+67
 1
 466
 361
@@ -101843,6 +102009,14 @@ rp457_x50_y50
 5
 1
 1883
+361
+5
+1
+1884
+361
+5
+1
+1885
 361
 5
 5
@@ -105809,11 +105983,16 @@ look
 361
 13
 -1
-1
+2
 east_exit
-93
+dispatch_terminal
+94
 1
 505
+361
+5
+0
+1
 361
 5
 5
@@ -117784,7 +117963,7 @@ craft
 -1
 0
 0
-190
+194
 5
 29
 1
@@ -118047,6 +118226,18 @@ craft
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -118564,7 +118755,7 @@ Grassland
 361
 5
 0
-0
+1
 361
 5
 5
@@ -118935,7 +119126,7 @@ _craft_matproc
 -1
 0
 0
-254
+258
 5
 361
 5
@@ -119390,6 +119581,18 @@ _craft_matproc
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -126822,7 +127025,7 @@ Wizard's sector center
 361
 591
 -1
--1
+361
 117
 -1
 887
@@ -136350,7 +136553,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1692
 0
 0
-206
+210
 5
 1691
 5
@@ -136661,6 +136864,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1691
+7
+5
+1691
+7
+5
+1691
+7
+5
+1691
+7
 5
 1691
 7
@@ -136983,7 +137198,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1693
 0
 0
-206
+210
 5
 1692
 5
@@ -137294,6 +137509,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1692
+7
+5
+1692
+7
+5
+1692
+7
+5
+1692
+7
 5
 1692
 7
@@ -137616,7 +137843,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1694
 0
 0
-206
+210
 5
 1693
 5
@@ -137927,6 +138154,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1693
+7
+5
+1693
+7
+5
+1693
+7
+5
+1693
+7
 5
 1693
 7
@@ -138249,7 +138488,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1695
 0
 0
-206
+210
 5
 361
 5
@@ -138560,6 +138799,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -138882,7 +139133,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1719
 0
 0
-206
+210
 5
 361
 5
@@ -139193,6 +139444,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -140384,13 +140647,18 @@ w west
 361
 13
 -1
-1
+2
 west_exit
-93
+dispatch_terminal
+94
 1
 1703
 361
 7
+0
+1
+361
+5
 5
 361
 5
@@ -142123,7 +142391,7 @@ bob
 -1
 0
 0
-206
+210
 5
 361
 5
@@ -142480,6 +142748,18 @@ none
 7
 1
 -1
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
 361
 7
 5
@@ -166352,11 +166632,11 @@ Desert
 0
 361
 -1
-361
+-1
 -1
 452
 -1
--1
+1884
 0
 0
 94
@@ -166546,7 +166826,631 @@ Desert
 361
 5
 0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
 1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1884
+Desert
+
+0
+361
+-1
+-1
+-1
+452
+-1
+1885
+0
+0
+94
+1
+457
+361
+5
+0
+2
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+5
+361
+5
+0
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1885
+Desert
+
+0
+361
+-1
+-1
+-1
+452
+-1
+-1
+0
+0
+94
+1
+457
+361
+5
+0
+2
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+-15
+361
+5
+0
+-33
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+0
 361
 5
 5
@@ -183211,33 +184115,190 @@ player:tell("JN=" + tostr(jn));
 player:tell("LB=" + tostr(lb));
 .
 #6:335
-"Colony dispatch terminal. Deploys you to the planet.";
+"Colony dispatch  deploy to a random safe location on planet.";
 p = player;
-if (p.location != #1704)
+"Check we are in the right room";
+lobby = #50;
+if (p.location != lobby)
+"Also allow dispatching from any room with a dispatch_terminal flag";
+has_terminal = 0;
+try
+has_terminal = p.location.dispatch_terminal;
+except e (ANY)
+endtry
+if (!has_terminal)
 p:tell("There is no dispatch terminal here.");
 return;
 endif
-if ((p.w_background == "none") || (p.w_background == ""))
+endif
+"Check background is set";
+bg = "none";
+try
+bg = p.w_background;
+except e (ANY)
+endtry
+if ((bg == "none") || (bg == ""))
 p:tell("[TERMINAL] Background file required before dispatch.");
-p:tell("Type BACKGROUND <1-5> to select.");
+p:tell("Type BACKGROUND <1-6> to select.");
 return;
 endif
+"Check if already dispatched";
+dispatched = 0;
+try
+dispatched = p.w_dispatched;
+except e (ANY)
+endtry
+if (dispatched)
+p:tell("[TERMINAL] You have already been dispatched.");
+p:tell(((("Your landing site was at (" + tostr(p.w_land_x)) + ", ") + tostr(p.w_land_y)) + ").");
+return;
+endif
+"Select planet (currently only Kepler-7)";
+planet = #457;
+sz = 50;
+try
+sz = planet.p_size;
+except e (ANY)
+endtry
+seed = 0;
+try
+seed = planet.p_seed;
+except e (ANY)
+endtry
+bmap = {0, 1, 2, 3, 4};
+try
+bmap = planet.p_biome_map;
+except e (ANY)
+endtry
+dmult = 1;
+try
+dmult = planet.p_danger_mult;
+except e (ANY)
+endtry
+"Find safe landing coordinates";
+"Rules: min 15 tiles from any colony, min 5 tiles from edge,";
+"       not in dangerous biome (5=fungal, 6=volcanic)";
+min_colony_dist = 15;
+min_edge_dist = 5;
+max_tries = 50;
+land_x = 0;
+land_y = 0;
+found = 0;
+tries = 0;
+while ((tries < max_tries) && (!found))
+"Pick random coords within safe zone";
+safe_range = sz - min_edge_dist;
+if (safe_range < 5)
+safe_range = 5;
+endif
+land_x = (random((safe_range * 2) + 1) - safe_range) - 1;
+land_y = (random((safe_range * 2) + 1) - safe_range) - 1;
+"Check biome is not dangerous";
+raw_b = perlin_2d(land_x + seed, land_y + seed, 1.0, 1.5, 5, 1);
+if (raw_b < 0)
+raw_b = 0;
+elseif (raw_b > 4)
+raw_b = 4;
+endif
+b = bmap[raw_b + 1];
+dr = perlin_2d(((land_x + seed) * 3) + 97, ((land_y + seed) * 3) + 53, 3.0, 2.5, 7, 1);
+if (dmult == 1)
+if (dr == 9)
+b = 5;
+elseif (dr == 0)
+b = 6;
+endif
+elseif (dmult == 2)
+if (dr >= 8)
+b = 5;
+elseif (dr <= 1)
+b = 6;
+endif
+elseif (dmult >= 3)
+if (dr >= 7)
+b = 5;
+elseif (dr <= 2)
+b = 6;
+endif
+endif
+if (b >= 5)
+tries = tries + 1;
+"Dangerous biome, try again.";
+else
+"Check distance from other player colonies";
+too_close = 0;
+for op in (players())
+if (op != p)
+try
+if (op.w_dispatched && (op.w_land_planet == planet))
+dx = land_x - op.w_land_x;
+dy = land_y - op.w_land_y;
+dist_sq = (dx * dx) + (dy * dy);
+if (dist_sq < (min_colony_dist * min_colony_dist))
+too_close = 1;
+endif
+endif
+except e (ANY)
+endtry
+endif
+endfor
+if (too_close)
+tries = tries + 1;
+else
+found = 1;
+endif
+endif
+endwhile
+if (!found)
+p:tell(("[TERMINAL] ERROR: No suitable landing zones found after " + tostr(max_tries)) + " attempts.");
+p:tell("The planet may be too crowded. Contact administration.");
+return;
+endif
+"Record landing data";
+p.w_land_x = land_x;
+p.w_land_y = land_y;
+p.w_land_planet = planet;
+p.w_dispatched = 1;
+"Dispatch narrative";
+bnames = planet.biome_names;
+bname = "unknown terrain";
+if ((b >= 0) && (b < length(bnames)))
+bname = bnames[b + 1];
+endif
 p:tell("");
+p:tell("======================================================");
+p:tell("  COLONY DISPATCH  " + planet.name);
+p:tell("======================================================");
 p:tell("");
-p:tell("  COLONY DISPATCH  KEPLER-7");
-p:tell("");
+p:tell("  Background: " + bg);
+p:tell(((("  Landing zone: (" + tostr(land_x)) + ", ") + tostr(land_y)) + ")");
+p:tell("  Terrain: " + bname);
 p:tell("");
 p:tell("  The terminal accepts your colonial file.");
 p:tell("  A drop pod slides open. You step inside.");
 p:tell("  The door seals. Deployment in 3... 2... 1...");
 p:tell("");
-move(p, #459);
-p:tell("  You hit hard. The pod splits open.");
-p:tell("  Impact Site Zero. Kepler-7. You are alone.");
+"Spawn the landing room and move player";
+dest = $ods:spawn_room(planet, land_x, land_y);
+if (!valid(dest))
+p:tell("ERROR: Landing zone generation failed. Contact admin.");
+p.w_dispatched = 0;
+return;
+endif
+move(p, dest);
+p:tell("  You hit hard. The pod splits open. Smoke clears.");
+p:tell(("  You are alone on " + planet.name) + ".");
 p:tell("");
-p:tell("  WIELD your mineral collector, then SCAN and HARVEST.");
-p:tell("  Type CRAFT for recipes. LOOK for the map.");
-p:tell("  Move: n/s/e/w. SELL ALL to earn credits.");
+p:tell("  COMMANDS:");
+p:tell("    LOOK           see your surroundings and map");
+p:tell("    WIELD <tool>   equip a harvesting tool");
+p:tell("    SURVEY         scan for nearby resources");
+p:tell("    HARVEST        gather resources");
+p:tell("    CRAFT          see crafting recipes");
+p:tell("    SELL ALL       sell resources for credits");
+p:tell("    MAP BIOMES     wider area biome map");
+p:tell("    CONFIG         player settings (screenreader, etc.)");
+p:tell("    n/s/e/w/ne/se/sw/nw  move");
 p:tell("");
 .
 #6:336
@@ -183973,6 +185034,75 @@ p:tell("Type CONFIG to see available settings.");
 #6:357
 "Alias for config.";
 this:config();
+.
+#6:358
+"Show your landing site / colony coordinates.";
+p = player;
+dispatched = 0;
+try
+dispatched = p.w_dispatched;
+except e (ANY)
+endtry
+if (!dispatched)
+p:tell("You have not been dispatched to a planet yet.");
+return;
+endif
+lx = 0;
+ly = 0;
+try
+lx = p.w_land_x;
+except e (ANY)
+endtry
+try
+ly = p.w_land_y;
+except e (ANY)
+endtry
+pname = "Unknown";
+try
+pname = p.w_land_planet.name;
+except e (ANY)
+endtry
+p:tell((((("Landing site: (" + tostr(lx)) + ", ") + tostr(ly)) + ") on ") + pname);
+if (parent(p.location) == $wroom)
+cx = p.location.x;
+cy = p.location.y;
+dx = lx - cx;
+dy = ly - cy;
+dist = 0;
+if (dx < 0)
+dist = dist - dx;
+else
+dist = dist + dx;
+endif
+if (dy < 0)
+dist = dist - dy;
+else
+dist = dist + dy;
+endif
+dir_x = "";
+dir_y = "";
+if (dx > 0)
+dir_x = tostr(dx) + " east";
+elseif (dx < 0)
+dir_x = tostr(-dx) + " west";
+endif
+if (dy > 0)
+dir_y = tostr(dy) + " north";
+elseif (dy < 0)
+dir_y = tostr(-dy) + " south";
+endif
+dir = "";
+if ((dir_x != "") && (dir_y != ""))
+dir = (dir_x + ", ") + dir_y;
+elseif (dir_x != "")
+dir = dir_x;
+elseif (dir_y != "")
+dir = dir_y;
+else
+dir = "you are here";
+endif
+p:tell(((("Direction: " + dir) + " (") + tostr(dist)) + " tiles away)");
+endif
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -240059,7 +241189,7 @@ move(player, #1703);
 .
 0 clocks
 2 queued tasks
-0 6 1775818014 1144029354
+0 6 1775818764 956338745
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -240132,11 +241262,11 @@ WAIF
 11
 task_id
 0
-1144029354
+956338745
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775818443 1372414737
+0 6 1775819343 1959022679
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -240209,7 +241339,7 @@ WAIF
 11
 taskid
 0
-1372414737
+1959022679
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
