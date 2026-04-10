@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
 1705
-3524
+3525
 0
 4
 65
@@ -8394,7 +8394,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--74
+-76
 361
 5
 4
@@ -10360,7 +10360,7 @@ generic player
 100
 33
 -1
-347
+348
 confunc
 361
 173
@@ -11746,6 +11746,10 @@ _mk_energy_node
 13
 -1
 list
+361
+29
+-1
+_calc_craft_quality
 361
 29
 -1
@@ -72659,7 +72663,7 @@ visit
 361
 5
 0
-1154875792
+1580295371
 361
 5
 4
@@ -78106,6 +78110,18 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 20:02:09 2026 PDT Database checkpoint started.~1b[0m
+0
+1775790129
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:59:37 2026 PDT Database checkpoint started.~1b[0m
+0
+1775789977
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:50:15 2026 PDT Database checkpoint started.~1b[0m
 0
 1775789415
@@ -78391,18 +78407,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 22:52:45 2026 PDT Database checkpoint started.~1b[0m
 0
 1775713965
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 21:52:45 2026 PDT Database checkpoint started.~1b[0m
-0
-1775710365
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 20:52:45 2026 PDT Database checkpoint started.~1b[0m
-0
-1775706765
 361
 5
 5
@@ -95888,7 +95892,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-739236970
+18359443
 361
 5
 4
@@ -98163,7 +98167,7 @@ hi
 4
 2
 0
-1775788406
+1775789822
 2
 localhost
 361
@@ -98173,7 +98177,7 @@ localhost
 361
 0
 0
-1775788769
+1775789985
 361
 1
 5
@@ -98842,7 +98846,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 42222
+port 7777 from localhost, port 36946
 361
 0
 5
@@ -98861,7 +98865,7 @@ port 7777 from localhost, port 42222
 361
 5
 0
-1775789259
+1775789986
 361
 1
 0
@@ -117724,12 +117728,20 @@ basic crafting tool
 5
 593
 647
-4
+6
 list_recipes
 361
 13
 -1
 craft_item
+361
+29
+-1
+_craft_structure
+361
+29
+-1
+_craft_dispatch
 361
 29
 -1
@@ -149130,20 +149142,88 @@ endif
 endif
 .
 #6:32
-set_task_perms(player);
-if (!this:can_see())
-this:tell("It's too dark to see much of anything.");
+"Examine an item. Shows description, quality, equipment stats.";
+p = player;
+tstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+if ((tstr == "") && (args != {}))
+for w in (args)
+if (typeof(w) == STR)
+tstr = (tstr == "") ? w | ((tstr + " ") + w);
+endif
+endfor
+endif
+if (tstr == "")
+p:tell("Examine what?");
 return;
 endif
-if (!dobjstr)
-dobjstr = "here";
+item = 0;
+for itm in (p.contents)
+if (index(itm.name, tstr))
+item = itm;
+break;
 endif
-what = $match_utils:match(dobjstr, {@player.contents, @player.location.contents, player.location});
-if ($command_utils:object_match_failed(what, dobjstr))
+endfor
+if (item == 0)
+for itm in (p.location.contents)
+if ((itm != p) && index(itm.name, tstr))
+item = itm;
+break;
+endif
+endfor
+endif
+if (item == 0)
+p:tell(("You don't see '" + tstr) + "'.");
 return;
 endif
-yield 1;
-what:do_examine(player);
+p:tell(("=== " + item.name) + " ===");
+try
+p:tell(item.description);
+except e (ANY)
+endtry
+"Quality";
+try
+q = item.q_quality;
+if (q > 0)
+grade = "Poor";
+if (q >= 80)
+grade = "Excellent";
+elseif (q >= 60)
+grade = "Good";
+elseif (q >= 40)
+grade = "Average";
+elseif (q >= 20)
+grade = "Low";
+endif
+p:tell(((("Quality: " + tostr(q)) + " (") + grade) + ")");
+endif
+except e (ANY)
+endtry
+"Equipment stats";
+try
+if (is_a(item, $equipment))
+p:tell((("Slot: " + item.eq_slot) + " | Type: ") + item.eq_type);
+stats = "";
+if (item.eq_tohit != 0)
+stats = (stats + " tohit:+") + tostr(item.eq_tohit);
+endif
+if (item.eq_dmg_bonus != 0)
+stats = (stats + " dmg:+") + tostr(item.eq_dmg_bonus);
+endif
+if (item.eq_defense != 0)
+stats = (stats + " def:+") + tostr(item.eq_defense);
+endif
+if (item.eq_dodge != 0)
+stats = (stats + " dodge:+") + tostr(item.eq_dodge);
+endif
+if (item.eq_hp_bonus != 0)
+stats = (stats + " hp:+") + tostr(item.eq_hp_bonus);
+endif
+if (stats != "")
+p:tell("Stats:" + stats);
+endif
+endif
+except e (ANY)
+endtry
 .
 #6:33
 "Add a feature to this player's features list.  Caller must be this or have suitable permissions (this or wizardly).";
@@ -153827,19 +153907,49 @@ if (((recipe == "") || (recipe == "list")) || (recipe == "help"))
 tool:list_recipes();
 return;
 endif
-"Try tool-specific dispatch first";
+"Snapshot inventory before crafting";
+before = p.contents;
+"Try crafting";
+crafted = 0;
 try
 if (tool:_craft_dispatch(recipe))
-return;
+crafted = 1;
 endif
 except e (ANY)
 endtry
-"Then try base craft_item";
+if (!crafted)
 try
 tool:craft_item(recipe);
+crafted = 1;
 except e (ANY)
 p:tell(("Error crafting. LIST " + tool.name) + " for recipes.");
 endtry
+endif
+"Post-craft: set quality on any new items";
+if (crafted)
+for itm in (p.contents)
+if (!(itm in before))
+"New item  calculate and set quality";
+try
+base_q = 20 + random(30);
+q = this:_calc_craft_quality(base_q);
+itm.q_quality = q;
+grade = "Poor";
+if (q >= 80)
+grade = "Excellent";
+elseif (q >= 60)
+grade = "Good";
+elseif (q >= 40)
+grade = "Average";
+elseif (q >= 20)
+grade = "Low";
+endif
+p:tell(((("  Quality: " + tostr(q)) + " (") + grade) + ")");
+except e (ANY)
+endtry
+endif
+endfor
+endif
 .
 #6:255
 "Full craft/eat/drink/build test.";
@@ -156047,6 +156157,38 @@ p:tell(("No tool matching '" + tstr) + "' in your inventory.");
 return;
 endif
 tool:list_recipes();
+.
+#6:347
+"Calculate craft output quality from ingredients + skill. Returns quality 0-100+.";
+"Called as this:_calc_craft_quality(base_quality) where base_quality is avg of ingredients.";
+base = args[1];
+p = player;
+bonus = 0;
+"Crafting skills add quality bonus";
+if ("Improvisation" in p.w_learned)
+bonus = bonus + 3;
+endif
+if ("Crude Planning" in p.w_learned)
+bonus = bonus + 5;
+endif
+if ("Better Materials" in p.w_learned)
+bonus = bonus + 8;
+endif
+if ("Crafter" in p.w_learned)
+bonus = bonus + 10;
+endif
+if ("Artisan" in p.w_learned)
+bonus = bonus + 15;
+endif
+"Add some randomness (+/- 10)";
+result = ((base + bonus) + random(20)) - 10;
+if (result < 1)
+result = 1;
+endif
+if (result > 100)
+result = 100;
+endif
+return result;
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -211557,7 +211699,7 @@ player:tell("  Exits: west");
 .
 0 clocks
 2 queued tasks
-0 6 1775789417 739236970
+0 6 1775790137 18359443
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -211630,11 +211772,11 @@ WAIF
 11
 task_id
 0
-739236970
+18359443
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775789643 1154875792
+0 6 1775790543 1580295371
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -211707,7 +211849,7 @@ WAIF
 11
 taskid
 0
-1154875792
+1580295371
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
