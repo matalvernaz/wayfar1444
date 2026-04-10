@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
 2049
-3571
+3572
 0
 7
 65
@@ -8477,7 +8477,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--190
+-207
 361
 5
 4
@@ -11992,14 +11992,14 @@ con
 361
 29
 -1
-con
+craft
 361
 29
 -1
 craft
 361
-29
--1
+93
+4
 108
 features
 previous_connection
@@ -44678,23 +44678,29 @@ run_megatrace
 4
 9
 0
-844976140
+1269424729
 2
-sujrvey
+craft
 4
-0
+3
 2
-
+bandage
+2
+on
+2
+basic
+2
+bandage on basic
 1
--1
+-3
 2
-
+bandage
 2
-
+on
 1
--1
+1948
 2
-
+basic
 29
 0
 4
@@ -73676,7 +73682,7 @@ visit
 361
 5
 0
-1818169550
+311948697
 361
 5
 4
@@ -79205,6 +79211,36 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 09:56:49 2026 PDT Database checkpoint started.~1b[0m
+0
+1775840209
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 09:54:33 2026 PDT Database checkpoint started.~1b[0m
+0
+1775840073
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 09:53:13 2026 PDT Database checkpoint started.~1b[0m
+0
+1775839993
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 09:50:14 2026 PDT Database checkpoint started.~1b[0m
+0
+1775839814
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 09:43:16 2026 PDT Database checkpoint started.~1b[0m
+0
+1775839396
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 09:39:13 2026 PDT Database checkpoint started.~1b[0m
 0
 1775839153
@@ -79472,36 +79508,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 23:14:39 2026 PDT Database checkpoint started.~1b[0m
 0
 1775801679
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 23:06:16 2026 PDT Database checkpoint started.~1b[0m
-0
-1775801176
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 22:57:22 2026 PDT Database checkpoint started.~1b[0m
-0
-1775800642
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 22:52:18 2026 PDT Database checkpoint started.~1b[0m
-0
-1775800338
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 22:15:25 2026 PDT Database checkpoint started.~1b[0m
-0
-1775798125
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 22:09:17 2026 PDT Database checkpoint started.~1b[0m
-0
-1775797757
 361
 5
 5
@@ -97314,7 +97320,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-366622789
+1865250893
 361
 5
 4
@@ -99664,7 +99670,7 @@ hi
 4
 2
 0
-1775839125
+1775840098
 2
 localhost
 361
@@ -99674,7 +99680,7 @@ localhost
 361
 0
 0
-1775839132
+1775840157
 361
 1
 5
@@ -100953,7 +100959,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 56956
+port 7777 from localhost, port 38590
 361
 0
 5
@@ -100972,7 +100978,7 @@ port 7777 from localhost, port 56956
 361
 5
 0
-1775839146
+1775840180
 361
 1
 0
@@ -184453,7 +184459,7 @@ tester
 4
 2
 0
-1775838857
+1775840001
 2
 localhost
 361
@@ -184462,7 +184468,7 @@ localhost
 361
 0
 0
-1775839104
+1775840037
 361
 1
 0
@@ -184501,7 +184507,7 @@ localhost
 361
 0
 2
-port 7777 from localhost, port 39544
+port 7777 from localhost, port 42426
 361
 0
 5
@@ -184520,7 +184526,7 @@ port 7777 from localhost, port 39544
 361
 5
 0
-1775838934
+1775840029
 361
 1
 5
@@ -226650,7 +226656,7 @@ ref.r_quality_equiv = 0;
 ref.r_count = 0;
 p:tell("Processor reset. All remaining material destroyed.");
 .
-#6:383
+#6:382
 "Craft items. Usage: craft <recipe>.";
 p = player;
 raw = "";
@@ -226694,6 +226700,46 @@ return;
 endif
 endif
 if (((recipe == "") || (recipe == "list")) || (recipe == "help"))
+tool:list_recipes();
+return;
+endif
+try
+if (tool:_craft_dispatch(recipe))
+return;
+endif
+except e (ANY)
+endtry
+try
+tool:craft_item(recipe);
+except e (ANY)
+p:tell("Error crafting. Type CRAFT for recipes.");
+endtry
+.
+#6:383
+"Craft <item> on <tool>.";
+p = player;
+recipe = (typeof(dobjstr) == STR) ? dobjstr | "";
+tool_name = (typeof(iobjstr) == STR) ? iobjstr | "";
+tool = 0;
+if (tool_name != "")
+for itm in (p.contents)
+if (is_a(itm, #592) && (index($string_utils:lowercase(itm.name), $string_utils:lowercase(tool_name)) > 0))
+tool = itm;
+endif
+endfor
+endif
+if (tool == 0)
+for itm in (p.contents)
+if (is_a(itm, #592))
+tool = itm;
+endif
+endfor
+endif
+if (tool == 0)
+p:tell("You need a crafting tool.");
+return;
+endif
+if ((recipe == "") || (recipe == "list"))
 tool:list_recipes();
 return;
 endif
@@ -283254,7 +283300,7 @@ dest:announce_all(this.name + " wanders in.");
 .
 0 clocks
 2 queued tasks
-0 6 1775839168 366622789
+0 6 1775840218 1865250893
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -283327,11 +283373,11 @@ WAIF
 11
 task_id
 0
-366622789
+1865250893
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775840043 1818169550
+0 6 1775840943 311948697
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -283404,7 +283450,7 @@ WAIF
 11
 taskid
 0
-1818169550
+311948697
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
