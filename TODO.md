@@ -14,7 +14,7 @@
 - [x] **Early game polish** — GATHER (hand-gathering, slow, 1 unit, low quality), HELP (comprehensive command reference), TAC (tactical display), ST/STATUS (dice pools, hunger, SP/credits). Tool-gathering via HARVEST still better.
 - [ ] **Building progression** — enforce crafting chain: shelter → refinery → processing plant → automated harvester → factory. Sector center is a MILESTONE deep in the tree, not early game. Each building step is meaningful and unlocks new capabilities.
 - [x] **Item degradation** (#44) — weapons/tools lose durability on use. REPAIR command restores 25% per use. Examine shows condition (Good/Worn/Damaged/Nearly broken/BROKEN). SWING/FIRE degrade weapons on hit.
-- [ ] **Medical + status effects** (#31, #32) — `BANDAGE` (First Aid skill), bleeding/burns/diseases. Infirmary building heals over time. Dangerous biomes cause diseases. Real consequences for combat and exploration.
+- [x] **Medical + status effects** (#31, #32) — BANDAGE (First Aid skill or bandage item), bleeding from creature attacks (30% chance, -2 HP/tick), burns from volcanic zones (-50% dice regen), disease from fungal zones (-1 HP/tick). EAT/DRINK commands with raw vs cooked food difference. Nourished buff from cooked food. Status effects on ST display.
 - [x] **Communications** (#4) — WHO (player list with location/idle), CHAT (global chatnet), CHATNET HISTORY (last 50), PAGE (private DM), say (HellCore built-in). Players can talk.
 
 ## Phase 3 — Colony Building (hours 5-20 of gameplay)

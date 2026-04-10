@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
-1922
-3563
+1934
+3566
 0
 6
 65
@@ -6078,7 +6078,7 @@ tell_mytree
 2
 build_options
 who_visible
-233
+237
 4
 0
 361
@@ -6454,6 +6454,18 @@ who_visible
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -8453,7 +8465,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--156
+-159
 361
 5
 4
@@ -10434,7 +10446,7 @@ generic player
 100
 33
 -1
-375
+378
 confunc
 361
 173
@@ -11935,7 +11947,19 @@ status
 361
 13
 -1
-103
+bandage
+361
+13
+-1
+eat
+361
+29
+-1
+drink
+361
+29
+-1
+107
 features
 previous_connection
 email_address
@@ -12039,7 +12063,11 @@ w_explored
 w_memorized
 w_discoveries
 w_last_explore
-198
+w_bleeding
+w_burned
+w_diseased
+w_bandaged
+202
 4
 5
 1
@@ -12617,6 +12645,22 @@ none
 361
 7
 4
+0
+361
+7
+0
+0
+361
+7
+0
+0
+361
+7
+0
+0
+361
+7
+0
 0
 361
 7
@@ -31834,7 +31878,7 @@ default_description
 request
 extra_confunc_msg
 free_to_use
-236
+240
 2
 neuter
 29
@@ -32236,6 +32280,18 @@ By definition, guests appear nondescript.
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -33060,7 +33116,7 @@ init_for_core
 173
 -1
 0
-253
+257
 5
 29
 1
@@ -33663,6 +33719,18 @@ sddfs
 7
 5
 29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
 5
 0
 193
@@ -34188,7 +34256,7 @@ set_*
 -1
 1
 queued_task_limit
-215
+219
 0
 0
 361
@@ -34619,6 +34687,18 @@ showmap
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -35578,7 +35658,7 @@ autowield
 bug
 readied_weapon
 unread_mail
-214
+218
 0
 0
 361
@@ -35948,6 +36028,18 @@ white
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -44881,7 +44973,7 @@ toad_victim_msg
 toad_msg
 mail_identity
 advertised
-262
+266
 2
 
 361
@@ -45361,6 +45453,18 @@ really impossible password to type
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -46131,7 +46235,7 @@ p_pois
 biome_names
 biome_descs
 biome_chars
-253
+257
 4
 0
 29
@@ -46653,6 +46757,18 @@ WARNING: Volcanic zone. The ground radiates searing heat. Sulphur vents hiss. En
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -54485,7 +54601,7 @@ drop_off_msg
 move_player_task
 moveto_task
 cleaning_index
-270
+274
 4
 0
 29
@@ -55102,6 +55218,18 @@ Barry
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -66356,7 +66484,7 @@ real_aliases
 zots
 bedroom
 chillmin
-231
+235
 2
 You join %n.
 29
@@ -66747,6 +66875,18 @@ You teleport %n.
 5
 361
 3
+5
+29
+7
+5
+29
+7
+5
+29
+7
+5
+29
+7
 5
 29
 7
@@ -73419,7 +73559,7 @@ visit
 361
 5
 0
-510062710
+6606121
 361
 5
 4
@@ -78932,6 +79072,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 08:36:33 2026 PDT Database checkpoint started.~1b[0m
+0
+1775835393
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 08:22:20 2026 PDT Database checkpoint started.~1b[0m
 0
 1775834540
@@ -79223,12 +79369,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:39:21 2026 PDT Database checkpoint started.~1b[0m
 0
 1775788761
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:25:01 2026 PDT Database checkpoint started.~1b[0m
-0
-1775787901
 361
 5
 5
@@ -92091,7 +92231,7 @@ player
 last_update_time
 active
 allow_update_time
-202
+206
 1
 -1
 361
@@ -92385,6 +92525,18 @@ allow_update_time
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -96945,7 +97097,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-419696028
+1628010188
 361
 5
 4
@@ -99014,9 +99166,9 @@ Wizard
 
 23
 361
-1895
+1881
 596
-1897
+1933
 49
 594
 -1
@@ -99038,7 +99190,7 @@ Wizard
 13
 -1
 0
-262
+266
 5
 361
 5
@@ -99283,7 +99435,7 @@ hi
 4
 2
 0
-1775822216
+1775834700
 2
 localhost
 361
@@ -99293,7 +99445,7 @@ localhost
 361
 0
 0
-1775822434
+1775834869
 361
 1
 5
@@ -99315,7 +99467,7 @@ localhost
 29
 1
 4
-509
+520
 1
 339
 1
@@ -100334,6 +100486,28 @@ localhost
 1920
 1
 1921
+1
+1922
+1
+1923
+1
+1924
+1
+1925
+1
+1926
+1
+1927
+1
+1928
+1
+1929
+1
+1930
+1
+1931
+1
+1933
 361
 1
 5
@@ -100354,7 +100528,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 46246
+port 7777 from localhost, port 58168
 361
 0
 5
@@ -100373,11 +100547,11 @@ port 7777 from localhost, port 46246
 361
 5
 0
-1775834331
+1775835014
 361
 1
 0
-1410065167
+1410065156
 29
 0
 0
@@ -100535,7 +100709,7 @@ test
 361
 5
 0
-8
+17
 361
 5
 0
@@ -100563,7 +100737,7 @@ test
 361
 5
 0
-453
+456
 361
 5
 0
@@ -100578,7 +100752,7 @@ hunter
 361
 5
 1
-1896
+1932
 361
 5
 4
@@ -100685,6 +100859,18 @@ Base Camp
 7
 0
 1775819469
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
 361
 7
 5
@@ -101258,7 +101444,7 @@ Wizard
 3
 459
 504
-5
+6
 look_self
 361
 45
@@ -101276,6 +101462,10 @@ gather
 29
 -1
 _explore_info
+361
+45
+-1
+_biome_hazard
 361
 45
 -1
@@ -102544,7 +102734,7 @@ spawn_creature
 361
 45
 -1
-50
+58
 rp457_x0_y1
 rp457_x1_y1
 rp457_x1_y2
@@ -102595,7 +102785,15 @@ rp457_x18_y15
 rp457_x17_y15
 rp457_x16_y16
 rp457_x16_y17
-83
+rp457_x16_y18
+rp457_x17_y19
+rp457_x18_y19
+rp457_x19_y18
+rp457_x19_y17
+rp457_x18_y16
+rp457_x17_y16
+rp457_x16_y19
+91
 1
 466
 361
@@ -102794,6 +102992,38 @@ rp457_x16_y17
 5
 1
 1921
+361
+5
+1
+1922
+361
+5
+1
+1923
+361
+5
+1
+1924
+361
+5
+1
+1925
+361
+5
+1
+1926
+361
+5
+1
+1927
+361
+5
+1
+1929
+361
+5
+1
+1931
 361
 5
 5
@@ -110816,7 +111046,7 @@ survival monitor
 5
 -1
 546
-11
+12
 tick
 361
 45
@@ -110858,6 +111088,10 @@ _creature_tick
 45
 -1
 _dice_regen
+361
+45
+-1
+_status_effects
 361
 45
 -1
@@ -119288,7 +119522,7 @@ craft
 -1
 0
 0
-198
+202
 5
 29
 1
@@ -119551,6 +119785,18 @@ craft
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -120481,7 +120727,7 @@ _craft_matproc
 -1
 0
 0
-262
+266
 5
 361
 5
@@ -120936,6 +121182,18 @@ _craft_matproc
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -138667,7 +138925,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1692
 0
 0
-214
+218
 5
 1691
 5
@@ -138978,6 +139236,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1691
+7
+5
+1691
+7
+5
+1691
+7
+5
+1691
+7
 5
 1691
 7
@@ -139324,7 +139594,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1693
 0
 0
-214
+218
 5
 1692
 5
@@ -139635,6 +139905,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1692
+7
+5
+1692
+7
+5
+1692
+7
+5
+1692
+7
 5
 1692
 7
@@ -139981,7 +140263,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1694
 0
 0
-214
+218
 5
 1693
 5
@@ -140292,6 +140574,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1693
+7
+5
+1693
+7
+5
+1693
+7
+5
+1693
+7
 5
 1693
 7
@@ -140638,7 +140932,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1695
 0
 0
-214
+218
 5
 361
 5
@@ -140949,6 +141243,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -141295,7 +141601,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1719
 0
 0
-214
+218
 5
 361
 5
@@ -141606,6 +141912,18 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -144688,7 +145006,7 @@ bob
 1898
 0
 0
-214
+218
 5
 361
 5
@@ -145045,6 +145363,18 @@ none
 7
 1
 -1
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
 361
 7
 5
@@ -169478,7 +169808,7 @@ Desert
 0
 361
 -1
--1
+361
 -1
 452
 -1
@@ -169672,7 +170002,7 @@ Desert
 361
 5
 0
-0
+1
 361
 5
 5
@@ -172483,7 +172813,7 @@ sand viper
 1892
 0
 0
-253
+257
 5
 29
 1
@@ -172911,6 +173241,18 @@ sand viper
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -173268,7 +173610,7 @@ A serpentine creature. Venomous.
 -1
 0
 0
-253
+257
 5
 29
 1
@@ -173696,6 +174038,18 @@ A serpentine creature. Venomous.
 5
 361
 3
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
 5
 361
 7
@@ -174348,7 +174702,7 @@ Desert
 0
 361
 -1
-361
+1897
 -1
 452
 -1
@@ -174542,7 +174896,7 @@ Desert
 361
 5
 0
-1
+0
 361
 5
 5
@@ -174665,7 +175019,7 @@ runner meat
 -1
 5
 -1
--1
+1933
 0
 0
 33
@@ -174787,7 +175141,7 @@ testplayer
 -1
 0
 0
-214
+218
 5
 361
 5
@@ -174847,7 +175201,7 @@ testplayer
 4
 2
 0
-1775833986
+1775834090
 2
 localhost
 361
@@ -174856,7 +175210,7 @@ localhost
 361
 0
 0
-1775834228
+1775834677
 361
 1
 0
@@ -174895,7 +175249,7 @@ localhost
 361
 0
 2
-port 7777 from localhost, port 47018
+port 7777 from localhost, port 46446
 361
 0
 5
@@ -174914,7 +175268,7 @@ port 7777 from localhost, port 47018
 361
 5
 0
-1775834090
+1775834576
 361
 1
 5
@@ -175201,6 +175555,18 @@ ranger
 7
 0
 1775834029
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
 361
 7
 5
@@ -176606,7 +176972,7 @@ Desert
 -1
 456
 -1
--1
+1928
 0
 0
 39
@@ -179160,7 +179526,7 @@ Desert
 -1
 452
 -1
--1
+1922
 0
 0
 94
@@ -179197,7 +179563,7 @@ Desert
 1
 1898
 0
-1775834187
+1775834663
 0
 0
 361
@@ -179458,6 +179824,2960 @@ Desert
 5
 361
 5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1922
+Desert
+
+0
+361
+-1
+-1
+-1
+452
+-1
+1923
+0
+0
+94
+1
+457
+361
+5
+0
+2
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+1
+4
+3
+1
+1898
+0
+1775834657
+0
+1775834663
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+16
+361
+5
+0
+18
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1923
+Desert
+
+0
+361
+-1
+-1
+-1
+452
+-1
+1924
+0
+0
+94
+1
+457
+361
+5
+0
+2
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+1
+4
+3
+1
+1898
+0
+1775834598
+0
+1775834605
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+17
+361
+5
+0
+19
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1924
+Forest
+
+0
+361
+-1
+-1
+-1
+452
+-1
+1925
+0
+0
+94
+1
+457
+361
+5
+0
+1
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+1
+4
+3
+1
+1898
+0
+1775834605
+0
+1775834611
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+18
+361
+5
+0
+19
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1925
+Forest
+
+0
+361
+-1
+-1
+-1
+452
+-1
+1926
+0
+0
+94
+1
+457
+361
+5
+0
+1
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+1
+4
+3
+1
+1898
+0
+1775834611
+0
+1775834618
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+19
+361
+5
+0
+18
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1926
+Forest
+
+0
+361
+-1
+-1
+-1
+452
+-1
+1927
+0
+0
+94
+1
+457
+361
+5
+0
+1
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+1
+4
+3
+1
+1898
+0
+1775834618
+0
+1775834624
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+19
+361
+5
+0
+17
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1927
+Desert
+
+0
+361
+-1
+1928
+-1
+452
+-1
+1929
+0
+0
+94
+1
+457
+361
+5
+0
+2
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+1
+4
+3
+1
+1898
+0
+1775834624
+0
+1775834631
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+18
+361
+5
+0
+16
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1928
+
+
+0
+361
+1927
+-1
+-1
+456
+-1
+1930
+0
+0
+39
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+8
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1929
+Desert
+
+0
+361
+-1
+1930
+-1
+452
+-1
+1931
+0
+0
+94
+1
+457
+361
+5
+0
+2
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+1
+4
+3
+1
+1898
+0
+1775834631
+0
+1775834637
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+17
+361
+5
+0
+16
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1930
+
+
+0
+361
+1929
+-1
+-1
+456
+-1
+-1
+0
+0
+39
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+8
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1931
+Desert
+
+0
+361
+-1
+-1
+-1
+452
+-1
+-1
+0
+0
+94
+1
+457
+361
+5
+0
+2
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+1
+4
+3
+1
+1898
+0
+1775834650
+0
+1775834657
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+16
+361
+5
+0
+19
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#1932 recycled
+#1933
+runner meat
+
+0
+361
+1881
+-1
+-1
+5
+-1
+-1
+0
+0
+33
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+5
+2
+Stringy but edible.
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
 5
 361
 5
@@ -193760,51 +197080,147 @@ player:tell("  ** You are critically injured. Rest or find the Med Bay. **");
 endif
 .
 #6:225
-"Eat food. Restores hunger + applies Nourished (10min dice regen bonus).";
+"Eat a food item. Restores hunger and HP, grants Nourished buff.";
 p = player;
-tstr = (typeof(dobjstr) == STR) ? dobjstr | "";
-if ((tstr == "") && (args != {}))
-for w in (args)
-if (typeof(w) == STR)
-tstr = (tstr == "") ? w | ((tstr + " ") + w);
-endif
-endfor
-endif
-if (tstr == "")
-p:tell("Eat what?");
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+if (dstr == "")
+p:tell("Eat what? Usage: EAT <food>");
 return;
 endif
 "Find food in inventory";
-food = 0;
-for itm in (p.contents)
-n = itm.name;
-if (index(n, tstr) && ((((((((index(n, "soup") || index(n, "ration")) || index(n, "berries")) || index(n, "meat")) || index(n, "food")) || index(n, "donut")) || index(n, "pie")) || index(n, "fungus")) || index(n, "slush")))
-food = itm;
-break;
+target = $nothing;
+dstr_low = $string_utils:lowercase(dstr);
+for OBJ in (p.contents)
+oname = $string_utils:lowercase(OBJ.name);
+if ((oname == dstr_low) || (index(oname, dstr_low) > 0))
+target = OBJ;
 endif
 endfor
-if (food == 0)
-p:tell(("You don't have any edible '" + tstr) + "'.");
+if (!valid(target))
+p:tell("You are not carrying that.");
 return;
 endif
-fname = food.name;
-recycle(food);
-p.hunger = p.hunger + 30;
-if (p.hunger > 100)
-p.hunger = 100;
+"Check if it is edible (has food-like name)";
+tname = $string_utils:lowercase(target.name);
+is_food = 0;
+food_words = {"meat", "soup", "food", "ration", "fruit", "berries", "tuber", "fish", "stew", "bread", "cooked", "roasted", "grilled"};
+for w in (food_words)
+if (index(tname, w) > 0)
+is_food = 1;
 endif
-p.w_hp = p.w_hp + 5;
-if (p.w_hp > p.w_hp_max)
-p.w_hp = p.w_hp_max;
+endfor
+if (!is_food)
+p:tell("That doesn't look edible.");
+return;
 endif
-"Apply Nourished effect (10 minutes)";
-p.w_nourished = time() + 600;
-p:tell(("You eat the " + fname) + ". [hunger +30, HP +5, Nourished 10min]");
-p:tell("  Nourished: +1 dice regen rate for 10 minutes.");
+"Eat it";
+p:tell(("You eat the " + target.name) + ".");
+recycle(target);
+"Restore hunger and HP";
+hunger = 0;
+try
+hunger = p.w_hunger;
+except e (ANY)
+endtry
+hp = 0;
+hp_max = 50;
+try
+hp = p.w_hp;
+except e (ANY)
+endtry
+try
+hp_max = p.w_hp_max;
+except e (ANY)
+endtry
+"Cooked food: better healing + nourished. Raw: less benefit";
+is_cooked = 0;
+for w in ({"cooked", "roasted", "grilled", "soup", "stew", "ration"})
+if (index(tname, w) > 0)
+is_cooked = 1;
+endif
+endfor
+if (is_cooked)
+hunger_gain = 30;
+hp_gain = 15;
+p.w_nourished = 10;
+p:tell("Nourished: +dice regen for 10 ticks.");
+else
+hunger_gain = 15;
+hp_gain = 5;
+p:tell("Raw food. Cook it for better benefits.");
+endif
+p.w_hunger = hunger + hunger_gain;
+if (p.w_hunger > 100)
+p.w_hunger = 100;
+endif
+if ((hp + hp_gain) > hp_max)
+hp_gain = hp_max - hp;
+endif
+if (hp_gain > 0)
+p.w_hp = p.w_hp + hp_gain;
+endif
+p:tell((((("Hunger: " + tostr(p.w_hunger)) + "/100  HP: ") + tostr(p.w_hp)) + "/") + tostr(hp_max));
 .
 #6:226
-"Alias for eat  consume a liquid.";
-this:eat(@args);
+"Drink a liquid item.";
+p = player;
+dstr = (typeof(dobjstr) == STR) ? dobjstr | "";
+if (dstr == "")
+p:tell("Drink what?");
+return;
+endif
+target = $nothing;
+dstr_low = $string_utils:lowercase(dstr);
+for OBJ in (p.contents)
+oname = $string_utils:lowercase(OBJ.name);
+if ((oname == dstr_low) || (index(oname, dstr_low) > 0))
+target = OBJ;
+endif
+endfor
+if (!valid(target))
+p:tell("You are not carrying that.");
+return;
+endif
+tname = $string_utils:lowercase(target.name);
+is_drink = 0;
+for w in ({"water", "canteen", "drink", "juice", "liquid", "distilled"})
+if (index(tname, w) > 0)
+is_drink = 1;
+endif
+endfor
+if (!is_drink)
+p:tell("You can't drink that.");
+return;
+endif
+p:tell(("You drink the " + target.name) + ".");
+recycle(target);
+hunger = 0;
+try
+hunger = p.w_hunger;
+except e (ANY)
+endtry
+p.w_hunger = hunger + 20;
+if (p.w_hunger > 100)
+p.w_hunger = 100;
+endif
+hp = 0;
+hp_max = 50;
+try
+hp = p.w_hp;
+except e (ANY)
+endtry
+try
+hp_max = p.w_hp_max;
+except e (ANY)
+endtry
+heal = 3;
+if ((hp + heal) > hp_max)
+heal = hp_max - hp;
+endif
+if (heal > 0)
+p.w_hp = p.w_hp + heal;
+endif
+p:tell((((("Hunger: " + tostr(p.w_hunger)) + "/100  HP: ") + tostr(p.w_hp)) + "/") + tostr(hp_max));
 .
 #6:227
 "Rest to recover stamina.";
@@ -194112,7 +197528,7 @@ endif
 p:tell("You cannot go northwest.");
 .
 #6:240
-"Status  show your combat stats, hunger, dice pools.";
+"Status  show combat stats, hunger, dice pools, status effects.";
 p = player;
 hp = 0;
 hp_max = 50;
@@ -194179,11 +197595,6 @@ try
 bg = p.w_background;
 except e (ANY)
 endtry
-nourished = 0;
-try
-nourished = p.w_nourished;
-except e (ANY)
-endtry
 p:tell(("=== " + p.name) + " ===");
 p:tell("  Background: " + bg);
 p:tell((("  Health:  " + tostr(hp)) + "/") + tostr(hp_max));
@@ -194192,8 +197603,50 @@ p:tell("");
 p:tell((("  Stamina dice:    " + tostr(stam)) + "/") + tostr(stam_max));
 p:tell((("  Clarity dice:    " + tostr(clar)) + "/") + tostr(clar_max));
 p:tell((("  Aggression dice: " + tostr(agg)) + "/") + tostr(agg_max));
-if (nourished > 0)
-p:tell("  [Nourished] +dice regen");
+"Status effects";
+effects = "";
+nour = 0;
+try
+nour = p.w_nourished;
+except e (ANY)
+endtry
+if (nour > 0)
+effects = ((effects + " [Nourished ") + tostr(nour)) + "t]";
+endif
+bleed = 0;
+try
+bleed = p.w_bleeding;
+except e (ANY)
+endtry
+if (bleed > 0)
+effects = ((effects + " [BLEEDING ") + tostr(bleed)) + "t]";
+endif
+band = 0;
+try
+band = p.w_bandaged;
+except e (ANY)
+endtry
+if (band > 0)
+effects = ((effects + " [Bandaged ") + tostr(band)) + "t]";
+endif
+burn = 0;
+try
+burn = p.w_burned;
+except e (ANY)
+endtry
+if (burn > 0)
+effects = ((effects + " [BURNED ") + tostr(burn)) + "t]";
+endif
+dis = 0;
+try
+dis = p.w_diseased;
+except e (ANY)
+endtry
+if (dis > 0)
+effects = ((effects + " [DISEASED ") + tostr(dis)) + "t]";
+endif
+if (effects != "")
+p:tell("  Effects:" + effects);
 endif
 p:tell("");
 p:tell((((("  SP: " + tostr(sp)) + "/") + tostr(sp_cap)) + "  Credits: ") + tostr(credits));
@@ -197962,6 +201415,78 @@ except e (ANY)
 endtry
 endif
 endfor
+.
+#6:375
+"Apply bandage to stop bleeding and heal. Needs First Aid skill or bandage item.";
+p = player;
+"Check for First Aid skill";
+has_skill = 0;
+skills = {};
+try
+skills = p.w_learned;
+except e (ANY)
+endtry
+for sk in (skills)
+sname = sk;
+if (typeof(sk) == LIST)
+sname = sk[1];
+endif
+if (sname == "first aid")
+has_skill = 1;
+endif
+endfor
+"Check for bandage item in inventory";
+bandage_item = $nothing;
+for OBJ in (p.contents)
+oname = $string_utils:lowercase(OBJ.name);
+if ((index(oname, "bandage") > 0) || (index(oname, "salve") > 0))
+bandage_item = OBJ;
+endif
+endfor
+if ((!has_skill) && (!valid(bandage_item)))
+p:tell("You need the First Aid skill or a bandage item.");
+p:tell("Craft a fibrous bandage on the basic crafting tool.");
+return;
+endif
+"Apply bandage";
+if (valid(bandage_item))
+"Consume the bandage item";
+p:tell(("You apply the " + bandage_item.name) + ".");
+recycle(bandage_item);
+else
+p:tell("You bandage your wounds with practiced hands.");
+endif
+"Stop bleeding";
+was_bleeding = 0;
+try
+was_bleeding = p.w_bleeding;
+except e (ANY)
+endtry
+p.w_bleeding = 0;
+p.w_bandaged = 5;
+if (was_bleeding > 0)
+p:tell("The bleeding stops.");
+endif
+p:tell("Bandaged: healing over time for 5 ticks.");
+"Immediate small heal";
+hp = 0;
+hp_max = 50;
+try
+hp = p.w_hp;
+except e (ANY)
+endtry
+try
+hp_max = p.w_hp_max;
+except e (ANY)
+endtry
+heal = 5;
+if ((hp + heal) > hp_max)
+heal = hp_max - hp;
+endif
+if (heal > 0)
+p.w_hp = p.w_hp + heal;
+p:tell(((((("Healed " + tostr(heal)) + " HP. [") + tostr(p.w_hp)) + "/") + tostr(hp_max)) + "]");
+endif
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -251517,6 +255042,47 @@ elseif (pct >= 100)
 player:tell("Fully explored.");
 endif
 .
+#452:5
+"Check biome hazards when player enters room.";
+"Called after movement.";
+b = this.biome;
+if (b == 5)
+"Fungal zone  25% chance of disease";
+if (random(100) <= 25)
+dis = 0;
+try
+dis = player.w_diseased;
+except e (ANY)
+endtry
+if (dis == 0)
+player.w_diseased = 8;
+player:tell("WARNING: The fungal spores infect you! You feel ill.");
+player:tell("[DISEASED] -1 HP per tick. Seek an infirmary or wait it out.");
+endif
+endif
+elseif (b == 6)
+"Volcanic zone  20% chance of burns";
+if (random(100) <= 20)
+burn = 0;
+try
+burn = player.w_burned;
+except e (ANY)
+endtry
+if (burn == 0)
+player.w_burned = 5;
+player:tell("WARNING: Searing heat burns you!");
+player:tell("[BURNED] Reduced dice regeneration for 5 ticks.");
+endif
+endif
+"Also take 1-3 damage from heat";
+hdmg = random(3);
+player.w_hp = player.w_hp - hdmg;
+if (player.w_hp < 0)
+player.w_hp = 0;
+endif
+player:tell(("The heat sears you for " + tostr(hdmg)) + " damage.");
+endif
+.
 #453:0
 "Gather resources from this deposit.";
 if (this.count <= 0)
@@ -252731,36 +256297,55 @@ endtry
 endfor
 .
 #545:10
-"Regenerate dice pools for all connected players.";
+"Regenerate dice pools. Burns halve regen rate.";
 set_task_perms(this.owner);
 for p in (connected_players())
 try
-"Regen 1 die per pool per tick (60s)";
+burn = 0;
+try
+burn = p.w_burned;
+except e (ANY)
+endtry
 sm = 3;
 try
 sm = p.w_stam_max;
 except e (ANY)
 endtry
-if (p.w_stam < sm)
-p.w_stam = p.w_stam + 1;
-endif
 cm = 3;
 try
 cm = p.w_clar_max;
 except e (ANY)
 endtry
-if (p.w_clar < cm)
-p.w_clar = p.w_clar + 1;
-endif
 am = 3;
 try
 am = p.w_agg_max;
 except e (ANY)
 endtry
+if (burn > 0)
+"Burned: only regen every other tick (50% rate)";
+if ((burn % 2) == 0)
+if (p.w_stam < sm)
+p.w_stam = p.w_stam + 1;
+endif
+if (p.w_clar < cm)
+p.w_clar = p.w_clar + 1;
+endif
 if (p.w_agg < am)
 p.w_agg = p.w_agg + 1;
 endif
-"Nourished bonus: extra die regen";
+endif
+else
+if (p.w_stam < sm)
+p.w_stam = p.w_stam + 1;
+endif
+if (p.w_clar < cm)
+p.w_clar = p.w_clar + 1;
+endif
+if (p.w_agg < am)
+p.w_agg = p.w_agg + 1;
+endif
+endif
+"Nourished bonus: extra die";
 nour = 0;
 try
 nour = p.w_nourished;
@@ -252777,6 +256362,85 @@ if (p.w_agg < am)
 p.w_agg = p.w_agg + 1;
 endif
 p.w_nourished = nour - 1;
+endif
+except e (ANY)
+endtry
+endfor
+.
+#545:11
+"Process status effects for all connected players.";
+set_task_perms(this.owner);
+for p in (connected_players())
+try
+"Bleeding: -2 HP per tick";
+bleed = 0;
+try
+bleed = p.w_bleeding;
+except e (ANY)
+endtry
+if (bleed > 0)
+p.w_hp = p.w_hp - 2;
+if (p.w_hp < 0)
+p.w_hp = 0;
+endif
+p.w_bleeding = bleed - 1;
+if (bleed <= 1)
+p:tell("Your bleeding has stopped.");
+else
+p:tell("You are bleeding... (-2 HP)");
+endif
+endif
+"Bandaged: +3 HP per tick";
+band = 0;
+try
+band = p.w_bandaged;
+except e (ANY)
+endtry
+if (band > 0)
+hp_max = 50;
+try
+hp_max = p.w_hp_max;
+except e (ANY)
+endtry
+heal = 3;
+if ((p.w_hp + heal) > hp_max)
+heal = hp_max - p.w_hp;
+endif
+if (heal > 0)
+p.w_hp = p.w_hp + heal;
+p:tell(((((("Bandaged: +" + tostr(heal)) + " HP [") + tostr(p.w_hp)) + "/") + tostr(hp_max)) + "]");
+endif
+p.w_bandaged = band - 1;
+endif
+"Burned: no dice regen this tick (handled in _dice_regen)";
+burn = 0;
+try
+burn = p.w_burned;
+except e (ANY)
+endtry
+if (burn > 0)
+p.w_burned = burn - 1;
+if (burn <= 1)
+p:tell("Your burns have healed.");
+endif
+endif
+"Diseased: -1 HP per tick + reduced stamina";
+dis = 0;
+try
+dis = p.w_diseased;
+except e (ANY)
+endtry
+if (dis > 0)
+p.w_hp = p.w_hp - 1;
+if (p.w_hp < 0)
+p.w_hp = 0;
+endif
+p.w_diseased = dis - 1;
+if (dis <= 1)
+p:tell("You have recovered from the disease.");
+else
+p:tell("You feel sick... (-1 HP)");
+endif
 endif
 except e (ANY)
 endtry
@@ -254272,25 +257936,26 @@ if ((now - this.c_attack_timer) < 30)
 return;
 endif
 this.c_attack_timer = now;
-"Find a player in the room";
 target = $nothing;
 for OBJ in (this.location.contents)
-if (is_player(OBJ) && (OBJ.w_hp > 0))
+if (is_player(OBJ))
+try
+if (OBJ.w_hp > 0)
 target = OBJ;
+endif
+except e (ANY)
+endtry
 endif
 endfor
 if (!valid(target))
 return;
 endif
-"Attack!";
 dmg = this.c_damage;
-"Random variance +-30%";
 variance = (dmg * random(60)) / 100;
 dmg = (dmg - ((dmg * 30) / 100)) + variance;
 if (dmg < 1)
 dmg = 1;
 endif
-"Apply defense";
 def = 0;
 try
 def = target.w_armor.w_defense;
@@ -254302,6 +257967,19 @@ dmg = 1;
 endif
 target.w_hp = target.w_hp - dmg;
 this.location:announce_all(((((this.name + " attacks ") + target.name) + " for ") + tostr(dmg)) + " damage!");
+"30% chance to cause bleeding";
+if (random(100) <= 30)
+try
+bleed = 0;
+try
+bleed = target.w_bleeding;
+except e (ANY)
+endtry
+target.w_bleeding = bleed + 3;
+target:tell("You are bleeding!");
+except e (ANY)
+endtry
+endif
 if (target.w_hp <= 0)
 target.w_hp = 0;
 target:tell(("You have been killed by " + this.name) + "!");
@@ -254341,7 +258019,7 @@ dest:announce_all(this.name + " wanders in.");
 .
 0 clocks
 2 queued tasks
-0 6 1775834547 419696028
+0 6 1775835417 1628010188
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -254414,11 +258092,11 @@ WAIF
 11
 task_id
 0
-419696028
+1628010188
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775834643 510062710
+0 6 1775835543 6606121
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -254491,7 +258169,7 @@ WAIF
 11
 taskid
 0
-510062710
+6606121
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
