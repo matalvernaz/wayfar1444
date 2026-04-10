@@ -1,75 +1,70 @@
 # Wayfar 1444 — TODO
-# Goal: faithful recreation of the original 2010-2016 game per wiki
-# Ordered by dependency chain — each item unblocks the ones below it
+# Survival colonization: survive → establish → automate → colony → expand
+# Ordered by what a player actually experiences
 
-## Phase 1 — Foundation (these unblock everything else)
+## Phase 1 — The Planet (architectural foundation)
 
-- [x] **#19b** Fix biomes — 5 major (Mountain/Forest/Desert/Jungle/Underwater) + 2 dangerous overlays (Fungal Zone/Volcanic)
-- [x] **#8** Skill tree — THE critical dependency. 19 categories per wiki with exact SP costs and prereq chains. SP earned from actions (not credits). SP cap 2500 (+100/reroll to 3500). `score`/`skills` to view/purchase. Skills grant commands: PUNCH/KICK (Self Defense), BANDAGE (First Aid), HACK (Novice Hacker), SURVEY (Terrain Details), DISCOVER (Unpaid Cartographer), PURIFY (Better Materials), IMPROVISE (Improvisation), FOCUS (Situational Awareness), etc. Replaces current 8-skill credit system entirely.
-- [x] **#42** Resource classes — 4 types each with own starter tool and material tiers. Minerals: inert metal → solid-phase → responsive → transuranic + sand variants. Organics: native fiber → native lumber → adaptive-phase fiber + berries/fungus/tubers. Energy: solar kretherson → thermal → dense thermal → intrinsic field. Water: unpurified water. Each class has a harvesting tool progression.
-- [x] **#12** Expanded crafting tools — unlocks the entire item tree. Wiki lists 8+ tools: structure crafting tool (buildings, sector center), equipment crafting tool (weapons, armor, gadgets), defensive crafting tool (turrets, shields), micro-bot crafting tool (robots), chemistry tool, food processor, maker block, cooking fire, engineering tool (automation), electronics processor (chips, AI), component crafting tool. Each has own recipe list per wiki. `list <tool>` shows recipes.
+- [ ] **Planet generation** — `@create-planet <name> <size> <type>` wizard verb. Bounded coords (e.g. -50 to +50), seed-based Perlin for consistent biomes, planet type affects biome ratios (jungle world, desert world, balanced). ODS creates rooms lazily within bounds. Edges are impassable/ocean. POIs placed during generation (pirate bases, ruins, NPC settlements).
+- [ ] **Random landing** — dispatch picks random coordinates far from other players' colonies. No shared crash site. Per-player landing zone. Wiki: shuttle ensures no colonies too close.
+- [ ] **Exploration** (#16) — `EXPLORE` fills room 0-100%. At 100%: `MEMORIZE` for fast `TRAVEL`, `DISCOVER` for artifacts/specimens (req Unpaid Cartographer skill). `map biomes` for surrounding area. Terrain surveyor income. This is how players navigate.
+- [ ] **Creatures** (#6) — biome-specific wildlife spawning naturally. Carnivores (dangerous), herbivores (resources), named bosses (Mother Muex, planet boss). Loot varies by species. `CON` to assess. Creature AI roaming between tiles. Makes the world alive.
 
-## Phase 2 — Core Systems (depend on Phase 1)
+## Phase 2 — Survival Progression (first hours of gameplay)
 
-- [x] **#41** Sector center recipe fix — needs structure crafting tool from #12. Wiki recipe: 2x simple structure base + 10x inert beam + 8x inert siding + 4x structure power core. Complexity 85.0. Up to 5 per player.
-- [x] **#14** Item quality — resources get quality 0-100+ on harvest (varies by tool quality and skill). Crafted item quality = avg ingredient quality + skill bonus. Refining converts bulk low-quality → fewer high-quality. Core to endgame loop.
-- [x] **#24** Material processor — tool (3x weak power emitter + 4x solid-phase metal + 4x inert casing). Raw → crafting materials: fiber cloth, solid-phase alloy, rare earth metal, polymer brick, electronics-grade silica, ceramic plate, nano-silk fabric etc. Needed for advanced crafting.
-- [x] **#43** Building stats — buildings have crime/civ/econ/rec/ind ratings. Ingredient quality affects building quality.
-- [x] **#9b** Combat polish — dice regen over time; Nourished effect (eating → bonus dice + max HP + faster regen); health does NOT regen naturally (heal manually per wiki); `ST` shows active effects.
-- [ ] **#6** Creatures — biome-specific wildlife (carnivores/herbivores); named bosses (Mother Muex); catbug; loot varies by species; creature AI roaming; `CON` assessment.
-- [ ] **#44** Item degradation — weapons wear with use, armor degrades on damage. `REPAIR <item>` with the crafting tool that made it.
+- [ ] **Early game polish** — hand-gathering is slow (1 unit, no quality). Tool-gathering is better (2 units, quality). Cooking fire for food. Eating raw food = less benefit. Shelter protects (future: weather/creature raids). Hunger/health pressure creates urgency.
+- [ ] **Building progression** — enforce crafting chain: shelter → refinery → processing plant → automated harvester → factory. Sector center is a MILESTONE deep in the tree, not early game. Each building step is meaningful and unlocks new capabilities.
+- [ ] **Item degradation** (#44) — weapons wear with use, armor degrades on damage. `REPAIR <item>` holding the tool that made it. Keeps crafting demand alive.
+- [ ] **Medical + status effects** (#31, #32) — `BANDAGE` (First Aid skill), bleeding/burns/diseases. Infirmary building heals over time. Dangerous biomes cause diseases. Real consequences for combat and exploration.
+- [ ] **Communications** (#4) — `say` (local), `chat` (global chatnet), `chatnet history`, `page` (private DM), `who` (online players). Additional nets later. Players need to talk.
 
-## Phase 3 — Progression & Economy (depend on skills + crafting tools)
+## Phase 3 — Colony Building (hours 5-20 of gameplay)
 
-- [ ] **#15** Reroll/ascension — complete background victory condition → reroll points. On reroll: lose skills/SP, keep buildings/vehicles/inventory. Respawn at Central Control. `forget <skill>` refunds 75% SP.
-- [ ] **#17** Jobs — ~30 repeatable achievements per wiki (FARMER, FACTORIUM LABOR, FLORA CATALOG, CENTER OF ATTENTION, PLANETARY HERO, etc.). Each awards SP and/or credits with repeat limits.
-- [ ] **#16** Exploration — `EXPLORE` fills room 0-100%. At 100%: `MEMORIZE` (fast TRAVEL), `DISCOVER` (req Unpaid Cartographer). Terrain surveyor income. Feeds Botanist and Lab Tech backgrounds.
-- [ ] **#31** Medical — `USE BANDAGE` / `BANDAGE` (First Aid skill); infirmary with clinic (auto-heal, diagnose diseases); `ASSIST <ally>` party healing; e-med tools (clarity roll).
-- [ ] **#32** Status effects — bleeding (bandages/coagulant), burns (reduced dice pools, salves/patches), diseases (from biomes, azocillin/antitoxin/omni-vaccine).
-- [ ] **#30** Weapon modules — module capacity on weapons; permanently installed; stat bonuses.
-- [ ] **#25** Blueprints — tools have default + discoverable blueprints. `LOAD <chip> onto <tool>` / `DOWNLOAD <tool>`. Blank chips from electronics processor. `lookup <thing> with datapad`.
-- [ ] **#23** Refining — 3 buildings: refinery (minerals), organic processing plant, nuclear enrichment plant. Mass-add → process → fewer over-maxed quality units.
-- [ ] **#20** Governor's office verbs — citizens/population, exile, govern, sectormap, construction, buildings, resources, colony, events/history, rollcall, collection, mods/modules.
+- [ ] **Refining** (#23) — 3 buildings (refinery/organic plant/nuclear plant). Bulk low-quality → fewer high-quality. The quality loop that makes endgame crafting work.
+- [ ] **Automated crafting** (#27) — engineering tool machines with input/output hoppers. Colony runs production without player input.
+- [ ] **Governor's office** (#20) — colony management verbs: citizens, sectormap, construction rights, collection config, events log, rollcall.
+- [ ] **Jobs** (#17) — ~30 repeatable achievements (FARMER, FACTORIUM LABOR, STRUCTURE CRAFTER, CENTER OF ATTENTION, PLANETARY HERO, etc.). Awards SP/credits. Drives progression.
+- [ ] **Reroll/ascension** (#15) — complete background victory condition → reroll points. Lose skills/SP, keep buildings/inventory. SP cap +100 per reroll to 3500.
+- [ ] **Blueprints** (#25) — discoverable recipes. `LOAD chip onto tool`. Found at pirate bases, discoveries. `lookup <thing> with datapad`.
 
-## Phase 4 — World & Content
+## Phase 4 — The Wider World
 
-- [ ] **#4** Communications — `say` (local), `chat` (global chatnet), `chatnet history`, `page` (private), `who`; additional nets: critternet/griefnet/mailnet/comedynet (toggleable + history); `corp` chat.
-- [ ] **#18** Central Complex expansion — expand starting area into full station. Ship refueling, smartpad shop, medical kits, colony dispatch + link-up terminals.
-- [ ] **#7** Multi-planet — different biome ratios per planet. Shuttle/drop pod travel. 5 solar systems (DSO-12 first).
-- [ ] **#21** Weather — visible in room descriptions, affects gameplay.
-- [ ] **#34** Farming — seeding tool, farm plots, agricultural pod building, landslide farming harvestor.
-- [ ] **#35** Colony beacon — other players link-up to your colony via terminal.
-- [ ] **#37** Fishing — wooden fishing rig, salt water fishing gear; CAREER ANGLER job.
-- [ ] **#38** Artifacts & research — Laboratory building; research q-locked items; odd trinket → relic; feeds Lab Tech/Botanist backgrounds.
-- [ ] **#45** NPC settlements — establish organically on planets; pirate outposts, faction bases (lootable), droid factories.
-- [ ] **#46** Points of interest — black markets, moons (blueprints + rare resources).
+- [ ] **Central Complex expansion** (#18) — full space station hub. Shops (smartpads, medical kits, ammo). Ship refueling. Link-up terminal for joining colonies.
+- [ ] **Multi-planet** (#7) — different biome ratios per planet. Shuttle/drop pod travel. 5 solar systems (DSO-12 first). Different resource availability drives travel.
+- [ ] **Vehicles** (#28) — q-cycle (no skill), land vehicles (Driving skill), aircraft (Flying). Vehicle assembly station.
+- [ ] **Starships** (#29) — starship complex building, assembly tool. Ships = rooms (bridge/generator/turrets/engineering). Warp gates. Asteroid mining.
+- [ ] **Farming** (#34) — seeding tool, farm plots, agricultural pod building. Landslide farming harvestor.
+- [ ] **Fishing** (#37) — fishing gear, alien waters. CAREER ANGLER job.
+- [ ] **Artifacts & research** (#38) — Laboratory building. Research q-locked items → relics, chips, equipment.
 
 ## Phase 5 — Advanced / Endgame
 
-- [ ] **#26** Hacking — smartpads, HACK command, q-chip programs, outlaw status.
-- [ ] **#27** Automated crafting — engineering tool machines with input/output hoppers.
-- [ ] **#28** Vehicles — q-cycle (no skill), land (Driving), aircraft (Flying); vehicle assembly station.
-- [ ] **#29** Starships — starship complex, assembly tool; ships = rooms; warp gates; asteroid mining.
-- [ ] **#33** Implants — augmentations from black markets.
-- [ ] **#36** Robots — micro-bot tool, robotic fabrication table, robot control hand-pad.
-- [ ] **#39** Factions — sector allegiance, faction HQ, corp chat, political systems.
-- [ ] **#40** Black markets — 6 randomized shop types per planet.
+- [ ] **Hacking** (#26) — smartpads, HACK command, q-chip programs, outlaw status.
+- [ ] **Robots** (#36) — micro-bot tool, robotic fabrication table, robot control.
+- [ ] **Factions** (#39) — sector allegiance, faction HQ, political systems.
+- [ ] **Black markets** (#40) — 6 randomized shop types per planet.
+- [ ] **Implants** (#33) — augmentations from black markets.
+- [ ] **NPC settlements** (#45) — establish organically on planets. Pirate outposts, faction bases.
+- [ ] **Weapon modules** (#30) — module capacity, permanently installed, stat bonuses.
 
 ## Bugs / Cosmetic
 
 - [ ] **#10** Silence Heart Of God `#150` division-by-zero noise
+- [ ] Clean up duplicate/orphaned verbs on $player from iterative development
 
-## Completed
+## Completed (systems built, may need revision as architecture changes)
 
-- [x] Wiki accuracy pass — backgrounds (Ranger/Fabricator/Retiree/Student/Lab Tech/Botanist), resource names (inert metal/native fiber/unpurified water/salvaged components), craft syntax (`craft X on <tool>`), commands (CREWHIRE/CREWFIRE/SURVEY), 8-direction movement, 12hr worker delivery, wiki recipes
-- [x] New player flow — Shuttle → Commerce Main Junction → Complex-Alpha Mall Lobby → background → DISPATCH → drop pod to Kepler-7
-- [x] Equipment slots — weapon/armor/gadget/special; WIELD/WEAR/EQUIP/REMOVE/GEAR/ACTIONS; combat integration
-- [x] Harvesting tools — WIELD → SURVEY/SCAN → CONFIGURE → HARVEST (2x yield)
-- [x] NPC workers — CREWHIRE/CREWFIRE; 12hr delivery; 50-item stockpile cap
-- [x] Per-player colonies — sector center (plaza/governor/factorium); colony/enter/out/labor
-- [x] CAC economy — sell/balance/prices; quality affects price
-- [x] Procedural world — 7 Perlin biomes; on-demand rooms; ANSI map; 8-direction movement
-- [x] Survival — hunger/health/stamina decay; heartbeat; death/respawn
-- [x] Combat basics — dice pools; KILL/SWING/FIRE/TAC/CON; weapon/armor bonuses; creatures + loot
-- [x] Crafting — basic tool wiki recipes; item quality on harvest
-- [x] Connection — create command, @quit, error suppression
+- [x] Biomes — 7 types (5 major + 2 dangerous overlay)
+- [x] Skill tree — 19 categories, 77 skills, SP-based
+- [x] Resource classes — 4 types, tiered yields, tool compatibility, respawning
+- [x] Crafting tools — tool-based dispatch, recipes on tool objects
+- [x] Equipment slots — weapon/armor/gadget/special with combat integration
+- [x] Harvesting — WIELD/SURVEY/CONFIGURE/HARVEST with 4 starter tools
+- [x] Combat — dice pools, KILL/SWING/FIRE/TAC/CON, weapon/armor bonuses
+- [x] NPC workers — CREWHIRE/CREWFIRE, 12hr delivery, stockpile cap
+- [x] Per-player colonies — sector center (3 rooms), colony/enter/out/labor
+- [x] Economy — sell with quality pricing, credits
+- [x] Item quality — harvest quality, crafting skill bonus, grade display
+- [x] Material processor — raw → refined materials
+- [x] Building stats — crime/civ/econ/rec/ind ratings
+- [x] New player flow — Alpha Complex → background → dispatch
+- [x] Connection — create command, @quit, confunc
