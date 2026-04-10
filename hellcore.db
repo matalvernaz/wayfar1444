@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
 1705
-3522
+3524
 0
 4
 65
@@ -8394,7 +8394,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--73
+-74
 361
 5
 4
@@ -78106,6 +78106,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:50:15 2026 PDT Database checkpoint started.~1b[0m
+0
+1775789415
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:39:21 2026 PDT Database checkpoint started.~1b[0m
 0
 1775788761
@@ -78397,12 +78403,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 20:52:45 2026 PDT Database checkpoint started.~1b[0m
 0
 1775706765
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 19:52:45 2026 PDT Database checkpoint started.~1b[0m
-0
-1775703165
 361
 5
 5
@@ -95888,7 +95888,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1073671976
+739236970
 361
 5
 4
@@ -98163,7 +98163,7 @@ hi
 4
 2
 0
-1775787834
+1775788406
 2
 localhost
 361
@@ -98173,7 +98173,7 @@ localhost
 361
 0
 0
-1775787909
+1775788769
 361
 1
 5
@@ -98842,7 +98842,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 41266
+port 7777 from localhost, port 42222
 361
 0
 5
@@ -98861,7 +98861,7 @@ port 7777 from localhost, port 41266
 361
 5
 0
-1775788406
+1775789259
 361
 1
 0
@@ -117724,12 +117724,20 @@ basic crafting tool
 5
 593
 647
-2
+4
 list_recipes
 361
 13
 -1
 craft_item
+361
+29
+-1
+_craft_structure
+361
+29
+-1
+_craft_dispatch
 361
 29
 -1
@@ -153773,7 +153781,7 @@ player.w_sp = old - 1;
 player:tell("ok: " + tostr(player.w_sp));
 .
 #6:254
-"Craft items. Usage: craft <recipe> on <tool>. Partial names work.";
+"Craft items. Usage: craft <recipe> on <tool>.";
 p = player;
 raw = "";
 for w in (args)
@@ -153784,7 +153792,6 @@ endfor
 if ((typeof(dobjstr) == STR) && (dobjstr != ""))
 raw = dobjstr;
 endif
-"Split on ' on ' to get recipe and tool name";
 recipe = raw;
 tool_name = "";
 on_idx = rindex(raw, " on ");
@@ -153792,7 +153799,6 @@ if (on_idx > 0)
 recipe = raw[1..on_idx - 1];
 tool_name = raw[on_idx + 4..$];
 endif
-"Find tool in inventory";
 tool = 0;
 if (tool_name != "")
 for itm in (p.contents)
@@ -153802,11 +153808,10 @@ break;
 endif
 endfor
 if (tool == 0)
-p:tell(("You don't have a tool matching '" + tool_name) + "'.");
+p:tell(("No tool matching '" + tool_name) + "'.");
 return;
 endif
 else
-"No tool specified  find first crafting tool";
 for itm in (p.contents)
 if (is_a(itm, #592))
 tool = itm;
@@ -153818,17 +153823,22 @@ p:tell("You need a crafting tool.");
 return;
 endif
 endif
-"No recipe = show help";
 if (((recipe == "") || (recipe == "list")) || (recipe == "help"))
 tool:list_recipes();
 return;
 endif
-"Dispatch to tool";
+"Try tool-specific dispatch first";
 try
-result = tool:craft_item(recipe);
+if (tool:_craft_dispatch(recipe))
+return;
+endif
 except e (ANY)
-p:tell("That tool doesn't know how to craft that.");
-p:tell(("Type LIST " + tool.name) + " to see recipes.");
+endtry
+"Then try base craft_item";
+try
+tool:craft_item(recipe);
+except e (ANY)
+p:tell(("Error crafting. LIST " + tool.name) + " for recipes.");
 endtry
 .
 #6:255
@@ -211256,6 +211266,241 @@ endif
 p:tell((("Unknown recipe: '" + tgt) + "' on ") + tn);
 p:tell(("Type LIST " + tn) + " to see available recipes.");
 .
+#592:2
+"Structure crafting tool recipes.";
+tgt = args[1];
+p = player;
+"INERT BEAM: 2x inert metal + 1x inert block";
+if (index(tgt, "beam"))
+fm = {};
+fb = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(fm) < 2) && index(n, "inert metal"))
+fm = listappend(fm, itm);
+endif
+if ((length(fb) == 0) && index(n, "inert block"))
+fb = listappend(fb, itm);
+endif
+endfor
+if (length(fm) < 2)
+p:tell("Need 2x inert metal.");
+return 1;
+endif
+if (length(fb) == 0)
+p:tell("Need 1x inert block.");
+return 1;
+endif
+recycle(fm[1]);
+recycle(fm[2]);
+recycle(fb[1]);
+r = create($thing);
+r.name = "inert beam";
+r.description = "Structural support beam.";
+move(r, p);
+p:tell("You forge an inert beam. [+component]");
+p:award_sp(2);
+return 1;
+endif
+"INERT SIDING: 1x inert metal + 1x native fiber";
+if (index(tgt, "siding"))
+fm = {};
+ff = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(fm) == 0) && index(n, "inert metal"))
+fm = listappend(fm, itm);
+endif
+if ((length(ff) == 0) && index(n, "fiber"))
+ff = listappend(ff, itm);
+endif
+endfor
+if (length(fm) == 0)
+p:tell("Need 1x inert metal.");
+return 1;
+endif
+if (length(ff) == 0)
+p:tell("Need 1x native fiber.");
+return 1;
+endif
+recycle(fm[1]);
+recycle(ff[1]);
+r = create($thing);
+r.name = "inert siding";
+r.description = "Wall panel.";
+move(r, p);
+p:tell("You shape inert siding. [+component]");
+p:award_sp(2);
+return 1;
+endif
+"SIMPLE STRUCTURE BASE: 2x inert block + 2x inert metal";
+if (index(tgt, "structure base") || index(tgt, "simple struct"))
+fb = {};
+fm = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(fb) < 2) && index(n, "inert block"))
+fb = listappend(fb, itm);
+endif
+if ((length(fm) < 2) && index(n, "inert metal"))
+fm = listappend(fm, itm);
+endif
+endfor
+if (length(fb) < 2)
+p:tell("Need 2x inert block. Have: " + tostr(length(fb)));
+return 1;
+endif
+if (length(fm) < 2)
+p:tell("Need 2x inert metal. Have: " + tostr(length(fm)));
+return 1;
+endif
+recycle(fb[1]);
+recycle(fb[2]);
+recycle(fm[1]);
+recycle(fm[2]);
+r = create($thing);
+r.name = "simple structure base";
+r.description = "Building foundation.";
+move(r, p);
+p:tell("You construct a simple structure base. [+component]");
+p:award_sp(3);
+return 1;
+endif
+"STRUCTURE POWER CORE: 1x weak power emitter + 2x inert casing + 1x inert wiring";
+if (index(tgt, "power core"))
+fe = {};
+fc = {};
+fw = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(fe) == 0) && index(n, "weak power emitter"))
+fe = listappend(fe, itm);
+endif
+if ((length(fc) < 2) && index(n, "inert casing"))
+fc = listappend(fc, itm);
+endif
+if ((length(fw) == 0) && index(n, "inert wiring"))
+fw = listappend(fw, itm);
+endif
+endfor
+if (length(fe) == 0)
+p:tell("Need 1x weak power emitter.");
+return 1;
+endif
+if (length(fc) < 2)
+p:tell("Need 2x inert casing. Have: " + tostr(length(fc)));
+return 1;
+endif
+if (length(fw) == 0)
+p:tell("Need 1x inert wiring.");
+return 1;
+endif
+recycle(fe[1]);
+recycle(fc[1]);
+recycle(fc[2]);
+recycle(fw[1]);
+r = create($thing);
+r.name = "structure power core";
+r.description = "Powers a building.";
+move(r, p);
+p:tell("You assemble a structure power core. [+component]");
+p:award_sp(3);
+return 1;
+endif
+"SECTOR CENTER KIT: 2x simple structure base + 10x inert beam + 8x inert siding + 4x structure power core";
+if (index(tgt, "sector") || index(tgt, "center"))
+fb = {};
+fbe = {};
+fsi = {};
+fpc = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(fb) < 2) && index(n, "simple structure base"))
+fb = listappend(fb, itm);
+endif
+if ((length(fbe) < 10) && index(n, "inert beam"))
+fbe = listappend(fbe, itm);
+endif
+if ((length(fsi) < 8) && index(n, "inert siding"))
+fsi = listappend(fsi, itm);
+endif
+if ((length(fpc) < 4) && index(n, "structure power core"))
+fpc = listappend(fpc, itm);
+endif
+endfor
+if (length(fb) < 2)
+p:tell("Need 2x simple structure base. Have: " + tostr(length(fb)));
+return 1;
+endif
+if (length(fbe) < 10)
+p:tell("Need 10x inert beam. Have: " + tostr(length(fbe)));
+return 1;
+endif
+if (length(fsi) < 8)
+p:tell("Need 8x inert siding. Have: " + tostr(length(fsi)));
+return 1;
+endif
+if (length(fpc) < 4)
+p:tell("Need 4x structure power core. Have: " + tostr(length(fpc)));
+return 1;
+endif
+for itm in (fb)
+recycle(itm);
+endfor
+for itm in ({@fbe, @fsi, @fpc})
+recycle(itm);
+endfor
+r = create($thing);
+r.name = "sector center kit";
+r.description = "Massive prefab colony HQ. PLACE SECTOR CENTER to deploy.";
+move(r, p);
+p:tell("You assemble a sector center kit! [+major building]");
+p:award_sp(10);
+return 1;
+endif
+"RESOURCE LOCKER: 2x inert metal + 1x inert casing";
+if (index(tgt, "locker"))
+fm = {};
+fc = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(fm) < 2) && index(n, "inert metal"))
+fm = listappend(fm, itm);
+endif
+if ((length(fc) == 0) && index(n, "inert casing"))
+fc = listappend(fc, itm);
+endif
+endfor
+if (length(fm) < 2)
+p:tell("Need 2x inert metal.");
+return 1;
+endif
+if (length(fc) == 0)
+p:tell("Need 1x inert casing.");
+return 1;
+endif
+recycle(fm[1]);
+recycle(fm[2]);
+recycle(fc[1]);
+r = create($thing);
+r.name = "resource locker";
+r.description = "Secure storage.";
+move(r, p);
+p:tell("You build a resource locker. [+container]");
+p:award_sp(2);
+return 1;
+endif
+return 0;
+.
+#592:3
+"Try tool-specific recipes based on tool name.";
+tgt = args[1];
+tn = this.name;
+if (index(tn, "structure crafting"))
+return this:_craft_structure(tgt);
+endif
+return 0;
+.
 #821:0
 "Show sector center room description (no area() call).";
 p = player;
@@ -211312,7 +211557,7 @@ player:tell("  Exits: west");
 .
 0 clocks
 2 queued tasks
-0 6 1775788787 1073671976
+0 6 1775789417 739236970
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -211385,7 +211630,7 @@ WAIF
 11
 task_id
 0
-1073671976
+739236970
 this.beat_task = 0;
 this:_beat();
 .
