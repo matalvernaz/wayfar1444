@@ -6078,7 +6078,7 @@ tell_mytree
 2
 build_options
 who_visible
-237
+238
 4
 0
 361
@@ -6454,6 +6454,9 @@ who_visible
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -8465,7 +8468,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--159
+-163
 361
 5
 4
@@ -11959,7 +11962,7 @@ drink
 361
 29
 -1
-107
+108
 features
 previous_connection
 email_address
@@ -12067,7 +12070,8 @@ w_bleeding
 w_burned
 w_diseased
 w_bandaged
-202
+w_buildings
+203
 4
 5
 1
@@ -12669,6 +12673,10 @@ none
 361
 7
 0
+0
+361
+7
+4
 0
 361
 7
@@ -31878,7 +31886,7 @@ default_description
 request
 extra_confunc_msg
 free_to_use
-240
+241
 2
 neuter
 29
@@ -32280,6 +32288,9 @@ By definition, guests appear nondescript.
 5
 361
 3
+5
+29
+7
 5
 29
 7
@@ -33116,7 +33127,7 @@ init_for_core
 173
 -1
 0
-257
+258
 5
 29
 1
@@ -33731,6 +33742,9 @@ sddfs
 7
 5
 29
+7
+5
+29
 5
 0
 193
@@ -34256,7 +34270,7 @@ set_*
 -1
 1
 queued_task_limit
-219
+220
 0
 0
 361
@@ -34687,6 +34701,9 @@ showmap
 5
 361
 3
+5
+29
+7
 5
 29
 7
@@ -35658,7 +35675,7 @@ autowield
 bug
 readied_weapon
 unread_mail
-218
+219
 0
 0
 361
@@ -36028,6 +36045,9 @@ white
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -44973,7 +44993,7 @@ toad_victim_msg
 toad_msg
 mail_identity
 advertised
-266
+267
 2
 
 361
@@ -45453,6 +45473,9 @@ really impossible password to type
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -46235,7 +46258,7 @@ p_pois
 biome_names
 biome_descs
 biome_chars
-257
+258
 4
 0
 29
@@ -46757,6 +46780,9 @@ WARNING: Volcanic zone. The ground radiates searing heat. Sulphur vents hiss. En
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -54601,7 +54627,7 @@ drop_off_msg
 move_player_task
 moveto_task
 cleaning_index
-274
+275
 4
 0
 29
@@ -55218,6 +55244,9 @@ Barry
 5
 361
 3
+5
+29
+7
 5
 29
 7
@@ -66484,7 +66513,7 @@ real_aliases
 zots
 bedroom
 chillmin
-235
+236
 2
 You join %n.
 29
@@ -66875,6 +66904,9 @@ You teleport %n.
 5
 361
 3
+5
+29
+7
 5
 29
 7
@@ -73559,7 +73591,7 @@ visit
 361
 5
 0
-6606121
+1048780477
 361
 5
 4
@@ -79072,6 +79104,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 08:42:59 2026 PDT Database checkpoint started.~1b[0m
+0
+1775835779
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 08:36:33 2026 PDT Database checkpoint started.~1b[0m
 0
 1775835393
@@ -79363,12 +79401,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:50:15 2026 PDT Database checkpoint started.~1b[0m
 0
 1775789415
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 19:39:21 2026 PDT Database checkpoint started.~1b[0m
-0
-1775788761
 361
 5
 5
@@ -92231,7 +92263,7 @@ player
 last_update_time
 active
 allow_update_time
-206
+207
 1
 -1
 361
@@ -92525,6 +92557,9 @@ allow_update_time
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -97097,7 +97132,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1628010188
+1042855664
 361
 5
 4
@@ -99190,7 +99225,7 @@ Wizard
 13
 -1
 0
-266
+267
 5
 361
 5
@@ -99435,7 +99470,7 @@ hi
 4
 2
 0
-1775834700
+1775835559
 2
 localhost
 361
@@ -99445,7 +99480,7 @@ localhost
 361
 0
 0
-1775834869
+1775835585
 361
 1
 5
@@ -100528,7 +100563,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 58168
+port 7777 from localhost, port 37796
 361
 0
 5
@@ -100547,7 +100582,7 @@ port 7777 from localhost, port 58168
 361
 5
 0
-1775835014
+1775835691
 361
 1
 0
@@ -100859,6 +100894,9 @@ Base Camp
 7
 0
 1775819469
+361
+7
+5
 361
 7
 5
@@ -119522,7 +119560,7 @@ craft
 -1
 0
 0
-202
+203
 5
 29
 1
@@ -119785,6 +119823,9 @@ craft
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -120727,7 +120768,7 @@ _craft_matproc
 -1
 0
 0
-266
+267
 5
 361
 5
@@ -121182,6 +121223,9 @@ _craft_matproc
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -138925,7 +138969,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1692
 0
 0
-218
+219
 5
 1691
 5
@@ -139236,6 +139280,9 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1691
+7
 5
 1691
 7
@@ -139594,7 +139641,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1693
 0
 0
-218
+219
 5
 1692
 5
@@ -139905,6 +139952,9 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1692
+7
 5
 1692
 7
@@ -140263,7 +140313,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1694
 0
 0
-218
+219
 5
 1693
 5
@@ -140574,6 +140624,9 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+1693
+7
 5
 1693
 7
@@ -140932,7 +140985,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1695
 0
 0
-218
+219
 5
 361
 5
@@ -141243,6 +141296,9 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -141601,7 +141657,7 @@ Thick alien plant fibers woven and hardened into crude body armor.
 1719
 0
 0
-218
+219
 5
 361
 5
@@ -141912,6 +141968,9 @@ Thick alien plant fibers woven and hardened into crude body armor.
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -145006,7 +145065,7 @@ bob
 1898
 0
 0
-218
+219
 5
 361
 5
@@ -145363,6 +145422,9 @@ none
 7
 1
 -1
+361
+7
+5
 361
 7
 5
@@ -172813,7 +172875,7 @@ sand viper
 1892
 0
 0
-257
+258
 5
 29
 1
@@ -173241,6 +173303,9 @@ sand viper
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -173610,7 +173675,7 @@ A serpentine creature. Venomous.
 -1
 0
 0
-257
+258
 5
 29
 1
@@ -174038,6 +174103,9 @@ A serpentine creature. Venomous.
 5
 361
 3
+5
+361
+7
 5
 361
 7
@@ -175141,7 +175209,7 @@ testplayer
 -1
 0
 0
-218
+219
 5
 361
 5
@@ -175201,7 +175269,7 @@ testplayer
 4
 2
 0
-1775834090
+1775834576
 2
 localhost
 361
@@ -175210,7 +175278,7 @@ localhost
 361
 0
 0
-1775834677
+1775835499
 361
 1
 0
@@ -175249,7 +175317,7 @@ localhost
 361
 0
 2
-port 7777 from localhost, port 46446
+port 7777 from localhost, port 40892
 361
 0
 5
@@ -175268,7 +175336,7 @@ port 7777 from localhost, port 46446
 361
 5
 0
-1775834576
+1775835434
 361
 1
 5
@@ -175408,7 +175476,7 @@ kSS3mesvLBprU
 361
 5
 0
-50
+35
 361
 5
 0
@@ -175462,7 +175530,9 @@ ranger
 361
 5
 4
-0
+1
+2
+first aid
 361
 5
 5
@@ -175557,12 +175627,17 @@ ranger
 1775834029
 361
 7
-5
+0
+0
 361
 7
 5
 361
 7
+5
+361
+7
+0
 5
 361
 7
@@ -198044,7 +198119,7 @@ player:tell("SUCCESS: both found!");
 endif
 .
 #6:267
-"Deploy a building kit at current location. Usage: place <kit name>.";
+"Deploy a building kit. Usage: PLACE <kit name>";
 p = player;
 query = (typeof(dobjstr) == STR) ? dobjstr | "";
 if ((query == "") && (args != {}))
@@ -198055,99 +198130,97 @@ endif
 endfor
 endif
 if (query == "")
-p:tell("Place what? (e.g. place shelter / place sector center)");
+p:tell("Place what? (e.g. PLACE shelter / PLACE sector center)");
 return;
 endif
-"Find kit matching query";
+"Must be in wilderness";
+if (parent(p.location) != $wroom)
+p:tell("You can only place buildings in the wilderness.");
+return;
+endif
+"Find kit in inventory";
 kit = 0;
+query_low = $string_utils:lowercase(query);
 for itm in (p.contents)
 nm = "";
 try
-nm = tostr(itm.name);
+nm = $string_utils:lowercase(itm.name);
 except e (ANY)
-nm = "";
 endtry
-if (index(nm, query) && index(nm, "kit"))
+if ((index(nm, query_low) > 0) && (index(nm, "kit") > 0))
 kit = itm;
-break;
 endif
 endfor
 if (kit == 0)
-p:tell(("You're not carrying a '" + query) + "' kit.");
+p:tell(("You are not carrying a '" + query) + "' kit.");
 return;
 endif
-"Route sector center kits to place_sc";
-if (index(kit.name, "sector center"))
+"Route sector center to place_sc";
+kit_name = $string_utils:lowercase(kit.name);
+if (index(kit_name, "sector center") > 0)
 recycle(kit);
 this:place_sc();
 return;
 endif
 "Normal building placement";
 loc = p.location;
-kn = kit.name;
-bname = strsub(kn, " kit", "");
-b = create($building);
-b.name = bname;
-b.description = kit.description;
-b.b_owner = p;
-b.b_type = bname;
-b.b_hp = 100;
-b.b_hp_max = 100;
-b.b_x = ("x" in properties(loc)) ? loc.x | 0;
-b.b_y = ("y" in properties(loc)) ? loc.y | 0;
-move(b, loc);
-recycle(kit);
-p:tell(("You unfold and anchor the " + bname) + " to the ground. [building placed]");
-loc:announce(((p.name + " constructs a ") + bname) + " here.", p);
-.
-#6:268
-"List buildings in current room with stats.";
-p = player;
-loc = p.location;
-buildings = {};
-for OBJ in (loc.contents)
-if (is_a(OBJ, $building))
-buildings = listappend(buildings, OBJ);
-endif
-endfor
-if (buildings == {})
-p:tell("No buildings here.");
-return;
-endif
-p:tell("=== BUILDINGS ===");
-for b in (buildings)
-line = (((("  [" + b.b_type) + "] HP:") + tostr(b.b_hp)) + "/") + tostr(b.b_hp_max);
+bldg = create($building);
+bldg.b_type = kit.name;
+bldg.b_owner = p;
+bldg.b_hp = 100;
+bldg.b_hp_max = 100;
+bldg.b_x = loc.x;
+bldg.b_y = loc.y;
+bldg.name = kit.name;
+strsub_name = strsub(kit.name, " kit", "");
+bldg.description = ((("A " + strsub_name) + " placed by ") + p.name) + ".";
+bldg.name = strsub_name;
+move(bldg, loc);
+"Track in player building list";
 try
-q = b.b_quality;
-if (q > 0)
-line = (line + " Q:") + tostr(q);
-endif
-stats = "";
-if (b.b_crime != 0)
-stats = (stats + " crm:") + tostr(b.b_crime);
-endif
-if (b.b_civ != 0)
-stats = (stats + " civ:") + tostr(b.b_civ);
-endif
-if (b.b_econ != 0)
-stats = (stats + " eco:") + tostr(b.b_econ);
-endif
-if (b.b_rec != 0)
-stats = (stats + " rec:") + tostr(b.b_rec);
-endif
-if (b.b_ind != 0)
-stats = (stats + " ind:") + tostr(b.b_ind);
-endif
-if (stats != "")
-line = line + stats;
-endif
+blist = p.w_buildings;
+p.w_buildings = listappend(blist, bldg);
 except e (ANY)
 endtry
-p:tell(line);
-if (("b_owner" in properties(b)) && valid(b.b_owner))
-p:tell("    Owner: " + b.b_owner.name);
+recycle(kit);
+p:tell(((((("You deploy the " + bldg.name) + " at (") + tostr(loc.x)) + ", ") + tostr(loc.y)) + ").");
+loc:announce(((p.name + " deploys a ") + bldg.name) + ".", p);
+.
+#6:268
+"Show your buildings.";
+p = player;
+blist = {};
+try
+blist = p.w_buildings;
+except e (ANY)
+endtry
+"Clean out invalid refs";
+valid_buildings = {};
+for b in (blist)
+if (valid(b))
+valid_buildings = listappend(valid_buildings, b);
 endif
 endfor
+p.w_buildings = valid_buildings;
+p:tell(("=== Your Buildings (" + tostr(length(valid_buildings))) + ") ===");
+if (length(valid_buildings) == 0)
+p:tell("  None yet. Craft a building kit and PLACE it.");
+p:tell("  Start: CRAFT shelter ON basic  (1x inert metal + 2x native fiber)");
+else
+for b in (valid_buildings)
+loc_str = "";
+try
+loc_str = (((" at (" + tostr(b.b_x)) + ", ") + tostr(b.b_y)) + ")";
+except e (ANY)
+endtry
+hp_str = "";
+try
+hp_str = (("  HP: " + tostr(b.b_hp)) + "/") + tostr(b.b_hp_max);
+except e (ANY)
+endtry
+p:tell((("  " + b.name) + loc_str) + hp_str);
+endfor
+endif
 .
 #6:270
 "Sell items for credits. Quality affects price. In factorium: sells room items too.";
@@ -258019,7 +258092,7 @@ dest:announce_all(this.name + " wanders in.");
 .
 0 clocks
 2 queued tasks
-0 6 1775835417 1628010188
+0 6 1775835807 1042855664
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -258092,11 +258165,11 @@ WAIF
 11
 task_id
 0
-1628010188
+1042855664
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775835543 6606121
+0 6 1775836443 1048780477
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -258169,7 +258242,7 @@ WAIF
 11
 taskid
 0
-6606121
+1048780477
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
