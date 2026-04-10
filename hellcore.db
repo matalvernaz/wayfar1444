@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
 1705
-3525
+3526
 0
 4
 65
@@ -8394,7 +8394,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--76
+-77
 361
 5
 4
@@ -72663,7 +72663,7 @@ visit
 361
 5
 0
-1580295371
+1901558984
 361
 5
 4
@@ -78110,6 +78110,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 20:24:17 2026 PDT Database checkpoint started.~1b[0m
+0
+1775791457
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mThu Apr  9 20:02:09 2026 PDT Database checkpoint started.~1b[0m
 0
 1775790129
@@ -78401,12 +78407,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 23:52:45 2026 PDT Database checkpoint started.~1b[0m
 0
 1775717565
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mWed Apr  8 22:52:45 2026 PDT Database checkpoint started.~1b[0m
-0
-1775713965
 361
 5
 5
@@ -95892,7 +95892,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-18359443
+1920545284
 361
 5
 4
@@ -98167,7 +98167,7 @@ hi
 4
 2
 0
-1775789822
+1775789986
 2
 localhost
 361
@@ -98177,7 +98177,7 @@ localhost
 361
 0
 0
-1775789985
+1775790137
 361
 1
 5
@@ -98846,7 +98846,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 36946
+port 7777 from localhost, port 44524
 361
 0
 5
@@ -98865,7 +98865,7 @@ port 7777 from localhost, port 36946
 361
 5
 0
-1775789986
+1775791297
 361
 1
 0
@@ -117728,7 +117728,7 @@ basic crafting tool
 5
 593
 647
-6
+7
 list_recipes
 361
 13
@@ -117750,6 +117750,10 @@ _craft_structure
 29
 -1
 _craft_dispatch
+361
+29
+-1
+_craft_matproc
 361
 29
 -1
@@ -210731,62 +210735,49 @@ p:tell(("Unknown recipe: '" + tgt) + "'");
 p:tell("Type 'craft' to see available recipes.");
 .
 #592:0
-"Show recipes for this crafting tool.";
+"Show recipes for this tool.";
 p = player;
 tn = this.name;
 p:tell(("=== " + tn) + " RECIPES ===");
 p:tell("");
 if (index(tn, "basic crafting"))
-p:tell("  Weapons:");
-p:tell("    colonial machete     1x inert metal + 1x native fiber");
-p:tell("    wilder javelin       2x native fiber + 1x inert metal");
-p:tell("    colonial rifle       2x inert metal + 1x crude wire");
-p:tell("  Armour:");
-p:tell("    hide armor           3x native fiber");
-p:tell("  Food:");
-p:tell("    insta-meat soup      2x native fiber + 1x unpurified water");
-p:tell("  Components:");
-p:tell("    inert metal          2x ore (from mineral deposit)");
-p:tell("    crude wire           1x inert metal + 1x salvaged components");
-p:tell("    inert casing         1x inert metal + 1x native fiber");
-p:tell("    inert block          2x inert metal");
-p:tell("    weak power emitter   2x inert metal + 5x any kretherson");
-p:tell("    inert wiring         2x inert metal + 1x sand");
-p:tell("  Medical:");
-p:tell("    fibrous bandage      2x native fiber");
-p:tell("  Containers:");
-p:tell("    fiber backpack       3x native fiber");
-p:tell("  Kits:");
-p:tell("    pre-fab shelter kit  1x inert metal + 2x native fiber");
-p:tell("  Tools (craftable on basic):");
-p:tell("    equipment crafting tool  1x weak power emitter + 2x solid-phase metal");
-p:tell("    structure crafting tool  1x weak power emitter + 4x solid-phase metal + 4x inert casing");
-p:tell("    food processor          1x weak power emitter + 2x inert metal + 1x inert casing");
-p:tell("    cooking fire            3x native lumber + 1x native fiber");
-p:tell("    maker block             2x inert metal + 2x native fiber");
+p:tell("  Weapons: colonial machete, wilder javelin, colonial rifle");
+p:tell("  Armour: hide armor");
+p:tell("  Food: insta-meat soup");
+p:tell("  Components: inert metal, crude wire, inert casing, inert block,");
+p:tell("    weak power emitter, inert wiring");
+p:tell("  Medical: fibrous bandage");
+p:tell("  Containers: fiber backpack");
+p:tell("  Kits: pre-fab shelter kit");
+p:tell("  Tools: equipment crafting tool, structure crafting tool,");
+p:tell("    food processor, cooking fire, maker block");
 elseif (index(tn, "equipment crafting"))
 p:tell("  Melee: bolo machete, shock baton, laser whip");
 p:tell("  Ranged: m141 assault rifle, e34 laser blaster, judge brand pistol");
 p:tell("  Armour: padded EVA suit, scrap armor, scrap helmet");
-p:tell("  Gadgets: assault jetpack, emergency teleporter");
 p:tell("  Tools: vehicle assembly station, engineering tool, electronics processor");
-p:tell("  Products: colony beacon, fragmentation grenade");
-p:tell("  (More recipes unlocked via blueprints)");
+p:tell("  (More via blueprints)");
 elseif (index(tn, "structure crafting"))
-p:tell("  Components: inert beam, inert siding, simple structure base, structure power core");
-p:tell("  Buildings: sector center, factory, commerce outlet, cantina,");
-p:tell("    emergency clinic, infirmary, laboratory, refinery,");
+p:tell("  Components: inert beam, inert siding, simple structure base,");
+p:tell("    structure power core, inert frame");
+p:tell("  Buildings: sector center, factory, infirmary, laboratory, refinery,");
 p:tell("    small warehouse, starship complex, agriculture pod");
+p:tell("  Tools: material processor");
 p:tell("  Containers: resource locker, metal locker");
-p:tell("  (More recipes unlocked via blueprints)");
+elseif (index(tn, "material processor"))
+p:tell("  Metals: solid-phase alloy (3x solid-phase metal)");
+p:tell("         rare earth metal (1x inert metal + 1x responsive metal)");
+p:tell("  Fabric: fiber cloth (3x native fiber)");
+p:tell("  Electronics: electronics-grade silica (2x sand + 2x kretherson)");
+p:tell("  Armor: ceramic plate (2x inert metal + 2x sand)");
+p:tell("  Polymer: polymer brick (3x native fiber + 1x kretherson)");
+p:tell("  Chemical: petroleum distillate (3x native lumber)");
 elseif (index(tn, "food processor"))
-p:tell("  high protein vita-slush, approved colonist ration,");
-p:tell("  marathon travel ration, fruit nebula pie");
+p:tell("  high protein vita-slush, colonist ration, marathon ration, fruit pie");
 elseif (index(tn, "maker block"))
-p:tell("  orlando swirl, donut, nutrient paste");
-p:tell("  Drinks: can of soda, clean water");
+p:tell("  orlando swirl, donut, nutrient paste, can of soda, clean water");
 elseif (index(tn, "cooking fire"))
-p:tell("  Cooked food from raw organics (native berries, tubers, fungus)");
+p:tell("  Cooked food from raw organics");
 else
 p:tell("  (No recipes loaded for this tool)");
 endif
@@ -211639,7 +211630,260 @@ return 0;
 tgt = args[1];
 tn = this.name;
 if (index(tn, "structure crafting"))
-return this:_craft_structure(tgt);
+r = this:_craft_structure(tgt);
+if (r)
+return r;
+endif
+"Material processor is also craftable on structure tool";
+if (index(tgt, "material proc") || (index(tgt, "processor") && (!index(tgt, "food"))))
+fe = {};
+fm = {};
+fc = {};
+p = player;
+for itm in (p.contents)
+n = itm.name;
+if ((length(fe) < 3) && index(n, "weak power emitter"))
+fe = listappend(fe, itm);
+endif
+if ((length(fm) < 4) && index(n, "solid-phase metal"))
+fm = listappend(fm, itm);
+endif
+if ((length(fc) < 4) && index(n, "inert casing"))
+fc = listappend(fc, itm);
+endif
+endfor
+if (length(fe) < 3)
+p:tell("Need 3x weak power emitter. Have: " + tostr(length(fe)));
+return 1;
+endif
+if (length(fm) < 4)
+p:tell("Need 4x solid-phase metal. Have: " + tostr(length(fm)));
+return 1;
+endif
+if (length(fc) < 4)
+p:tell("Need 4x inert casing. Have: " + tostr(length(fc)));
+return 1;
+endif
+for itm in ({@fe, @fm, @fc})
+recycle(itm);
+endfor
+r = create(#592);
+r.name = "material processor";
+r.description = "Converts raw resources into crafting materials. LIST to see recipes.";
+move(r, p);
+p:tell("You assemble a material processor. [+tool]");
+p:award_sp(5);
+return 1;
+endif
+endif
+"Material processor tool";
+if (index(tn, "material processor"))
+return this:_craft_matproc(tgt);
+endif
+return 0;
+.
+#592:6
+"Material processor recipes  raw resources into crafting materials.";
+tgt = args[1];
+p = player;
+"SOLID-PHASE ALLOY: 3x solid-phase metal";
+if (index(tgt, "alloy") || index(tgt, "solid-phase alloy"))
+fm = {};
+for itm in (p.contents)
+if ((length(fm) < 3) && index(itm.name, "solid-phase metal"))
+fm = listappend(fm, itm);
+endif
+endfor
+if (length(fm) < 3)
+p:tell("Need 3x solid-phase metal. Have: " + tostr(length(fm)));
+return 1;
+endif
+for itm in (fm)
+recycle(itm);
+endfor
+r = create($thing);
+r.name = "solid-phase alloy";
+r.description = "Refined alloy for advanced construction.";
+move(r, p);
+p:tell("You process solid-phase alloy. [+material]");
+p:award_sp(2);
+return 1;
+endif
+"FIBER CLOTH: 3x native fiber";
+if (index(tgt, "fiber cloth") || index(tgt, "cloth"))
+ff = {};
+for itm in (p.contents)
+if ((length(ff) < 3) && index(itm.name, "native fiber"))
+ff = listappend(ff, itm);
+endif
+endfor
+if (length(ff) < 3)
+p:tell("Need 3x native fiber. Have: " + tostr(length(ff)));
+return 1;
+endif
+for itm in (ff)
+recycle(itm);
+endfor
+r = create($thing);
+r.name = "fiber cloth";
+r.description = "Woven alien fabric.";
+move(r, p);
+p:tell("You weave fiber cloth. [+material]");
+p:award_sp(2);
+return 1;
+endif
+"ELECTRONICS-GRADE SILICA: 2x sand + 2x any kretherson";
+if (index(tgt, "silica") || index(tgt, "electronics"))
+fs = {};
+fe = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(fs) < 2) && (n == "sand"))
+fs = listappend(fs, itm);
+endif
+if ((length(fe) < 2) && index(n, "kretherson"))
+fe = listappend(fe, itm);
+endif
+endfor
+if (length(fs) < 2)
+p:tell("Need 2x sand. Have: " + tostr(length(fs)));
+return 1;
+endif
+if (length(fe) < 2)
+p:tell("Need 2x any kretherson. Have: " + tostr(length(fe)));
+return 1;
+endif
+recycle(fs[1]);
+recycle(fs[2]);
+recycle(fe[1]);
+recycle(fe[2]);
+r = create($thing);
+r.name = "electronics-grade silica";
+r.description = "Purified silica for circuits.";
+move(r, p);
+p:tell("You refine electronics-grade silica. [+material]");
+p:award_sp(2);
+return 1;
+endif
+"CERAMIC PLATE: 2x inert metal + 2x sand";
+if (index(tgt, "ceramic") || index(tgt, "ceramic plate"))
+fm = {};
+fs = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(fm) < 2) && index(n, "inert metal"))
+fm = listappend(fm, itm);
+endif
+if ((length(fs) < 2) && (n == "sand"))
+fs = listappend(fs, itm);
+endif
+endfor
+if (length(fm) < 2)
+p:tell("Need 2x inert metal.");
+return 1;
+endif
+if (length(fs) < 2)
+p:tell("Need 2x sand.");
+return 1;
+endif
+recycle(fm[1]);
+recycle(fm[2]);
+recycle(fs[1]);
+recycle(fs[2]);
+r = create($thing);
+r.name = "ceramic plate";
+r.description = "Hardened ceramic armor plate.";
+move(r, p);
+p:tell("You fire ceramic plate. [+material]");
+p:award_sp(2);
+return 1;
+endif
+"POLYMER BRICK: 3x native fiber + 1x any kretherson";
+if (index(tgt, "polymer") || index(tgt, "plastiform"))
+ff = {};
+fe = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(ff) < 3) && index(n, "native fiber"))
+ff = listappend(ff, itm);
+endif
+if ((length(fe) == 0) && index(n, "kretherson"))
+fe = listappend(fe, itm);
+endif
+endfor
+if (length(ff) < 3)
+p:tell("Need 3x native fiber.");
+return 1;
+endif
+if (length(fe) == 0)
+p:tell("Need 1x any kretherson.");
+return 1;
+endif
+for itm in (ff)
+recycle(itm);
+endfor
+recycle(fe[1]);
+r = create($thing);
+r.name = "polymer brick";
+r.description = "Compressed polymer block.";
+move(r, p);
+p:tell("You form a polymer brick. [+material]");
+p:award_sp(2);
+return 1;
+endif
+"RARE EARTH METAL: 1x inert metal + 1x responsive metal";
+if (index(tgt, "rare earth") || index(tgt, "rare metal"))
+fm = {};
+fr = {};
+for itm in (p.contents)
+n = itm.name;
+if ((length(fm) == 0) && index(n, "inert metal"))
+fm = listappend(fm, itm);
+endif
+if ((length(fr) == 0) && index(n, "responsive metal"))
+fr = listappend(fr, itm);
+endif
+endfor
+if (length(fm) == 0)
+p:tell("Need 1x inert metal.");
+return 1;
+endif
+if (length(fr) == 0)
+p:tell("Need 1x responsive metal.");
+return 1;
+endif
+recycle(fm[1]);
+recycle(fr[1]);
+r = create($thing);
+r.name = "rare earth metal";
+r.description = "Exotic metal for advanced electronics.";
+move(r, p);
+p:tell("You extract rare earth metal. [+material]");
+p:award_sp(3);
+return 1;
+endif
+"PETROLEUM DISTILLATE: 3x native lumber";
+if (index(tgt, "petroleum") || index(tgt, "distillate"))
+fl = {};
+for itm in (p.contents)
+if ((length(fl) < 3) && index(itm.name, "native lumber"))
+fl = listappend(fl, itm);
+endif
+endfor
+if (length(fl) < 3)
+p:tell("Need 3x native lumber.");
+return 1;
+endif
+for itm in (fl)
+recycle(itm);
+endfor
+r = create($thing);
+r.name = "petroleum distillate";
+r.description = "Organic fuel extract.";
+move(r, p);
+p:tell("You distill petroleum. [+material]");
+p:award_sp(2);
+return 1;
 endif
 return 0;
 .
@@ -211699,7 +211943,7 @@ player:tell("  Exits: west");
 .
 0 clocks
 2 queued tasks
-0 6 1775790137 18359443
+0 6 1775791488 1920545284
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -211772,11 +212016,11 @@ WAIF
 11
 task_id
 0
-18359443
+1920545284
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775790543 1580295371
+0 6 1775792343 1901558984
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -211849,7 +212093,7 @@ WAIF
 11
 taskid
 0
-1580295371
+1901558984
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
