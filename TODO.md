@@ -13,9 +13,9 @@
 
 - [ ] **Early game polish** — hand-gathering is slow (1 unit, no quality). Tool-gathering is better (2 units, quality). Cooking fire for food. Eating raw food = less benefit. Shelter protects (future: weather/creature raids). Hunger/health pressure creates urgency.
 - [ ] **Building progression** — enforce crafting chain: shelter → refinery → processing plant → automated harvester → factory. Sector center is a MILESTONE deep in the tree, not early game. Each building step is meaningful and unlocks new capabilities.
-- [ ] **Item degradation** (#44) — weapons wear with use, armor degrades on damage. `REPAIR <item>` holding the tool that made it. Keeps crafting demand alive.
+- [x] **Item degradation** (#44) — weapons/tools lose durability on use. REPAIR command restores 25% per use. Examine shows condition (Good/Worn/Damaged/Nearly broken/BROKEN). SWING/FIRE degrade weapons on hit.
 - [ ] **Medical + status effects** (#31, #32) — `BANDAGE` (First Aid skill), bleeding/burns/diseases. Infirmary building heals over time. Dangerous biomes cause diseases. Real consequences for combat and exploration.
-- [ ] **Communications** (#4) — `say` (local), `chat` (global chatnet), `chatnet history`, `page` (private DM), `who` (online players). Additional nets later. Players need to talk.
+- [x] **Communications** (#4) — WHO (player list with location/idle), CHAT (global chatnet), CHATNET HISTORY (last 50), PAGE (private DM), say (HellCore built-in). Players can talk.
 
 ## Phase 3 — Colony Building (hours 5-20 of gameplay)
 
