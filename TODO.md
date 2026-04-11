@@ -28,23 +28,39 @@
 
 ## Phase 4 — The Wider World
 
-- [ ] **Central Complex expansion** (#18) — full space station hub. Shops (smartpads, medical kits, ammo). Ship refueling. Link-up terminal for joining colonies.
-- [ ] **Multi-planet** (#7) — different biome ratios per planet. Shuttle/drop pod travel. 5 solar systems (DSO-12 first). Different resource availability drives travel.
-- [ ] **Vehicles** (#28) — q-cycle (no skill), land vehicles (Driving skill), aircraft (Flying). Vehicle assembly station.
-- [ ] **Starships** (#29) — starship complex building, assembly tool. Ships = rooms (bridge/generator/turrets/engineering). Warp gates. Asteroid mining.
-- [ ] **Farming** (#34) — seeding tool, farm plots, agricultural pod building. Landslide farming harvestor.
-- [ ] **Fishing** (#37) — fishing gear, alien waters. CAREER ANGLER job.
-- [ ] **Artifacts & research** (#38) — Laboratory building. Research q-locked items → relics, chips, equipment.
+- [ ] **Central Complex expansion** (#18) — full space station hub. Shops (smartpads, medical kits, ammo). Ship refueling. Link-up terminal for joining colonies. Loan terminal. Rec dome. Holotheater. Medical bay. Multiple hangars. Admin level with lounge/vending.
+- [ ] **Multi-planet** (#7) — different biome ratios per planet. Shuttle/drop pod travel. 5 solar systems (DSO-12 first). Different resource availability drives travel. Moons with rarer resources, no atmosphere, EVA suits required. Gas giants for fuel scooping.
+- [ ] **Vehicles** (#28) — q-cycle (no skill), land vehicles (Driving skill), aircraft (Flying). Vehicle assembly station. Escort vehicles (8T-RL, 8T-BL). Vehicle weapons and modules. Fuel tanks. Cockpit interfaces. Explosions on destruction. Airboards/jetpacks for personal transport.
+- [ ] **Starships** (#29) — starship complex building, assembly tool. Ships = rooms (bridge/generator/turrets/engineering). Warp gates. Asteroid mining with dual cargo bays. Tractor beams. Solar carriers that load smaller ships. Thrust-to-mass ratio affects speed. Power consumption tracking. Respawn terminals on ships. Pre-assembled modular chassis models for purchase.
+- [ ] **Farming** (#34) — seeding tool, farm plots, agricultural pod building. Landslide farming harvestor. Edible organics (berries, fungus). Invisible resources (spices, herbs, tubers). Maker block food production.
+- [ ] **Fishing** (#37) — fishing gear, alien waters. CAREER ANGLER job. 20+ fish species across biomes. Fishtank types for storage.
+- [ ] **Artifacts & research** (#38) — Laboratory building. Research q-locked items → relics, chips, equipment. Relic engine research from odd trinkets (moon-exclusive drops). Random stat-boosting relics with potential negative bonuses.
+- [ ] **Weather system** — thunderstorms with lightning damage, sleet, ice/hail storms (cold+blunt damage), asteroid showers on barren planets. Temperature gradient equator-to-pole affecting biome distribution.
+- [ ] **Cave/dungeon generation** — waypoint-based procedural dungeons. Underground points of interest with daily respawning. Digging system with 3D on-demand spawning for vertical excavation. Moon dungeons with hackable containers.
+- [ ] **Crew commands** — hire up to 3 civilians (expandable via skills/reroll). Orders: converge, hold ground/guard, loot corpses, attack, drop everything. Crew follow and assist in combat.
+- [ ] **Transit system** — travel directly to planetary coordinates. Menu showing nearby shops, sector centers, points of interest.
 
 ## Phase 5 — Advanced / Endgame
 
-- [ ] **Hacking** (#26) — smartpads, HACK command, q-chip programs, outlaw status.
-- [ ] **Robots** (#36) — micro-bot tool, robotic fabrication table, robot control.
-- [ ] **Factions** (#39) — sector allegiance, faction HQ, political systems.
-- [ ] **Black markets** (#40) — 6 randomized shop types per planet.
-- [ ] **Implants** (#33) — augmentations from black markets.
-- [ ] **NPC settlements** (#45) — establish organically on planets. Pirate outposts, faction bases.
-- [ ] **Weapon modules** (#30) — module capacity, permanently installed, stat bonuses.
+- [ ] **Hacking** (#26) — smartpads, HACK command, q-chip programs, outlaw status. Hack uncontrolled buildings/vehicles. Multiple hack nodes with selectable programs. Firewall challenges. Success grants ownership/control. Code-locked doors (1111-9999). Secure containers.
+- [ ] **Robots** (#36) — micro-bot tool, robotic fabrication table, robot control. Voice commands, direct orders via control handpad. Guard duty defending controllers. Robot selling. Machine arena for robot salvage/combat.
+- [ ] **Factions** (#39) — sector allegiance, faction HQ, political systems. NPC faction reputation (-1000 to +5000). Killing faction members reduces rep. Faction delivery tasks at contract offices. Faction collapse events. Law enforcement system.
+- [ ] **Black markets** (#40) — 6 randomized shop types per planet (Implant, Munitions, Superior Equipment, Starships, Medical, Robots).
+- [ ] **Implants** (#33) — augmentations from black markets. Static bonuses, damage resistances, or drug release capacity.
+- [ ] **NPC settlements** (#45) — establish organically on planets. Pirate outposts, faction bases. Pirate hideouts on moons. NPC pilot routines. Civilian building construction (construction sites in 3x3 around sector center).
+- [ ] **Weapon modules** (#30) — module capacity, permanently installed, stat bonuses. Armor modules and secondary prefix system with potential resistances/dodge/hacking bonuses.
+- [ ] **Bio-engineering** — Bio-Organic Synthesis Tool. SCRAPE command for harvesting genetic sequences from corpses. Red strands (aggression), green strands (health), rare mutagen strands. Scaffolding + reagents for creature creation. Incubation. Created creatures follow and assist until death. Lost creatures escape into wild ecosystem.
+- [ ] **Superior weapons** — random 4% loot chance from creatures. 6 quality tiers (cyan, green, blue, purple, yellow, red). Quality-scaled ammo capacity. Stat multipliers. Superior armor with +25 module capacity.
+- [ ] **Grenades & explosives** — 25mm grenade rifle, 40mm grenade launcher, demolition charges (12hr real-time delay), plasma grenades, proximity charges. Frag grenades cause minimal vehicle damage. Missile silos with X/Y coordinate targeting.
+- [ ] **Drugs & consumables** — drug injectors usable on self/others. Medical skill rolls reduce duration. Dice pool/regeneration drugs. Broad-spectrum vaccine. Sky-stick smokeables (dice recovery, clarity bonuses) from vending machines. Cough mechanics with relaxant inhaler remedy.
+- [ ] **Diseases expanded** — spore cough. Gas masks and rebreather modules provide immunity. Radiation sickness. Burns from thermal/laser/plasma (stackable, 5-min duration).
+- [ ] **Battlegrounds** — team competition PvP arena. Queue system. Awards money, skillpoints, battleground points. Equipment storage. Proper cleanup after matches.
+- [ ] **Social professions** — Musician (sing/play every 15min, 10-min buff duration, listeners get buffs every 5min). Preacher (PREACH 10-min cooldown buffs nearby, BLESS 20-point restore). Consultant (crafting skill buffs).
+- [ ] **TV/media system** — SENSI TV station. News reporting faction events, advertisements. Multiple TV channels with programming. Trading cards and albums (collectible text items).
+- [ ] **Sector defense** — turret systems (gatling gun variants, easel-mounted). Minigame with NPC warning civilians during vehicle attacks. Civilians manning turrets. Missile turrets. Invasion/defense framework.
+- [ ] **Civilian AI expansion** — paramedic module (auto-bandage injured). Gathering module (harvest resources, manage backpacks, build storehouses). Maintenance technician (building/vehicle repairs). Game hunter type. Personality traits (intelligence, reliability) affecting behavior.
+- [ ] **Building decay** — abandoned buildings decay after extended inactivity. Warning mails before destruction. Dismantling returns ~50% components (100% with Crude Planning skill).
+- [ ] **Noise propagation** — $noise framework for vehicle/weapon/explosive audio propagating through rooms. Laser tripwire trigger devices.
 
 ## Bugs / Cosmetic
 
