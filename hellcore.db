@@ -8694,7 +8694,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--29
+-33
 361
 5
 4
@@ -12035,7 +12035,7 @@ scan
 361
 13
 -1
-configure
+conf*igure
 361
 29
 -1
@@ -12063,7 +12063,7 @@ crewfire
 361
 29
 -1
-survey
+surv*ey scan
 361
 13
 -1
@@ -12331,7 +12331,7 @@ look
 361
 45
 -1
-harv
+_dead_harv
 361
 13
 -1
@@ -45301,9 +45301,9 @@ run_megatrace
 4
 9
 0
-1521116817
+1890107330
 2
-flex
+have
 4
 0
 2
@@ -80156,6 +80156,18 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 01:41:37 2026 PDT Database checkpoint started.~1b[0m
+0
+1775896897
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 01:41:01 2026 PDT Database checkpoint started.~1b[0m
+0
+1775896861
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 01:38:05 2026 PDT Database checkpoint started.~1b[0m
 0
 1775896685
@@ -80441,18 +80453,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 11:27:20 2026 PDT Database checkpoint started.~1b[0m
 0
 1775845640
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 11:18:14 2026 PDT Database checkpoint started.~1b[0m
-0
-1775845094
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 11:09:51 2026 PDT Database checkpoint started.~1b[0m
-0
-1775844591
 361
 5
 5
@@ -98440,7 +98440,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1099831793
+1404953790
 361
 5
 4
@@ -100814,7 +100814,7 @@ hi
 4
 2
 0
-1775896354
+1775896870
 2
 localhost
 361
@@ -100824,7 +100824,7 @@ localhost
 361
 0
 0
-1775896466
+1775896884
 361
 1
 5
@@ -103479,7 +103479,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 46844
+port 7777 from localhost, port 55386
 361
 0
 5
@@ -103498,7 +103498,7 @@ port 7777 from localhost, port 46844
 361
 5
 0
-1775896508
+1775896895
 361
 1
 0
@@ -288253,7 +288253,7 @@ special
 361
 3
 2
-harvest
+harv*est
 361
 3
 5
@@ -389597,7 +389597,7 @@ this:out();
 .
 0 clocks
 2 queued tasks
-0 6 1775896710 1099831793
+0 6 1775896920 1404953790
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -389670,7 +389670,7 @@ WAIF
 11
 task_id
 0
-1099831793
+1404953790
 this.beat_task = 0;
 this:_beat();
 .
