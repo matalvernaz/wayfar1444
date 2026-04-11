@@ -8694,7 +8694,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--19
+-20
 361
 5
 4
@@ -74593,7 +74593,7 @@ visit
 361
 5
 0
-1629388697
+1041323585
 361
 5
 4
@@ -80152,6 +80152,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 23:58:11 2026 PDT Database checkpoint started.~1b[0m
+0
+1775890691
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 23:33:38 2026 PDT Database checkpoint started.~1b[0m
 0
 1775889218
@@ -80443,12 +80449,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 10:52:53 2026 PDT Database checkpoint started.~1b[0m
 0
 1775843573
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 10:47:38 2026 PDT Database checkpoint started.~1b[0m
-0
-1775843258
 361
 5
 5
@@ -98436,7 +98436,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1411214057
+1643537866
 361
 5
 4
@@ -100810,7 +100810,7 @@ hi
 4
 2
 0
-1775887562
+1775888951
 2
 localhost
 361
@@ -100820,7 +100820,7 @@ localhost
 361
 0
 0
-1775887682
+1775889233
 361
 1
 5
@@ -103341,7 +103341,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 35826
+port 7777 from localhost, port 57036
 361
 0
 5
@@ -103360,7 +103360,7 @@ port 7777 from localhost, port 35826
 361
 5
 0
-1775888951
+1775890593
 361
 1
 0
@@ -315562,17 +315562,19 @@ p:tell(("=== SURVEY: " + tool.name) + " ===");
 if (nodes == {})
 p:tell("  No resources detected.");
 else
+found_compat = 0;
 for nd in (nodes)
 nc = "";
 try
 nc = nd.node_class;
 except e (ANY)
 endtry
-compat = "";
-if (((tc != "") && (nc != "")) && (nc != tc))
-compat = (" [need " + nc) + " tool]";
+if (((tc == "") || (nc == "")) || (tc == nc))
+p:tell(((("  " + nd.name) + " (") + tostr(nd.count)) + ")");
+found_compat = 1;
+else
+p:tell("  Something is here, but your tool can't get a reading on it.");
 endif
-p:tell((((("  " + nd.name) + " (") + tostr(nd.count)) + ")") + compat);
 endfor
 endif
 .
@@ -372436,17 +372438,17 @@ player:tell(("The heat sears you for " + tostr(hdmg)) + " damage.");
 endif
 .
 #452:6
-"Show room contents: resource nodes, creatures, items.";
+"Show room contents: resource flavor text, creatures, items.";
 resources = {};
 creatures = {};
 items = {};
 for OBJ in (this.contents)
 if (is_player(OBJ))
-"skip players";
+"skip";
 else
 is_res = 0;
 try
-if (OBJ.is_node)
+if (OBJ.is_node && (OBJ.count > 0))
 is_res = 1;
 endif
 except e (ANY)
@@ -372467,21 +372469,12 @@ items = {@items, OBJ.name};
 endif
 endif
 endfor
-"Show resources with flavor text";
 if (length(resources) > 0)
 player:tell("");
 for res in (resources)
-cnt = 1;
-try
-cnt = res.count;
-except e (ANY)
-endtry
-if (cnt > 0)
-player:tell(((((res.description + " [") + res.name) + " x") + tostr(cnt)) + "]");
-endif
+player:tell(res.description);
 endfor
 endif
-"Show creatures";
 if (length(creatures) > 0)
 cnames = {};
 for c in (creatures)
@@ -372490,7 +372483,6 @@ endfor
 player:tell("");
 player:tell("You see here: " + $string_utils:english_list(cnames));
 endif
-"Show other items";
 if (length(items) > 0)
 player:tell("");
 player:tell("You see here: " + $string_utils:english_list(items));
@@ -375748,7 +375740,7 @@ this:out();
 .
 0 clocks
 2 queued tasks
-0 6 1775889239 1411214057
+0 6 1775890709 1643537866
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -375821,11 +375813,11 @@ WAIF
 11
 task_id
 0
-1411214057
+1643537866
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775890078 1629388697
+0 6 1775890978 1041323585
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -375898,7 +375890,7 @@ WAIF
 11
 taskid
 0
-1629388697
+1041323585
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
