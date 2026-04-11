@@ -12041,7 +12041,7 @@ scan
 361
 13
 -1
-conf*igure
+configure
 361
 29
 -1
@@ -12125,7 +12125,7 @@ background
 361
 29
 -1
-background
+back*ground
 361
 29
 -1
@@ -117188,7 +117188,7 @@ Planetary Dispatch Bay
 -1
 802
 1
-dispatch
+disp*atch
 361
 13
 -1
@@ -327941,6 +327941,23 @@ endif
 move(p, dest);
 p:tell("  You hit hard. The pod splits open. Smoke clears.");
 p:tell(("  You are alone on " + planet.name) + ".");
+"Give starter equipment if empty-handed";
+if (length(p.contents) == 0)
+t1 = create($basic_craft_tool);
+t1.name = "basic crafting tool";
+t1.description = "A multi-purpose fabrication device.";
+move(t1, p);
+tools = {{"ion-driven mineral collector", "mineral", "Starter mineral/ore collector."}, {"cheap orgo-reaper", "organic", "Starter organic harvesting tool."}, {"hand-held energy absorption unit", "energy", "Starter energy/kretherson collector."}, {"atmo-thrasher condenser", "water", "Starter water harvesting tool."}};
+for td in (tools)
+ht = create($basic_craft_tool);
+ht.name = td[1];
+ht.description = td[3];
+try add_property(ht, "eq_type", "harvest", {player, "rwc"}); except e (ANY) endtry
+try add_property(ht, "h_tool_class", td[2], {player, "rwc"}); except e (ANY) endtry
+try add_property(ht, "h_resource", "", {player, "rwc"}); except e (ANY) endtry
+move(ht, p);
+endfor
+endif
 p:tell("");
 p:tell("  COMMANDS:");
 p:tell("    LOOK           see your surroundings and map");
@@ -328404,8 +328421,10 @@ p:tell("Background: " + p.w_background);
 endif
 return;
 endif
-if ((p.w_background != "none") && (p.w_background != ""))
-p:tell(("Already a " + p.w_background) + ".");
+dispatched = 0;
+try dispatched = p.w_dispatched; except e (ANY) endtry
+if (dispatched)
+p:tell(("You are already a " + p.w_background) + ". You cannot change after dispatch.");
 return;
 endif
 bg = "";
