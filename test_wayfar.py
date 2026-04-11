@@ -351,6 +351,22 @@ def run_tests():
     check('HINT', t.cmd('hint'), expect=['Hints:', 'Use:'])
 
     # ============================================================
+    # CONFIG PARTIAL MATCH + HINTS TOGGLE
+    # ============================================================
+    print('\n=== CONFIG PARTIAL + HINTS ===')
+    check('CONFIG screen (partial)', t.cmd('config screen'), expect='SCREENREADER')
+    t.cmd('config screen')  # toggle back off
+    check('CONFIG hints toggle', t.cmd('config hints'), expect='HINTS')
+    t.cmd('config hints')  # toggle back on
+
+    # ============================================================
+    # CRAFT FUZZY MATCH
+    # ============================================================
+    print('\n=== CRAFT FUZZY ===')
+    w.cmd('; for p in (players()) if (p.name == "tester") for i in [1..4] f = create($thing); f.name = "native fiber"; f.w_quality = 15; move(f, p); endfor endif endfor', 1.0)
+    check('CRAFT prefab (fuzzy)', t.cmd('craft prefab'), expect='craft')
+
+    # ============================================================
     # SUMMARY
     # ============================================================
     w.close()
