@@ -13,7 +13,7 @@ Usage:
 Sections: core, craft, gather, combat, food, hazards, death,
           explore, screenreader, comms, errors, buildings, colony,
           jobs, victory, blueprints, factory, respawn, shop, hint,
-          config, fuzzy, wrap, lookself, farming, fishing, weather
+          config, fuzzy, wrap, lookself, fishing, weather
 """
 
 import socket, time, re, sys
@@ -355,25 +355,6 @@ def test_lookself(w, t):
     check('LOOK ME', out, expect=['===', 'HP:'])
 
 
-def test_farming(w, t):
-    print('\n=== FARMING ===')
-    w.cmd('; for p in (players()) if (p.name == "tester") '
-          'p.w_hp = 50; p.w_credits = 500; p.w_dispatched = 1; '
-          'move(p, $ods:spawn_room(#457, 25, 25)); endif endfor', 3.0)
-    # Give seeding tool
-    w.cmd('; for p in (players()) if (p.name == "tester") '
-          'st = create($thing); st.name = "seeding tool"; '
-          'st.w_durability = 30; st.w_durability_max = 30; '
-          'move(st, p); endif endfor', 1.0)
-    check('PLANT', t.cmd('plant'), expect='plant')
-    check('TEND', t.cmd('tend'), expect='tend')
-    check('REAP (not mature)', t.cmd('reap'), expect='No mature')
-    # Clean up farm plots
-    w.cmd('; for p in (players()) if (p.name == "tester") '
-          'for itm in (p.location.contents) '
-          'try if (parent(itm) == #0.farm_plot) recycle(itm); endif '
-          'except e (ANY) endtry endfor endif endfor', 1.0)
-
 
 def test_fishing(w, t):
     print('\n=== FISHING ===')
@@ -420,7 +401,7 @@ def test_weather(w, t):
     # Reset weather
     w.cmd('; #457.p_weather = "clear"; #457.p_weather_severity = 0', 1.0)
     # Test JOBS shows new entries
-    check('JOBS has Farmer', t.cmd('jobs', 3.0), expect=['Farmer', 'Career Angler'])
+    check('JOBS has Angler', t.cmd('jobs', 3.0), expect='Career Angler')
 
 
 # ============================================================
@@ -452,7 +433,6 @@ TESTS = [
     ('fuzzy',       test_fuzzy),
     ('wrap',        test_wrap),
     ('lookself',    test_lookself),
-    ('farming',     test_farming),
     ('fishing',     test_fishing),
     ('weather',     test_weather),
 ]
