@@ -8694,7 +8694,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--18
+-19
 361
 5
 4
@@ -74593,7 +74593,7 @@ visit
 361
 5
 0
-349428318
+1629388697
 361
 5
 4
@@ -80152,6 +80152,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 23:33:38 2026 PDT Database checkpoint started.~1b[0m
+0
+1775889218
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 23:07:47 2026 PDT Database checkpoint started.~1b[0m
 0
 1775887667
@@ -80443,12 +80449,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 10:47:38 2026 PDT Database checkpoint started.~1b[0m
 0
 1775843258
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 10:44:25 2026 PDT Database checkpoint started.~1b[0m
-0
-1775843065
 361
 5
 5
@@ -98436,7 +98436,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-454196528
+1411214057
 361
 5
 4
@@ -100810,7 +100810,7 @@ hi
 4
 2
 0
-1775887466
+1775887562
 2
 localhost
 361
@@ -100820,7 +100820,7 @@ localhost
 361
 0
 0
-1775887523
+1775887682
 361
 1
 5
@@ -100842,7 +100842,7 @@ localhost
 29
 1
 4
-1248
+1239
 1
 339
 1
@@ -103216,8 +103216,6 @@ localhost
 1
 3473
 1
-3475
-1
 3476
 1
 3477
@@ -103272,10 +103270,6 @@ localhost
 1
 3512
 1
-3519
-1
-3520
-1
 3521
 1
 3523
@@ -103287,8 +103281,6 @@ localhost
 3528
 1
 3529
-1
-3531
 1
 3532
 1
@@ -103308,23 +103300,13 @@ localhost
 1
 3541
 1
-3542
-1
 3543
-1
-3544
 1
 3545
 1
-3546
-1
 3547
 1
-3548
-1
 3549
-1
-3550
 1
 3551
 1
@@ -103359,7 +103341,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 55526
+port 7777 from localhost, port 35826
 361
 0
 5
@@ -103378,11 +103360,11 @@ port 7777 from localhost, port 55526
 361
 5
 0
-1775887562
+1775888951
 361
 1
 0
-1410064428
+1410064437
 29
 0
 0
@@ -105676,7 +105658,7 @@ wipe_all
 361
 45
 -1
-19
+10
 rp457_x0_y0
 rp457_x16_y17
 rp457_x36_ym43
@@ -105686,17 +105668,8 @@ rp457_x25_y25
 rp457_x30_y30
 rp457_x22_y35
 rp457_x50_ym50
-rp457_xm5_y16
-rp457_x25_y26
-rp457_x26_y26
-rp457_xm4_y16
-rp457_x50_y0
-rp457_xm50_y0
-rp457_xm4_y17
-rp457_xm4_y18
 rp457_xm3_y18
-rp457_xm2_y18
-55
+46
 1
 591
 361
@@ -105734,43 +105707,7 @@ rp457_xm2_y18
 361
 5
 1
-3475
-361
-5
-1
-3519
-361
-5
-1
-3520
-361
-5
-1
-3531
-361
-5
-1
-3542
-361
-5
-1
-3544
-361
-5
-1
-3546
-361
-5
-1
-3548
-361
-5
-1
 3549
-361
-5
-1
-3550
 361
 5
 5
@@ -271337,7 +271274,7 @@ Desert
 -1
 452
 -1
-3475
+3549
 0
 0
 94
@@ -290443,7 +290380,7 @@ salvage pile
 361
 361
 -1
--1
+3532
 456
 -1
 3532
@@ -290595,326 +290532,7 @@ Half-buried wreckage pokes through the sand here  corroded hull plating and tang
 361
 5
 #3474 recycled
-#3475
-Desert
-
-0
-361
--1
--1
--1
-452
--1
-3519
-0
-0
-94
-1
-457
-361
-5
-0
-2
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-1
-4
-3
-1
-3444
-0
-1775884096
-0
-1775887017
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
--5
-361
-5
-0
-16
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
+#3475 recycled
 #3476
 native fiber
 
@@ -294660,646 +294278,8 @@ inert metal
 #3516 recycled
 #3517 recycled
 #3518 recycled
-#3519
-Desert
-
-0
-361
--1
--1
--1
-452
--1
-3520
-0
-0
-94
-1
-457
-361
-5
-0
-2
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-1
-4
-3
-1
-1947
-0
-1775886538
-0
-1775886545
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
-25
-361
-5
-0
-26
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-#3520
-Forest
-
-0
-361
--1
--1
--1
-452
--1
-3531
-0
-0
-94
-1
-457
-361
-5
-0
-1
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-1
-4
-3
-1
-1947
-0
-1775886545
-0
-1775886572
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
-26
-361
-5
-0
-26
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
+#3519 recycled
+#3520 recycled
 #3521
 chitin plate
 
@@ -296304,332 +295284,13 @@ test output
 361
 5
 #3530 recycled
-#3531
-Desert
-
-0
-361
--1
-3532
--1
-452
--1
-3542
-0
-0
-94
-1
-457
-361
-5
-0
-2
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-1
-4
-3
-1
-3444
-0
-1775887017
-0
-1775887220
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
--4
-361
-5
-0
-16
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
+#3531 recycled
 #3532
 salvage pile
 
 0
 361
-3531
+361
 -1
 3533
 456
@@ -296787,9 +295448,9 @@ sand viper
 
 0
 361
-3531
+361
 -1
--1
+3543
 1889
 -1
 3543
@@ -297849,334 +296510,15 @@ Collapsed shelter. PLACE SHELTER to deploy.
 5
 361
 5
-#3542
-Forest
-
-0
-361
--1
-3543
--1
-452
--1
-3544
-0
-0
-94
-1
-457
-361
-5
-0
-1
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-1
-4
-3
-1
-1947
-0
-1775887110
-0
-1775887117
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
-50
-361
-5
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
+#3542 recycled
 #3543
 bark beetle
 
 0
 361
-3542
+361
 -1
--1
+3545
 1889
 -1
 3545
@@ -298353,334 +296695,15 @@ A dog-sized insect with hard chitin.
 5
 361
 5
-#3544
-Desert
-
-0
-361
--1
-3545
--1
-452
--1
-3546
-0
-0
-94
-1
-457
-361
-5
-0
-2
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-1
-4
-3
-1
-1947
-0
-1775887117
-0
-1775887130
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
--50
-361
-5
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
+#3544 recycled
 #3545
 sand viper
 
 0
 361
-3544
+361
 -1
--1
+3547
 1889
 -1
 3552
@@ -298857,334 +296880,15 @@ A serpentine venomous creature.
 5
 361
 5
-#3546
-Desert
-
-0
-361
--1
-3547
--1
-452
--1
-3548
-0
-0
-94
-1
-457
-361
-5
-0
-2
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-1
-4
-3
-1
-3444
-0
-1775887220
-0
-1775887224
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
--4
-361
-5
-0
-17
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
+#3546 recycled
 #3547
 salvage pile
 
 0
 361
-3546
+361
 -1
--1
+3551
 456
 -1
 3551
@@ -299335,326 +297039,7 @@ Half-buried wreckage pokes through the sand here  corroded hull plating and tang
 5
 361
 5
-#3548
-Desert
-
-0
-361
--1
--1
--1
-452
--1
-3549
-0
-0
-94
-1
-457
-361
-5
-0
-2
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-1
-4
-3
-1
-3444
-0
-1775887224
-0
-1775887230
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
--4
-361
-5
-0
-18
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
+#3548 recycled
 #3549
 Desert
 
@@ -299665,7 +297050,7 @@ Desert
 -1
 452
 -1
-3550
+-1
 0
 0
 94
@@ -299975,332 +297360,13 @@ Desert
 5
 361
 5
-#3550
-Desert
-
-0
-361
--1
-3551
--1
-452
--1
--1
-0
-0
-94
-1
-457
-361
-5
-0
-2
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-1
-4
-3
-1
-3444
-0
-1775887236
-0
-1775887268
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
--2
-361
-5
-0
-18
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-1
-5
-361
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
+#3550 recycled
 #3551
 salvage pile
 
 0
 361
-3550
+361
 -1
 3552
 456
@@ -300458,7 +297524,7 @@ dust runner
 
 0
 361
-3550
+361
 -1
 -1
 1889
@@ -318112,7 +315178,7 @@ p.w_special.h_resource = tstr;
 p:tell("Harvesting tool configured to target: " + tstr);
 .
 #6:331
-"Harvest resources using wielded tool. Loops until depleted.";
+"Harvest resources. Loops until depleted, then moves to next node.";
 p = player;
 if ((!valid(p.w_special)) || (p.w_special.eq_type != "harvest"))
 p:tell("You need a harvesting tool wielded.");
@@ -318120,23 +315186,47 @@ return;
 endif
 loc = p.location;
 tool = p.w_special;
-target_type = "";
+tc = "";
 try
-target_type = tool.h_resource;
+tc = tool.h_tool_class;
 except e (ANY)
 endtry
-tool_class = "";
+target = "";
 try
-tool_class = tool.h_tool_class;
+target = tool.h_resource;
 except e (ANY)
 endtry
-node = 0;
+"Flavor messages by tool class";
+msgs_mineral = {"You crack open a seam of rock...", "Your tool bites into the deposit...", "Fragments break loose...", "You pry material from the stone face..."};
+msgs_organic = {"You cut through dense growth...", "Your reaper hums through stalks...", "You strip bark and harvest...", "You pull alien vegetation free..."};
+msgs_water = {"Your condenser draws moisture...", "You extract liquid from the rock...", "The collector hisses, pulling water...", "Droplets collect in your canister..."};
+msgs_energy = {"Your absorption unit crackles...", "Energy pulses into the collector...", "The crystal hums as you draw charge...", "A bright arc snaps into your tool..."};
+msgs = msgs_mineral;
+if (tc == "organic")
+msgs = msgs_organic;
+endif
+if (tc == "water")
+msgs = msgs_water;
+endif
+if (tc == "energy")
+msgs = msgs_energy;
+endif
+"Find all compatible nodes";
+total = 0;
+keep_going = 1;
+while (keep_going && (p.location == loc))
+"Find next compatible node";
+node = $nothing;
 for OBJ in (loc.contents)
 try
-if (OBJ.is_node)
-if ((target_type == "") || index(OBJ.name, target_type))
-nc = this:_node_class(OBJ);
-if ((((tool_class == "") || (nc == "")) || (tool_class == nc)) || (nc == "salvage"))
+if (OBJ.is_node && (OBJ.count > 0))
+nc = "";
+try
+nc = OBJ.node_class;
+except e (ANY)
+endtry
+if (((tc == "") || (nc == "")) || (tc == nc))
+if ((target == "") || index(OBJ.name, target))
 node = OBJ;
 break;
 endif
@@ -318145,40 +315235,20 @@ endif
 except e (ANY)
 endtry
 endfor
-if (node == 0)
-p:tell("No harvestable resources for this tool here.");
-return;
+if (!valid(node))
+keep_going = 0;
+break;
 endif
-if (node.count <= 0)
-p:tell(("The " + node.name) + " is depleted.");
-return;
+if (total == 0)
+p:tell(("You begin harvesting " + node.name) + "...");
+else
+p:tell(("Moving to " + node.name) + "...");
 endif
-nc = this:_node_class(node);
-"Flavor messages per resource type";
-msgs_mineral = {"You crack open a seam of rock...", "Your tool bites into the deposit...", "Fragments break loose under the drill...", "You pry minerals from the stone face..."};
-msgs_organic = {"You cut through dense undergrowth...", "Your reaper hums through fibrous stalks...", "You strip bark and harvest growth...", "You pull a thick tangle of alien vegetation free..."};
-msgs_water = {"Your condenser draws moisture from the air...", "You extract liquid from the rock face...", "The collector hisses, pulling water from vapor...", "Droplets form and collect in your canister..."};
-msgs_energy = {"Your absorption unit crackles with static...", "Energy pulses flow into the collector...", "The crystal hums as you draw its charge...", "A bright arc snaps into your tool..."};
-msgs_salvage = {"You dig through corroded wreckage...", "Metal groans as you pry panels apart...", "You sort through tangled wiring and hull plating...", "Ancient machinery yields to your tool..."};
-msgs = msgs_mineral;
-if (nc == "organic")
-msgs = msgs_organic;
-endif
-if (nc == "water")
-msgs = msgs_water;
-endif
-if (nc == "energy")
-msgs = msgs_energy;
-endif
-if (nc == "salvage")
-msgs = msgs_salvage;
-endif
-"Loop: harvest one at a time with delay";
-p:tell(("You begin harvesting the " + node.name) + "...");
-total = 0;
+"Harvest this node until empty";
 while ((node.count > 0) && (p.location == loc))
-suspend(3);
+suspend(5);
 if ((p.location != loc) || (!valid(node)))
+keep_going = 0;
 break;
 endif
 if (node.count <= 0)
@@ -318187,71 +315257,31 @@ endif
 msg = msgs[1 + (random(length(msgs)) - 1)];
 p:tell(msg);
 item = create($thing);
-roll = random(100);
-if (nc == "mineral")
-if (roll <= 60)
-item.name = "inert metal";
-elseif (roll <= 85)
-item.name = "solid-phase metal";
-elseif (roll <= 95)
-item.name = "responsive metal";
-else
-item.name = "sand";
-endif
-elseif (nc == "organic")
-if (roll <= 50)
-item.name = "native fiber";
-elseif (roll <= 75)
-item.name = "native lumber";
-elseif (roll <= 90)
-item.name = "native fungus";
-else
-item.name = "native berries";
-endif
-elseif (nc == "energy")
-if (roll <= 60)
-item.name = "solar kretherson";
-elseif (roll <= 85)
-item.name = "thermal kretherson";
-else
-item.name = "intrinsic field kretherson";
-endif
-elseif (nc == "water")
-item.name = "unpurified water";
-elseif (nc == "salvage")
-"Salvage yields metals + components mix";
-if (roll <= 40)
-item.name = "inert metal";
-elseif (roll <= 65)
-item.name = "solid-phase metal";
-elseif (roll <= 80)
-item.name = "responsive metal";
-elseif (roll <= 90)
-item.name = "crude wiring";
-else
-item.name = "salvaged components";
-endif
-else
-try
-item.name = node.yield_name;
-except e (ANY)
-item.name = "raw resource";
-endtry
-endif
+item.name = node.name;
 item.description = "Harvested resource.";
 try
-item.w_quality = 10 + random(40);
+add_property(item, "w_quality", 10 + random(40), {player, "rwc"});
 except e (ANY)
 endtry
 move(item, p);
 node.count = node.count - 1;
 total = total + 1;
+if (node.count > 0)
 p:tell(((("  Collected: " + item.name) + " [") + tostr(node.count)) + " left]");
+else
+p:tell(("  Collected: " + item.name) + " [depleted]");
+"Recycle empty node";
+recycle(node);
+endif
+endwhile
 endwhile
 if (total > 0)
 p:tell(("Harvesting complete. " + tostr(total)) + " resources collected.");
+sp = (total + 1) / 2;
+if (sp < 1)
+sp = 1;
+endif
 try
-sp = total;
 p.w_sp = p.w_sp + sp;
 p:tell(("  [+" + tostr(sp)) + " skill points]");
 except e (ANY)
@@ -318261,7 +315291,7 @@ p.w_harvested = p.w_harvested + total;
 except e (ANY)
 endtry
 else
-p:tell("Harvesting interrupted.");
+p:tell("No compatible resources here for this tool.");
 endif
 .
 #6:332
@@ -318506,7 +315536,7 @@ return this:hire(@args);
 return this:fire(@args);
 .
 #6:337
-"Scan for harvestable resources in this area.";
+"Scan for resources in this area.";
 p = player;
 if ((!valid(p.w_special)) || (p.w_special.eq_type != "harvest"))
 p:tell("You need a harvesting tool wielded. (WIELD <tool>)");
@@ -318514,37 +315544,35 @@ return;
 endif
 tool = p.w_special;
 loc = p.location;
-nodes = {};
-for OBJ in (loc.contents)
-try
-if (OBJ.is_node)
-nodes = listappend(nodes, OBJ);
-endif
-except e (ANY)
-endtry
-endfor
 tc = "";
 try
 tc = tool.h_tool_class;
 except e (ANY)
 endtry
-p:tell(("=== SURVEY: " + tool.name) + " ===");
-if (nodes == {})
-p:tell("  No resources detected. Try another tile.");
-p:tell("  Resources respawn over time.");
-else
-for nd in (nodes)
-nc = this:_node_class(nd);
-compat = "";
-if (((tc != "") && (nc != tc)) && (nc != "salvage"))
-compat = (" [need " + nc) + " tool]";
-endif
-yname = nd.name;
+nodes = {};
+for OBJ in (loc.contents)
 try
-yname = nd.yield_name;
+if (OBJ.is_node && (OBJ.count > 0))
+nodes = {@nodes, OBJ};
+endif
 except e (ANY)
 endtry
-p:tell((((((("  " + nd.name) + "  ") + yname) + " (") + tostr(nd.count)) + " left)") + compat);
+endfor
+p:tell(("=== SURVEY: " + tool.name) + " ===");
+if (nodes == {})
+p:tell("  No resources detected.");
+else
+for nd in (nodes)
+nc = "";
+try
+nc = nd.node_class;
+except e (ANY)
+endtry
+compat = "";
+if (((tc != "") && (nc != "")) && (nc != tc))
+compat = (" [need " + nc) + " tool]";
+endif
+p:tell((((("  " + nd.name) + " (") + tostr(nd.count)) + ")") + compat);
 endfor
 endif
 .
@@ -375408,56 +372436,64 @@ player:tell(("The heat sears you for " + tostr(hdmg)) + " damage.");
 endif
 .
 #452:6
-"Show room contents with atmospheric resource descriptions.";
+"Show room contents: resource nodes, creatures, items.";
 resources = {};
+creatures = {};
 items = {};
 for OBJ in (this.contents)
-if (OBJ != player)
-is_resource = 0;
-try
-if (OBJ.count >= 0)
-is_resource = 1;
-endif
-except e (ANY)
-endtry
-if (is_resource)
-resources = listappend(resources, OBJ);
+if (is_player(OBJ))
+"skip players";
 else
-items = listappend(items, OBJ.name);
-endif
-endif
-endfor
-"Show resource descriptions";
-hints = 1;
+is_res = 0;
 try
-hints = player.w_hints;
+if (OBJ.is_node)
+is_res = 1;
+endif
 except e (ANY)
 endtry
-for res in (resources)
-player:tell("");
-desc = res.description;
-if ((!hints) && (length(desc) > 0))
-"Strip the tool hint (everything after the last period)";
-dot = rindex(desc, ".");
-if (dot > 1)
-prev_dot = rindex(desc[1..dot - 1], ".");
-if (prev_dot > 0)
-desc = desc[1..prev_dot];
+is_cre = 0;
+try
+if (OBJ.c_alive)
+is_cre = 1;
+endif
+except e (ANY)
+endtry
+if (is_res)
+resources = {@resources, OBJ};
+elseif (is_cre)
+creatures = {@creatures, OBJ};
+else
+items = {@items, OBJ.name};
 endif
 endif
-endif
-player:tell(desc);
 endfor
+"Show resources with flavor text";
+if (length(resources) > 0)
+player:tell("");
+for res in (resources)
+cnt = 1;
+try
+cnt = res.count;
+except e (ANY)
+endtry
+if (cnt > 0)
+player:tell(((((res.description + " [") + res.name) + " x") + tostr(cnt)) + "]");
+endif
+endfor
+endif
+"Show creatures";
+if (length(creatures) > 0)
+cnames = {};
+for c in (creatures)
+cnames = {@cnames, c.name};
+endfor
+player:tell("");
+player:tell("You see here: " + $string_utils:english_list(cnames));
+endif
 "Show other items";
 if (length(items) > 0)
 player:tell("");
-listing = items[1];
-idx = 2;
-while (idx <= length(items))
-listing = (listing + ", ") + items[idx];
-idx = idx + 1;
-endwhile
-player:tell("You see here: " + listing);
+player:tell("You see here: " + $string_utils:english_list(items));
 endif
 .
 #452:7
@@ -375664,7 +372700,7 @@ this:populate(r, planet);
 return r;
 .
 #458:1
-"Populate room with resources and creature.";
+"Populate room with specific resource nodes and creatures.";
 {room, planet} = args;
 set_task_perms(this.owner);
 x = room.x;
@@ -375675,68 +372711,100 @@ try
 seed = planet.p_seed;
 except e (ANY)
 endtry
-"Resource hash  60% of tiles get a resource";
+"Biome resource pools: {name, tool_class, desc}";
+pools = {};
+if (b == 0)
+pools = {{"inert metal", "mineral", "A vein of dull grey metal runs through exposed rock."}, {"solid-phase metal", "mineral", "Dense metallic ore glints in a fractured cliff face."}, {"responsive metal", "mineral", "A rare seam of shimmering metal pulses faintly."}, {"sand", "mineral", "Loose silicate sand collects in a sheltered depression."}, {"solar kretherson", "energy", "A crystalline formation hums with stored solar energy."}, {"thermal kretherson", "energy", "Heat radiates from a geothermal vent, energy crystals forming at its rim."}};
+elseif (b == 1)
+pools = {{"native fiber", "organic", "Fibrous alien stalks grow thick here."}, {"native lumber", "organic", "A cluster of dense alien wood suitable for harvest."}, {"native fungus", "organic", "Pale alien mushrooms sprout from the undergrowth."}, {"native berries", "organic", "Clusters of alien berries hang from low branches."}, {"thermal kretherson", "energy", "Heat radiates from a geothermal fissure beneath the roots."}};
+elseif (b == 2)
+pools = {{"inert metal", "mineral", "Corroded metal juts from the sand, remnants of something ancient."}, {"solid-phase metal", "mineral", "A half-buried metallic formation catches the light."}, {"sand", "mineral", "Fine silicate sand drifts against the dunes."}, {"solar kretherson", "energy", "Sun-baked crystals shimmer with absorbed energy."}};
+elseif (b == 3)
+pools = {{"native fiber", "organic", "Dense vines and fibrous growth tangle together here."}, {"native lumber", "organic", "Thick alien timber grows in this clearing."}, {"unpurified water", "water", "A pool of murky liquid collects in a hollow."}, {"native berries", "organic", "Exotic fruit hangs heavy from jungle canopy."}, {"thermal kretherson", "energy", "Steam rises where geothermal heat meets jungle moisture."}};
+elseif (b == 4)
+pools = {{"unpurified water", "water", "Clear liquid seeps from a submerged rock face."}, {"native fiber", "organic", "Aquatic plant growth waves in the current."}, {"thermal kretherson", "energy", "A hydrothermal vent bubbles with energy-rich minerals."}};
+elseif (b == 5)
+pools = {{"native fungus", "organic", "A mass of alien mycelium covers the ground."}, {"native fiber", "organic", "Fungal filaments grow in thick ropy strands."}, {"native berries", "organic", "Bioluminescent spore-fruit clusters glow faintly."}, {"thermal kretherson", "energy", "Warmth seeps from deep fungal decomposition below."}};
+elseif (b == 6)
+pools = {{"solar kretherson", "energy", "Intense heat has fused energy into crystalline deposits."}, {"thermal kretherson", "energy", "Molten vents spew superheated energy crystals."}, {"intrinsic field kretherson", "energy", "A rare formation of deep-core energy pulses with an eerie glow."}, {"responsive metal", "mineral", "Volcanic pressure has forged rare metal in the rock."}};
+endif
+if (pools == {})
+return;
+endif
+"Determine number of nodes: 60% chance of any, then 1-6 nodes";
 HASH = (((x + seed) * 7919) + ((y + seed) * 104729)) % 100;
 if (HASH < 0)
 HASH = -HASH;
 endif
-if (HASH < 60)
-proto = 0;
-sub = (((x + seed) * 31) + ((y + seed) * 97)) % 100;
-if (sub < 0)
-sub = -sub;
-endif
-if (b == 0)
-if (sub < 70)
-proto = $ore_node;
+if (HASH >= 60)
+"No resources this room  creature only";
 else
-proto = $energy_node;
+"Roll node count: weighted 1-3 common, 4-6 rare";
+nhash = (((x + seed) * 3571) + ((y + seed) * 8111)) % 100;
+if (nhash < 0)
+nhash = -nhash;
 endif
-elseif (b == 1)
-proto = $fiber_node;
-elseif (b == 2)
-if (sub < 70)
-proto = $salvage_pile;
+if (nhash < 30)
+num_nodes = 1;
+elseif (nhash < 60)
+num_nodes = 2;
+elseif (nhash < 80)
+num_nodes = 3;
+elseif (nhash < 92)
+num_nodes = 4;
+elseif (nhash < 98)
+num_nodes = 5;
 else
-proto = $energy_node;
+num_nodes = 6;
 endif
-elseif (b == 3)
-if (sub < 40)
-proto = $fiber_node;
-elseif (sub < 80)
-proto = $water_node;
+plen = length(pools);
+for ni in [1..num_nodes]
+"Pick a material from the pool";
+pidx = (((x + seed) * (ni * 1301)) + ((y + seed) * (ni * 2749))) % plen;
+if (pidx < 0)
+pidx = -pidx;
+endif
+pidx = (pidx % plen) + 1;
+entry = pools[pidx];
+"Roll node size 1-5, weighted toward 1-3";
+shash = (((x + seed) * (ni * 997)) + ((y + seed) * (ni * 4007))) % 100;
+if (shash < 0)
+shash = -shash;
+endif
+if (shash < 35)
+sz = 1;
+elseif (shash < 65)
+sz = 2;
+elseif (shash < 85)
+sz = 3;
+elseif (shash < 95)
+sz = 4;
 else
-proto = $energy_node;
+sz = 5;
 endif
-elseif (b == 4)
-if (sub < 80)
-proto = $water_node;
-else
-proto = $energy_node;
-endif
-elseif (b == 5)
-if (sub < 80)
-proto = $fiber_node;
-else
-proto = $energy_node;
-endif
-elseif (b == 6)
-if (sub < 70)
-proto = $energy_node;
-else
-proto = $ore_node;
-endif
-endif
-if (valid(proto))
-node = create(proto);
-node.name = proto.name;
-node.aliases = proto.aliases;
-node.description = proto.description;
-node.count = proto.max_count;
+node = create($thing);
+node.name = entry[1];
+node.description = entry[3];
+try
+add_property(node, "is_node", 1, {player, "rwc"});
+except e (ANY)
+endtry
+try
+add_property(node, "count", sz, {player, "rwc"});
+except e (ANY)
+endtry
+try
+add_property(node, "max_count", sz, {player, "rwc"});
+except e (ANY)
+endtry
+try
+add_property(node, "node_class", entry[2], {player, "rwc"});
+except e (ANY)
+endtry
 move(node, room);
+endfor
 endif
-endif
-"Creature spawning in background (heavier operation)";
+"Creature spawning in background";
 fork (0)
 chash = ((((x + seed) + 7) * 2741) + (((y + seed) + 13) * 6263)) % 100;
 if (chash < 0)
@@ -378680,7 +375748,7 @@ this:out();
 .
 0 clocks
 2 queued tasks
-0 6 1775887678 454196528
+0 6 1775889239 1411214057
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -378753,11 +375821,11 @@ WAIF
 11
 task_id
 0
-454196528
+1411214057
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775888278 349428318
+0 6 1775890078 1629388697
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -378830,7 +375898,7 @@ WAIF
 11
 taskid
 0
-349428318
+1629388697
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
