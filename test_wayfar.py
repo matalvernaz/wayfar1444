@@ -367,6 +367,30 @@ def run_tests():
     check('CRAFT prefab (fuzzy)', t.cmd('craft prefab'), expect='craft')
 
     # ============================================================
+    # PLANET WRAPPING
+    # ============================================================
+    print('\n=== PLANET WRAPPING ===')
+    # Move tester to planet edge (x=50) and go east — should wrap, not error
+    w.cmd('; for p in (players()) if (p.name == "tester") '
+          'r = $ods:spawn_room(#457, 50, 0); move(p, r); endif endfor', 2.0)
+    out = t.cmd('e', 2.0)
+    check('WRAP east (x=50→-50)', out, expect='Kepler-7', reject='edge')
+    # Check we actually wrapped (coords should be -50)
+    coords = w.cmd('; for p in (players()) if (p.name == "tester") '
+                    'player:tell(tostr(p.location.x)); endif endfor', 1.0)
+    check('WRAP coords', coords, expect='-50')
+    # Move back to test area
+    w.cmd('; for p in (players()) if (p.name == "tester") '
+          'r = $ods:spawn_room(#457, 25, 25); move(p, r); endif endfor', 2.0)
+
+    # ============================================================
+    # LOOK SELF
+    # ============================================================
+    print('\n=== LOOK SELF ===')
+    out = t.cmd('look me')
+    check('LOOK ME', out, expect=['===', 'HP:'])
+
+    # ============================================================
     # SUMMARY
     # ============================================================
     w.close()
