@@ -8694,7 +8694,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--2
+-3
 361
 5
 4
@@ -80174,6 +80174,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 02:17:27 2026 PDT Database checkpoint started.~1b[0m
+0
+1775899047
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 02:09:14 2026 PDT Database checkpoint started.~1b[0m
 0
 1775898554
@@ -80465,12 +80471,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 12:46:42 2026 PDT Database checkpoint started.~1b[0m
 0
 1775850402
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 12:44:42 2026 PDT Database checkpoint started.~1b[0m
-0
-1775850282
 361
 5
 5
@@ -98458,7 +98458,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-683644722
+564892179
 361
 5
 4
@@ -100832,7 +100832,7 @@ hi
 4
 2
 0
-1775897524
+1775898474
 2
 localhost
 361
@@ -100842,7 +100842,7 @@ localhost
 361
 0
 0
-1775898448
+1775898569
 361
 1
 5
@@ -103467,7 +103467,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 36990
+port 7777 from localhost, port 57400
 361
 0
 5
@@ -103486,7 +103486,7 @@ port 7777 from localhost, port 36990
 361
 5
 0
-1775898474
+1775898991
 361
 1
 0
@@ -330840,7 +330840,7 @@ p:tell("Harvester targeting: any resource");
 else
 p:tell("Harvester targeting: " + cur);
 endif
-p:tell("Usage: toggle <material name> or toggle any");
+p:tell("Usage: toggle <material> or toggle any");
 return;
 endif
 if (((tstr == "any") || (tstr == "all")) || (tstr == "reset"))
@@ -330848,8 +330848,22 @@ p.w_special.h_resource = "";
 p:tell("Harvester reset to collect any available resource.");
 return;
 endif
-p.w_special.h_resource = tstr;
-p:tell("Harvester targeting: " + tstr);
+"Partial match against known resources";
+names = {"inert metal", "solid-phase metal", "responsive metal", "sand", "native fiber", "native lumber", "native fungus", "native berries", "unpurified water", "solar kretherson", "thermal kretherson", "intrinsic field kretherson"};
+match = "";
+for nm in (names)
+if (index(nm, tstr) == 1)
+match = nm;
+endif
+endfor
+if (match == "")
+p:tell("Unknown resource. Known types:");
+p:tell("  inert, solid, responsive, sand, fiber, lumber,");
+p:tell("  fungus, berries, water, solar, thermal, intrinsic");
+return;
+endif
+p.w_special.h_resource = match;
+p:tell("Harvester targeting: " + match);
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -388260,7 +388274,7 @@ this:out();
 .
 0 clocks
 2 queued tasks
-0 6 1775898568 683644722
+0 6 1775899049 564892179
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -388333,7 +388347,7 @@ WAIF
 11
 task_id
 0
-683644722
+564892179
 this.beat_task = 0;
 this:_beat();
 .
