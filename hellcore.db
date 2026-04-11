@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
 3658
-3619
+3620
 0
 10
 65
@@ -113,7 +113,7 @@ bf_occupants
 361
 173
 -1
-362
+364
 builder
 login
 last_restart_time
@@ -476,7 +476,9 @@ chatnet_history
 _tr
 factory_room
 machine_proto
-372
+claude_inbox
+claude_outbox
+374
 1
 2
 361
@@ -5594,6 +5596,14 @@ test msg
 361
 7
 4
+0
+361
+7
+4
+0
+361
+7
+4
 1
 2
 The System Object
@@ -8695,7 +8705,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--9
+-11
 361
 5
 4
@@ -10727,7 +10737,7 @@ generic player
 100
 33
 -1
-407
+408
 confunc
 361
 173
@@ -12356,6 +12366,10 @@ commands comm*ands
 361
 29
 -1
+@claude
+361
+93
+-2
 124
 features
 previous_connection
@@ -74622,7 +74636,7 @@ visit
 361
 5
 0
-2028562976
+441030911
 361
 5
 4
@@ -80185,6 +80199,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 02:41:02 2026 PDT Database checkpoint started.~1b[0m
+0
+1775900462
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 02:33:33 2026 PDT Database checkpoint started.~1b[0m
 0
 1775900013
@@ -80476,12 +80496,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 13:52:43 2026 PDT Database checkpoint started.~1b[0m
 0
 1775854363
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 13:50:00 2026 PDT Database checkpoint started.~1b[0m
-0
-1775854200
 361
 5
 5
@@ -98469,7 +98483,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-733015338
+1443823074
 361
 5
 4
@@ -100843,7 +100857,7 @@ hi
 4
 2
 0
-1775899891
+1775900308
 2
 localhost
 361
@@ -100853,7 +100867,7 @@ localhost
 361
 0
 0
-1775899917
+1775900379
 361
 1
 5
@@ -103510,7 +103524,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 55114
+port 7777 from localhost, port 51798
 361
 0
 5
@@ -103529,7 +103543,7 @@ port 7777 from localhost, port 55114
 361
 5
 0
-1775899951
+1775900404
 361
 1
 0
@@ -334771,6 +334785,23 @@ except e (ANY)
 endtry
 endif
 .
+#6:407
+"Send a request to Claude. Usage: @claude <message>";
+msg = (typeof(argstr) == STR) ? argstr | "";
+if (msg == "")
+player:tell("Usage: @claude <your request>");
+player:tell("Example: @claude fix the harvest command");
+return;
+endif
+entry = (((ctime() + " | ") + player.name) + " | ") + msg;
+$claude_inbox = {@$claude_inbox, entry};
+player:tell("[Claude] Request queued: " + msg);
+"Check for any pending responses";
+for resp in ($claude_outbox)
+player:tell("[Claude] " + resp);
+endfor
+$claude_outbox = {};
+.
 #7:0
 ":length(tree) => number of leaves in tree.";
 return args[1] ? args[1][2] | 0;
@@ -392180,7 +392211,7 @@ this:out();
 .
 0 clocks
 2 queued tasks
-0 6 1775900039 733015338
+0 6 1775900489 1443823074
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -392253,11 +392284,11 @@ WAIF
 11
 task_id
 0
-733015338
+1443823074
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775900248 2028562976
+0 6 1775901148 441030911
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -392330,7 +392361,7 @@ WAIF
 11
 taskid
 0
-2028562976
+441030911
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
