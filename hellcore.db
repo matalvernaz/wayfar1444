@@ -1,6 +1,6 @@
 ** LambdaMOO Database, Format Version 6 **
 3642
-3617
+3618
 0
 9
 65
@@ -485,7 +485,7 @@ machine_proto
 361
 1
 0
-1775897233
+1775898448
 361
 5
 1
@@ -8694,7 +8694,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--7
+-2
 361
 5
 4
@@ -8712,7 +8712,13 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 361
 4
 4
-24
+25
+4
+2
+0
+1775898448
+0
+0
 4
 2
 0
@@ -10720,7 +10726,7 @@ generic player
 100
 33
 -1
-405
+406
 confunc
 361
 173
@@ -12041,7 +12047,7 @@ scan
 361
 13
 -1
-configure
+_dead_configure
 361
 29
 -1
@@ -12145,7 +12151,7 @@ config
 361
 29
 -1
-toggle
+_dead_toggle
 361
 29
 -1
@@ -12340,6 +12346,10 @@ look
 _dead_harv
 361
 13
+-1
+toggle
+361
+29
 -1
 124
 features
@@ -74603,7 +74613,7 @@ visit
 361
 5
 0
-2086070434
+2122704856
 361
 5
 4
@@ -80164,6 +80174,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 02:09:14 2026 PDT Database checkpoint started.~1b[0m
+0
+1775898554
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 01:52:47 2026 PDT Database checkpoint started.~1b[0m
 0
 1775897567
@@ -80455,12 +80471,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 12:44:42 2026 PDT Database checkpoint started.~1b[0m
 0
 1775850282
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 12:42:01 2026 PDT Database checkpoint started.~1b[0m
-0
-1775850121
 361
 5
 5
@@ -98448,7 +98458,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1290503913
+683644722
 361
 5
 4
@@ -100822,7 +100832,7 @@ hi
 4
 2
 0
-1775897413
+1775897524
 2
 localhost
 361
@@ -100832,7 +100842,7 @@ localhost
 361
 0
 0
-1775897507
+1775898448
 361
 1
 5
@@ -103457,7 +103467,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 50162
+port 7777 from localhost, port 36990
 361
 0
 5
@@ -103476,7 +103486,7 @@ port 7777 from localhost, port 50162
 361
 5
 0
-1775897524
+1775898474
 361
 1
 0
@@ -309004,7 +309014,8 @@ matt
 5
 361
 0
-5
+0
+1775898448
 361
 1
 0
@@ -327952,9 +327963,18 @@ for td in (tools)
 ht = create($basic_craft_tool);
 ht.name = td[1];
 ht.description = td[3];
-try add_property(ht, "eq_type", "harvest", {player, "rwc"}); except e (ANY) endtry
-try add_property(ht, "h_tool_class", td[2], {player, "rwc"}); except e (ANY) endtry
-try add_property(ht, "h_resource", "", {player, "rwc"}); except e (ANY) endtry
+try
+add_property(ht, "eq_type", "harvest", {player, "rwc"});
+except e (ANY)
+endtry
+try
+add_property(ht, "h_tool_class", td[2], {player, "rwc"});
+except e (ANY)
+endtry
+try
+add_property(ht, "h_resource", "", {player, "rwc"});
+except e (ANY)
+endtry
 move(ht, p);
 endfor
 endif
@@ -328422,7 +328442,10 @@ endif
 return;
 endif
 dispatched = 0;
-try dispatched = p.w_dispatched; except e (ANY) endtry
+try
+dispatched = p.w_dispatched;
+except e (ANY)
+endtry
 if (dispatched)
 p:tell(("You are already a " + p.w_background) + ". You cannot change after dispatch.");
 return;
@@ -330789,6 +330812,44 @@ endif
 #6:404
 "Alias for harvest.";
 this:harvest();
+.
+#6:405
+"Set harvesting tool target. Usage: toggle <resource> or toggle any.";
+p = player;
+if ((!valid(p.w_special)) || (p.w_special.eq_type != "harvest"))
+p:tell("You need a harvesting tool wielded first. (WIELD <tool>)");
+return;
+endif
+tstr = ((typeof(dobjstr) == STR) && (dobjstr != "")) ? dobjstr | "";
+if ((tstr == "") && (args != {}))
+for w in (args)
+if (typeof(w) == STR)
+tstr = (tstr == "") ? w | ((tstr + " ") + w);
+endif
+endfor
+endif
+tstr = $string_utils:lowercase(tstr);
+if (tstr == "")
+cur = "";
+try
+cur = p.w_special.h_resource;
+except e (ANY)
+endtry
+if (cur == "")
+p:tell("Harvester targeting: any resource");
+else
+p:tell("Harvester targeting: " + cur);
+endif
+p:tell("Usage: toggle <material name> or toggle any");
+return;
+endif
+if (((tstr == "any") || (tstr == "all")) || (tstr == "reset"))
+p.w_special.h_resource = "";
+p:tell("Harvester reset to collect any available resource.");
+return;
+endif
+p.w_special.h_resource = tstr;
+p:tell("Harvester targeting: " + tstr);
 .
 #7:0
 ":length(tree) => number of leaves in tree.";
@@ -388199,7 +388260,7 @@ this:out();
 .
 0 clocks
 2 queued tasks
-0 6 1775897593 1290503913
+0 6 1775898568 683644722
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -388272,11 +388333,11 @@ WAIF
 11
 task_id
 0
-1290503913
+683644722
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775898178 2086070434
+0 6 1775899348 2122704856
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -388349,11 +388410,10 @@ WAIF
 11
 taskid
 0
-2086070434
+2122704856
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
 0 suspended tasks
-2 active connections with listeners
+1 active connections with listeners
 361 0
-3636 0
