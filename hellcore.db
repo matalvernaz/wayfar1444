@@ -8694,7 +8694,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--3
+-4
 361
 5
 4
@@ -74613,7 +74613,7 @@ visit
 361
 5
 0
-2122704856
+2028562976
 361
 5
 4
@@ -80174,6 +80174,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 02:23:07 2026 PDT Database checkpoint started.~1b[0m
+0
+1775899387
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 02:17:27 2026 PDT Database checkpoint started.~1b[0m
 0
 1775899047
@@ -80465,12 +80471,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 13:42:23 2026 PDT Database checkpoint started.~1b[0m
 0
 1775853743
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 12:46:42 2026 PDT Database checkpoint started.~1b[0m
-0
-1775850402
 361
 5
 5
@@ -98458,7 +98458,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-564892179
+651406146
 361
 5
 4
@@ -100832,7 +100832,7 @@ hi
 4
 2
 0
-1775898474
+1775898991
 2
 localhost
 361
@@ -100842,7 +100842,7 @@ localhost
 361
 0
 0
-1775898569
+1775899062
 361
 1
 5
@@ -103467,7 +103467,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 57400
+port 7777 from localhost, port 47018
 361
 0
 5
@@ -103486,7 +103486,7 @@ port 7777 from localhost, port 57400
 361
 5
 0
-1775898991
+1775899318
 361
 1
 0
@@ -330814,12 +330814,17 @@ endif
 this:harvest();
 .
 #6:405
-"Set harvesting tool target. Usage: toggle <resource> or toggle any.";
+"Set harvesting tool target by scanning room resources.";
 p = player;
 if ((!valid(p.w_special)) || (p.w_special.eq_type != "harvest"))
 p:tell("You need a harvesting tool wielded first. (WIELD <tool>)");
 return;
 endif
+tc = "";
+try
+tc = p.w_special.h_tool_class;
+except e (ANY)
+endtry
 tstr = ((typeof(dobjstr) == STR) && (dobjstr != "")) ? dobjstr | "";
 if ((tstr == "") && (args != {}))
 for w in (args)
@@ -330829,6 +330834,26 @@ endif
 endfor
 endif
 tstr = $string_utils:lowercase(tstr);
+"Scan room for compatible resource names";
+available = {};
+for OBJ in (p.location.contents)
+try
+if (OBJ.is_node && (OBJ.count > 0))
+nc = "";
+try
+nc = OBJ.node_class;
+except e (ANY)
+endtry
+if (((tc == "") || (nc == "")) || (tc == nc))
+nm = OBJ.name;
+if (!(nm in available))
+available = {@available, nm};
+endif
+endif
+endif
+except e (ANY)
+endtry
+endfor
 if (tstr == "")
 cur = "";
 try
@@ -330840,7 +330865,11 @@ p:tell("Harvester targeting: any resource");
 else
 p:tell("Harvester targeting: " + cur);
 endif
-p:tell("Usage: toggle <material> or toggle any");
+if (length(available) > 0)
+p:tell("Available here: " + $string_utils:english_list(available));
+else
+p:tell("No compatible resources here.");
+endif
 return;
 endif
 if (((tstr == "any") || (tstr == "all")) || (tstr == "reset"))
@@ -330848,18 +330877,18 @@ p.w_special.h_resource = "";
 p:tell("Harvester reset to collect any available resource.");
 return;
 endif
-"Partial match against known resources";
-names = {"inert metal", "solid-phase metal", "responsive metal", "sand", "native fiber", "native lumber", "native fungus", "native berries", "unpurified water", "solar kretherson", "thermal kretherson", "intrinsic field kretherson"};
+"Partial match against what is in this room";
 match = "";
-for nm in (names)
-if (index(nm, tstr) == 1)
+for nm in (available)
+if (index(nm, tstr) > 0)
 match = nm;
 endif
 endfor
 if (match == "")
-p:tell("Unknown resource. Known types:");
-p:tell("  inert, solid, responsive, sand, fiber, lumber,");
-p:tell("  fungus, berries, water, solar, thermal, intrinsic");
+p:tell("No matching resource here for this tool.");
+if (length(available) > 0)
+p:tell("Available: " + $string_utils:english_list(available));
+endif
 return;
 endif
 p.w_special.h_resource = match;
@@ -388274,7 +388303,7 @@ this:out();
 .
 0 clocks
 2 queued tasks
-0 6 1775899049 564892179
+0 6 1775899409 651406146
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -388347,11 +388376,11 @@ WAIF
 11
 task_id
 0
-564892179
+651406146
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775899348 2122704856
+0 6 1775900248 2028562976
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -388424,7 +388453,7 @@ WAIF
 11
 taskid
 0
-2122704856
+2028562976
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
