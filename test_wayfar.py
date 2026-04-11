@@ -13,7 +13,7 @@ Usage:
 Sections: core, craft, gather, combat, food, hazards, death,
           explore, screenreader, comms, errors, buildings, colony,
           jobs, victory, blueprints, factory, respawn, shop, hint,
-          config, fuzzy, wrap, lookself
+          config, fuzzy, wrap, lookself, farming, fishing, weather
 """
 
 import socket, time, re, sys
@@ -355,6 +355,74 @@ def test_lookself(w, t):
     check('LOOK ME', out, expect=['===', 'HP:'])
 
 
+def test_farming(w, t):
+    print('\n=== FARMING ===')
+    w.cmd('; for p in (players()) if (p.name == "tester") '
+          'p.w_hp = 50; p.w_credits = 500; p.w_dispatched = 1; '
+          'move(p, $ods:spawn_room(#457, 25, 25)); endif endfor', 3.0)
+    # Give seeding tool
+    w.cmd('; for p in (players()) if (p.name == "tester") '
+          'st = create($thing); st.name = "seeding tool"; '
+          'st.w_durability = 30; st.w_durability_max = 30; '
+          'move(st, p); endif endfor', 1.0)
+    check('PLANT', t.cmd('plant'), expect='plant')
+    check('TEND', t.cmd('tend'), expect='tend')
+    check('REAP (not mature)', t.cmd('reap'), expect='No mature')
+    # Clean up farm plots
+    w.cmd('; for p in (players()) if (p.name == "tester") '
+          'for itm in (p.location.contents) '
+          'try if (parent(itm) == #0.farm_plot) recycle(itm); endif '
+          'except e (ANY) endtry endfor endif endfor', 1.0)
+
+
+def test_fishing(w, t):
+    print('\n=== FISHING ===')
+    # Move to a forest biome (biome 1) for fishing
+    w.cmd('; for p in (players()) if (p.name == "tester") '
+          'move(p, $ods:spawn_room(#457, 25, 25)); endif endfor', 2.0)
+    # Give fishing gear
+    w.cmd('; for p in (players()) if (p.name == "tester") '
+          'fg = create($thing); fg.name = "wooden fishing rig"; '
+          'fg.w_durability = 25; fg.w_durability_max = 25; '
+          'move(fg, p); endif endfor', 1.0)
+    out = t.cmd('fish', 2.0)
+    # Biome might not be fishable at 25,25 — check for either catch or "no fishable"
+    if 'no fishable' in out.lower():
+        check('FISH (wrong biome)', out, expect='no fishable')
+        # Move to find water: try several spots
+        for coords in [(30, 30), (20, 20), (15, 15), (35, 35)]:
+            w.cmd(f'; for p in (players()) if (p.name == "tester") '
+                  f'move(p, $ods:spawn_room(#457, {coords[0]}, {coords[1]})); endif endfor', 2.0)
+            out = t.cmd('fish', 2.0)
+            if 'no fishable' not in out.lower():
+                break
+    if 'caught' in out.lower() or 'nothing bites' in out.lower():
+        check('FISH (cast)', out, expect='cast')
+    else:
+        check('FISH (no water found)', out, expect='fish')
+    # Test without gear
+    w.cmd('; for p in (players()) if (p.name == "tester") '
+          'for itm in (p.contents) '
+          'try if (index(itm.name, "fishing") > 0) recycle(itm); endif '
+          'except e (ANY) endtry endfor endif endfor', 1.0)
+    check('FISH no gear', t.cmd('fish'), expect='need fishing gear')
+
+
+def test_weather(w, t):
+    print('\n=== WEATHER ===')
+    w.cmd('; for p in (players()) if (p.name == "tester") '
+          'move(p, $ods:spawn_room(#457, 25, 25)); endif endfor', 2.0)
+    check('WEATHER cmd', t.cmd('weather'), expect=['Weather Report', 'Conditions:'])
+    # Set weather and verify it shows
+    w.cmd('; #457.p_weather = "thunderstorm"; #457.p_weather_severity = 2', 1.0)
+    check('WEATHER severe', t.cmd('weather'), expect=['thunderstorm', 'Severity'])
+    check('LOOK weather', t.cmd('look'), expect='Thunder')
+    # Reset weather
+    w.cmd('; #457.p_weather = "clear"; #457.p_weather_severity = 0', 1.0)
+    # Test JOBS shows new entries
+    check('JOBS has Farmer', t.cmd('jobs', 3.0), expect=['Farmer', 'Career Angler'])
+
+
 # ============================================================
 # REGISTRY — maps CLI names to test functions
 # ============================================================
@@ -384,6 +452,9 @@ TESTS = [
     ('fuzzy',       test_fuzzy),
     ('wrap',        test_wrap),
     ('lookself',    test_lookself),
+    ('farming',     test_farming),
+    ('fishing',     test_fishing),
+    ('weather',     test_weather),
 ]
 
 
