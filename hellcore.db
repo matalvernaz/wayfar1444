@@ -1,5 +1,5 @@
 ** LambdaMOO Database, Format Version 6 **
-3578
+3581
 3615
 0
 9
@@ -8694,7 +8694,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--25
+-26
 361
 5
 4
@@ -74593,7 +74593,7 @@ visit
 361
 5
 0
-989617562
+994285645
 361
 5
 4
@@ -80152,6 +80152,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 00:55:00 2026 PDT Database checkpoint started.~1b[0m
+0
+1775894100
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 00:09:32 2026 PDT Database checkpoint started.~1b[0m
 0
 1775891372
@@ -80443,12 +80449,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 11:06:54 2026 PDT Database checkpoint started.~1b[0m
 0
 1775844414
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 11:02:37 2026 PDT Database checkpoint started.~1b[0m
-0
-1775844157
 361
 5
 5
@@ -98436,7 +98436,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-822466722
+1185863894
 361
 5
 4
@@ -100810,7 +100810,7 @@ hi
 4
 2
 0
-1775891171
+1775891310
 2
 localhost
 361
@@ -100820,7 +100820,7 @@ localhost
 361
 0
 0
-1775891184
+1775891387
 361
 1
 5
@@ -100842,7 +100842,7 @@ localhost
 29
 1
 4
-1252
+1255
 1
 339
 1
@@ -103347,6 +103347,12 @@ localhost
 3576
 1
 3577
+1
+3578
+1
+3579
+1
+3580
 361
 1
 5
@@ -103367,7 +103373,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 49520
+port 7777 from localhost, port 32832
 361
 0
 5
@@ -103386,11 +103392,11 @@ port 7777 from localhost, port 49520
 361
 5
 0
-1775891310
+1775893952
 361
 1
 0
-1410064424
+1410064421
 29
 0
 0
@@ -105684,7 +105690,7 @@ wipe_all
 361
 45
 -1
-10
+11
 rp457_x0_y0
 rp457_x16_y17
 rp457_x36_ym43
@@ -105695,7 +105701,8 @@ rp457_x30_y30
 rp457_x22_y35
 rp457_x50_ym50
 rp457_xm5_y15
-46
+rp457_xm5_y14
+47
 1
 591
 361
@@ -105734,6 +105741,10 @@ rp457_xm5_y15
 5
 1
 3569
+361
+5
+1
+3578
 361
 5
 5
@@ -286598,9 +286609,9 @@ matt
 
 1
 361
-3569
+3578
 3445
-3572
+-1
 33
 -1
 -1
@@ -286675,7 +286686,7 @@ matt
 361
 0
 0
-1775884121
+1775893903
 361
 1
 0
@@ -298994,7 +299005,7 @@ Desert
 -1
 452
 -1
--1
+3578
 0
 0
 94
@@ -299033,7 +299044,7 @@ Desert
 0
 1775890894
 0
-0
+1775893835
 361
 5
 5
@@ -299192,7 +299203,7 @@ Desert
 361
 5
 0
-1
+0
 361
 5
 5
@@ -299459,7 +299470,7 @@ inert metal
 361
 3569
 -1
-3444
+3572
 5
 -1
 3574
@@ -300239,7 +300250,7 @@ inert metal
 -1
 5
 -1
--1
+3579
 0
 4
 is_node
@@ -300346,6 +300357,622 @@ mineral
 5
 2
 Corroded metal juts from the sand, remnants of something ancient.
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#3578
+Desert
+
+0
+361
+-1
+3579
+-1
+452
+-1
+-1
+0
+0
+94
+1
+457
+361
+5
+0
+2
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+1
+4
+3
+1
+3444
+0
+1775893835
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+-5
+361
+5
+0
+14
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+0
+1
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+1
+5
+361
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#3579
+solid-phase metal
+
+0
+361
+3578
+-1
+3580
+5
+-1
+3580
+0
+4
+is_node
+count
+max_count
+node_class
+40
+0
+1
+361
+7
+0
+3
+361
+7
+0
+3
+361
+7
+2
+mineral
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+5
+2
+A half-buried metallic formation catches the light.
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#3580
+sand
+
+0
+361
+3578
+-1
+3444
+5
+-1
+-1
+0
+4
+is_node
+count
+max_count
+node_class
+40
+0
+1
+361
+7
+0
+2
+361
+7
+0
+2
+361
+7
+2
+mineral
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+5
+2
+Fine silicate sand drifts against the dunes.
 361
 5
 4
@@ -374221,13 +374848,28 @@ try
 pname = planet.name;
 except e (ANY)
 endtry
+"Collect resource descriptions";
+res_descs = {};
+for OBJ in (this.contents)
+try
+if (OBJ.is_node && (OBJ.count > 0))
+res_descs = {@res_descs, OBJ.description};
+endif
+except e (ANY)
+endtry
+endfor
 if (sr)
 player:tell("");
 player:tell(((((((this.name + "  (") + tostr(rx)) + ", ") + tostr(ry)) + ")  [") + pname) + "]");
 if ((b >= 0) && (b < length(bdescs)))
 player:tell(bdescs[b + 1]);
 endif
+"Resource flavor text right after biome desc";
+for rd in (res_descs)
+player:tell(rd);
+endfor
 player:tell("");
+"Directions";
 dirs = {{"North", 0, 1}, {"Northeast", 1, 1}, {"East", 1, 0}, {"Southeast", 1, -1}, {"South", 0, -1}, {"Southwest", -1, -1}, {"West", -1, 0}, {"Northwest", -1, 1}};
 sz = 50;
 try
@@ -374237,9 +374879,6 @@ endtry
 for d in (dirs)
 nx = rx + d[2];
 ny = ry + d[3];
-if ((((nx < (-sz)) || (nx > sz)) || (ny < (-sz))) || (ny > sz))
-player:tell(("  " + d[1]) + ": Planet edge");
-else
 nb = perlin_2d(nx + seed, ny + seed, 1.0, 1.5, 5, 1);
 if (nb < 0)
 nb = 0;
@@ -374272,9 +374911,9 @@ if ((nb >= 0) && (nb < length(bnames)))
 bname = bnames[nb + 1];
 endif
 player:tell((("  " + d[1]) + ": ") + bname);
-endif
 endfor
 else
+"Visual map";
 esc = chr(27);
 reset = esc + "[0m";
 bold = esc + "[1m";
@@ -374318,16 +374957,7 @@ elseif (mdr <= 2)
 mb = 6;
 endif
 endif
-sz = 50;
-try
-sz = planet.p_size;
-except e (ANY)
-endtry
-if ((((mx < (-sz)) || (mx > sz)) || (my < (-sz))) || (my > sz))
-row = ((row + esc) + "[90m ~ ") + reset;
-else
 row = ((row + bcolor[mb + 1]) + bchar[mb + 1]) + reset;
-endif
 endif
 dx = dx + 1;
 endwhile
@@ -374335,15 +374965,16 @@ player:tell(row);
 dy = dy - 1;
 endwhile
 player:tell("");
-esc = chr(27);
-bold = esc + "[1m";
-reset = esc + "[0m";
 player:tell(((((((((bold + this.name) + reset) + "  (") + tostr(rx)) + ", ") + tostr(ry)) + ")  [") + pname) + "]");
 if ((b >= 0) && (b < length(bdescs)))
 player:tell(bdescs[b + 1]);
 endif
+"Resource flavor text after biome desc";
+for rd in (res_descs)
+player:tell(rd);
+endfor
 endif
-"Show room contents (resources + items)";
+"Creatures and items";
 this:_show_contents();
 "Exploration status";
 this:_explore_info();
@@ -374465,8 +375096,7 @@ player:tell(("The heat sears you for " + tostr(hdmg)) + " damage.");
 endif
 .
 #452:6
-"Show room contents: resource flavor text, creatures, items.";
-resources = {};
+"Show creatures and items in the room (resources shown by look_self).";
 creatures = {};
 items = {};
 for OBJ in (this.contents)
@@ -374475,7 +375105,7 @@ if (is_player(OBJ))
 else
 is_res = 0;
 try
-if (OBJ.is_node && (OBJ.count > 0))
+if (OBJ.is_node)
 is_res = 1;
 endif
 except e (ANY)
@@ -374488,7 +375118,7 @@ endif
 except e (ANY)
 endtry
 if (is_res)
-resources = {@resources, OBJ};
+"handled by look_self directly";
 elseif (is_cre)
 creatures = {@creatures, OBJ};
 else
@@ -374496,22 +375126,14 @@ items = {@items, OBJ.name};
 endif
 endif
 endfor
-if (length(resources) > 0)
-player:tell("");
-for res in (resources)
-player:tell(res.description);
-endfor
-endif
 if (length(creatures) > 0)
 cnames = {};
 for c in (creatures)
 cnames = {@cnames, c.name};
 endfor
-player:tell("");
 player:tell("You see here: " + $string_utils:english_list(cnames));
 endif
 if (length(items) > 0)
-player:tell("");
 player:tell("You see here: " + $string_utils:english_list(items));
 endif
 .
@@ -377767,7 +378389,7 @@ this:out();
 .
 0 clocks
 2 queued tasks
-0 6 1775891399 822466722
+0 6 1775894130 1185863894
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -377840,11 +378462,11 @@ WAIF
 11
 task_id
 0
-822466722
+1185863894
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775891878 989617562
+0 6 1775894578 994285645
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -377917,11 +378539,10 @@ WAIF
 11
 taskid
 0
-989617562
+994285645
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
 0 suspended tasks
-2 active connections with listeners
+1 active connections with listeners
 361 0
-3444 0
