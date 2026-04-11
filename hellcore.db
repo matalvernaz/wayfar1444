@@ -8693,17 +8693,13 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 361
 0
 4
-2
 1
--6
 1
--7
+-9
 361
 5
 4
-2
-0
-2
+1
 0
 2
 361
@@ -45330,9 +45326,9 @@ run_megatrace
 4
 9
 0
-1008005539
+2044002250
 2
-disp
+ls
 4
 0
 2
@@ -80189,6 +80185,12 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 02:33:33 2026 PDT Database checkpoint started.~1b[0m
+0
+1775900013
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mSat Apr 11 02:28:39 2026 PDT Database checkpoint started.~1b[0m
 0
 1775899719
@@ -80480,12 +80482,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 13:50:00 2026 PDT Database checkpoint started.~1b[0m
 0
 1775854200
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 13:45:00 2026 PDT Database checkpoint started.~1b[0m
-0
-1775853900
 361
 5
 5
@@ -98473,7 +98469,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-1519345051
+733015338
 361
 5
 4
@@ -100847,7 +100843,7 @@ hi
 4
 2
 0
-1775899318
+1775899891
 2
 localhost
 361
@@ -100857,7 +100853,7 @@ localhost
 361
 0
 0
-1775899402
+1775899917
 361
 1
 5
@@ -103514,7 +103510,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 38178
+port 7777 from localhost, port 55114
 361
 0
 5
@@ -103533,7 +103529,7 @@ port 7777 from localhost, port 38178
 361
 5
 0
-1775899640
+1775899951
 361
 1
 0
@@ -310973,7 +310969,8 @@ bitchboy
 5
 361
 0
-5
+0
+1775900006
 361
 1
 0
@@ -331059,7 +331056,7 @@ endif
 endif
 .
 #6:321
-"Equip a weapon or special tool. Usage: wield <item name>.";
+"Equip a weapon or tool. Usage: wield <item name>.";
 p = player;
 tstr = ((typeof(dobjstr) == STR) && (dobjstr != "")) ? dobjstr | "";
 if ((tstr == "") && (args != {}))
@@ -331070,50 +331067,86 @@ endif
 endfor
 endif
 if (tstr == "")
-p:tell("Wield what? Usage: wield <weapon name>");
+p:tell("Wield what? Usage: wield <item name>");
 return;
 endif
-"Find matching equipment in inventory";
-item = 0;
+tstr = $string_utils:lowercase(tstr);
+"Find matching item in inventory by substring";
+item = $nothing;
 for itm in (p.contents)
-if (is_a(itm, $equipment) && index(itm.name, tstr))
+nm = $string_utils:lowercase(itm.name);
+if (index(nm, tstr) > 0)
+"Check if it is wieldable: weapon, tool, or harvest tool";
+wieldable = 0;
+try
+if (is_a(itm, $equipment))
+wieldable = 1;
+endif
+except e (ANY)
+endtry
+try
+if (is_a(itm, $basic_craft_tool))
+wieldable = 1;
+endif
+except e (ANY)
+endtry
+try
+if (itm.eq_type == "harvest")
+wieldable = 1;
+endif
+except e (ANY)
+endtry
+try
+if (itm.w_damage > 0)
+wieldable = 1;
+endif
+except e (ANY)
+endtry
+if (wieldable)
 item = itm;
 break;
 endif
+endif
 endfor
-if (item == 0)
+if (!valid(item))
 p:tell(("You're not carrying any wieldable item matching '" + tstr) + "'.");
 return;
 endif
-"Check slot type";
+"Determine slot";
+slot = "special";
+try
 slot = item.eq_slot;
+except e (ANY)
+endtry
+eq_type = "";
+try
+eq_type = item.eq_type;
+except e (ANY)
+endtry
+if ((eq_type == "harvest") || is_a(item, $basic_craft_tool))
+slot = "special";
+endif
 if (slot == "weapon")
-"Unequip current weapon if any";
 if (valid(p.w_weapon))
+try
 this:_unequip_stats(p.w_weapon);
+except e (ANY)
+endtry
 p:tell(("You put away the " + p.w_weapon.name) + ".");
 endif
 p.w_weapon = item;
+try
 this:_apply_stats(item);
-p:tell(("You wield the " + item.name) + ".");
-if (item.eq_type == "melee")
-p:tell("  Use SWING to attack in melee.");
-elseif (item.eq_type == "ranged")
-p:tell("  Use FIRE to attack at range.");
-endif
-elseif (slot == "special")
+except e (ANY)
+endtry
+p:tell(("You ready the " + item.name) + " as your weapon.");
+else
 if (valid(p.w_special))
-this:_unequip_stats(p.w_special);
 p:tell(("You put away the " + p.w_special.name) + ".");
 endif
 p.w_special = item;
-this:_apply_stats(item);
 p:tell(("You ready the " + item.name) + " in your special weapon slot.");
-else
-p:tell("You can't wield that. Try WEAR for armor or EQUIP for gadgets.");
-return;
 endif
-p.location:announce(((p.name + " readies a ") + item.name) + ".", p);
 .
 #6:323
 "Equip a gadget. Usage: equip <gadget name>.";
@@ -392147,7 +392180,7 @@ this:out();
 .
 0 clocks
 2 queued tasks
-0 6 1775899739 1519345051
+0 6 1775900039 733015338
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -392220,7 +392253,7 @@ WAIF
 11
 task_id
 0
-1519345051
+733015338
 this.beat_task = 0;
 this:_beat();
 .
@@ -392302,6 +392335,5 @@ this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
 0 suspended tasks
-2 active connections with listeners
+1 active connections with listeners
 361 0
-3642 0
