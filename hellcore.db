@@ -12160,7 +12160,7 @@ map
 361
 29
 -1
-config
+conf*ig
 361
 29
 -1
@@ -12360,7 +12360,7 @@ _dead_harv
 361
 13
 -1
-toggle
+tog*gle
 361
 29
 -1
@@ -317977,7 +317977,7 @@ h_tool_class
 h_resource
 40
 2
-harvest
+harv*est
 361
 7
 2
