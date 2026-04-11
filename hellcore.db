@@ -1,5 +1,5 @@
 ** LambdaMOO Database, Format Version 6 **
-2592
+2593
 3600
 0
 8
@@ -8597,7 +8597,7 @@ Sorry, but there's no help here yet.  Type `?' for a list of commands.
 4
 1
 1
--80
+-95
 361
 5
 4
@@ -74418,7 +74418,7 @@ visit
 361
 5
 0
-1498072140
+194875734
 361
 5
 4
@@ -79973,6 +79973,42 @@ sysnet
 4
 2
 2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 17:57:00 2026 PDT Database checkpoint started.~1b[0m
+0
+1775869020
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 17:55:22 2026 PDT Database checkpoint started.~1b[0m
+0
+1775868922
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 17:53:50 2026 PDT Database checkpoint started.~1b[0m
+0
+1775868830
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 17:51:49 2026 PDT Database checkpoint started.~1b[0m
+0
+1775868709
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 17:50:51 2026 PDT Database checkpoint started.~1b[0m
+0
+1775868651
+4
+2
+2
+~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 17:48:33 2026 PDT Database checkpoint started.~1b[0m
+0
+1775868513
+4
+2
+2
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 17:45:01 2026 PDT Database checkpoint started.~1b[0m
 0
 1775868301
@@ -80234,42 +80270,6 @@ sysnet
 ~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 09:15:50 2026 PDT Database checkpoint started.~1b[0m
 0
 1775837750
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 09:13:10 2026 PDT Database checkpoint started.~1b[0m
-0
-1775837590
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 09:03:50 2026 PDT Database checkpoint started.~1b[0m
-0
-1775837030
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 08:59:26 2026 PDT Database checkpoint started.~1b[0m
-0
-1775836766
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 08:56:50 2026 PDT Database checkpoint started.~1b[0m
-0
-1775836610
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 08:42:59 2026 PDT Database checkpoint started.~1b[0m
-0
-1775835779
-4
-2
-2
-~1b[35m[sysnet]~1b[0m~1b[0m ~1b[36mFri Apr 10 08:36:33 2026 PDT Database checkpoint started.~1b[0m
-0
-1775835393
 361
 5
 5
@@ -98257,7 +98257,7 @@ removing non-area <invalid> (#661376) from long queue.
 361
 5
 0
-560490101
+1304866897
 361
 5
 4
@@ -100631,7 +100631,7 @@ hi
 4
 2
 0
-1775866277
+1775868875
 2
 localhost
 361
@@ -100641,7 +100641,7 @@ localhost
 361
 0
 0
-1775866299
+1775868932
 361
 1
 5
@@ -100663,7 +100663,7 @@ localhost
 29
 1
 4
-771
+769
 1
 339
 1
@@ -102115,15 +102115,9 @@ localhost
 1
 2542
 1
-2543
-1
-2544
-1
 2545
 1
 2546
-1
-2547
 1
 2548
 1
@@ -102206,6 +102200,8 @@ localhost
 2590
 1
 2591
+1
+2592
 361
 1
 5
@@ -102226,7 +102222,7 @@ localhost.localdomain
 361
 0
 2
-port 7777 from localhost, port 45806
+port 7777 from localhost, port 52986
 361
 0
 5
@@ -102245,11 +102241,11 @@ port 7777 from localhost, port 45806
 361
 5
 0
-1775868207
+1775868972
 361
 1
 0
-1410064905
+1410064907
 29
 0
 0
@@ -170569,7 +170565,7 @@ tester
 4
 2
 0
-1775866252
+1775866321
 2
 localhost
 361
@@ -170578,7 +170574,7 @@ localhost
 361
 0
 0
-1775866429
+1775868355
 361
 1
 0
@@ -170617,7 +170613,7 @@ localhost
 361
 0
 2
-port 7777 from localhost, port 38758
+port 7777 from localhost, port 42636
 361
 0
 5
@@ -170636,7 +170632,7 @@ port 7777 from localhost, port 38758
 361
 5
 0
-1775866321
+1775868325
 361
 1
 5
@@ -171058,7 +171054,8 @@ Completed job: Ranger Patrol
 5
 361
 7
-5
+0
+1
 361
 7
 5
@@ -211752,7 +211749,7 @@ fibrous bandage
 -1
 5
 -1
-2543
+2545
 0
 0
 36
@@ -211950,16 +211947,16 @@ matt
 4
 2
 0
-0
+1775868841
 2
-
+localhost
 361
 0
 5
 361
 0
 0
-1775868244
+1775868941
 361
 1
 0
@@ -211992,13 +211989,15 @@ matt
 361
 4
 4
-1
+2
+2
+localhost
 2
 MattPC
 361
 0
 2
-port 7777 from MattPC, port 57221
+port 7777 from localhost, port 40380
 361
 0
 5
@@ -212017,7 +212016,7 @@ port 7777 from MattPC, port 57221
 361
 5
 0
-1775866788
+1775868933
 361
 1
 5
@@ -212189,7 +212188,7 @@ port 7777 from MattPC, port 57221
 361
 5
 0
-4
+6
 361
 5
 0
@@ -212214,7 +212213,7 @@ fabricator
 361
 5
 0
-4
+6
 361
 5
 5
@@ -212261,7 +212260,7 @@ fabricator
 361
 7
 0
-1
+0
 361
 7
 5
@@ -212379,7 +212378,8 @@ fabricator
 5
 361
 5
-5
+4
+0
 361
 5
 0
@@ -213308,7 +213308,7 @@ atmo-thrasher condenser
 361
 2537
 -1
-2543
+2545
 1679
 -1
 -1
@@ -213472,260 +213472,8 @@ Starter atmospheric water condenser.
 5
 361
 5
-#2543
-native fiber
-
-0
-361
-2537
--1
-2544
-5
--1
-2544
-0
-0
-36
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-7
-5
-361
-7
-5
-361
-7
-5
-361
-7
-5
-361
-7
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-#2544
-native fiber
-
-0
-361
-2537
--1
-2545
-5
--1
-2545
-0
-0
-36
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-7
-5
-361
-7
-5
-361
-7
-5
-361
-7
-5
-361
-7
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
+#2543 recycled
+#2544 recycled
 #2545
 native fiber
 
@@ -213860,133 +213608,6 @@ native fiber
 361
 2537
 -1
-2547
-5
--1
-2547
-0
-0
-36
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-7
-5
-361
-7
-5
-361
-7
-5
-361
-7
-5
-361
-7
-5
-361
-5
-5
-361
-5
-4
-2
-0
-0
-0
-0
-29
-1
-5
-361
-5
-5
-361
-5
-5
-361
-7
-5
-361
-5
-5
-361
-5
-5
-361
-5
-5
-361
-5
-#2547
-inert metal
-
-0
-361
-2537
--1
 2548
 5
 -1
@@ -214107,6 +213728,7 @@ inert metal
 5
 361
 5
+#2547 recycled
 #2548
 inert metal
 
@@ -215616,10 +215238,10 @@ solid-phase metal
 361
 2537
 -1
--1
+2592
 5
 -1
--1
+2592
 0
 0
 36
@@ -223008,6 +222630,134 @@ Dropped by sand viper.
 5
 2
 A serpentine venomous creature.
+361
+5
+4
+2
+0
+0
+0
+0
+29
+1
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+#2592
+pre-fab shelter kit
+
+0
+361
+2537
+-1
+-1
+5
+-1
+-1
+0
+0
+36
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+5
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+7
+5
+361
+5
+2
+Collapsed shelter. PLACE SHELTER to deploy.
 361
 5
 4
@@ -240912,14 +240662,15 @@ try
 hn = p.w_hints;
 except e (ANY)
 endtry
-p:tell("  screenreader  " + (sr ? "[ON]  No colors, text-only map descriptions" | "[OFF] Visual ANSI color map"));
+p:tell("  screenreader  " + (sr ? "[ON]  No colors, text-only map" | "[OFF] Visual ANSI color map"));
 p:tell("  brief         " + (br ? "[ON]  Short room descriptions" | "[OFF] Full room descriptions"));
-p:tell("  hints         " + (hn ? "[ON]  Tool hints in resource descriptions" | "[OFF] No tool hints"));
+p:tell("  hints         " + (hn ? "[ON]  Tool hints in resources" | "[OFF] No tool hints"));
 p:tell("");
-p:tell("Toggle a setting: CONFIG <name>");
+p:tell("Toggle: CONFIG <name>");
 return;
 endif
-if ((dstr == "screenreader") || (dstr == "sr"))
+"Match partial names";
+if (index("screenreader", dstr) == 1)
 sr = 0;
 try
 sr = p.w_screenreader;
@@ -240930,11 +240681,11 @@ p.w_screenreader = 0;
 p:tell("[SCREENREADER OFF] Visual ANSI map enabled.");
 else
 p.w_screenreader = 1;
-p:tell("[SCREENREADER ON] Text descriptions replace visual map. No color codes.");
+p:tell("[SCREENREADER ON] Text descriptions, no colors.");
 endif
 return;
 endif
-if ((dstr == "brief") || (dstr == "br"))
+if (index("brief", dstr) == 1)
 br = 0;
 try
 br = p.w_brief;
@@ -240942,14 +240693,14 @@ except e (ANY)
 endtry
 if (br)
 p.w_brief = 0;
-p:tell("[BRIEF OFF] Full room descriptions.");
+p:tell("[BRIEF OFF]");
 else
 p.w_brief = 1;
-p:tell("[BRIEF ON] Short room descriptions.");
+p:tell("[BRIEF ON]");
 endif
 return;
 endif
-if ((dstr == "hints") || (dstr == "hint"))
+if (index("hints", dstr) == 1)
 hn = 1;
 try
 hn = p.w_hints;
@@ -240957,15 +240708,14 @@ except e (ANY)
 endtry
 if (hn)
 p.w_hints = 0;
-p:tell("[HINTS OFF] Resource descriptions will not show tool suggestions.");
+p:tell("[HINTS OFF] No tool suggestions.");
 else
 p.w_hints = 1;
-p:tell("[HINTS ON] Resource descriptions include tool suggestions.");
+p:tell("[HINTS ON] Tool suggestions enabled.");
 endif
 return;
 endif
-p:tell("Unknown setting: " + dstr);
-p:tell("Type CONFIG to see available settings.");
+p:tell(("Unknown setting: " + dstr) + ". Type CONFIG to see options.");
 .
 #6:356
 "Alias for config.";
@@ -242007,18 +241757,16 @@ if (tool_name != "")
 for itm in (p.contents)
 if (is_a(itm, #592) && index(itm.name, tool_name))
 tool = itm;
-break;
 endif
 endfor
 if (tool == 0)
-p:tell(("No tool matching '" + tool_name) + "'.");
+p:tell("No tool matching that name.");
 return;
 endif
 else
 for itm in (p.contents)
 if (is_a(itm, #592))
 tool = itm;
-break;
 endif
 endfor
 if (tool == 0)
@@ -242029,6 +241777,19 @@ endif
 if (((recipe == "") || (recipe == "list")) || (recipe == "help"))
 tool:list_recipes();
 return;
+endif
+"Fuzzy recipe search: strip hyphens, match against known recipe names";
+clean = strsub($string_utils:lowercase(recipe), "-", "");
+all_recipes = {"colonial machete", "wilder javelin", "colonial rifle", "hide armor", "insta-meat soup", "inert metal", "crude wire", "inert casing", "inert block", "weak power emitter", "inert wiring", "fibrous bandage", "fiber backpack", "pre-fab shelter kit", "equipment crafting tool", "structure crafting tool", "food processor", "cooking fire", "maker block"};
+matched = "";
+for rname in (all_recipes)
+rclean = strsub($string_utils:lowercase(rname), "-", "");
+if ((index(rclean, clean) > 0) || (index(clean, rclean) > 0))
+matched = rname;
+endif
+endfor
+if (matched != "")
+recipe = matched;
 endif
 try
 if (tool:_craft_dispatch(recipe))
@@ -299754,7 +299515,7 @@ this:out();
 .
 0 clocks
 2 queued tasks
-0 6 1775868317 560490101
+0 6 1775869038 1304866897
 1
 150
 150 -7 -8 362 -9 361 150 -10 8
@@ -299827,11 +299588,11 @@ WAIF
 11
 task_id
 0
-560490101
+1304866897
 this.beat_task = 0;
 this:_beat();
 .
-0 6 1775868884 1498072140
+0 6 1775869784 194875734
 1
 103
 103 -7 -8 362 -9 361 103 -10 8
@@ -299904,7 +299665,7 @@ WAIF
 11
 taskid
 0
-1498072140
+194875734
 this.meat_reaper_task = 0;
 this:_meat_reaper();
 .
